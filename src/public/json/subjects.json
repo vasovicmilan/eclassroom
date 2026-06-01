@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1,
+    "slug": "multimedijalne-aplikacije",
+    "name": "Multimedijalne i grafičke aplikacije",
+    "code": "MGA",
+    "icon": "🎨",
+    "description": "Rad sa slikom, zvukom i videom i razvoj multimedijalnih aplikacija.",
+    "weeks": 15,
+    "espb": 8,
+    "lectures": "2 časa nedeljno",
+    "exercises": "3 časa nedeljno",
+    "startDate": "2026-02-19",
+    "endDate": "2026-05-07",
+    "resources": {
+      "plan": "https://drive.google.com/file/d/1YYoCteM-5xoD98rYYHA2tH4GMd73ex9n/view",
+      "results": "#",
+      "questions": "#"
+    }
+  },
+  {
+    "id": 2,
+    "slug": "otvoreno-racunarstvo",
+    "name": "Otvoreno računarstvo",
+    "code": "OSRAC",
+    "icon": "💻",
+    "description": "Proučavanje otvorenog softvera, otvorenih standarda i digitalnih infrastruktura.",
+    "weeks": 15,
+    "espb": 8,
+    "lectures": "3 časa nedeljno",
+    "exercises": "2 časa nedeljno",
+    "startDate": "2026-02-27",
+    "endDate": "2026-04-17",
+    "resources": {
+      "plan": "https://drive.google.com/file/d/1srxPqQ8zprc8Ggo6yn9t27_tgQcfWTGn/view",
+      "results": "#",
+      "questions": "#"
+    }
+  },
+  {
+    "id": 3,
+    "slug": "teorija-sistema",
+    "name": "Teorija sistema i informacija",
+    "code": "TSI",
+    "icon": "🧠",
+    "description": "Osnovni pojmovi teorije sistema, modelovanje sistema i analiza strukture kompleksnih sistema.",
+    "weeks": 15,
+    "espb": 8,
+    "lectures": "3 časa nedeljno",
+    "exercises": "2 časa nedeljno",
+    "startDate": "2026-02-23",
+    "endDate": "2026-04-13",
+    "resources": {
+      "plan": "https://drive.google.com/file/d/1M2y1lAvvGMxuc2z1Kh2xf802JnbDjQwk/view",
+      "results": "#",
+      "questions": "#"
+    }
+  }
+]

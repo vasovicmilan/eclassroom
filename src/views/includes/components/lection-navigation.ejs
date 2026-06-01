@@ -1,0 +1,43 @@
+<nav class="lection-sidebar">
+  <div class="card shadow-sm sticky-top" style="top: 2rem;">
+    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+      <h3 class="h5 mb-0">Lekcije</h3>
+      <button class="btn btn-sm btn-outline-light d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#lectionNavCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </div>
+    <div class="collapse d-lg-block" id="lectionNavCollapse">
+      <div class="card-body p-0">
+        <ul class="list-group list-group-flush">
+          <% lections.forEach((lec) => { %>
+            <li class="list-group-item <%= lec.slug === currentSlug ? 'active' : '' %> <%= !lec.available ? 'bg-light text-muted' : '' %>">
+              <a href="<%= lec.available ? '/' + (subjectSlug || lec.subjectSlug) + '/lekcija/' + lec.slug : '#' %>" 
+                 class="d-flex align-items-center gap-2 text-decoration-none <%= lec.slug === currentSlug ? 'fw-bold' : '' %> <%= !lec.available ? 'disabled-link' : '' %>"
+                 <%= !lec.available ? 'tabindex="-1" aria-disabled="true"' : '' %>>
+                <span class="badge bg-secondary rounded-circle"><%= lec.week %></span>
+                <span class="flex-grow-1"><%= lec.title %></span>
+                <% if (!lec.available) { %>
+                  <span class="text-muted">🔒</span>
+                <% } else if (lec.slug === currentSlug) { %>
+                  <span class="text-primary">▶</span>
+                <% } else { %>
+                  <span class="text-muted">→</span>
+                <% } %>
+              </a>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+      <div class="card-footer bg-white">
+        <% 
+          const availableCount = lections.filter(l => l.available).length;
+          const percent = Math.round((availableCount / lections.length) * 100);
+        %>
+        <div class="progress mb-2" style="height: 8px;">
+          <div class="progress-bar bg-primary" role="progressbar" style="width: <%= percent %>%" aria-valuenow="<%= percent %>" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="small text-center mb-0"><%= availableCount %>/<%= lections.length %> lekcija dostupno</p>
+      </div>
+    </div>
+  </div>
+</nav>

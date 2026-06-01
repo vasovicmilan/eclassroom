@@ -1,0 +1,231 @@
+<%- include('../includes/head', { title: pageTitle, pageDescription: pageDescription, pageStyles: pageStyles }) %>
+
+<main class="home-page">
+
+  <%- include('../includes/navigation', { active: "" }) %>
+
+  <!-- HERO SECTION -->
+  <section class="home-hero bg-primary text-white py-5">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <span class="badge bg-light text-primary mb-3 fs-6">E-učionica</span>
+          <h1 class="display-4 fw-bold mb-4">Dobrodošli u digitalnu učionicu</h1>
+          <p class="lead mb-4">
+            Centralno mesto za nastavne materijale, predavanja i resurse
+            u okviru studijskih predmeta.
+          </p>
+          <a href="#predmeti" class="btn btn-light btn-lg mb-5">Pogledaj predmete →</a>
+
+          <!-- Quick links (predmeti) -->
+          <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
+            <% subjects.forEach(subject => { %>
+              <a href="/<%= subject.slug %>" class="btn btn-outline-light">
+                <span class="me-2"><%= subject.icon || "📘" %></span>
+                <%= subject.name %>
+              </a>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O PLATFORMI -->
+  <section class="home-about py-5 bg-light">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="section-title display-5 fw-bold">Digitalno okruženje za savremeno učenje</h2>
+        <p class="lead text-muted">
+          Aplikacija je zasnovana na principima otvorenog obrazovanja,
+          transparentnosti i jednostavne dostupnosti sadržaja.
+        </p>
+      </div>
+
+      <div class="row align-items-stretch">
+        <div class="col-md-7">
+          <% features.forEach(feature => { %>
+            <div class="card mb-3 shadow-sm border-0">
+              <div class="card-body d-flex align-items-start gap-3">
+                <div class="feature-icon fs-1"><%= feature.icon %></div>
+                <div>
+                  <h3 class="h5 fw-semibold"><%= feature.title %></h3>
+                  <p class="text-muted mb-0"><%= feature.description %></p>
+                </div>
+              </div>
+            </div>
+          <% }) %>
+        </div>
+
+        <div class="col-md-5">
+          <div class="card bg-white shadow-sm border-0 h-100">
+            <div class="card-body text-center p-4">
+              <div class="row">
+                <div class="col-4">
+                  <div class="stat-number display-4 fw-bold text-primary"><%= stats.activeSubjects %></div>
+                  <span class="text-muted">Aktivna predmeta</span>
+                </div>
+                <div class="col-4">
+                  <div class="stat-number display-4 fw-bold text-primary"><%= stats.totalLessons %>+</div>
+                  <span class="text-muted">Lekcija</span>
+                </div>
+                <div class="col-4">
+                  <div class="stat-number display-4 fw-bold text-primary"><%= stats.openAccess %>%</div>
+                  <span class="text-muted">Otvoren pristup</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJEKAT (detaljne informacije) -->
+  <section class="home-project py-5">
+    <div class="container">
+      <h2 class="section-title display-5 fw-bold text-center mb-5"><%= projectInfo.title %></h2>
+
+      <div class="row g-4">
+        <!-- O projektu -->
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="h4 fw-semibold mb-3"><%= projectInfo.about.title %></h3>
+              <p><%= projectInfo.about.text %></p>
+              <ul class="list-group list-group-flush">
+                <% projectInfo.about.goals.forEach(goal => { %>
+                  <li class="list-group-item bg-transparent ps-0"><%= goal %></li>
+                <% }) %>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pedagoška ideja -->
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="h4 fw-semibold mb-3"><%= projectInfo.pedagogy.title %></h3>
+              <ul class="list-group list-group-flush">
+                <% projectInfo.pedagogy.points.forEach(point => { %>
+                  <li class="list-group-item bg-transparent ps-0"><%= point %></li>
+                <% }) %>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Funkcionalnosti -->
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="h4 fw-semibold mb-3"><%= projectInfo.functionality.title %></h3>
+              <ul class="list-group list-group-flush">
+                <% projectInfo.functionality.items.forEach(item => { %>
+                  <li class="list-group-item bg-transparent ps-0"><%= item %></li>
+                <% }) %>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tehnološki okvir -->
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="h4 fw-semibold mb-3"><%= projectInfo.tech.title %></h3>
+              <ul class="list-group list-group-flush">
+                <% projectInfo.tech.items.forEach(item => { %>
+                  <li class="list-group-item bg-transparent ps-0"><%= item %></li>
+                <% }) %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cilj i napomena -->
+      <div class="row mt-5">
+        <div class="col-lg-8 mx-auto">
+          <div class="alert alert-info text-center mb-3">
+            <p class="mb-0"><%= projectInfo.goal %></p>
+          </div>
+          <div class="alert alert-warning text-center">
+            ⚠️ <%= projectInfo.note %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREDMETI (kartice) -->
+  <section id="predmeti" class="home-subjects py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title display-5 fw-bold text-center mb-5">Naši predmeti</h2>
+      <div class="row g-4">
+        <% subjects.forEach(subject => { %>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm text-center">
+              <div class="card-body">
+                <div class="subject-icon display-1 mb-3"><%= subject.icon || "📘" %></div>
+                <h3 class="h5 fw-semibold"><%= subject.name %></h3>
+                <p class="text-muted"><%= subject.description || "Opis predmeta uskoro." %></p>
+                <div class="d-flex justify-content-center gap-3 mb-3 text-muted small">
+                  <span><%= subject.weeks %> nedelja</span>
+                  <span><%= subject.espb %> ESPB</span>
+                </div>
+                <a href="/<%= subject.slug %>" class="btn btn-outline-primary">Istraži predmet →</a>
+              </div>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <!-- DODATNI MATERIJALI (kartica sa preporukama) -->
+  <div class="container my-5">
+    <div class="card shadow-sm border-0">
+      <div class="card-header bg-white border-0 pt-4">
+        <h2 class="h3 fw-bold mb-0">📚 Dodatni materijali</h2>
+      </div>
+      <div class="card-body">
+        <div class="alert alert-light d-flex align-items-center gap-2 mb-3">
+          <span class="fs-3">💡</span>
+          <span><strong>Ovo je moje lično viđenje</strong> – put kojim bih ja krenuo da sada počinjem.</span>
+        </div>
+        <p class="mb-3">
+          Svi materijali su javno dostupni na internetu. Nisam povezan ni sa jednim od ovih resursa niti
+          imam ikakvu finansijsku korist.
+        </p>
+        <div class="row g-2 mb-4">
+          <div class="col-md-6">
+            <div class="border rounded p-2">🔗 <strong>w3schools</strong> – HTML/CSS/JS baza</div>
+          </div>
+          <div class="col-md-6">
+            <div class="border rounded p-2">📘 <strong>Eloquent JavaScript</strong> – besplatna knjiga online</div>
+          </div>
+          <div class="col-md-6">
+            <div class="border rounded p-2">🎓 <strong>Udemy (Maximilian Schwarzmüller)</strong> – kursevi koje sam lično koristio</div>
+          </div>
+          <div class="col-md-6">
+            <div class="border rounded p-2">🤖 <strong>AI alati (ChatGPT, DeepSeek)</strong> – za učenje i istraživanje</div>
+          </div>
+          <div class="col-12">
+            <div class="border rounded p-2">📄 <strong>Oficijalna dokumentacija</strong> – uvek primarni izvor</div>
+          </div>
+        </div>
+        <div class="text-center">
+          <a href="/dodatni-materijali" class="btn btn-primary btn-lg w-100 mb-3">Pogledaj kompletan vodič →</a>
+          <div class="small text-muted">
+            ⚠️ Bez afilijacija – sve preporuke su isključivo iz ličnog iskustva.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<%- include('../includes/end') %>

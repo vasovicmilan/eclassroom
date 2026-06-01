@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title><%= typeof title !== 'undefined' ? title + ' | ' : '' %>EUCIONICA</title>
+
+    <!-- Description & Keywords -->
+    <% if (typeof pageDescription !== 'undefined' && pageDescription) { %>
+        <meta name="description" content="<%= pageDescription %>">
+    <% } %>
+    <% if (typeof pageKeywords !== 'undefined' && pageKeywords) { %>
+        <meta name="keywords" content="<%= pageKeywords %>">
+    <% } %>
+
+    <!-- Favicons -->
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS (lokalno) -->
+    <link rel="stylesheet" href="/bootstrap-css/bootstrap.min.css">
+
+    <!-- Custom CSS (sada bez /public) -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Page-specific CSS -->
+    <% if (typeof pageStyles !== 'undefined' && pageStyles) { %>
+        <% if (typeof pageStyles === 'string') { %>
+            <link rel="stylesheet" href="/css/<%= pageStyles %>">
+        <% } else if (Array.isArray(pageStyles)) { %>
+            <% pageStyles.forEach(function(style) { %>
+                <link rel="stylesheet" href="/css/<%= style %>">
+            <% }); %>
+        <% } %>
+    <% } %>
+</head>
+<body>

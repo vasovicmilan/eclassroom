@@ -1,0 +1,589 @@
+<%- include('../includes/head', { 
+    title: meta.title || 'Dodatni materijali', 
+    pageDescription: meta.description || 'Lični vodič kroz resurse za samoedukaciju', 
+    pageStyles: 'pages/extra-materials.css',
+    pageKeywords: meta.keywords || 'programiranje, učenje, resursi'
+}) %>
+
+<%- include('../includes/navigation', { active: '' }) %>
+
+<main class="container py-4">
+
+    <!-- HERO / DISCLAIMER -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-10">
+            <div class="card border-0 bg-light shadow-sm">
+                <div class="card-body text-center p-4 p-md-5">
+                    <h1 class="display-5 fw-bold mb-3">📚 Dodatni materijali</h1>
+                    <div class="alert alert-warning mb-3" role="alert">
+                        <strong>⚠️ Važna napomena</strong>
+                        <p class="mb-0 mt-2"><%= disclaimer.message %> <strong><%= disclaimer.noAffiliate %></strong></p>
+                    </div>
+                    <div class="alert alert-info" role="alert">
+                        💡 <strong><%= disclaimer.tip.split(':')[0] %>:</strong> <%= disclaimer.tip.split(':')[1] || disclaimer.tip %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HRONOLOŠKI RASPORED (Timeline) -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0">🗓️ Hronološki raspored učenja (Full Stack i game dev)</h2>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted">Ovo je redosled kojim bih ja išao – od apsolutne nule do profesionalne spreme. Apsolutno nije neophodno uzimati ove ili bilo koje kurseve, postoji gomila besplatno dostupnog sadržaja!</p>
+                    <div class="row g-4">
+                        <% timeline.forEach(phase => { %>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-header bg-light">
+                                        <span class="badge bg-secondary me-2"><%= phase.phase %>️⃣</span>
+                                        <h3 class="h5 d-inline-block mb-0"><%= phase.title %></h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <% phase.items.forEach(item => { %>
+                                                <li class="list-group-item bg-transparent px-0">
+                                                    <strong><%= item.name %></strong><br>
+                                                    <% if (item.link) { %>
+                                                        <a href="<%= item.link %>" target="_blank" rel="noopener" class="small"><%= item.description %></a>
+                                                    <% } else { %>
+                                                        <span class="small text-muted"><%= item.description %></span>
+                                                    <% } %>
+                                                </li>
+                                            <% }) %>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RAZLIČITI PRAVCI U IT -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0">🧭 <%= careerPaths.title %></h2>
+                </div>
+                <div class="card-body">
+                    <p class="lead"><%= careerPaths.intro %></p>
+                    <div class="row g-4">
+                        <% careerPaths.paths.forEach(path => { %>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="display-1 text-center mb-3"><%= path.icon %></div>
+                                        <h3 class="h5 text-center mb-3"><%= path.title %></h3>
+                                        <% path.content.forEach(line => { %>
+                                            <p class="small mb-1"><%= line %></p>
+                                        <% }) %>
+                                        <div class="alert alert-secondary mt-2 mb-0 p-2 small">💡 <%= path.tip %></div>
+                                    </div>
+                                </div>
+                            </div>
+                        <% }) %>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <h3 class="h5">📌 Kako da izabereš?</h3>
+                                    <ul class="row">
+                                        <% careerPaths.summary.forEach(item => { %>
+                                            <li class="col-md-6">🔹 <%= item %></li>
+                                        <% }) %>
+                                    </ul>
+                                    <p class="mt-2 fw-bold">🎯 <%= careerPaths.conclusion %></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PARALELA: WEB vs DESKTOP vs MOBILE vs GAMING -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0"><%= platformParallel.title %></h2>
+                </div>
+                <div class="card-body overflow-auto">
+                    <p class="text-muted"><%= platformParallel.intro %></p>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Koncept</th>
+                                    <th>🌐 Web</th>
+                                    <th>🖥️ Desktop</th>
+                                    <th>📱 Mobile</th>
+                                    <th>🎮 Gaming</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% platformParallel.concepts.forEach(concept => { %>
+                                    <tr>
+                                        <td><%= concept.concept %></td>
+                                        <td><%= concept.web %></td>
+                                        <td><%= concept.desktop %></td>
+                                        <td><%= concept.mobile %></td>
+                                        <td><%= concept.gaming %></td>
+                                    </tr>
+                                <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="alert alert-secondary mt-3 mb-0"><%= platformParallel.conclusion %></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROGRAMSKI JEZICI -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0">💻 Programski jezici</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <% programmingLanguages.forEach(lang => { %>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="border rounded p-3 text-center h-100">
+                                    <strong><%= lang.name %></strong><br>
+                                    <small class="text-muted"><%= lang.description %></small>
+                                </div>
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BAZE PODATAKA -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0">🗄️ Baze podataka</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 bg-light">
+                                <div class="card-body">
+                                    <h3 class="h5">SQL (relacione)</h3>
+                                    <ul class="list-unstyled">
+                                        <% databases.sql.forEach(db => { %>
+                                            <li class="mb-2">
+                                                <strong><%= db.name %></strong><br>
+                                                <% if (db.link) { %>
+                                                    <a href="<%= db.link %>" target="_blank" class="small"><%= db.description %></a>
+                                                <% } else { %>
+                                                    <span class="small text-muted"><%= db.description %></span>
+                                                <% } %>
+                                            </li>
+                                        <% }) %>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 bg-light">
+                                <div class="card-body">
+                                    <h3 class="h5">NoSQL</h3>
+                                    <ul class="list-unstyled">
+                                        <% databases.nosql.forEach(db => { %>
+                                            <li class="mb-2"><strong><%= db.name %></strong><br><span class="small text-muted"><%= db.description %></span></li>
+                                        <% }) %>
+                                        <li class="mt-3"><strong>Savet:</strong> <%= databases.advice %></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FRAMEWORKS & BIBLIOTEKE -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0">⚛️ Frameworks & biblioteke</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <% frameworks.forEach(fw => { %>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="border rounded p-3 h-100">
+                                    <strong><%= fw.name %></strong><br>
+                                    <% if (fw.link) { %>
+                                        <a href="<%= fw.link %>" target="_blank" class="small"><%= fw.description %></a>
+                                    <% } else { %>
+                                        <span class="small text-muted"><%= fw.description %></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        <% }) %>
+                    </div>
+                    <div class="alert alert-info mt-3 mb-0">📌 <strong>Savet:</strong> <%= frameworkAdvice %></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HOSTING PLATFORME -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0">☁️ Hosting platforme (free / jeftino)</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <% hostingPlatforms.forEach(host => { %>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <a href="<%= host.url %>" target="_blank" rel="noopener" class="text-decoration-none">
+                                    <div class="card h-100 border-0 shadow-sm text-center p-3">
+                                        <strong><%= host.name %></strong>
+                                        <small class="text-muted"><%= host.description %></small>
+                                    </div>
+                                </a>
+                            </div>
+                        <% }) %>
+                    </div>
+                    <div class="alert alert-success mt-3 mb-0">💡 <strong>Savet:</strong> <%= hostingAdvice %></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GAME DEV ALATI -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0">🎮 Game development alati</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <% gameDevTools.forEach(tool => { %>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <a href="<%= tool.url %>" target="_blank" class="text-decoration-none">
+                                    <div class="card h-100 border-0 shadow-sm text-center p-3">
+                                        <strong><%= tool.name %></strong>
+                                        <small class="text-muted"><%= tool.description %></small>
+                                    </div>
+                                </a>
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WEB ALATI -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0">🛠️ Web development alati</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <% webTools.forEach(tool => { %>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <a href="<%= tool.url %>" target="_blank" class="text-decoration-none">
+                                    <div class="card h-100 border-0 shadow-sm text-center p-3">
+                                        <strong><%= tool.name %></strong>
+                                        <small class="text-muted"><%= tool.description %></small>
+                                    </div>
+                                </a>
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PLATFORME ZA UČENJE -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0">🎓 Platforme za učenje</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <% learningPlatforms.forEach(platform => { %>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <a href="<%= platform.url %>" target="_blank" class="text-decoration-none">
+                                    <div class="card h-100 border-0 shadow-sm text-center p-3">
+                                        <strong><%= platform.name %></strong>
+                                        <small class="text-muted"><%= platform.description %></small>
+                                    </div>
+                                </a>
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- UDEMY KURSEVI -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0">📹 Udemy kursevi koje sam kupio i koristio</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <% udemyCourses.forEach(course => { %>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="border rounded p-3 h-100">
+                                    <a href="<%= course.url %>" target="_blank" class="fw-bold text-decoration-none"><%= course.name %></a>
+                                </div>
+                            </div>
+                        <% }) %>
+                    </div>
+                    <div class="alert alert-secondary mt-3">
+                        📌 <strong>Instructor:</strong> 
+                        <a href="<%= udemyInstructor.url %>" target="_blank"><%= udemyInstructor.name %></a> – 
+                        <%= udemyInstructor.note %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- KNJIGE -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0">📖 Knjige koje menjaju perspektivu</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <% books.forEach(book => { %>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="border rounded p-3 h-100">
+                                    <strong><%= book.title %></strong><br>
+                                    <span class="small text-muted"><%= book.author %></span><br>
+                                    <small><%= book.description %></small>
+                                </div>
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- YOUTUBE KANALI -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0">🎬 YouTube kanali koje pratim</h2>
+                </div>
+                <div class="card-body">
+                    <div class="mb-4">
+                        <h3 class="h5">🌐 Web razvoj / Programiranje (generalno)</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <% youtubeChannels.webDev.forEach(ch => { %>
+                                <a href="<%= ch.url %>" target="_blank" class="btn btn-outline-secondary btn-sm"><%= ch.name %></a>
+                            <% }) %>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="h5">⚛️ Frontend specifično (Angular, React, CSS, dizajn)</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <% youtubeChannels.frontend.forEach(ch => { %>
+                                <a href="<%= ch.url %>" target="_blank" class="btn btn-outline-secondary btn-sm"><%= ch.name %></a>
+                            <% }) %>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="h5">🛠️ Alati, builderi, WordPress</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <% youtubeChannels.tools.forEach(ch => { %>
+                                <a href="<%= ch.url %>" target="_blank" class="btn btn-outline-secondary btn-sm"><%= ch.name %></a>
+                            <% }) %>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="h5">🔧 DevOps / Infrastruktura / Embedded</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <% youtubeChannels.devops.forEach(ch => { %>
+                                <a href="<%= ch.url %>" target="_blank" class="btn btn-outline-secondary btn-sm"><%= ch.name %></a>
+                            <% }) %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- W3SCHOOLS -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0">🔗 W3Schools</h2>
+                </div>
+                <div class="card-body">
+                    <p><a href="<%= w3schools.url %>" target="_blank"><%= w3schools.url %></a> – <%= w3schools.description %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI ALATI -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0">🤖 AI alati</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <% aiTools.forEach(ai => { %>
+                            <div class="col-sm-4">
+                                <div class="border rounded p-3 text-center">
+                                    <strong><%= ai.name %></strong><br>
+                                    <small class="text-muted"><%= ai.description %></small>
+                                </div>
+                            </div>
+                        <% }) %>
+                    </div>
+                    <div class="alert alert-warning mt-3 mb-0">💡 <strong><%= aiAdvice %></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- OFICIJALNA DOKUMENTACIJA -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0">📄 Oficijalna dokumentacija</h2>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex flex-wrap gap-2">
+                        <% officialDocs.forEach(doc => { %>
+                            <a href="<%= doc.url %>" target="_blank" class="btn btn-outline-primary btn-sm"><%= doc.name %></a>
+                        <% }) %>
+                    </div>
+                    <div class="alert alert-danger mt-3 mb-0">⚡ <strong><%= docsAdvice %></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DRAG-AND-DROP & CMS -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0">🧩 Drag-and-drop & CMS</h2>
+                </div>
+                <div class="card-body">
+                    <p><%= buildersNote %></p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <% builders.forEach(builder => { %>
+                            <span class="badge bg-secondary fs-6 p-2"><%= builder.name %></span>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GOOGLE ALATI -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0">📂 Google alati</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <% googleTools.forEach(tool => { %>
+                            <div class="col-sm-4">
+                                <div class="border rounded p-3 text-center">
+                                    <strong><%= tool.name %></strong><br>
+                                    <small class="text-muted"><%= tool.description %></small>
+                                </div>
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ZAVRŠNI SAVETI -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0">🎯 Završni saveti</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="border rounded bg-success bg-opacity-10 p-3">
+                                <h3 class="h6 text-success">✅ Dobri saveti</h3>
+                                <ul class="mb-0">
+                                    <% finalTips.good.forEach(tip => { %>
+                                        <li><%= tip %></li>
+                                    <% }) %>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="border rounded bg-danger bg-opacity-10 p-3">
+                                <h3 class="h6 text-danger">⚠️ Upozorenja</h3>
+                                <ul class="mb-0">
+                                    <% finalTips.warnings.forEach(tip => { %>
+                                        <li><%= tip %></li>
+                                    <% }) %>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POVRATAK NA POČETNU -->
+    <div class="text-center mb-4">
+        <a href="/" class="btn btn-primary btn-lg">← Nazad na početnu</a>
+    </div>
+</main>
+
+<%- include('../includes/end') %>

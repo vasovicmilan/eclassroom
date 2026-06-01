@@ -1,0 +1,313 @@
+<%- include('../includes/head', { title: lection.title, pageDescription: lection.description, pageStyles: 'pages/lection.css' }) %>
+<link rel="stylesheet" href="/css/lightbox.css">
+<%- include('../includes/navigation', { active: subjectSlug || lection.subjectSlug }) %>
+
+<div class="container py-4">
+  <div class="row g-4">
+    <aside class="col-lg-3 col-md-4">
+      <%- include('../includes/components/lection-navigation', { lections: lections, currentSlug: lection.slug, subjectSlug: subjectSlug || lection.subjectSlug }) %>
+    </aside>
+
+    <main class="col-lg-9 col-md-8">
+      <% if (!lection.available) { %>
+        <div class="card text-center border-warning">
+          <div class="card-body py-5">
+            <div class="display-1 mb-3">🔒</div>
+            <h2 class="card-title">Lekcija još nije dostupna</h2>
+            <p class="card-text">Ova lekcija postaje dostupna <strong><%= lection.formattedDate %></strong>.</p>
+            <p class="card-text">Jedna lekcija se otključava svake nedelje.</p>
+            <a href="/<%= subjectSlug || lection.subjectSlug %>" class="btn btn-primary btn-lg">Nazad na predmet</a>
+          </div>
+        </div>
+      <% } else { %>
+        <article>
+          <div class="mb-4">
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="badge bg-secondary">📅 Nedelja <%= lection.week %></span>
+              <span class="badge bg-secondary">📌 <%= lection.formattedDate %></span>
+            </div>
+            <h1 class="display-6 fw-bold mb-3"><%= lection.title %></h1>
+            <% if (lection.description) { %><p class="lead"><%- lection.description %></p><% } %>
+            <div class="alert alert-warning">⚠️ Ovo je kratak pregled lekcije, nije zamena za prezentacije!</div>
+          </div>
+
+          <div class="lection-content">
+            <% if (lection.content && lection.content.sections) { %>
+              <% lection.content.sections.forEach(section => { %>
+
+                <% if (section.type === 'note') { %>
+                  <div class="alert alert-info"><%- section.text %></div>
+
+                <% } else if (section.type === 'text') { %>
+                  <section class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <div>
+                      <% if (section.paragraphs) { section.paragraphs.forEach(p => { %><p><%- p %></p><% }) } %>
+                      <% if (section.highlight) { %><div class="alert alert-primary"><%- section.highlight %></div><% } %>
+                      <% if (section.listItems) { %><ul class="list-group list-group-flush mb-3"><% section.listItems.forEach(item => { %><li class="list-group-item bg-transparent"><%- item %></li><% }) %></ul><% } %>
+                      <% if (section.closing) { %><p><%- section.closing %></p><% } %>
+                    </div>
+                  </section>
+
+                <% } else if (section.type === 'grid' || section.type === 'tech-grid') { %>
+                  <section class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <div class="row g-3"><% (section.items || []).forEach(item => { %>
+                      <div class="col-sm-6 col-md-4 col-lg-3"><div class="card h-100 text-center"><div class="card-body"><div class="fs-1"><%= item.icon || '📦' %></div><strong><%- item.name || item.title %></strong><span class="small d-block"><%- item.description %></span></div></div></div>
+                    <% }) %></div>
+                  </section>
+
+                <% } else if (section.type === 'icon-list') { %>
+                  <section class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <div class="list-group"><% section.items.forEach(item => { %><div class="list-group-item d-flex gap-3 align-items-center"><span class="fs-3"><%= item.icon %></span><span><%- item.text %></span></div><% }) %></div>
+                  </section>
+
+                <% } else if (section.type === 'ordered-list') { %>
+                  <section class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <ol class="list-group list-group-numbered"><% section.items.forEach(item => { %><li class="list-group-item"><%- item %></li><% }) %></ol>
+                    <% if (section.note) { %><div class="alert alert-secondary mt-2"><%- section.note %></div><% } %>
+                  </section>
+
+                <% } else if (section.type === 'list') { %>
+                  <section class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <% if (section.items && section.items.length) { %>
+                      <ul class="list-group"><% section.items.forEach(item => { %><li class="list-group-item"><%- item %></li><% }) %></ul>
+                    <% } else if (section.subsections && section.subsections.length) { %>
+                      <% section.subsections.forEach(sub => { %>
+                        <div class="mb-3">
+                          <h3 class="h5"><%= sub.title %></h3>
+                          <ul class="list-group"><% sub.items.forEach(item => { %><li class="list-group-item"><%- item %></li><% }) %></ul>
+                        </div>
+                      <% }) %>
+                    <% } %>
+                    <% if (section.intro) { %><p><%= section.intro %></p><% } %>
+                  </section>
+
+                <% } else if (section.type === 'two-columns') { %>
+                  <section class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <div class="row"><div class="col-md-6"><h3 class="h5"><%= section.left.title %></h3><ul><% section.left.items.forEach(item => { %><li><%- item %></li><% }) %></ul></div><div class="col-md-6"><h3 class="h5"><%= section.right.title %></h3><ul><% section.right.items.forEach(item => { %><li><%- item %></li><% }) %></ul></div></div>
+                    <% if (section.note) { %><div class="alert alert-info mt-2"><%- section.note %></div><% } %>
+                  </section>
+
+                <% } else if (section.type === 'comparison-grid') { %>
+                  <section class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <% if (section.items && section.items.length === 2) { %>
+                      <div class="row g-3">
+                        <div class="col-md-6"><div class="card h-100 bg-light"><div class="card-body"><h3 class="h5"><%= section.items[0].title %></h3><p><%- section.items[0].description %></p></div></div></div>
+                        <div class="col-md-6"><div class="card h-100 bg-light"><div class="card-body"><h3 class="h5"><%= section.items[1].title %></h3><p><%- section.items[1].description %></p></div></div></div>
+                      </div>
+                    <% } else if (section.left && section.right) { %>
+                      <div class="row g-3">
+                        <div class="col-md-6"><div class="card h-100 bg-light"><div class="card-body"><h3 class="h5"><%= section.left.title %></h3><p><%- section.left.description %></p></div></div></div>
+                        <div class="col-md-6"><div class="card h-100 bg-light"><div class="card-body"><h3 class="h5"><%= section.right.title %></h3><p><%- section.right.description %></p></div></div></div>
+                      </div>
+                    <% } %>
+                    <% if (section.note) { %><div class="alert alert-secondary mt-2"><%- section.note %></div><% } %>
+                  </section>
+
+                <% } else if (section.type === 'table') { %>
+                  <section class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <div class="table-responsive"><table class="table table-bordered"><thead class="table-light"><tr><% section.headers.forEach(h => { %><th><%= h %></th><% }) %></tr></thead><tbody><% section.rows.forEach(row => { %><tr><% row.forEach(cell => { %><td><%- cell %></td><% }) %></tr><% }) %></tbody></table></div>
+                  </section>
+
+                <% } else if (section.type === 'tables-group') { %>
+                  <section class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <% (section.subsections || []).forEach(sub => { %><div class="mb-4"><h3 class="h5 mb-3"><%= sub.title %></h3><div class="table-responsive"><table class="table table-bordered"><thead class="table-light"><tr><% (sub.headers || []).forEach(h => { %><th><%= h %></th><% }) %></tr></thead><tbody><% (sub.rows || []).forEach(row => { %><tr><% row.forEach(cell => { %><td><%- cell %></td><% }) %></tr><% }) %></tbody></table></div></div><% }) %>
+                  </section>
+
+                <% } else if (section.type === 'cheat-sheet') { %>
+                  <section class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <div class="accordion" id="cheatSheetAccordion"><% section.categories.forEach((cat, idx) => { %><div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button <%= idx !== 0 ? 'collapsed' : '' %>" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= idx %>"><%= cat.name %></button></h2><div id="collapse<%= idx %>" class="accordion-collapse collapse <%= idx === 0 ? 'show' : '' %>" data-bs-parent="#cheatSheetAccordion"><div class="accordion-body"><ul class="list-group list-group-flush"><% cat.commands.forEach(cmd => { %><li class="list-group-item"><code><%= cmd.cmd %></code> – <%- cmd.desc %><% if (cmd.examples) { %><br><small class="text-muted"><%- cmd.examples.join(', ') %></small><% } %></li><% }) %></ul></div></div></div><% }) %></div>
+                    <% if (section.shortcuts) { %><div class="mt-3"><strong>Prečice:</strong> <%= section.shortcuts.join(', ') %></div><% } %>
+                  </section>
+
+                <% } else if (section.type === 'code-block') { %>
+                  <section class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <pre class="bg-dark text-white p-3 rounded"><code><%= section.content %></code></pre>
+                    <% if (section.description) { %><p class="small text-muted"><%- section.description %></p><% } %>
+                  </section>
+
+                <% } else if (section.type === 'video') { %>
+                  <section class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <div class="ratio ratio-16x9"><video controls src="<%= section.videoPath %>"></video></div>
+                    <p><%- section.note %></p>
+                  </section>
+
+                <% } else if (section.type === 'video-list') { %>
+                  <section class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <ul class="list-group"><% section.videos.forEach(v => { %><li class="list-group-item"><a href="<%= v.url %>" target="_blank" rel="noopener"><%= v.title %></a></li><% }) %></ul>
+                  </section>
+
+                <% } else if (section.type === 'info-box') { %>
+                  <div class="alert alert-info">
+                    <%- section.content ? section.content.join('') : section.text %>
+                    <% if (section.note) { %><div class="small mt-2"><%- section.note %></div><% } %>
+                  </div>
+
+                <% } else if (section.type === 'divider') { %>
+                  <hr class="my-4">
+
+                <% } else if (section.type === 'image-gallery') { %>
+                  <section class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <div class="row g-3"><% section.images.forEach(img => { %><div class="col-md-6"><div class="card"><img src="<%= img.src %>" class="card-img-top" alt="<%= img.caption %>"><div class="card-body"><p class="card-text"><%= img.caption %></p></div></div></div><% }) %></div>
+                  </section>
+
+                <% } else if (section.type === 'image-with-text') { %>
+                  <section class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <div class="row"><div class="col-md-6"><% (section.images || []).forEach(img => { %><img src="<%= img.src %>" class="img-fluid rounded" alt="<%= img.caption %>"><% }) %></div><div class="col-md-6"><% if (section.paragraphs) { section.paragraphs.forEach(p => { %><p><%- p %></p><% }) } %><% if (section.listItems) { %><ul><% section.listItems.forEach(item => { %><li><%- item %></li><% }) %></ul><% } %></div></div>
+                  </section>
+
+                <% } else if (section.type === 'text-with-headers') { %>
+                  <section class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <% (section.sections || []).forEach(sub => { %>
+                      <h3 class="h5 mt-3"><%= sub.title %></h3>
+                      <p><%- sub.content %></p>
+                      <% if (sub.advantages) { %><div class="alert alert-success"><%- sub.advantages %></div><% } %>
+                      <% if (sub.disadvantages) { %><div class="alert alert-warning"><%- sub.disadvantages %></div><% } %>
+                      <% if (sub.example) { %><div class="alert alert-secondary"><%- sub.example %></div><% } %>
+                      <% if (sub.comparison) { %><div class="row"><div class="col-md-6"><h4>HTTP</h4><ul><% sub.comparison.HTTP.forEach(line => { %><li><%- line %></li><% }) %></ul></div><div class="col-md-6"><h4>MQTT</h4><ul><% sub.comparison.MQTT.forEach(line => { %><li><%- line %></li><% }) %></ul></div></div><% } %>
+                      <% if (sub.codeBlock) { %><pre class="bg-dark text-white p-2 rounded"><code><%= sub.codeBlock %></code></pre><% } %>
+                    <% }) %>
+                    <% if (section.note) { %><div class="alert alert-info mt-2"><%- section.note %></div><% } %>
+                  </section>
+
+                <% } else if (section.type === 'distributions-list') { %>
+                  <section class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <% section.distributions.forEach(dist => { %><div class="card mb-3"><div class="card-body"><h3 class="h5"><%= dist.name %></h3><p><%- dist.description %></p><a href="<%= dist.downloadUrl %>" target="_blank" class="btn btn-sm btn-primary">Preuzmi</a></div></div><% }) %>
+                  </section>
+
+                <% } else if (section.type === 'download-link') { %>
+                  <div class="mb-3"><a href="<%= section.url %>" target="_blank" class="btn btn-primary"><%= section.urlText || section.title %></a><p class="small text-muted"><%- section.description %></p></div>
+
+                <% } else if (section.type === 'role-tags') { %>
+                  <section class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <p><%- section.description %></p>
+                    <div class="d-flex flex-wrap gap-2 mb-3"><% section.roles.forEach(role => { %><span class="badge bg-secondary fs-6 p-2"><%= role %></span><% }) %></div>
+                    <p><%- section.extra %></p>
+                  </section>
+
+                <% } else if (section.type === 'practical-exercise') { %>
+                  <section class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <p><%- section.description %></p>
+                    <% (section.steps || []).forEach(step => { %><div class="card mb-2"><div class="card-header"><%= step.title %></div><div class="card-body"><% if (step.commands) { %><pre class="bg-light p-2 rounded"><code><%= step.commands.join('\n') %></code></pre><% } %><% if (step.content) { %><p><%- step.content %></p><% } %><% if (step.note) { %><div class="alert alert-info"><%- step.note %></div><% } %></div></div><% }) %>
+                    <% if (section.additionalTasks) { %><h3>Dodatni zadaci</h3><% section.additionalTasks.forEach(task => { %><div class="card mb-2"><div class="card-header"><%= task.title %></div><div class="card-body"><% if (task.description) { %><p><%- task.description %></p><% } %><% if (task.items) { %><ul><% task.items.forEach(i => { %><li><%- i %></li><% }) %></ul><% } %><% if (task.commands) { %><pre class="bg-light p-2 rounded"><code><%= task.commands.join('\n') %></code></pre><% } %></div></div><% }) %><% } %>
+                  </section>
+
+                <% } else if (section.type === 'code-details') { %>
+                  <section class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <details><summary><%= section.summaryLabel || 'Prikaži kod' %></summary><pre class="bg-dark text-white p-3 rounded mt-2"><code><%= section.code %></code></pre></details>
+                    <% if (section.note) { %><div class="alert alert-warning mt-2"><%- section.note %></div><% } %>
+                  </section>
+
+                <% } else if (section.type === 'detailed') { %>
+                  <div class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <% (section.sections || []).forEach(subsection => { %>
+                      <% if (subsection.type === 'text') { %>
+                        <div><% if (subsection.paragraphs) { subsection.paragraphs.forEach(p => { %><p><%- p %></p><% }) } %><% if (subsection.highlight) { %><div class="alert alert-primary"><%- subsection.highlight %></div><% } %></div>
+                      <% } else if (subsection.type === 'icon-list') { %>
+                        <div class="list-group mt-2 mb-2"><% subsection.items.forEach(item => { %><div class="list-group-item d-flex gap-3 align-items-center"><span class="fs-3"><%= item.icon %></span><span><%- item.text %></span></div><% }) %></div>
+                      <% } else if (subsection.type === 'ordered-list') { %>
+                        <ol class="list-group list-group-numbered mt-2 mb-2"><% subsection.items.forEach(item => { %><li class="list-group-item"><%- item %></li><% }) %></ol>
+                      <% } else if (subsection.type === 'list') { %>
+                        <ul class="list-group mt-2 mb-2"><% subsection.items.forEach(item => { %><li class="list-group-item"><%- item %></li><% }) %></ul>
+                      <% } else if (subsection.type === 'code-block') { %>
+                        <pre class="bg-dark text-white p-2 rounded mt-2 mb-2"><code><%= subsection.content %></code></pre>
+                      <% } else if (subsection.type === 'download-link') { %>
+                        <div class="mb-2"><a href="<%= subsection.url %>" target="_blank" class="btn btn-primary"><%= subsection.urlText || subsection.title %></a><p class="small text-muted"><%- subsection.description %></p></div>
+                      <% } else { %>
+                        <div class="alert alert-secondary">Nepoznat tip podsekcije: <strong><%= subsection.type %></strong></div>
+                      <% } %>
+                    <% }) %>
+                  </div>
+
+                <% } else if (section.type === 'custom') { %>
+                  <div class="mb-4">
+                    <% if (section.title) { %><h2 class="h3 mb-3"><%= section.title %></h2><% } %>
+                    <%- section.html %>
+                  </div>
+
+                <% } else if (section.type === 'dashboard') { %>
+                  <section class="mb-4">
+                    <h2 class="h3 mb-3"><%= section.title %></h2>
+                    <p><%- section.description %></p>
+                    <div id="<%= section.config.containerId %>" class="table-responsive">
+                      <table class="table table-bordered" id="<%= section.config.tableId %>">
+                        <thead class="table-dark"><tr><th>Vreme</th><th>Uređaj</th><th>Temperatura (°C)</th><th>Vlažnost (%)</th><th>Pritisak (hPa)</th><th>Vlaga zemlje (%)</th><th>Kiša (%)</th><th>Svetlost (%)</th></tr></thead>
+                        <tbody id="<%= section.config.tableBodyId %>"><tr><td colspan="8">Učitavanje...<\/td></tr></tbody>
+                      </table>
+                    </div>
+                    <div class="alert alert-info"><%- section.config.note || section.note %></div>
+                  </section>
+
+                <% } else if (section.type === 'http-explorer') { %>
+                  <section class="mb-4">
+                    <h2 class="h3 mb-3"><%= section.title %></h2>
+                    <p><%- section.description %></p>
+                    <div class="card p-3 mb-3">
+                      <form id="<%= section.config.form.formId || 'httpForm' %>" action="javascript:void(0);">
+                        <div class="mb-3"><label class="form-label">Izaberi endpoint:</label><div><% (section.config.form.endpoints || []).forEach(ep => { %><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="endpoint" value="<%= ep.value %>" id="<%= ep.id %>Radio" <%= ep.default ? 'checked' : '' %>><label class="form-check-label" for="<%= ep.id %>Radio"><span class="badge bg-<%= ep.badge %>"><%= ep.label %></span></label></div><% }) %></div></div>
+                        <div class="mb-3"><label class="form-label">URL:</label><input type="text" id="customUrl" class="form-control" value="<%= section.config.form.defaultUrl %>"></div>
+                        <button type="submit" class="btn btn-primary">Pošalji zahtev ➡️</button>
+                      </form>
+                      <div id="<%= section.config.form.statusContainerId %>" class="mt-3"></div>
+                      <pre id="<%= section.config.form.responseContainerId %>" class="bg-light p-2 mt-2 border rounded">Čekam tvoj zahtev...</pre>
+                      <div id="<%= section.config.form.handshakeContainerId %>" class="d-none mt-3"></div>
+                    </div>
+                    <% if (section.config.curlExamples) { %><div class="row g-3 mt-2"><div class="col-md-6"><div class="card"><div class="card-header">📡 HTTP Request (curl)</div><div class="card-body"><pre class="mb-0"><code><%= section.config.curlExamples.http.textCode %></code></pre></div></div></div><div class="col-md-6"><div class="card"><div class="card-header">🔒 HTTPS Request (curl)</div><div class="card-body"><pre class="mb-0"><code><%= section.config.curlExamples.https.textCode %></code></pre></div></div></div></div><% } %>
+                    <% if (section.config.handshakeExplanation) { %><div class="card mt-3"><div class="card-header"><%= section.config.handshakeExplanation.title %></div><div class="card-body"><ol><% section.config.handshakeExplanation.steps.forEach(step => { %><li><%- step %></li><% }) %></ol></div></div><% } %>
+                    <div class="alert alert-info mt-3"><%- section.config.note || section.note %></div>
+                  </section>
+
+                <% } else if (section.type === 'interactive-api-examples') { %>
+                  <section class="mb-4">
+                    <h2 class="h3 mb-3"><%= section.title %></h2>
+                    <p><%- section.description %></p>
+                    <div class="mb-3"><label class="form-label">Izaberi tip odgovora:</label><select id="<%= section.config.selector.id %>" class="form-select"><% section.config.selector.options.forEach(opt => { %><option value="<%= opt.value %>"><%= opt.label %></option><% }) %></select></div>
+                    <button id="<%= section.config.selector.buttonId %>" class="btn btn-primary mb-3">Prikaži u iframe-u 🚀</button>
+                    <div class="ratio ratio-16x9"><iframe id="<%= section.config.selector.iframeId %>" title="Prikaz odgovora" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-downloads"></iframe></div>
+                    <div class="alert alert-secondary mt-3"><%- section.config.note || section.note %></div>
+                  </section>
+
+                <% } else { %>
+                  <div class="alert alert-danger">Nepoznat tip sekcije: <strong><%= section.type %></strong></div>
+                <% } %>
+
+              <% }) %>
+            <% } else { %>
+              <p>Sadržaj lekcije nije dostupan.</p>
+            <% } %>
+          </div>
+
+          <nav class="d-flex justify-content-between mt-5 pt-3 border-top">
+            <% if (navigation.prev) { %><a href="/<%= subjectSlug || lection.subjectSlug %>/lekcija/<%= navigation.prev.slug %>" class="btn btn-outline-primary">← Prethodna lekcija<br><small><%= navigation.prev.title %></small></a>
+            <% } else { %><a href="/<%= subjectSlug || lection.subjectSlug %>" class="btn btn-outline-secondary">← Nazad na predmet</a><% } %>
+            <% if (navigation.next) { %><a href="/<%= subjectSlug || lection.subjectSlug %>/lekcija/<%= navigation.next.slug %>" class="btn btn-outline-primary">Sledeća lekcija →<br><small><%= navigation.next.title %></small></a><% } %>
+          </nav>
+        </article>
+      <% } %>
+    </main>
+  </div>
+</div>
+
+<script src="/js/lightbox.js"></script>
+
+<%- include('../includes/end') %>

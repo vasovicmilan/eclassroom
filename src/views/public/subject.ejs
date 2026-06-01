@@ -1,0 +1,215 @@
+<%- include('../includes/head', { title: subject.name, pageDescription: subject.description, pageStyles: 'pages/subject.css' }) %>
+<%- include('../includes/navigation', { active: subject.slug }) %>
+
+<main class="subject-page container py-4">
+  <!-- HERO -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="bg-primary text-white rounded-3 p-4 p-md-5">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+          <div>
+            <h1 class="display-5 fw-bold mb-2"><%= subject.name %></h1>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge bg-light text-primary">ESPB: <%= subject.espb %></span>
+              <span class="badge bg-light text-primary">Šifra: <%= subject.code %></span>
+              <span class="badge bg-light text-primary">Predavanja: <%= subject.lectures %></span>
+              <span class="badge bg-light text-primary">Vežbe: <%= subject.exercises %></span>
+            </div>
+          </div>
+          <div class="text-end">
+            <div class="display-6 fw-bold"><%= stats.available %>/<%= stats.total %></div>
+            <div class="small">dostupnih lekcija</div>
+            <div class="progress mt-2" style="width: 150px;">
+              <div class="progress-bar" role="progressbar" style="width: <%= stats.percent %>%" aria-valuenow="<%= stats.percent %>" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS CARDS (početak, kraj, ESPB) -->
+  <div class="row g-3 mb-5">
+    <div class="col-sm-6 col-lg-3">
+      <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+          <div class="display-6">📅</div>
+          <div class="small text-muted">Početak</div>
+          <div class="fw-bold"><%= subject.startDate %></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+          <div class="display-6">🏁</div>
+          <div class="small text-muted">Kraj</div>
+          <div class="fw-bold"><%= subject.endDate %></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+          <div class="display-6">🎓</div>
+          <div class="small text-muted">ESPB</div>
+          <div class="fw-bold"><%= subject.espb %></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+          <div class="display-6">📊</div>
+          <div class="small text-muted">Napredak</div>
+          <div class="fw-bold"><%= stats.percent %>%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Glavni grid: content + sidebar -->
+  <div class="row g-4">
+    <!-- MAIN CONTENT -->
+    <div class="col-lg-8">
+      <!-- O predmetu -->
+      <div class="card shadow-sm mb-4">
+        <div class="card-header bg-white">
+          <h2 class="h4 mb-0">O predmetu</h2>
+        </div>
+        <div class="card-body">
+          <p class="lead"><%= subject.description %></p>
+          <p>Fokus predmeta nije samo na konkretnim alatima, već na razumevanju principa otvorenih sistema i njihove uloge u modernom IT okruženju.</p>
+          <p>Internet, web servisi, cloud platforme i razvojni alati u velikoj meri koriste tehnologije koje su javno dostupne i otvorene.</p>
+        </div>
+      </div>
+
+      <!-- Plan rada po nedeljama (tabela) -->
+      <div class="card shadow-sm mb-4">
+        <div class="card-header bg-white">
+          <h2 class="h4 mb-0">Plan rada po nedeljama</h2>
+        </div>
+        <div class="card-body p-0">
+          <div class="table-responsive">
+            <table class="table table-hover mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th>Nedelja</th>
+                  <th>Tema</th>
+                  <th>Datum</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% workPlan.forEach(item => { %>
+                  <tr class="<%= item.isCurrent ? 'table-primary' : '' %>">
+                    <td><strong>Nedelja <%= item.week %></strong></td>
+                    <td><%= item.title %></td>
+                    <td><%= item.formattedDate %></td>
+                    <td>
+                      <% if (item.isCurrent) { %>
+                        <span class="badge bg-primary">🔵 Trenutno</span>
+                      <% } else if (item.isPast) { %>
+                        <span class="badge bg-success">✅ Završeno</span>
+                      <% } else { %>
+                        <span class="badge bg-secondary">⏳ Predstoji</span>
+                      <% } %>
+                    </td>
+                  </tr>
+                <% }) %>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer bg-white">
+            <div class="d-flex flex-wrap gap-3 small">
+              <span><span class="badge bg-primary">🔵</span> Trenutno</span>
+              <span><span class="badge bg-success">✅</span> Završeno</span>
+              <span><span class="badge bg-secondary">⏳</span> Predstoji</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="col-lg-4">
+      <!-- Trenutna lekcija -->
+      <div class="card shadow-sm mb-4 border-primary">
+        <div class="card-header bg-primary text-white">
+          <h2 class="h5 mb-0">Trenutna lekcija</h2>
+        </div>
+        <div class="card-body">
+          <% if (currentLection) { %>
+            <h3 class="h5"><%= currentLection.title %></h3>
+            <div class="small text-muted mb-2">📅 <%= currentLection.formattedDate %></div>
+            <p class="small"><%= currentLection.description %></p>
+            <a href="/<%= subject.slug %>/lekcija/<%= currentLection.slug %>" class="btn btn-primary w-100">Otvori lekciju →</a>
+          <% } else { %>
+            <div class="text-center py-3">
+              <div class="display-6">📚</div>
+              <p class="mb-0">Predmet još nije počeo</p>
+              <small class="text-muted">Prva lekcija: <%= workPlan[0] ? workPlan[0].formattedDate : 'uskoro' %></small>
+            </div>
+          <% } %>
+        </div>
+      </div>
+
+      <!-- Način ocenjivanja (može se učitati iz JSON-a ili ostati statički) -->
+      <div class="card shadow-sm mb-4">
+        <div class="card-header bg-white">
+          <h2 class="h5 mb-0">Način ocenjivanja</h2>
+        </div>
+        <div class="card-body">
+          <div class="d-flex justify-content-between mb-2">
+            <span>📋 Prisustvo na predavanjima</span>
+            <span class="fw-bold">10</span>
+          </div>
+          <div class="d-flex justify-content-between mb-2">
+            <span>💻 Prisustvo na vežbama</span>
+            <span class="fw-bold">10</span>
+          </div>
+          <div class="d-flex justify-content-between mb-2">
+            <span>📝 Kolokvijum 1</span>
+            <span class="fw-bold">30</span>
+          </div>
+          <div class="d-flex justify-content-between mb-2">
+            <span>📝 Kolokvijum 2</span>
+            <span class="fw-bold">30</span>
+          </div>
+          <div class="d-flex justify-content-between mb-2">
+            <span>🎯 Završni ispit</span>
+            <span class="fw-bold">20</span>
+          </div>
+          <hr>
+          <div class="d-flex justify-content-between fw-bold">
+            <span>UKUPNO</span>
+            <span>100</span>
+          </div>
+          <div class="mt-3">
+            <div class="small">Prag za prolaz: 51/100</div>
+            <div class="progress mt-1">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 51%" aria-valuenow="51" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Korisni resursi -->
+      <div class="card shadow-sm">
+        <div class="card-header bg-white">
+          <h2 class="h5 mb-0">Korisni resursi</h2>
+        </div>
+        <div class="card-body">
+            <div class="d-grid gap-2">
+                <a href="<%= subject.resources?.plan || '#' %>" class="btn btn-outline-secondary btn-sm" target="_blank">📄 Plan rada</a>
+                <a href="/<%= subject.slug %>/materijali" class="btn btn-outline-secondary btn-sm">📚 Materijali</a>
+                <a href="<%= subject.resources?.results || '#' %>" class="btn btn-outline-secondary btn-sm" target="_blank">📊 Rezultati</a>
+                <a href="<%= subject.resources?.questions || '#' %>" class="btn btn-outline-secondary btn-sm" target="_blank">❓ Pitanja</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include('../includes/end') %>

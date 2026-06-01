@@ -1,0 +1,77 @@
+<%- include('../includes/head', { title: subject.name + ' – Materijali', pageDescription: 'Svi materijali za predmet ' + subject.name, pageStyles: 'pages/materials.css' }) %>
+<%- include('../includes/navigation', { active: subject.slug }) %>
+
+<main class="container py-4">
+  <!-- Page header -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="bg-primary text-white rounded-3 p-4">
+        <h1 class="display-5 fw-bold mb-2">📚 Materijali</h1>
+        <p class="lead mb-0">Predmet: <strong><%= subject.name %></strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Materials grouped by week -->
+  <div class="row">
+    <div class="col-12">
+      <div class="card shadow-sm">
+        <div class="card-header bg-white">
+          <h2 class="h4 mb-0">Materijali po nedeljama</h2>
+        </div>
+        <div class="card-body">
+          <% if (Object.keys(materialsGrouped).length === 0) { %>
+            <div class="alert alert-info">Trenutno nema materijala za ovaj predmet.</div>
+          <% } else { %>
+            <div class="accordion" id="materialsAccordion">
+              <% Object.keys(materialsGrouped).sort((a,b) => a - b).forEach(week => { %>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingWeek<%= week %>">
+                    <button class="accordion-button <%= week == 1 ? '' : 'collapsed' %>" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWeek<%= week %>" aria-expanded="<%= week == 1 ? 'true' : 'false' %>" aria-controls="collapseWeek<%= week %>">
+                      <strong>Nedelja <%= week %></strong>
+                    </button>
+                  </h2>
+                  <div id="collapseWeek<%= week %>" class="accordion-collapse collapse <%= week == 1 ? 'show' : '' %>" aria-labelledby="headingWeek<%= week %>" data-bs-parent="#materialsAccordion">
+                    <div class="accordion-body">
+                      <div class="list-group">
+                        <% materialsGrouped[week].forEach(material => { %>
+                          <div class="list-group-item">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1"><%= material.title %></h5>
+                              <% if (material.formattedDate) { %>
+                                <small><%= material.formattedDate %></small>
+                              <% } %>
+                            </div>
+                            <p class="mb-1">
+                              <% if (material.file) { %>
+                                <a href="/pdf/<%= material.file %>" target="_blank" class="btn btn-sm btn-outline-primary mt-2">
+                                  📄 Preuzmi materijal
+                                </a>
+                              <% } %>
+                            </p>
+                            <% if (material.description) { %>
+                              <small class="text-muted"><%= material.description %></small>
+                            <% } %>
+                          </div>
+                        <% }) %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <% }) %>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to subject -->
+  <div class="row mt-4">
+    <div class="col-12 text-center">
+      <a href="/<%= subject.slug %>" class="btn btn-secondary">← Nazad na predmet</a>
+    </div>
+  </div>
+</main>
+
+<%- include('../includes/end') %>

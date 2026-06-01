@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg bg-light sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">E UCIONICA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link <%= active === 'otvoreno-racunarstvo' ? 'active' : '' %>" href="/otvoreno-racunarstvo">
+                        Otvoreno računarstvo
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <%= active === 'multimedijalne-aplikacije' ? 'active' : '' %>" href="/multimedijalne-aplikacije">
+                        Multimedijalne i grafičke aplikacije
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <%= active === 'teorija-sistema' ? 'active' : '' %>" href="/teorija-sistema">
+                        Teorija sistema i informacija
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

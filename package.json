@@ -1,0 +1,33 @@
+{
+  "name": "eclassroom",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Milan Vasovic",
+  "type": "module",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "NODE_ENV=production node src/app.js",
+    "start-dev": "NODE_ENV=development nodemon src/app.js | npx pino-pretty",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8",
+    "dotenv": "^17.4.2",
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.5.2",
+    "express-validator": "^7.3.2",
+    "helmet": "^8.2.0",
+    "method-override": "^3.0.0",
+    "node-cron": "^4.2.1",
+    "pino": "^10.3.1",
+    "pino-http": "^11.0.0",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "pino-pretty": "^13.1.3"
+  }
+}

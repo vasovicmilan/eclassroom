@@ -1,0 +1,73 @@
+{
+  "features": [
+    {
+      "icon": "📚",
+      "title": "Strukturirani materijali",
+      "description": "Predavanja i materijali organizovani po nedeljama."
+    },
+    {
+      "icon": "📂",
+      "title": "Centralizovani resursi",
+      "description": "Svi dokumenti i prezentacije dostupni na jednom mestu."
+    },
+    {
+      "icon": "📊",
+      "title": "Jasna struktura predmeta",
+      "description": "Pregled lekcija, materijala i plana rada."
+    },
+    {
+      "icon": "🔓",
+      "title": "Otvoren pristup",
+      "description": "Materijali dostupni studentima bez ograničenja."
+    }
+  ],
+  "projectInfo": {
+    "title": "Elektronska učionica – Nastavni portal",
+    "about": {
+      "title": "O projektu",
+      "text": "Elektronska učionica predstavlja centralizovani web sistem razvijen sa ciljem objedinjavanja nastavnih materijala, lekcija i projektnih zadataka.",
+      "goals": [
+        "jasan pregled predmeta",
+        "transparentan prikaz nastavnog plana",
+        "pregled načina ocenjivanja",
+        "pristup lekcijama i materijalima",
+        "strukturisano praćenje gradiva"
+      ]
+    },
+    "pedagogy": {
+      "title": "Pedagoška ideja",
+      "points": [
+        "objedinjavanje nastavnih materijala",
+        "demonstracija realnog web sistema",
+        "razumevanje strukture aplikacije",
+        "praktična demonstracija teorijskih koncepata"
+      ]
+    },
+    "functionality": {
+      "title": "Funkcionalnosti sistema",
+      "items": [
+        "Stranice pojedinačnih predmeta",
+        "Plan rada po nedeljama",
+        "Sistem lekcija",
+        "Prikaz materijala",
+        "Projektni zadaci"
+      ]
+    },
+    "tech": {
+      "title": "Tehnološki okvir",
+      "items": [
+        "Serverski renderovane stranice",
+        "Modularna struktura aplikacije",
+        "Dinamički prikaz sadržaja",
+        "Jasna separacija logike i prikaza"
+      ]
+    },
+    "goal": "Cilj projekta je kreiranje digitalne baze nastavnog sadržaja i demonstracija realnog razvoja jednog sistema.",
+    "note": "Projekat je edukativnog karaktera i nije zvanični institucionalni kanal komunikacije."
+  },
+  "meta": {
+    "title": "E-učionica | Digitalna platforma za nastavu",
+    "description": "Digitalna platforma za pristup nastavnim materijalima i predavanjima.",
+    "keywords": "e-učionica, nastavni materijali, predavanja"
+  }
+}

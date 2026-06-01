@@ -1,0 +1,335 @@
+[
+  {
+    "week": 0,
+    "title": "Knjiga – Photoshop (dodatna literatura)",
+    "file": "multimedijalne-aplikacije/Knjiga - Photoshop - dodatna literatura.pdf",
+    "date": "2026-02-19",
+    "formattedDate": "Dostupno tokom celog semestra",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 1,
+    "title": "Prvo predavanje",
+    "file": "multimedijalne-aplikacije/Prvo i drugo predavanje.pdf",
+    "date": "2026-02-19",
+    "formattedDate": "19.02.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 2,
+    "title": "Drugo predavanje",
+    "file": "multimedijalne-aplikacije/Prvo i drugo predavanje.pdf",
+    "date": "2026-02-26",
+    "formattedDate": "26.02.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 3,
+    "title": "Treće predavanje",
+    "file": "multimedijalne-aplikacije/Treće i četvrto predavanje.pdf",
+    "date": "2026-03-05",
+    "formattedDate": "05.03.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 4,
+    "title": "Četvrto predavanje",
+    "file": "multimedijalne-aplikacije/Treće i četvrto predavanje.pdf",
+    "date": "2026-03-12",
+    "formattedDate": "12.03.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 5,
+    "title": "Peto predavanje",
+    "file": "multimedijalne-aplikacije/Peto i šesto predavanje.pdf",
+    "date": "2026-03-19",
+    "formattedDate": "19.03.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 6,
+    "title": "Šesto predavanje",
+    "file": "multimedijalne-aplikacije/Peto i šesto predavanje.pdf",
+    "date": "2026-03-26",
+    "formattedDate": "26.03.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 7,
+    "title": "Sedmo predavanje",
+    "file": "multimedijalne-aplikacije/Sedmo i osmo predavanje.pdf",
+    "date": "2026-04-02",
+    "formattedDate": "02.04.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 8,
+    "title": "Osmo predavanje",
+    "file": "multimedijalne-aplikacije/Sedmo i osmo predavanje.pdf",
+    "date": "2026-04-09",
+    "formattedDate": "09.04.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 9,
+    "title": "Deveto predavanje",
+    "file": "multimedijalne-aplikacije/Deveto i deseto predavanje.pdf",
+    "date": "2026-04-09",
+    "formattedDate": "16.04.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 10,
+    "title": "Deseto predavanje",
+    "file": "multimedijalne-aplikacije/Deveto i deseto predavanje.pdf",
+    "date": "2026-04-09",
+    "formattedDate": "23.04.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 11,
+    "title": "Jedanaesto predavanje",
+    "file": "multimedijalne-aplikacije/Jedanaesto i dvanaesto predavanje.pdf",
+    "date": "2026-04-09",
+    "formattedDate": "30.04.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 12,
+    "title": "Dvanaesto predavanje",
+    "file": "multimedijalne-aplikacije/Jedanaesto i dvanaesto predavanje.pdf",
+    "date": "2026-04-09",
+    "formattedDate": "07.05.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 12,
+    "title": "Trinaesto predavanje",
+    "file": "multimedijalne-aplikacije/Trinaesto predavanje.pdf",
+    "date": "2026-04-09",
+    "formattedDate": "07.05.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 12,
+    "title": "Četrnaesto predavanje",
+    "file": "multimedijalne-aplikacije/Četrnaesto i petnaesto predavanje.pdf",
+    "date": "2026-04-09",
+    "formattedDate": "07.05.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 12,
+    "title": "Petnaesto predavanje",
+    "file": "multimedijalne-aplikacije/Četrnaesto i petnaesto predavanje.pdf",
+    "date": "2026-04-09",
+    "formattedDate": "07.05.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 0,
+    "title": "Uvodna prezentacija",
+    "file": "otvoreno-racunarstvo/UVODNA-PREZENTACIJA.pdf",
+    "date": "2026-02-26",
+    "formattedDate": "26.02.2026.",
+    "available": true,
+    "subjectSlug": "otvoreno-racunarstvo"
+  },
+  {
+    "week": 1,
+    "title": "Open source softver – ideja, istorija i zajednica",
+    "file": "otvoreno-racunarstvo/1. Open source softver, ideja, istorija i zajednica.pdf",
+    "date": "2026-02-26",
+    "formattedDate": "26.02.2026.",
+    "available": true,
+    "subjectSlug": "otvoreno-racunarstvo"
+  },
+  {
+    "week": 2,
+    "title": "Linux i otvoreni operativni sistemi",
+    "file": "otvoreno-racunarstvo/2. Linux i otvoreni operativni sistemi.pdf",
+    "date": "2026-03-06",
+    "formattedDate": "06.03.2026.",
+    "available": true,
+    "subjectSlug": "otvoreno-racunarstvo"
+  },
+  {
+    "week": 3,
+    "title": "Git i kolaborativni razvoj softvera",
+    "file": "otvoreno-racunarstvo/3. Git i kolaborativni razvoj softvera.pdf",
+    "date": "2026-03-13",
+    "formattedDate": "13.03.2026.",
+    "available": true,
+    "subjectSlug": "otvoreno-racunarstvo"
+  },
+  {
+    "week": 4,
+    "title": "Otvoreni protokoli i standardi",
+    "file": "otvoreno-racunarstvo/4. Otvoreni protokoli i standardi.pdf",
+    "date": "2026-03-20",
+    "formattedDate": "20.03.2026.",
+    "available": true,
+    "subjectSlug": "otvoreno-racunarstvo"
+  },
+  {
+    "week": 5,
+    "title": "API i REST",
+    "file": "otvoreno-racunarstvo/5. API & REST.pdf",
+    "date": "2026-03-27",
+    "formattedDate": "27.03.2026.",
+    "available": true,
+    "subjectSlug": "otvoreno-racunarstvo"
+  },
+  {
+    "week": 6,
+    "title": "Open Source licence",
+    "file": "otvoreno-racunarstvo/6. Open Source Licence, Pravila Koriscenja, Deljenja i Izmena.pdf",
+    "date": "2026-04-10",
+    "formattedDate": "10.04.2026.",
+    "available": true,
+    "subjectSlug": "otvoreno-racunarstvo"
+  },
+  {
+    "week": 7,
+    "title": "Uloga Open Source alata u otvorenom računarstvu",
+    "file": "otvoreno-racunarstvo/7. Uloga Open Source Alata u Otvorenom Racunarstvu.pdf",
+    "date": "2026-04-17",
+    "formattedDate": "17.04.2026.",
+    "available": true,
+    "subjectSlug": "otvoreno-racunarstvo"
+  },
+  {
+    "week": 1,
+    "title": "Uvod u predmet",
+    "file": "teorija-sistema/Uvod.pptx",
+    "date": "2026-02-23",
+    "formattedDate": "23.02.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 1,
+    "title": "UML – osnovni pojmovi i dijagrami",
+    "file": "teorija-sistema/1. čas.pptx",
+    "date": "2026-02-23",
+    "formattedDate": "23.02.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 1,
+    "title": "UML and OO Design Foundations",
+    "file": "teorija-sistema/UML-and-OO-Design-Foundations-v1_2.pdf",
+    "date": "2026-02-23",
+    "formattedDate": "23.02.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 1,
+    "title": "Klasni dijagram – uvod",
+    "file": "teorija-sistema/Klasni dijagram uvod.pptx",
+    "date": "2026-02-23",
+    "formattedDate": "23.02.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 1,
+    "title": "ER dijagrami – vežbe",
+    "file": "teorija-sistema/ER DIJAGRAMI 2. vezbe.pptx",
+    "date": "2026-02-23",
+    "formattedDate": "23.02.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 1,
+    "title": "Teorija sistema i informacija 1",
+    "file": "teorija-sistema/Teorija sistema i informacija 1.pptx",
+    "date": "2026-02-23",
+    "formattedDate": "23.02.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 2,
+    "title": "Teorija sistema i informacija 2",
+    "file": "teorija-sistema/Teorija sistema i informacija 2.pptx",
+    "date": "2026-03-02",
+    "formattedDate": "02.03.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 3,
+    "title": "Teorija sistema i informacija 3",
+    "file": "teorija-sistema/Teorija sistema i informacija 3.pptx",
+    "date": "2026-03-09",
+    "formattedDate": "09.03.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 4,
+    "title": "Teorija sistema i informacija 4",
+    "file": "teorija-sistema/Teorija sistema i informacija 4.pptx",
+    "date": "2026-03-16",
+    "formattedDate": "16.03.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 5,
+    "title": "Teorija sistema i informacija 5",
+    "file": "teorija-sistema/Teorija sistema i informacija 5.pptx",
+    "date": "2026-03-23",
+    "formattedDate": "23.03.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 6,
+    "title": "Teorija sistema i informacija 6",
+    "file": "teorija-sistema/Teorija sistema i informacija 6.pptx",
+    "date": "2026-03-30",
+    "formattedDate": "30.03.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 7,
+    "title": "Teorija sistema i informacija 7",
+    "file": "teorija-sistema/Teorija sistema i informacija 7.pptx",
+    "date": "2026-04-06",
+    "formattedDate": "06.04.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 8,
+    "title": "Teorija sistema i informacija 8",
+    "file": "teorija-sistema/Teorija sistema i informacija 8.pptx",
+    "date": "2026-04-13",
+    "formattedDate": "13.04.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  }
+]

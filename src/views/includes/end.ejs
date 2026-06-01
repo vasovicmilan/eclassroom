@@ -1,0 +1,32 @@
+    <footer class="footer bg-light border-top mt-5 py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-muted">
+                        © <%= new Date().getFullYear() %> EUCIONICA
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0 text-muted">
+                        Izradio: <a href="https://milanvasovic.com" target="_blank" rel="noopener" class="text-decoration-none">Milan Vasović</a> · 
+                        <a href="https://ariussystems.com" target="_blank" rel="noopener" class="text-decoration-none">Arius Systems</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/bootstrap-js/bootstrap.bundle.min.js"></script>
+    <script src="/js/shared.js"></script>
+
+    <% if (typeof pageScripts !== 'undefined' && pageScripts) { %>
+        <% if (Array.isArray(pageScripts)) { %>
+            <% pageScripts.forEach(script => { %>
+                <script src="/js/<%= script %>"></script>
+            <% }); %>
+        <% } else { %>
+            <script src="/js/<%= pageScripts %>"></script>
+        <% } %>
+    <% } %>
+</body>
+</html>
