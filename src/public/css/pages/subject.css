@@ -1,0 +1,11 @@
+/* Stranica predmeta */
+.subject-page .subject-hero {
+  background: linear-gradient(135deg, #0d6efd 0%, #0a4fc4 100%);
+  color: #fff;
+  box-shadow: 0 .5rem 1.25rem rgba(13, 110, 253, .25);
+}
+.subject-page .subject-hero .badge.bg-light { color: #0a4fc4 !important; font-weight: 600; }
+.subject-page .subject-hero .progress { height: .6rem; background-color: rgba(255, 255, 255, .3); }
+.subject-page .subject-hero .progress-bar { background-color: #ffc107; }
+.subject-page .card .text-muted { color: #6c757d !important; }
+.subject-page .card-header.bg-primary { background: linear-gradient(135deg, #0d6efd 0%, #0a4fc4 100%) !important; color: #fff; }

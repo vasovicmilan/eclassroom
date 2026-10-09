@@ -1,19 +1,19 @@
 import { Router } from 'express';
-import otvorenoRacunarstvoRoutes from './otvoreno-racunarstvo/index.routes.js';
-import multimedijalneAplikacijeRoutes from './multimedijalne-aplikacije/index.routes.js';
-import teorijaSistemaRoutes from './teorija-sistema/index.routes.js';
 import { getIndexPage, getExtraMaterials } from '../../controllers/web/web.controller.js';
+import { navSubjects } from '../../middlewares/nav.middleware.js';
+import subjectRoutes from './subject.routes.js';
 
 const router = Router();
+
+// lista predmeta za navigaciju (res.locals.navSubjects)
+router.use(navSubjects);
 
 router.get('/', getIndexPage);
 
 router.get('/dodatni-materijali', getExtraMaterials);
 
-router.use('/otvoreno-racunarstvo', otvorenoRacunarstvoRoutes);
-router.use('/multimedijalne-aplikacije', multimedijalneAplikacijeRoutes);
-router.use('/teorija-sistema', teorijaSistemaRoutes);
-
-// INFO: add new subjects like Verovatnoca i Statistika and Objektno Orijentisano Programiranje 3
+// Svi predmeti (subjects.json) rade kroz jedan generički router: /:subjectSlug, /materijali, /lekcija/:slug.
+// Ako slug nije predmet, loadSubject prosleđuje zahtev dalje (npr. /api, 404).
+router.use('/:subjectSlug', subjectRoutes);
 
 export default router;

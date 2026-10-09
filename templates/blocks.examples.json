@@ -1,0 +1,211 @@
+[
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "Naslov odeljka"
+  },
+  {
+    "type": "paragraph",
+    "text": "Tekst pasusa. Dozvoljen je HTML (<strong>, <em>, <code>, <a>)."
+  },
+  {
+    "type": "callout",
+    "variant": "info",
+    "title": "Naslov (opciono)",
+    "text": "Istaknuta napomena."
+  },
+  {
+    "type": "list",
+    "style": "bullets",
+    "items": [
+      "Prva stavka",
+      "Druga stavka"
+    ]
+  },
+  {
+    "type": "icon-list",
+    "items": [
+      {
+        "icon": "✅",
+        "text": "Stavka sa ikonom"
+      }
+    ]
+  },
+  {
+    "type": "cards",
+    "layout": "grid",
+    "columns": 3,
+    "items": [
+      {
+        "icon": "📦",
+        "title": "Naslov",
+        "text": "Opis"
+      }
+    ]
+  },
+  {
+    "type": "columns",
+    "left": {
+      "title": "Levo",
+      "items": [
+        "a"
+      ]
+    },
+    "right": {
+      "title": "Desno",
+      "items": [
+        "b"
+      ]
+    }
+  },
+  {
+    "type": "table",
+    "headers": [
+      "Kolona 1",
+      "Kolona 2"
+    ],
+    "rows": [
+      [
+        "a",
+        "b"
+      ]
+    ]
+  },
+  {
+    "type": "code",
+    "language": "js",
+    "code": "console.log(\"zdravo\");"
+  },
+  {
+    "type": "image",
+    "src": "/images/predmet/slika.png",
+    "alt": "Opis slike"
+  },
+  {
+    "type": "gallery",
+    "images": [
+      {
+        "src": "/images/predmet/slika.png",
+        "alt": "Opis"
+      }
+    ]
+  },
+  {
+    "type": "image-text",
+    "images": [
+      {
+        "src": "/images/predmet/slika.png",
+        "alt": "Opis"
+      }
+    ],
+    "text": "Tekst pored slike"
+  },
+  {
+    "type": "video",
+    "src": "https://www.youtube.com/embed/ID",
+    "title": "Naslov videa"
+  },
+  {
+    "type": "links",
+    "items": [
+      {
+        "title": "Naziv",
+        "url": "https://example.com"
+      }
+    ]
+  },
+  {
+    "type": "accordion",
+    "id": "grupa-1",
+    "items": [
+      {
+        "title": "Grupa",
+        "items": [
+          "Stavka"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "download",
+    "label": "Preuzmi PDF",
+    "url": "/pdf/predmet/fajl.pdf"
+  },
+  {
+    "type": "badges",
+    "items": [
+      "Oznaka 1",
+      "Oznaka 2"
+    ]
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "quote",
+    "text": "Citat",
+    "author": "Autor"
+  },
+  {
+    "type": "panel",
+    "title": "Naslov panela",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Sadržaj panela"
+      }
+    ]
+  },
+  {
+    "type": "flow",
+    "nodes": [
+      {
+        "label": "Korak 1"
+      },
+      {
+        "label": "Korak 2"
+      }
+    ]
+  },
+  {
+    "type": "distributions",
+    "items": [
+      {
+        "name": "Naziv",
+        "url": "https://example.com",
+        "description": "Opis"
+      }
+    ]
+  },
+  {
+    "type": "http-explorer",
+    "config": {
+      "form": "http-form"
+    },
+    "scripts": [
+      "otvoreno-racunarstvo/http-explorer.js"
+    ]
+  },
+  {
+    "type": "api-examples",
+    "config": {
+      "selector": ".api-example"
+    },
+    "scripts": [
+      "otvoreno-racunarstvo/api-example.js"
+    ]
+  },
+  {
+    "type": "dashboard",
+    "config": {
+      "containerId": "dashboard"
+    },
+    "scripts": [
+      "otvoreno-racunarstvo/iot-example.js"
+    ]
+  },
+  {
+    "type": "html",
+    "html": "<p>Poslednja opcija – koristi samo kad nijedan blok ne odgovara.</p>"
+  }
+]

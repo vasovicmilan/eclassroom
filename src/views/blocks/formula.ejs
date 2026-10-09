@@ -1,0 +1,11 @@
+<%# Formule: svaka stavka ima label (opis), tex (LaTeX) i opciono note. Prikazuje KaTeX (public/js/math-render.js). %>
+<div class="card mb-3 formula-card"><div class="card-body">
+<% block.items.forEach((item, i) => { %>
+  <div class="<%= i < block.items.length - 1 ? 'mb-3 pb-3 border-bottom' : '' %>">
+    <% if (item.label) { %><div class="small text-muted"><%- item.label %></div><% } %>
+    <div class="formula-tex">\[ <%= item.tex %> \]</div>
+    <% if (item.note) { %><div class="small mt-1"><%- item.note %></div><% } %>
+  </div>
+<% }) %>
+<% if (block.note) { %><div class="alert alert-secondary mt-3 mb-0"><%- block.note %></div><% } %>
+</div></div>

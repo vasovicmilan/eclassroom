@@ -1,0 +1,3744 @@
+[
+  {
+    "slug": "open-source-softver-ideja-istorija-zajednica",
+    "subjectSlug": "otvoreno-racunarstvo",
+    "title": "Open source softver: ideja, istorija i zajednica",
+    "description": "Uvod u koncept otvorenog softvera, njegova filozofija, istorijski razvoj i uloga zajednice u stvaranju održivih softverskih ekosistema.",
+    "week": 1,
+    "date": "2026-01-26",
+    "formattedDate": "26.01.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je open source softver?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Open source softver je softver čiji je izvorni kod javno dostupan i može se slobodno koristiti, proučavati, menjati i distribuirati u skladu sa uslovima licence."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Open source ne predstavlja samo tehničku karakteristiku, već i filozofiju razvoja softvera zasnovanu na saradnji i razmeni znanja."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Open source nije isto što i besplatno"
+        },
+        {
+          "type": "cards",
+          "layout": "pair",
+          "items": [
+            {
+              "title": "Besplatan softver",
+              "text": "Softver koji se ne plaća",
+              "icon": "💰"
+            },
+            {
+              "title": "Open source softver",
+              "text": "Softver sa otvorenim izvornim kodom",
+              "icon": "🔓"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "secondary",
+          "text": "Open source softver može biti besplatan ili komercijalan. Suština open source-a nije cena, već sloboda korišćenja i razumevanja softvera."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zašto je open source nastao?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Open source pokret nastao je kao odgovor na zatvorene softverske sisteme u kojima korisnici nisu imali uvid u način rada softvera."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cilj je bio omogućavanje slobodnog protoka znanja, zajedničko rešavanje problema i brži tehnološki napredak."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Osnovne ideje open source filozofije"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "🧠",
+              "text": "Znanje treba da bude dostupno svima"
+            },
+            {
+              "icon": "👁️",
+              "text": "Softver treba da bude transparentan"
+            },
+            {
+              "icon": "🤝",
+              "text": "Saradnja daje bolje rezultate od izolovanog rada"
+            },
+            {
+              "icon": "🎮",
+              "text": "Korisnik treba da ima kontrolu nad tehnologijom"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Uloga open source zajednice"
+        },
+        {
+          "type": "paragraph",
+          "text": "Open source zajednicu ne čine samo programeri, već i testeri, dizajneri, edukatori i krajnji korisnici."
+        },
+        {
+          "type": "badges",
+          "items": [
+            "👨‍💻 Programeri",
+            "🧪 Testeri",
+            "🎨 Dizajneri",
+            "📚 Edukatori",
+            "👥 Korisnici"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Zajednica omogućava kontinuirani razvoj, podršku i unapređenje softvera."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Open source u savremenoj IT industriji"
+        },
+        {
+          "type": "paragraph",
+          "text": "Danas se open source softver koristi u gotovo svim oblastima informacionih tehnologija:"
+        },
+        {
+          "type": "cards",
+          "layout": "grid",
+          "items": [
+            {
+              "title": "Operativni sistemi",
+              "icon": "🐧"
+            },
+            {
+              "title": "Web serveri",
+              "icon": "🌐"
+            },
+            {
+              "title": "Cloud infrastruktura",
+              "icon": "☁️"
+            },
+            {
+              "title": "Razvojni alati",
+              "icon": "🛠️"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "linux-i-otvoreni-operativni-sistemi",
+    "subjectSlug": "otvoreno-racunarstvo",
+    "title": "Linux i otvoreni operativni sistemi",
+    "description": "Proučavanje Linuxa kao temelja otvorenog računarstva, njegove arhitekture, distribucija i značaja u serverskim i cloud okruženjima.",
+    "week": 2,
+    "date": "2026-02-06",
+    "formattedDate": "06.02.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je Linux?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Linux je open source operativni sistem zasnovan na Unix filozofiji. Njegov razvoj započeo je 1991. godine i danas predstavlja osnovu većine serverskih sistema, cloud infrastrukture, mrežnih uređaja i superračunara."
+        },
+        {
+          "type": "paragraph",
+          "text": "Linux se zasniva na modularnosti, bezbednosti i efikasnom upravljanju resursima. Njegova otvorena priroda omogućava zajednički razvoj i transparentnost."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Najpoznatije Linux distribucije"
+        },
+        {
+          "type": "distributions",
+          "items": [
+            {
+              "name": "Ubuntu",
+              "description": "Jedna od najpopularnijih distribucija. Pogodna za početnike, obrazovne institucije i serverska okruženja. Poznata po stabilnosti i velikoj zajednici.",
+              "url": "https://ubuntu.com/download"
+            },
+            {
+              "name": "Debian",
+              "description": "Distribucija poznata po izuzetnoj stabilnosti i dugoročnom održavanju. Često se koristi kao osnova za druge distribucije.",
+              "url": "https://www.debian.org/distrib/"
+            },
+            {
+              "name": "Fedora",
+              "description": "Moderna distribucija koja uvodi najnovije tehnologije. Popularna među developerima i u profesionalnim okruženjima.",
+              "url": "https://getfedora.org"
+            },
+            {
+              "name": "Arch Linux",
+              "description": "Minimalistička distribucija namenjena naprednim korisnicima. Koristi rolling release model i omogućava potpunu kontrolu sistema.",
+              "url": "https://archlinux.org/download/"
+            },
+            {
+              "name": "Linux Mint",
+              "description": "User-friendly distribucija sa fokusom na desktop korisnike. Često preporučena korisnicima koji prelaze sa Windows sistema.",
+              "url": "https://linuxmint.com/download.php"
+            },
+            {
+              "name": "Red Hat Enterprise Linux (RHEL)",
+              "description": "Enterprise distribucija namenjena velikim kompanijama. Fokus na dugoročnu podršku, bezbednost i profesionalnu infrastrukturu.",
+              "url": "https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Praktični rad: Linux na USB uređaju"
+        },
+        {
+          "type": "paragraph",
+          "text": "Studenti će doneti sopstvene USB uređaje na koje ćemo instalirati multiboot sistem sa više Linux distribucija. Time će dobiti prenosivo okruženje za učenje i eksperimentisanje."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Minimalni zahtevi"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "16GB USB",
+            "USB 2.0 (funkcionalno)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Preporučeni zahtevi"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "32GB USB ili više",
+            "USB 3.0 / 3.1 radi bržeg rada"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Studenti će učiti kako da pokrenu računar sa USB uređaja, koriste BIOS/UEFI boot meni i rade u live okruženju bez izmene postojećeg sistema."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ventoy – Multiboot USB za operativne sisteme"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Ventoy</strong> je open-source alat koji omogućava kreiranje bootabilnog USB uređaja za pokretanje različitih operativnih sistema. Za razliku od klasičnih alata za pravljenje bootabilnog USB-a, Ventoy se instalira na USB samo jednom, a nakon toga je dovoljno samo kopirati ISO fajlove operativnih sistema."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kada se računar pokrene sa Ventoy USB uređaja, prikazuje se meni sa listom svih ISO fajlova koji se nalaze na USB-u. Korisnik zatim bira koji operativni sistem želi da pokrene."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Prednosti Ventoy alata"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "✅",
+              "text": "Nema potrebe za ponovnim formatiranjem USB-a"
+            },
+            {
+              "icon": "✅",
+              "text": "Podržava više operativnih sistema na jednom USB uređaju"
+            },
+            {
+              "icon": "✅",
+              "text": "Jednostavno kopiranje ISO fajlova"
+            },
+            {
+              "icon": "✅",
+              "text": "Podrška za BIOS i UEFI sisteme"
+            },
+            {
+              "icon": "✅",
+              "text": "Podrška za više od 900 različitih operativnih sistema"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Minimalni zahtevi"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "💿",
+              "text": "USB uređaj (preporučeno 16GB ili više)"
+            },
+            {
+              "icon": "🖥️",
+              "text": "Računar sa BIOS ili UEFI podrškom"
+            },
+            {
+              "icon": "📀",
+              "text": "ISO fajl operativnog sistema (Linux, Windows, itd.)"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "1. Preuzimanje Ventoy alata"
+        },
+        {
+          "type": "download",
+          "url": "https://www.ventoy.net/en/download.html",
+          "label": "https://www.ventoy.net",
+          "description": "Potrebno je preuzeti verziju za odgovarajući operativni sistem (Windows ili Linux)."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "2. Instalacija Ventoy na USB uređaj"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nakon preuzimanja potrebno je raspakovati arhivu i pokrenuti instalacioni program."
+        },
+        {
+          "type": "list",
+          "style": "numbered",
+          "items": [
+            "Ubaciti USB uređaj u računar",
+            "Pokrenuti program <strong>Ventoy2Disk</strong>",
+            "Izabrati USB uređaj iz liste",
+            "Kliknuti na dugme <strong>Install</strong>",
+            "Potvrditi upozorenje o brisanju podataka"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "secondary",
+          "text": "Tokom instalacije svi podaci na USB uređaju biće obrisani, zato je potrebno napraviti backup važnih fajlova."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "3. Dodavanje operativnih sistema"
+        },
+        {
+          "type": "code",
+          "code": "ubuntu.iso\nlinuxmint.iso\ndebian.iso",
+          "description": "Nakon instalacije Ventoy-a nije potrebno praviti novi bootabilni USB. Dovoljno je kopirati ISO fajl operativnog sistema na USB uređaj. Ventoy će automatski prepoznati sve ISO fajlove i prikazati ih u boot meniju prilikom pokretanja računara."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "4. Pokretanje operativnog sistema sa USB-a"
+        },
+        {
+          "type": "list",
+          "style": "numbered",
+          "items": [
+            "Restartovati računar",
+            "Otvoriti Boot Menu (najčešće F12, ESC ili F2)",
+            "Izabrati USB uređaj",
+            "U Ventoy meniju izabrati željeni ISO fajl"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Operativni sistem će se pokrenuti u <strong>Live režimu</strong>, što znači da se pokreće direktno sa USB uređaja bez instalacije na računar."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Persistent Storage (čuvanje podataka)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Standardni Live Linux sistemi ne čuvaju podatke nakon restartovanja. Ventoy omogućava korišćenje <strong>persistent storage</strong> opcije koja omogućava čuvanje fajlova, instaliranih programa i podešavanja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Persistent storage se realizuje korišćenjem posebnog fajla koji Ventoy koristi kao dodatni prostor za čuvanje podataka."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Primer Ventoy konfiguracije"
+        },
+        {
+          "type": "code",
+          "code": "{\n    \"persistence\":[\n        {\n            \"image\": \"/ubuntu.iso\",\n            \"backend\": \"/ubuntu-persistence.dat\"\n        }\n    ]\n}",
+          "description": "Ova konfiguracija omogućava da Ubuntu koristi persistent storage fajl za čuvanje podataka između restartovanja sistema."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Kada koristiti Ventoy"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "🧪",
+              "text": "Testiranje Linux distribucija"
+            },
+            {
+              "icon": "💿",
+              "text": "Instalacija operativnih sistema"
+            },
+            {
+              "icon": "🔧",
+              "text": "Oporavak sistema"
+            },
+            {
+              "icon": "📦",
+              "text": "Prijenosni operativni sistem na USB uređaju"
+            },
+            {
+              "icon": "🎓",
+              "text": "Rad u laboratorijskim i edukativnim okruženjima"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Video demonstracija: Ventoy"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pogledaj sledeće video demonstracije koje prikazuju kako funkcioniše Ventoy i kako se pravi bootabilni USB:"
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "title": "Kako napraviti bootabilni USB pomoću Ventoy-a",
+              "url": "https://youtu.be/2SXscyVArMI?si=QcYd5YWb0c5Jgia5"
+            },
+            {
+              "title": "Ventoy – pokretanje više ISO sistema sa jednog USB-a",
+              "url": "https://youtu.be/EgcC_40wyKs?si=t3x0zxO8dUOcXyyL"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "💡 Preporuka: Nakon gledanja videa pokušaj sam da napraviš Ventoy USB i testiraš bootovanje ISO fajla."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Alternativa: Virtualna mašina"
+        },
+        {
+          "type": "paragraph",
+          "text": "Studenti sa jačim računarima (8GB RAM ili više) mogu koristiti virtualne mašine."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Video tutorijali"
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "title": "How to use VirtualBox – Tutorial for Beginners",
+              "url": "https://youtu.be/nvdnQX9UkMY?si=wF-CFtEIs60RMPSu"
+            },
+            {
+              "title": "How to use VirtualBox (Complete Beginner Guide)",
+              "url": "https://youtu.be/SXqFPW87WFU?si=pJhB3rLglHKEvw8w"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovi tutorijali objašnjavaju instalaciju VirtualBox-a, kreiranje virtualne mašine i pokretanje Linux sistema bez potrebe za restartovanjem računara."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Linux Terminal – Kompletan Cheat Sheet"
+        },
+        {
+          "type": "paragraph",
+          "text": "Terminal predstavlja tekstualni interfejs za komunikaciju sa operativnim sistemom. Omogućava preciznu kontrolu nad sistemom, automatizaciju i profesionalni rad u serverskim i cloud okruženjima."
+        },
+        {
+          "type": "accordion",
+          "id": "cheat-sheet",
+          "items": [
+            {
+              "title": "1. Navigacija kroz fajl sistem",
+              "items": [
+                {
+                  "code": "pwd",
+                  "text": "prikazuje trenutni direktorijum"
+                },
+                {
+                  "code": "ls",
+                  "text": "prikazuje sadržaj direktorijuma",
+                  "examples": [
+                    "ls",
+                    "ls -l",
+                    "ls -a",
+                    "ls -lh"
+                  ]
+                },
+                {
+                  "code": "cd",
+                  "text": "promena direktorijuma",
+                  "examples": [
+                    "cd folder",
+                    "cd ..",
+                    "cd ~",
+                    "cd /"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "2. Rad sa fajlovima i direktorijumima",
+              "items": [
+                {
+                  "code": "mkdir",
+                  "text": "kreiranje direktorijuma",
+                  "examples": [
+                    "mkdir projekat"
+                  ]
+                },
+                {
+                  "code": "touch",
+                  "text": "kreiranje praznog fajla",
+                  "examples": [
+                    "touch fajl.txt"
+                  ]
+                },
+                {
+                  "code": "cp",
+                  "text": "kopiranje fajlova",
+                  "examples": [
+                    "cp fajl.txt backup.txt",
+                    "cp -r folder novi_folder"
+                  ]
+                },
+                {
+                  "code": "mv",
+                  "text": "premeštanje ili preimenovanje",
+                  "examples": [
+                    "mv fajl.txt novi.txt",
+                    "mv fajl.txt /home/user/"
+                  ]
+                },
+                {
+                  "code": "rm",
+                  "text": "brisanje fajlova",
+                  "examples": [
+                    "rm fajl.txt",
+                    "rm -r folder",
+                    "rm -rf folder"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "3. Pregled sadržaja fajlova",
+              "items": [
+                {
+                  "code": "cat",
+                  "text": "prikaz sadržaja",
+                  "examples": [
+                    "cat fajl.txt"
+                  ]
+                },
+                {
+                  "code": "less",
+                  "text": "pregled velikih fajlova",
+                  "examples": [
+                    "less fajl.txt"
+                  ]
+                },
+                {
+                  "code": "head / tail",
+                  "text": "prikaz početka ili kraja fajla",
+                  "examples": [
+                    "head fajl.txt",
+                    "tail fajl.txt",
+                    "tail -f log.txt"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "4. Dozvole i vlasništvo",
+              "items": [
+                {
+                  "code": "chmod",
+                  "text": "promena dozvola",
+                  "examples": [
+                    "chmod 755 skripta.sh",
+                    "chmod +x skripta.sh"
+                  ]
+                },
+                {
+                  "code": "chown",
+                  "text": "promena vlasnika fajla",
+                  "examples": [
+                    "sudo chown user fajl.txt"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "5. Upravljanje procesima",
+              "items": [
+                {
+                  "code": "top",
+                  "text": "pregled aktivnih procesa",
+                  "examples": [
+                    "top"
+                  ]
+                },
+                {
+                  "code": "ps",
+                  "text": "lista procesa",
+                  "examples": [
+                    "ps aux"
+                  ]
+                },
+                {
+                  "code": "kill",
+                  "text": "zaustavljanje procesa",
+                  "examples": [
+                    "kill PID",
+                    "kill -9 PID"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "6. Instalacija paketa (Debian/Ubuntu)",
+              "items": [
+                {
+                  "code": "sudo apt update",
+                  "text": "osvežava listu paketa"
+                },
+                {
+                  "code": "sudo apt upgrade",
+                  "text": "nadograđuje instalirane pakete"
+                },
+                {
+                  "code": "sudo apt install paket",
+                  "text": "instalira paket"
+                },
+                {
+                  "code": "sudo apt remove paket",
+                  "text": "uklanja paket"
+                }
+              ]
+            },
+            {
+              "title": "7. Mrežne komande",
+              "items": [
+                {
+                  "code": "ping",
+                  "text": "test konekcije",
+                  "examples": [
+                    "ping google.com"
+                  ]
+                },
+                {
+                  "code": "curl",
+                  "text": "dohvatanje sadržaja sa URL",
+                  "examples": [
+                    "curl https://example.com"
+                  ]
+                },
+                {
+                  "code": "ip",
+                  "text": "pregled mrežnih interfejsa",
+                  "examples": [
+                    "ip a"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "8. Pretraga",
+              "items": [
+                {
+                  "code": "grep",
+                  "text": "pretraga teksta",
+                  "examples": [
+                    "grep \"tekst\" fajl.txt"
+                  ]
+                },
+                {
+                  "code": "find",
+                  "text": "pretraga fajlova",
+                  "examples": [
+                    "find . -name \"fajl.txt\""
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "9. Disk i prostor",
+              "items": [
+                {
+                  "code": "df -h",
+                  "text": "prikaz slobodnog prostora na diskovima"
+                },
+                {
+                  "code": "du -sh folder",
+                  "text": "veličina direktorijuma"
+                }
+              ]
+            },
+            {
+              "title": "10. Redirekcija i pipe",
+              "items": [
+                {
+                  "code": "ls > lista.txt",
+                  "text": "preusmeravanje izlaza u fajl"
+                },
+                {
+                  "code": "ls | grep txt",
+                  "text": "prosleđivanje izlaza komande drugoj komandi"
+                }
+              ]
+            },
+            {
+              "title": "11. Sistem informacije",
+              "items": [
+                {
+                  "code": "uname -a",
+                  "text": "informacije o sistemu"
+                },
+                {
+                  "code": "whoami",
+                  "text": "trenutni korisnik"
+                },
+                {
+                  "code": "history",
+                  "text": "istorija komandi"
+                },
+                {
+                  "code": "clear",
+                  "text": "brisanje ekrana"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Prečice:</strong> TAB – automatsko dovršavanje komande, ↑ / ↓ – prethodne komande, CTRL + C – prekid procesa, CTRL + L – brisanje ekrana, CTRL + R – pretraga istorije komandi"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Najvažnije komande:</strong> <code>pwd</code>, <code>ls</code>, <code>cd</code>, <code>mkdir</code>, <code>rm</code>, <code>cp</code>, <code>mv</code>, <code>cat</code>, <code>grep</code>, <code>chmod</code>, <code>sudo</code>"
+        },
+        {
+          "type": "paragraph",
+          "text": "Razumevanje ovih komandi predstavlja osnovu za dalji rad u serverskim sistemima, DevOps okruženju i cloud infrastrukturi."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "git-i-kolaborativni-razvoj",
+    "subjectSlug": "otvoreno-racunarstvo",
+    "title": "Git i kolaborativni razvoj softvera",
+    "description": "Sistem za kontrolu verzija Git, njegova uloga u timskom radu, open source filozofija i platforme za saradnju poput GitHub-a.",
+    "week": 3,
+    "date": "2026-03-13",
+    "formattedDate": "13.03.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zašto je potreban kolaborativni razvoj"
+        },
+        {
+          "type": "paragraph",
+          "text": "Savremeni softverski sistemi retko nastaju radom jedne osobe. Većina modernih aplikacija razvija se kroz saradnju više programera koji rade paralelno na različitim delovima projekta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kolaborativni razvoj omogućava:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "podelu posla između članova tima",
+            "brži razvoj softvera",
+            "veću pouzdanost i kvalitet koda",
+            "razmenu znanja između učesnika"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "U open source svetu kolaborativni razvoj predstavlja osnovu rada velikih projekata kao što su operativni sistemi, programski jezici i razvojni alati."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Problemi bez sistema za kontrolu verzija"
+        },
+        {
+          "type": "paragraph",
+          "text": "Bez sistema za kontrolu verzija razvoj softvera postaje neefikasan i rizičan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Najčešći problemi uključuju:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "gubitak prethodnih verzija koda",
+            "prepisivanje tuđih izmena",
+            "nemogućnost praćenja istorije promena",
+            "konflikti kada više ljudi radi na istom fajlu"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovi problemi postaju posebno izraženi u većim timovima ili u open source projektima gde učestvuje veliki broj ljudi."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je Git"
+        },
+        {
+          "type": "paragraph",
+          "text": "Git je <strong>open source sistem za kontrolu verzija</strong> koji omogućava praćenje promena u projektu tokom vremena."
+        },
+        {
+          "type": "paragraph",
+          "text": "Git beleži svaku promenu u kodu i čuva kompletnu istoriju razvoja projekta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Git omogućava:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "rad više ljudi na istom projektu",
+            "vraćanje na starije verzije koda",
+            "pregled promena između verzija",
+            "sigurno eksperimentisanje kroz grane (branches)"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Zbog svoje pouzdanosti Git je danas postao standardni alat za razvoj softvera."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Razlika između Git i GitHub"
+        },
+        {
+          "type": "cards",
+          "layout": "pair",
+          "items": [
+            {
+              "title": "Git",
+              "text": "Alat koji se instalira na računaru i služi za kontrolu verzija.",
+              "icon": "⚙️"
+            },
+            {
+              "title": "GitHub",
+              "text": "Online platforma za čuvanje Git repozitorijuma i saradnju.",
+              "icon": "🌐"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "secondary",
+          "text": "Git može da se koristi i bez GitHub-a, ali GitHub omogućava jednostavno deljenje projekata i rad u timu."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Osnovna ideja rada sa Git-om"
+        },
+        {
+          "type": "paragraph",
+          "text": "Git koristi <strong>distribuirani model</strong>. To znači da svaki developer ima kompletnu kopiju projekta i njegove istorije na svom računaru."
+        },
+        {
+          "type": "paragraph",
+          "text": "Promene se prvo prave lokalno, a zatim se razmenjuju sa drugim članovima tima preko zajedničkog repozitorijuma."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prednosti distribuirano-g modela:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "rad bez stalne internet konekcije",
+            "manji rizik od konflikata",
+            "veća fleksibilnost u razvoju"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "GitHub kao platforma za saradnju"
+        },
+        {
+          "type": "paragraph",
+          "text": "GitHub je platforma koja omogućava hostovanje Git repozitorijuma i saradnju između developera."
+        },
+        {
+          "type": "paragraph",
+          "text": "GitHub omogućava:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "javno deljenje koda",
+            "upravljanje problemima (issues)",
+            "pregled izmena kroz pull request",
+            "organizaciju open source projekata"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "GitHub je jedna od najvažnijih platformi za open source razvoj i koristi se širom sveta."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Kreiranje GitHub naloga"
+        },
+        {
+          "type": "gallery",
+          "images": [
+            {
+              "src": "/images/otvoreno-racunarstvo/github_1.png",
+              "caption": "GitHub početna stranica"
+            },
+            {
+              "src": "/images/otvoreno-racunarstvo/github_2.png",
+              "caption": "GitHub registracija"
+            },
+            {
+              "src": "/images/otvoreno-racunarstvo/github_3.png",
+              "caption": "Prijava putem Google naloga"
+            },
+            {
+              "src": "/images/otvoreno-racunarstvo/github_4.png",
+              "caption": "Kreiranje naloga"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "style": "numbered",
+          "items": [
+            "Posetite https://github.com i kliknite Sign up.",
+            "Unesite osnovne podatke (email, lozinku, korisničko ime).",
+            "Možete se prijaviti i putem Google naloga.",
+            "Potvrdite nalog putem email-a."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Primer GitHub repozitorijuma"
+        },
+        {
+          "type": "image-text",
+          "images": [
+            {
+              "src": "/images/otvoreno-racunarstvo/github_5.jpg",
+              "caption": "GitHub repozitorijum - početni prikaz"
+            }
+          ],
+          "paragraphs": [
+            "Nakon kreiranja naloga moguće je napraviti repozitorijum koji sadrži projekat i njegovu istoriju izmena.",
+            "Na stranici repozitorijuma mogu se videti:"
+          ],
+          "items": [
+            "lista fajlova projekta",
+            "istorija commit-a",
+            "grane projekta",
+            "pull request-ovi"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Primer repozitorijuma nakon commit i push operacija"
+        },
+        {
+          "type": "image-text",
+          "images": [
+            {
+              "src": "/images/otvoreno-racunarstvo/github_6.png",
+              "caption": "GitHub repozitorijum - nakon commit-a"
+            }
+          ],
+          "paragraphs": [
+            "Nakon što programer napravi izmene u projektu i izvrši komande <strong>git commit</strong> i <strong>git push</strong>, promene postaju vidljive na GitHub repozitorijumu.",
+            "GitHub tada prikazuje:"
+          ],
+          "items": [
+            "najnovije commit poruke",
+            "autora izmene",
+            "vreme kada je promena napravljena",
+            "istoriju svih prethodnih verzija projekta"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Na ovaj način moguće je pratiti razvoj projekta kroz vreme i jasno videti ko je napravio koju izmenu u kodu."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Osnovni Git workflow"
+        },
+        {
+          "type": "code",
+          "code": "rad na kodu\n↓\ngit add\n↓\ngit commit\n↓\ngit push",
+          "description": "Programer pravi izmene u kodu, dodaje ih u staging zonu, kreira commit i zatim šalje promene na udaljeni repozitorijum."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Osnovne Git komande (Cheat Sheet)"
+        },
+        {
+          "type": "accordion",
+          "id": "cheat-sheet",
+          "items": [
+            {
+              "title": "1. Kreiranje repozitorijuma",
+              "items": [
+                {
+                  "code": "git init",
+                  "text": "inicijalizuje Git u tekućem direktorijumu"
+                }
+              ]
+            },
+            {
+              "title": "2. Kloniranje postojećeg repozitorijuma",
+              "items": [
+                {
+                  "code": "git clone https://github.com/user/project.git",
+                  "text": "kopira repozitorijum na lokalni računar"
+                }
+              ]
+            },
+            {
+              "title": "3. Provera statusa",
+              "items": [
+                {
+                  "code": "git status",
+                  "text": "prikazuje koje su izmene pripremljene za commit"
+                }
+              ]
+            },
+            {
+              "title": "4. Dodavanje fajlova u commit",
+              "items": [
+                {
+                  "code": "git add fajl.txt",
+                  "text": "dodaje jedan fajl u staging zonu"
+                },
+                {
+                  "code": "git add .",
+                  "text": "dodaje sve izmenjene i nove fajlove"
+                }
+              ]
+            },
+            {
+              "title": "5. Kreiranje commit-a",
+              "items": [
+                {
+                  "code": "git commit -m \"Opis promene\"",
+                  "text": "čuva izmene u lokalnoj istoriji"
+                }
+              ]
+            },
+            {
+              "title": "6. Pregled istorije",
+              "items": [
+                {
+                  "code": "git log",
+                  "text": "prikazuje listu commit-ova"
+                }
+              ]
+            },
+            {
+              "title": "7. Slanje promena na GitHub",
+              "items": [
+                {
+                  "code": "git push",
+                  "text": "šalje lokalne commit-ove na udaljeni repozitorijum"
+                }
+              ]
+            },
+            {
+              "title": "8. Preuzimanje promena",
+              "items": [
+                {
+                  "code": "git pull",
+                  "text": "dohvata i spaja promene sa udaljenog repozitorijuma"
+                }
+              ]
+            },
+            {
+              "title": "9. Rad sa granama",
+              "items": [
+                {
+                  "code": "git branch",
+                  "text": "lista svih grana"
+                },
+                {
+                  "code": "git branch nova-grana",
+                  "text": "kreira novu granu"
+                },
+                {
+                  "code": "git checkout nova-grana",
+                  "text": "prebacuje se na granu"
+                },
+                {
+                  "code": "git merge nova-grana",
+                  "text": "spaja granu sa trenutnom granom"
+                }
+              ]
+            },
+            {
+              "title": "10. Promena udaljenog repozitorijuma",
+              "items": [
+                {
+                  "code": "git remote -v",
+                  "text": "prikazuje konfigurisane udaljene repozitorijume"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako funkcioniše rad u open source projektima"
+        },
+        {
+          "type": "paragraph",
+          "text": "U open source projektima doprinosi se kroz sledeći proces:"
+        },
+        {
+          "type": "list",
+          "style": "numbered",
+          "items": [
+            "Fork repozitorijuma",
+            "Kreiranje nove grane",
+            "Izmena koda",
+            "Commit promena",
+            "Pull Request"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovaj proces omogućava održavanje kvaliteta koda i kontrolu promena u projektu."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Video tutorijali"
+        },
+        {
+          "type": "paragraph",
+          "text": "Za bolje razumevanje rada sa Git-om pogledajte sledeće tutorijale:"
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "title": "Git & GitHub Crash Course for Beginners [2026]",
+              "url": "https://youtu.be/mAFoROnOfHs?si=wSTrnklvbDGM-hvk"
+            },
+            {
+              "title": "Git and GitHub Tutorial for Beginners [2023-2024] - Crash Course",
+              "url": "https://youtu.be/6zFRoCBRPSc?si=AwVr92qzZMcuLS_d"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "💡 Preporuka: pokušaj da pratiš tutorijal i napraviš sopstveni Git repozitorijum."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Praktična vežba: Prvi Git projekat"
+        },
+        {
+          "type": "paragraph",
+          "text": "U ovoj vežbi studenti će napraviti svoj prvi Git projekat, sačuvati izmene kroz commit i postaviti projekat na GitHub."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cilj vežbe je razumevanje osnovnog Git workflow-a koji se koristi u realnim softverskim projektima."
+        },
+        {
+          "type": "panel",
+          "title": "Korak 1 – Kreiranje projekta",
+          "blocks": [
+            {
+              "type": "code",
+              "code": "mkdir moj-prvi-git-projekat\ncd moj-prvi-git-projekat\ngit init"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Korak 2 – Kreiranje prvog fajla",
+          "blocks": [
+            {
+              "type": "code",
+              "code": "touch README.md"
+            },
+            {
+              "type": "paragraph",
+              "text": "U fajl upišite kratak opis projekta, na primer:\n# Moj prvi Git projekat\n\nOvo je moj prvi projekat koji koristim za učenje Git-a."
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Korak 3 – Dodavanje fajla u Git",
+          "blocks": [
+            {
+              "type": "code",
+              "code": "git status\ngit add README.md"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Korak 4 – Prvi commit",
+          "blocks": [
+            {
+              "type": "code",
+              "code": "git commit -m \"Initial commit\""
+            },
+            {
+              "type": "callout",
+              "variant": "info",
+              "text": "Ovaj korak čuva trenutnu verziju projekta u Git istoriji."
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Korak 5 – Kreiranje GitHub repozitorijuma",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Otvorite GitHub i napravite novi repozitorijum. Primer URL-a repozitorijuma:"
+            },
+            {
+              "type": "code",
+              "code": "https://github.com/username/moj-prvi-git-projekat"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Korak 6 – Povezivanje sa GitHub repozitorijumom",
+          "blocks": [
+            {
+              "type": "code",
+              "code": "git remote add origin https://github.com/username/moj-prvi-git-projekat.git\ngit remote -v"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Korak 7 – Slanje projekta na GitHub",
+          "blocks": [
+            {
+              "type": "code",
+              "code": "git branch -M main\ngit push -u origin main"
+            },
+            {
+              "type": "callout",
+              "variant": "info",
+              "text": "Nakon ovog koraka projekat će biti vidljiv na GitHub-u."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Dodatni zadaci"
+        },
+        {
+          "type": "panel",
+          "title": "Dodatni zadatak",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Nakon osnovne vežbe pokušajte sledeće:"
+            },
+            {
+              "type": "list",
+              "style": "bullets",
+              "items": [
+                "napravite novi fajl <strong>notes.txt</strong>",
+                "dodajte ga u Git repozitorijum",
+                "napravite novi commit",
+                "pošaljite promene na GitHub"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Napredni zadatak (rad sa granama)",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Kreirajte novu granu i napravite izmenu u projektu."
+            },
+            {
+              "type": "code",
+              "code": "git branch nova-grana\ngit checkout nova-grana"
+            },
+            {
+              "type": "paragraph",
+              "text": "Napravite izmenu u README.md fajlu i zatim uradite commit. Na kraju spojite granu sa glavnom granom:"
+            },
+            {
+              "type": "code",
+              "code": "git checkout main\ngit merge nova-grana"
+            },
+            {
+              "type": "callout",
+              "variant": "info",
+              "text": "💡 Razumevanje grananja (branches) predstavlja jedan od najvažnijih koncepata u Git-u i omogućava paralelni razvoj različitih funkcionalnosti."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "otvoreni-protokoli-i-standardi",
+    "subjectSlug": "otvoreno-racunarstvo",
+    "title": "Otvoreni protokoli i standardi",
+    "description": "TCP/IP, HTTP, DNS i drugi otvoreni protokoli koji čine temelj interneta, zajedno sa organizacijama koje ih definišu.",
+    "week": 4,
+    "date": "2026-03-19",
+    "formattedDate": "19.03.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta su protokoli i standardi"
+        },
+        {
+          "type": "paragraph",
+          "text": "Protokoli i standardi predstavljaju skup pravila koja definišu kako različiti sistemi međusobno komuniciraju. Oni određuju način slanja, primanja i tumačenja podataka između računarskih sistema."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bez jasno definisanih protokola i standarda, savremeni informacioni sistemi ne bi mogli da funkcionišu zajedno. Kao što ljudi koriste zajednički jezik da bi se razumeli, računari koriste protokole."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Značaj otvorenih standarda"
+        },
+        {
+          "type": "paragraph",
+          "text": "Otvoreni standardi su javno dostupni i dokumentovani. To znači da ih svako može implementirati bez ograničenja ili zavisnosti od jednog proizvođača."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "🔗",
+              "text": "Interoperabilnost sistema – različiti uređaji i softver mogu da rade zajedno."
+            },
+            {
+              "icon": "📅",
+              "text": "Dugoročnu kompatibilnost – podaci ostaju čitljivi i nakon mnogo godina."
+            },
+            {
+              "icon": "🔓",
+              "text": "Tehnološku nezavisnost – nismo vezani za jednog proizvođača (nema vendor lock-in-a)."
+            },
+            {
+              "icon": "⚖️",
+              "text": "Ravnopravno učešće različitih tehnologija – svako može da se takmiči na tržištu."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Otvoreni protokoli kao osnova interneta"
+        },
+        {
+          "type": "paragraph",
+          "text": "Internet je zasnovan na otvorenim protokolima koji omogućavaju komunikaciju između miliona različitih uređaja i sistema širom sveta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zahvaljujući otvorenosti ovih protokola:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Internet je globalan i dostupan svima.",
+            "Sistemi mogu međusobno da komuniciraju bez obzira na proizvođača.",
+            "Razvoj novih tehnologija je omogućen bez centralne kontrole."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Klijent–server model komunikacije"
+        },
+        {
+          "type": "paragraph",
+          "text": "Većina savremenih sistema funkcioniše po <strong>klijent–server modelu</strong>, gde:"
+        },
+        {
+          "type": "list",
+          "style": "numbered",
+          "items": [
+            "<strong>Klijent</strong> šalje zahtev (npr. web browser traži stranicu).",
+            "<strong>Server</strong> obrađuje zahtev (npr. web server pronalazi stranicu).",
+            "<strong>Server</strong> vraća odgovor (npr. šalje HTML stranicu nazad)."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovaj model omogućava jasnu podelu uloga i odgovornosti u sistemima zasnovanim na otvorenim protokolima."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "TCP/IP – temelj interneta"
+        },
+        {
+          "type": "paragraph",
+          "text": "TCP/IP je osnovni komunikacioni model interneta. Sastoji se iz dva ključna protokola:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>TCP (Transmission Control Protocol):</strong> odgovoran za pouzdan prenos podataka. Proverava da li su svi paketi stigli i da li su u ispravnom redosledu.",
+            "<strong>IP (Internet Protocol):</strong> odgovoran za adresiranje uređaja i rutiranje paketa kroz mrežu (pronalaženje puta od pošiljaoca do primaoca)."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Linux i open source mrežni alati su direktno izgrađeni oko TCP/IP modela."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "HTTP – protokol web-a"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>HTTP (Hypertext Transfer Protocol)</strong> je jedan od najvažnijih otvorenih protokola i koristi se za razmenu podataka na web-u."
+        },
+        {
+          "type": "paragraph",
+          "text": "HTTP omogućava:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "prenos web stranica,",
+            "komunikaciju između klijenta (browser) i servera,",
+            "rad web aplikacija."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "HTTP je <strong>tekstualan, otvoren i lako implementabilan</strong>, što ga čini idealnim za open source. Primer: Browser šalje HTTP request, a server vraća HTTP response sa traženom stranicom."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "HTTPS i sigurnost"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>HTTPS = HTTP + kriptografija</strong>. To je sigurna verzija HTTP protokola."
+        },
+        {
+          "type": "paragraph",
+          "text": "HTTPS omogućava:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>Šifrovanje podataka</strong> – niko ko presreće komunikaciju ne može da pročita sadržaj.",
+            "<strong>Zaštitu privatnosti</strong> – podaci o korišćenju ostaju privatni.",
+            "<strong>Sigurnu autentifikaciju</strong> – potvrđujemo da smo povezani sa pravim sajtom."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo je ključno za e-trgovinu, login sisteme i zaštitu privatnosti korisnika. Open source alati poput <strong>OpenSSL</strong> i sam Linux čine osnovu HTTPS-a."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "DNS – imenik interneta"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>DNS (Domain Name System)</strong> prevodi ljudima razumljiva imena u IP adrese koje računari razumeju."
+        },
+        {
+          "type": "paragraph",
+          "text": "Primer: <code>google.com → 142.250.185.46</code>"
+        },
+        {
+          "type": "paragraph",
+          "text": "Bez DNS-a, morali bismo da pamtimo brojeve umesto imena. Zamislite da svaki put kada želite da posetite neki sajt kucate 142.250.185.46 umesto google.com."
+        },
+        {
+          "type": "paragraph",
+          "text": "DNS serveri često koriste open source softver kao što su <strong>BIND</strong> ili <strong>Unbound</strong>."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Protokoli i filozofija otvorenosti"
+        },
+        {
+          "type": "paragraph",
+          "text": "Otvoreni protokoli su:"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "📄",
+              "text": "dokumentovani – svako može da pročita kako rade,"
+            },
+            {
+              "icon": "💸",
+              "text": "besplatni – nema licencnih naknada za korišćenje,"
+            },
+            {
+              "icon": "🔧",
+              "text": "slobodni za implementaciju – svako može da napiše softver koji ih koristi."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "To znači: nema vendor lock-in-a – nismo zarobljeni u ekosistemu jedne kompanije; zajednica ima kontrolu – standardi se razvijaju kroz dogovor, a ne diktat. Ovo je direktna filozofija open source pokreta."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Organizacije koje definišu standarde"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "🌐",
+              "text": "<strong>IETF (Internet Engineering Task Force):</strong> definiše internet protokole. Poznata je po dokumentima zvanim <strong>RFC (Request for Comments)</strong>. Primer: HTTP, TCP/IP, DNS."
+            },
+            {
+              "icon": "🌍",
+              "text": "<strong>W3C (World Wide Web Consortium):</strong> postavlja standarde za web tehnologije. Primer: HTML, CSS, XML. Osigurava da web radi isto svuda."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "⚠️ Važno: ove organizacije nisu kompanije, već zajednice eksperata koje rade na otvorenim standardima za dobrobit svih."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Bezbednost i otvoreni protokoli"
+        },
+        {
+          "type": "paragraph",
+          "text": "Iako su otvoreni protokoli javno dokumentovani, to <strong>ne znači da su nebezbedni</strong>. Naprotiv, otvorenost omogućava:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>Javnu proveru</strong> – hiljade stručnjaka može da pregleda protokol i pronađe slabosti.",
+            "<strong>Brzo uočavanje problema</strong> – kada se otkrije rupa, brzo se reaguje.",
+            "<strong>Kontinuirano unapređenje bezbednosti</strong> – protokoli se stalno popravljaju."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Bezbednost se zasniva na <strong>pravilnoj implementaciji</strong> i kriptografiji, a ne na skrivanju pravila (security through obscurity je loša praksa)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zašto su otvoreni standardi ključni za open source?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Otvoreni standardi omogućavaju:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "razvoj open source softvera <strong>bez pravnih barijera</strong>,",
+            "<strong>kompatibilnost</strong> između različitih sistema (npr. Linux server može da komunicira sa Windows klijentom),",
+            "<strong>slobodu izbora</strong> alata i platformi."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Primer: Firefox (open source) može da otvori sajt pisan u HTML-u (otvoreni standard) bez obzira ko ga je pravio. 💡 Open source = slobodan softver | Otvoreni standardi = slobodna komunikacija"
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "<strong>JSONPlaceholder</strong> je besplatni, javni REST API koji koristimo za testiranje HTTP zahteva u ovoj lekciji. Služi kao \"lažni backend\" za učenje i eksperimentisanje.<h4>🌍 Osnovne informacije:</h4><ul><li><strong>URL:</strong> <code>https://jsonplaceholder.typicode.com</code></li><li><strong>Autorizacija:</strong> Nije potrebna (potpuno javno)</li><li><strong>CORS:</strong> Omogućen (radi direktno iz browsera)</li><li><strong>Podrška:</strong> HTTP i HTTPS</li></ul><h4>📋 Šta sve nudi?</h4><div class=\"tech-grid\"><div class=\"tech-item\"><span class=\"tech-icon\">📝</span><span>/posts</span></div><div class=\"tech-item\"><span class=\"tech-icon\">💬</span><span>/comments</span></div><div class=\"tech-item\"><span class=\"tech-icon\">📸</span><span>/photos</span></div><div class=\"tech-item\"><span class=\"tech-icon\">👥</span><span>/users</span></div></div>💡 U interaktivnoj vežbi ispod, svi zahtevi idu upravo na JSONPlaceholder. Probaj sam da pošalješ zahtev i vidi kako izgleda pravi API odgovor!",
+          "title": "📦 JSONPlaceholder - naš testni partner",
+          "note": "💡 U interaktivnoj vežbi ispod, svi zahtevi idu upravo na JSONPlaceholder. Probaj sam da pošalješ zahtev i vidi kako izgleda pravi API odgovor!"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "🔬 Interaktivna vežba: HTTP Explorer"
+        },
+        {
+          "type": "paragraph",
+          "text": "U ovoj vežbi ćemo direktno komunicirati sa JSONPlaceholder serverom koristeći HTTP protokol. Videćemo kako izgledaju zahtevi i odgovori, i šta se dešava 'iza scene'."
+        },
+        {
+          "type": "http-explorer",
+          "config": {
+            "form": {
+              "endpoints": [
+                {
+                  "id": "http",
+                  "label": "HTTP (nebezbedno)",
+                  "value": "http",
+                  "badge": "danger",
+                  "default": true
+                },
+                {
+                  "id": "https",
+                  "label": "HTTPS (bezbedno)",
+                  "value": "https",
+                  "badge": "success"
+                },
+                {
+                  "id": "json",
+                  "label": "JSON API",
+                  "value": "json",
+                  "badge": "info"
+                }
+              ],
+              "defaultUrl": "jsonplaceholder.typicode.com/posts/1",
+              "statusContainerId": "requestStatus",
+              "responseContainerId": "responseContainer",
+              "handshakeContainerId": "handshakeInfo",
+              "formId": "httpForm"
+            },
+            "curlExamples": {
+              "http": {
+                "image": "/images/otvoreno-racunarstvo/http-curl.png",
+                "alt": "HTTP curl output",
+                "textCode": "curl -v http://jsonplaceholder.typicode.com/posts/1\n\n# U zaglavlju odgovora videćeš:\n< HTTP/1.1 200 OK\n< Content-Type: application/json\n< Content-Length: 292"
+              },
+              "https": {
+                "image": "/images/otvoreno-racunarstvo/https-curl.png",
+                "alt": "HTTPS curl output",
+                "textCode": "curl -v https://jsonplaceholder.typicode.com/posts/1\n\n# SSL/TLS handshake detalji:\n* SSL connection using TLSv1.3\n* ALPN: server accepted http/1.1\n* Server certificate:\n*   subject: CN=typicode.com\n*   SSL certificate verify ok"
+              }
+            },
+            "handshakeExplanation": {
+              "title": "🔐 SSL/TLS Handshake - Šta se zapravo dešava?",
+              "steps": [
+                "<strong>Client Hello</strong> - Browser šalje listu podržanih enkripcija",
+                "<strong>Server Hello</strong> - Server bira enkripciju i šalje sertifikat",
+                "<strong>Verifikacija</strong> - Browser proverava sertifikat",
+                "<strong>Key Exchange</strong> - Razmena ključeva za sigurnu komunikaciju",
+                "<strong>Change Cipher Spec</strong> - Sva dalja komunikacija je šifrovana"
+              ]
+            }
+          },
+          "scripts": [
+            "otvoreno-racunarstvo/http-explorer.js"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "💡 Probaj: Pošalji zahtev na <strong>http://jsonplaceholder.typicode.com/posts/1</strong> (nebezbedno) i <strong>https://jsonplaceholder.typicode.com/posts/1</strong> (bezbedno). Obrati pažnju na to što moderni browseri često blokiraju mešani sadržaj!"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta smo naučili?"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "📡",
+              "text": "Protokoli i standardi su pravila komunikacije – bez njih bi nastao haos."
+            },
+            {
+              "icon": "🔓",
+              "text": "Otvoreni standardi su javni i omogućavaju interoperabilnost i slobodu izbora."
+            },
+            {
+              "icon": "🌍",
+              "text": "Internet počiva na otvorenim protokolima kao što su TCP/IP, HTTP i DNS."
+            },
+            {
+              "icon": "🧪",
+              "text": "<strong>JSONPlaceholder</strong> je besplatni testni API koji koristimo za praktično učenje."
+            },
+            {
+              "icon": "🔒",
+              "text": "Otvorenost ne znači nesigurnost – naprotiv, omogućava bolju proveru i bezbednost."
+            },
+            {
+              "icon": "🤝",
+              "text": "Otvoreni standardi i open source su neraskidivo povezani i čine osnovu modernih informacionih sistema."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "otvoreni-api-i-rest-servisi",
+    "subjectSlug": "otvoreno-racunarstvo",
+    "title": "Otvoreni API i REST servisi",
+    "description": "Koncept API-ja, REST arhitektura, HTTP metode, JSON format i praktična primena u razvoju savremenih web servisa.",
+    "week": 5,
+    "date": "2026-03-27",
+    "formattedDate": "27.03.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je API?"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>API (Application Programming Interface)</strong> je posrednik između dva softverska sistema koji omogućava njihovu komunikaciju. Najbolja analogija za razumevanje API-ja jeste <strong>konobar u restoranu</strong>. Konobar prima porudžbinu (zahtev) od gosta, prenosi je kuhinji (sistemu) i vraća gotovo jelo (odgovor) gostu. Gost ne mora da zna kako kuhinja funkcioniše – dovoljno je da komunicira preko konobara."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zašto su API-ji važni?"
+        },
+        {
+          "type": "paragraph",
+          "text": "API-ji predstavljaju <strong>\"lepak\"</strong> savremenog softverskog sveta. Oni omogućavaju:"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "🔗",
+              "text": "Povezivanje različitih aplikacija i servisa"
+            },
+            {
+              "icon": "♻️",
+              "text": "Ponovnu upotrebu postojećih funkcionalnosti"
+            },
+            {
+              "icon": "📱",
+              "text": "Razdvajanje frontend-a i backend-a"
+            },
+            {
+              "icon": "⚡",
+              "text": "Brži razvoj softvera"
+            },
+            {
+              "icon": "📈",
+              "text": "Skalabilnost sistema"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "💡 Svakodnevni primer upotrebe API-ja jeste aplikacija za vremensku prognozu na telefonu – ona ne meri temperaturu sama, već \"pita\" API meteorološkog servisa i prikazuje dobijene podatke."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako API funkcioniše?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Osnovni model komunikacije funkcioniše po principu <strong>zahtev-odgovor</strong>:"
+        },
+        {
+          "type": "list",
+          "style": "numbered",
+          "items": [
+            "<strong>Klijent</strong> (aplikacija) šalje ZAHTEV (request) ka API-ju",
+            "<strong>API</strong> prosleđuje zahtev serveru (backendu)",
+            "<strong>Server</strong> obrađuje podatke i vraća ODGOVOR (response) putem API-ja nazad klijentu"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ključni elementi: klijent (aplikacija koja traži podatke), API (definisana \"recepcija\") i server (backend koji obrađuje zahtev)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Vrste API-ja prema dostupnosti"
+        },
+        {
+          "type": "cards",
+          "layout": "grid",
+          "items": [
+            {
+              "title": "Javni / Otvoreni API",
+              "icon": "🌍",
+              "text": "Dostupni svim programerima, često besplatni uz ograničenje broja poziva."
+            },
+            {
+              "title": "Interni / Privatni API",
+              "icon": "🏢",
+              "text": "Koriste se samo unutar jedne organizacije za povezivanje internih sistema."
+            },
+            {
+              "title": "Partnerski API",
+              "icon": "🤝",
+              "text": "Dele se samo sa specifičnim poslovnim partnerima."
+            },
+            {
+              "title": "Kompozitni API",
+              "icon": "🔗",
+              "text": "Kombinuju podatke iz više API-ja u jednom pozivu."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Primeri javnih API-ja:</strong> Google Maps API, Twitter API, OpenWeather API."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Otvoreni API i otvoreno računarstvo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Otvoreni API-ji prate istu filozofiju kao i open source softver:"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "📄",
+              "text": "<strong>Transparentnost</strong> – javno dostupna dokumentacija"
+            },
+            {
+              "icon": "🔓",
+              "text": "<strong>Sloboda korišćenja</strong> – svako može da integriše API u svoje aplikacije"
+            },
+            {
+              "icon": "🤝",
+              "text": "<strong>Interoperabilnost</strong> – povezivanje različitih sistema"
+            },
+            {
+              "icon": "👥",
+              "text": "<strong>Zajednica</strong> – programeri koji grade dodatne alate i biblioteke oko API-ja"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je REST?"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>REST (Representational State Transfer)</strong> nije protokol, već <strong>arhitekturni stil</strong> za dizajn mrežnih aplikacija. Definisao ga je Roy Fielding 2000. godine u svojoj doktorskoj disertaciji."
+        },
+        {
+          "type": "paragraph",
+          "text": "REST je danas dominantan jer:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Koristi HTTP – standardni protokol",
+            "Jednostavan – za razumevanje i implementaciju",
+            "Nezavisan – od platforme i programskog jezika",
+            "Skalabilan i pouzdan"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ključni principi REST-a"
+        },
+        {
+          "type": "cards",
+          "layout": "grid",
+          "items": [
+            {
+              "title": "Klijent-server arhitektura",
+              "icon": "🖥️",
+              "text": "Razdvaja frontend od backend-a."
+            },
+            {
+              "title": "Bezstanje (Stateless)",
+              "icon": "📄",
+              "text": "Server ne pamti stanje klijenta između zahteva. Svaki zahtev sadrži sve potrebne informacije."
+            },
+            {
+              "title": "Keširanje (Cacheability)",
+              "icon": "💾",
+              "text": "Odgovori definišu da li mogu da se keširaju, čime se smanjuje opterećenje servera."
+            },
+            {
+              "title": "Jedinstveni interfejs (Uniform Interface)",
+              "icon": "🔌",
+              "text": "Srž REST-a – standardizovan način komunikacije."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Resursi (Resources)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sve je resurs: korisnik, proizvod, porudžbina. Svaki resurs ima svoj <strong>URI (Uniform Resource Identifier)</strong>.<br>Primeri URI-ja:<br><code>/korisnici</code> – lista svih korisnika<br><code>/korisnici/123</code> – konkretan korisnik<br>Resursi se razmenjuju u standardnim formatima, najčešće <strong>JSON</strong>, a ponekad XML."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "HTTP metode – \"glagoli\" REST API-ja"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Metoda",
+            "Operacija",
+            "Opis",
+            "Primer"
+          ],
+          "rows": [
+            [
+              "GET",
+              "Dohvata resurs",
+              "Ne menja stanje sistema",
+              "<code>GET /proizvodi</code>"
+            ],
+            [
+              "POST",
+              "Kreira novi resurs",
+              "Dodaje novi zapis",
+              "<code>POST /korisnici</code>"
+            ],
+            [
+              "PUT",
+              "Zamenjuje ceo resurs",
+              "Potpuna zamena postojećeg",
+              "<code>PUT /korisnici/123</code>"
+            ],
+            [
+              "PATCH",
+              "Delimično ažurira",
+              "Menja samo deo resursa",
+              "<code>PATCH /korisnici/123</code>"
+            ],
+            [
+              "DELETE",
+              "Briše resurs",
+              "Uklanja zapis",
+              "<code>DELETE /korisnici/123</code>"
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "⚠️ Važno: HTTP metode su standardizovane i nezavisne od toga šta resurs predstavlja."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "HTTP statusni kodovi"
+        },
+        {
+          "type": "cards",
+          "layout": "grid",
+          "items": [
+            {
+              "title": "2xx – Uspeh",
+              "icon": "✅",
+              "text": "200 OK, 201 Created"
+            },
+            {
+              "title": "4xx – Greška klijenta",
+              "icon": "❌",
+              "text": "400 Bad Request, 401 Unauthorized, 404 Not Found"
+            },
+            {
+              "title": "5xx – Greška servera",
+              "icon": "🔥",
+              "text": "500 Internal Server Error"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "JSON – jezik razmene podataka"
+        },
+        {
+          "type": "code",
+          "code": "{\n  \"id\": 123,\n  \"ime\": \"Marko Marković\",\n  \"email\": \"marko@example.com\",\n  \"aktivan\": true,\n  \"godine\": 25\n}",
+          "description": "<strong>JSON (JavaScript Object Notation)</strong> je najčešći format za razmenu podataka u REST API-jima."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "JSON je omiljen jer je čitljiv ljudima i mašinama, nezavisan od programskog jezika, lagan i podržan u svim modernim programskim jezicima."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Dobre i loše prakse u dizajnu API-ja"
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "✅ Dobar API (RESTful)",
+            "items": [
+              "<code>GET /proizvodi</code>",
+              "<code>GET /proizvodi/123</code>",
+              "<code>POST /porudzbine</code>",
+              "<code>GET /korisnici/456/porudzbine</code>"
+            ]
+          },
+          "right": {
+            "title": "❌ Loš API (nije RESTful)",
+            "items": [
+              "Glagoli u URI-ju: <code>GET /getProduct</code>",
+              "Nestandardne forme: <code>GET /productinfo?id=123</code>",
+              "Pogrešne HTTP metode: <code>POST /updateProduct/123</code>"
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "💡 Osnovno pravilo: <strong>URI treba da imenuje resurse (imenice)</strong>, a HTTP metoda definiše akciju (glagol)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Dokumentacija API-ja i OpenAPI"
+        },
+        {
+          "type": "paragraph",
+          "text": "Dobra dokumentacija sadrži: spisak endpoint-a, HTTP metode, parametre, primere zahteva i odgovora, statusne kodove i način autentifikacije."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>OpenAPI Specification (bivši Swagger)</strong> je jezik za opisivanje API-ja koji je razumljiv i ljudima i mašinama. Omogućava automatsko generisanje dokumentacije, klijentskog koda i testiranje."
+        },
+        {
+          "type": "paragraph",
+          "text": "<em>Primeri alata: Swagger UI, Swagger Editor.</em>"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Alati za rad sa API-jima"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Alat",
+            "Tip",
+            "Opis"
+          ],
+          "rows": [
+            [
+              "Curl",
+              "Komandna linija",
+              "Slanje HTTP zahteva, npr. <code>curl https://api.example.com/korisnici/123</code>"
+            ],
+            [
+              "Postman",
+              "Grafički (freemium)",
+              "Grafički alat za testiranje API-ja"
+            ],
+            [
+              "Insomnia",
+              "Open source",
+              "Alternativa Postman-u"
+            ],
+            [
+              "Swagger UI",
+              "Dokumentacija",
+              "Automatski generisana interaktivna dokumentacija"
+            ],
+            [
+              "Hoppscotch",
+              "Open source / Web",
+              "Testiranje API-ja direktno u pregledaču"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zaštita API-ja"
+        },
+        {
+          "type": "cards",
+          "layout": "grid",
+          "items": [
+            {
+              "title": "🔑 API ključ",
+              "text": "Jednostavan token za identifikaciju aplikacije.",
+              "icon": "📦"
+            },
+            {
+              "title": "🔐 OAuth 2.0",
+              "text": "Standard za delegiranje pristupa (\"Prijavi se preko Google-a\").",
+              "icon": "📦"
+            },
+            {
+              "title": "📜 JWT",
+              "text": "Token koji sadrži informacije o korisniku.",
+              "icon": "📦"
+            },
+            {
+              "title": "⏱️ Rate Limiting",
+              "text": "Ograničava broj zahteva po vremenskom intervalu.",
+              "icon": "📦"
+            },
+            {
+              "title": "🚪 API Gateway",
+              "text": "Sloj ispred API-ja koji upravlja saobraćajem.",
+              "icon": "📦"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Verzionisanje API-ja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Osnovni princip: <strong>nikada se ne menja API na način koji ruši postojeće klijente</strong>. Rešenje je verzionisanje."
+        },
+        {
+          "type": "code",
+          "code": "https://api.example.com/v1/korisnici\nhttps://api.example.com/v2/korisnici"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "U URI-ju: <code>/v1/</code>, <code>/v2/</code>",
+            "U HTTP header-u: <code>Accept: application/vnd.example.v1+json</code>",
+            "Query parametar: <code>?version=1</code>"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Praktični primer – API za blog"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Resurs \"članci\""
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Metoda",
+            "Ruta",
+            "Opis"
+          ],
+          "rows": [
+            [
+              "GET",
+              "/clanci",
+              "Lista svih članaka"
+            ],
+            [
+              "POST",
+              "/clanci",
+              "Kreiranje novog članka"
+            ],
+            [
+              "GET",
+              "/clanci/42",
+              "Pojedinačni članak"
+            ],
+            [
+              "PUT",
+              "/clanci/42",
+              "Zamena celog članka"
+            ],
+            [
+              "PATCH",
+              "/clanci/42",
+              "Delimično ažuriranje"
+            ],
+            [
+              "DELETE",
+              "/clanci/42",
+              "Brisanje članka"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Resurs \"komentari\""
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Metoda",
+            "Ruta",
+            "Opis"
+          ],
+          "rows": [
+            [
+              "GET",
+              "/clanci/42/komentari",
+              "Prikaz komentara članka"
+            ],
+            [
+              "POST",
+              "/clanci/42/komentari",
+              "Dodavanje novog komentara"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "🌐 Interaktivna vežba: Prikaz različitih tipova odgovora"
+        },
+        {
+          "type": "paragraph",
+          "text": "U ovoj vežbi koristimo <code>&lt;iframe&gt;</code> da bismo prikazali kako različite vrste HTTP odgovora izgledaju u pregledaču. Svi primeri su posluženi sa našeg servera (isti origin), tako da nema CSP ograničenja."
+        },
+        {
+          "type": "api-examples",
+          "config": {
+            "selector": {
+              "id": "exampleSelect",
+              "options": [
+                {
+                  "value": "/api/v1/otvoreno-racunarstvo/examples/json",
+                  "label": "📄 JSON"
+                },
+                {
+                  "value": "/api/v1/otvoreno-racunarstvo/examples/html",
+                  "label": "🌐 HTML stranica"
+                },
+                {
+                  "value": "/api/v1/otvoreno-racunarstvo/examples/image",
+                  "label": "🖼️ Slika (PNG)"
+                },
+                {
+                  "value": "/api/v1/otvoreno-racunarstvo/examples/pdf",
+                  "label": "📑 PDF dokument"
+                }
+              ],
+              "buttonId": "loadLocalButton",
+              "iframeId": "localIframe"
+            }
+          },
+          "scripts": [
+            "otvoreno-racunarstvo/api-example.js"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "secondary",
+          "text": "💡 <strong>Objašnjenje:</strong> Svaki od ovih endpoint-a vraća drugačiji <code>Content-Type</code>. Zato iframe može prikazati i JSON (kao tekst), i HTML, i sliku, i PDF. Sve je unutar naše domene – nema vanjskih poziva, pa nema ni CSP problema."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta smo naučili?"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "🔌",
+              "text": "API je posrednik koji omogućava komunikaciju između softverskih sistema."
+            },
+            {
+              "icon": "🧱",
+              "text": "REST je arhitekturni stil koji koristi HTTP i principe poput stateless i uniform interface."
+            },
+            {
+              "icon": "📡",
+              "text": "HTTP metode (GET, POST, PUT, PATCH, DELETE) i statusni kodovi su standardizovani."
+            },
+            {
+              "icon": "📦",
+              "text": "JSON je najčešći format za razmenu podataka."
+            },
+            {
+              "icon": "✅",
+              "text": "Dobar REST API koristi imenice u URI-ju i pravilne HTTP metode."
+            },
+            {
+              "icon": "🛠️",
+              "text": "Postoje alati za testiranje (curl, Postman) i specifikacije (OpenAPI) za dokumentaciju."
+            },
+            {
+              "icon": "🔒",
+              "text": "API-ji se štite autentifikacijom, autorizacijom i rate limiting-om."
+            },
+            {
+              "icon": "🖼️",
+              "text": "HTTP odgovori mogu imati različite tipove sadržaja: JSON, HTML, slike, PDF i dr."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "iot-i-otvoreno-racunarstvo",
+    "subjectSlug": "otvoreno-racunarstvo",
+    "title": "IoT i otvoreno računarstvo",
+    "description": "Primena otvorenih principa na Internet of Things uređaje, protokole (MQTT, CoAP), hardver i softver u IoT ekosistemu.",
+    "week": 6,
+    "date": "2026-03-27",
+    "formattedDate": "27.03.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je Internet of Things (IoT)?"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Internet of Things (IoT)</strong> predstavlja mrežu fizičkih uređaja (senzora, aktuatora, pametnih aparata) koji su povezani na internet i međusobno komuniciraju. Ovi uređaji prikupljaju podatke iz okruženja, razmenjuju ih i na osnovu njih donose odluke – često bez ljudske intervencije."
+        },
+        {
+          "type": "paragraph",
+          "text": "Primeri IoT uređaja: pametni termostati, pametne sijalice, sistemi za nadzor, nosivi uređaji (fitnes tracker-i), industrijski senzori, pa čak i gradski sistemi za parking ili osvetljenje."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "💡 Procenjuje se da će do 2030. godine biti povezano preko 25 milijardi IoT uređaja širom sveta."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Otvoreno računarstvo kao pokretač IoT-a"
+        },
+        {
+          "type": "paragraph",
+          "text": "Otvoreno računarstvo (open source hardver i softver) igra ključnu ulogu u razvoju IoT-a. Za razliku od zatvorenih, proprietarnih sistema, otvoreni pristup donosi:"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "🔍",
+              "text": "<strong>Transparentnost</strong> – svako može pregledati, analizirati i unaprediti kod firmvera ili hardverske šeme."
+            },
+            {
+              "icon": "🔗",
+              "text": "<strong>Interoperabilnost</strong> – otvoreni protokoli (MQTT, CoAP, HTTP) omogućavaju povezivanje uređaja različitih proizvođača."
+            },
+            {
+              "icon": "🔒",
+              "text": "<strong>Sigurnost</strong> – zajednica brže otkriva i popravlja ranjivosti (nema 'sigurnosti kroz skrivanje')."
+            },
+            {
+              "icon": "🌍",
+              "text": "<strong>Ekosistem</strong> – open source hardver (ESP32, Arduino, Raspberry Pi) i softver (FreeRTOS, Zephyr, Linux) ubrzavaju razvoj i smanjuju troškove."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>ESP32</strong> je jedan od najpopularnijih open source mikrokontrolera – jeftin, moćan, sa ugrađenim Wi-Fi i Bluetooth-om, idealan za IoT projekte."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Komunikacioni protokoli za IoT"
+        },
+        {
+          "type": "paragraph",
+          "text": "Za razliku od klasičnog web-a gde dominira HTTP/HTTPS, u IoT svetu se koriste specijalizovani protokoli prilagođeni ograničenim resursima (mala procesorska snaga, mala memorija, mala snaga baterije)."
+        },
+        {
+          "type": "cards",
+          "layout": "grid",
+          "items": [
+            {
+              "title": "HTTP/HTTPS",
+              "icon": "🌐",
+              "text": "Zahtev-odgovor, jednostavan, veliki overhead. Pogodan za slanje podataka na server (REST API)."
+            },
+            {
+              "title": "MQTT",
+              "icon": "📡",
+              "text": "Pub/Sub model, izuzetno lagan (minimalni header 2 bajta), idealan za senzorske mreže i embedded uređaje. Koristi TCP."
+            },
+            {
+              "title": "CoAP",
+              "icon": "🔄",
+              "text": "UDP-based, dizajniran za RESTful arhitekturu sa malim resursima. Sličan HTTP-u, ali efikasniji."
+            },
+            {
+              "title": "WebSocket",
+              "icon": "⚡",
+              "text": "Bidirekciona komunikacija u realnom vremenu, mali latency. Često se koristi za dashboard-e i kontrolu uređaja."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "📌 <strong>MQTT je često bolji izbor</strong> za IoT jer štedi energiju i bandwith, ali zahteva MQTT broker (npr. Mosquitto). HTTP je univerzalan i radi svuda."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako IoT uređaji komuniciraju? Osnovni principi"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📡 1. Model klijent-server (zahtev-odgovor)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo je najjednostavniji i najrasprostranjeniji obrazac. Klijent (npr. ESP32) šalje zahtev serveru i čeka odgovor. Server obrađuje zahtev i vraća odgovor (uspeh, greška, ili traženi podatak). <strong>HTTP</strong> i <strong>CoAP</strong> rade na ovom principu."
+        },
+        {
+          "type": "callout",
+          "variant": "success",
+          "text": "Prednost: Jednostavan za razumevanje i implementaciju."
+        },
+        {
+          "type": "callout",
+          "variant": "warning",
+          "text": "Nedostatak: Server mora biti stalno dostupan; klijent mora da 'pita' da bi dobio podatke (polling). Nije efikasan za veliki broj uređaja."
+        },
+        {
+          "type": "callout",
+          "variant": "secondary",
+          "text": "<em>Primer u našem projektu:</em> ESP32 šalje POST zahtev sa senzorskim podacima (temperatura, vlažnost, pritisak, vlaga zemlje, kiša, svetlost); server odgovara sa <code>{ status: \"ok\" }</code>."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📡 2. Model publish-subscribe (objavi-pretplati se)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo je napredniji obrazac koji koriste MQTT, AMQP i neki drugi IoT protokoli. Umesto direktnog slanja serveru, uređaji komuniciraju preko posrednika – <strong>brokera</strong>. Uređaji <strong>objavljuju</strong> poruke na određene <strong>teme</strong>, a drugi uređaji koji su <strong>pretplaćeni</strong> na te teme primaju poruke. Objavljivač i pretplatnik ne znaju jedan za drugog – sistem je labavo povezan."
+        },
+        {
+          "type": "callout",
+          "variant": "success",
+          "text": "Prednost: Izuzetno skalabilan; odličan za distribuirane sisteme; uređaji mogu da primaju podatke u realnom vremenu bez konstantnog proveravanja."
+        },
+        {
+          "type": "callout",
+          "variant": "warning",
+          "text": "Nedostatak: Zahteva dodatnu komponentu (broker), složeniji za postavljanje."
+        },
+        {
+          "type": "callout",
+          "variant": "secondary",
+          "text": "<em>Primer:</em> Pametna sijalica se pretplati na temu <code>komande/soba1/svetlo</code>. Kada mobilna aplikacija objavi <code>{\"status\": \"ON\"}</code> na toj temi, broker prosleđuje poruku sijalici koja pali svetlo."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📡 3. Poređenje HTTP i MQTT (najčešći izbori)"
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "HTTP",
+            "items": [
+              "Tekstualni protokol (zaglavlja u ASCII)",
+              "Veliki overhead (često > 500 bajta po zahtevu)",
+              "Radi preko TCP (port 80/443)",
+              "Zahtev-odgovor, sinhrono",
+              "Lako prolazi kroz firewall-e"
+            ]
+          },
+          "right": {
+            "title": "MQTT",
+            "items": [
+              "Binarni protokol, minimalna zaglavlja (2 bajta!)",
+              "Izuzetno mali overhead – idealan za baterijske uređaje",
+              "Radi preko TCP (port 1883/8883 za TLS)",
+              "Pub/Sub, asinhrono",
+              "Kvalitet usluge (QoS) nivoi: 0,1,2"
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "U našem projektu koristimo HTTP jer je jednostavan za demonstraciju i ne zahteva dodatni broker. U realnim IoT sistemima, MQTT je često bolji izbor."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📡 4. Kako funkcioniše slanje JSON podataka preko HTTP?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kada ESP32 šalje podatke, on formira HTTP poruku:"
+        },
+        {
+          "type": "code",
+          "code": "POST /otvoreno-racunarstvo/api/iot/sensor-data HTTP/1.1\nHost: eucionica.onrender.com\nContent-Type: application/json\nContent-Length: 78\n\n{\"t\":23.5,\"h\":60,\"p\":1013,\"s\":45,\"r\":10,\"l\":85}"
+        },
+        {
+          "type": "paragraph",
+          "text": "Server (Express) parsira zaglavlja, prepoznaje JSON telo i prosleđuje ga kontroleru. Odgovor koji server vraća izgleda ovako:"
+        },
+        {
+          "type": "code",
+          "code": "HTTP/1.1 200 OK\nContent-Type: application/json\n\n{\"status\":\"ok\"}"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovaj razgovor između klijenta i servera je <strong>stateless</strong> – svaki zahtev je nezavisan (REST princip)."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📡 5. Zašto su otvoreni standardi ključni?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Otvoreni standardi (HTTP, MQTT, CoAP, JSON, TLS) omogućavaju da uređaji različitih proizvođača komuniciraju bez ikakvih barijera. Na primer, ESP32 sa MQTT može da šalje podatke na cloud platformu koja koristi MQTT broker (npr. Mosquitto, EMQX), bez obzira da li je broker open source ili komercijalan. Takođe, otvoreni standardi garantuju da će podaci biti čitljivi i za 10 godina – nema 'zaključavanja' u ekosistem jednog proizvođača."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "💡 <strong>Ključna razlika:</strong> HTTP je <strong>sinhroni, zahtev-odgovor</strong> – klijent mora inicirati komunikaciju. MQTT je <strong>asinhroni, pub/sub</strong> – broker prosleđuje poruke čim stignu. Za senzore koji šalju podatke svakih nekoliko minuta, HTTP je sasvim dovoljan. Za sisteme koji zahtevaju trenutnu reakciju (npr. pametne brave, alarmi), MQTT je neophodan."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Primer: Višenamenska IoT stanica sa ESP32"
+        },
+        {
+          "type": "paragraph",
+          "text": "Napravićemo uređaj koji meri više parametara okruženja, prikazuje podatke na OLED displeju (sa mogućnošću prebacivanja ekrana preko tastera) i šalje očitanja na naš server."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Komponente"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "ESP32 razvojna ploča",
+            "DHT11 senzor temperature i vlažnosti vazduha (pin 5)",
+            "BMP280 senzor temperature i atmosferskog pritiska (I2C)",
+            "Senzor vlažnosti zemlje (analogni, pin 34)",
+            "Senzor kiše (analogni, pin 35)",
+            "Senzor svetlosti (fotootpornik, analogni, pin 32)",
+            "OLED displej SSD1306 (I2C, SDA=21, SCL=22)",
+            "Taster za promenu ekrana (pin 18, INPUT_PULLUP)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Funkcionalnost"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "<strong>Lokalno:</strong> OLED prikazuje 6 različitih ekrana koji se menjaju pritiskom na taster: pregled svih parametara, DHT11 podaci, BMP280 podaci, vlažnost zemlje, kiša, svetlost.",
+            "<strong>Na server:</strong> ESP32 svakih 10 sekundi šalje JSON sa svih 6 vrednosti na naš API endpoint."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎥 Prikaz rada uređaja"
+        },
+        {
+          "type": "video",
+          "src": "/videos/otvoreno-racunarstvo/iot_metero-720p.mp4"
+        },
+        {
+          "type": "paragraph",
+          "text": "Na snimku ispod možete vidjeti kako izgleda kompletna meteorološka stanica, kako se podaci prikazuju na OLED displeju i kako ESP32 šalje očitanja na naš server (web aplikaciju)."
+        },
+        {
+          "type": "paragraph",
+          "text": "💡 Snimak prikazuje uređaj kako mjeri temperaturu, vlažnost, pritisak, vlagu zemlje, kišu i svjetlost, te šalje podatke na dashboard koji se automatski osvježava."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📟 Arduino kod za ESP32"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kod je organizovan u funkcije, koristi <code>millis()</code> za slanje podataka i debounce za taster. Podaci se šalju na server nezavisno od osvežavanja displeja."
+        },
+        {
+          "type": "code",
+          "code": "#include <WiFi.h>\n#include <HTTPClient.h>\n#include <Wire.h>\n#include <Adafruit_GFX.h>\n#include <Adafruit_SSD1306.h>\n#include <Adafruit_BMP280.h>\n#include <DHT.h>\n\n// WIFI - ZAMENI SA SVOJIM PODACIMA\nconst char* ssid = \"TVOJA_SSID\";\nconst char* password = \"TVOJA_LOZINKA\";\nconst char* serverUrl = \"https://eucionica.onrender.com/otvoreno-racunarstvo/api/iot/sensor-data\";\n\n// OLED\n#define SCREEN_WIDTH 128\n#define SCREEN_HEIGHT 64\nAdafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);\n\n// DHT\n#define DHTPIN 5\n#define DHTTYPE DHT11\nDHT dht(DHTPIN, DHTTYPE);\n\n// BMP280\nAdafruit_BMP280 bmp;\n\n// Pinovi\n#define BUTTON_PIN 18\n#define SOIL_PIN 34\n#define RAIN_PIN 35\n#define LIGHT_PIN 32\n\n// Kontrola ekrana\nint screen = 0;\n\n// Debounce tastera\nbool buttonState = HIGH;\nbool lastReading = HIGH;\nunsigned long lastDebounceTime = 0;\nunsigned long debounceDelay = 200;\n\n// Slanje podataka na server\nunsigned long lastSend = 0;\nunsigned long sendInterval = 10000; // 10 sekundi\n\nvoid setup() {\n  Serial.begin(115200);\n  pinMode(BUTTON_PIN, INPUT_PULLUP);\n  Wire.begin(21, 22);\n  \n  if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {\n    Serial.println(\"OLED nije pronadjen!\");\n    while(1);\n  }\n  \n  dht.begin();\n  \n  if (!bmp.begin(0x76)) {\n    if (!bmp.begin(0x77)) {\n      Serial.println(\"BMP280 nije pronadjen!\");\n      while (1);\n    }\n  }\n  \n  WiFi.begin(ssid, password);\n  Serial.print(\"Povezivanje na WiFi\");\n  while (WiFi.status() != WL_CONNECTED) {\n    delay(500);\n    Serial.print(\".\");\n  }\n  Serial.println(\"\\nWiFi povezan!\");\n  display.clearDisplay();\n}\n\nvoid handleButton() {\n  bool reading = digitalRead(BUTTON_PIN);\n  if (reading != lastReading) lastDebounceTime = millis();\n  if ((millis() - lastDebounceTime) > debounceDelay) {\n    if (reading != buttonState) {\n      buttonState = reading;\n      if (buttonState == LOW) {\n        screen++;\n        if (screen > 5) screen = 0;\n        Serial.println(\"Promena ekrana!\");\n      }\n    }\n  }\n  lastReading = reading;\n}\n\nvoid sendData(float t, float h, float p, int soil, int rain, int light) {\n  if (WiFi.status() != WL_CONNECTED) return;\n  HTTPClient http;\n  http.begin(serverUrl);\n  http.addHeader(\"Content-Type\", \"application/json\");\n  char payload[128];\n  snprintf(payload, sizeof(payload),\n    \"{\\\"t\\\":%.1f,\\\"h\\\":%.0f,\\\"p\\\":%.0f,\\\"s\\\":%d,\\\"r\\\":%d,\\\"l\\\":%d}\",\n    t, h, p, soil, rain, light\n  );\n  int code = http.POST(payload);\n  Serial.print(\"HTTP odgovor: \");\n  Serial.println(code);\n  http.end();\n}\n\nvoid loop() {\n  handleButton();\n  \n  float tempDHT = dht.readTemperature();\n  float hum = dht.readHumidity();\n  float tempBMP = bmp.readTemperature();\n  float pressure = bmp.readPressure() / 100.0F;\n  \n  int soilRaw = analogRead(SOIL_PIN);\n  int rainRaw = analogRead(RAIN_PIN);\n  int lightRaw = analogRead(LIGHT_PIN);\n  \n  int soilPercent = map(soilRaw, 4000, 1000, 0, 100);\n  int rainPercent = map(rainRaw, 4000, 1000, 0, 100);\n  rainPercent = constrain(rainPercent, 0, 100);\n  int lightPercent = map(lightRaw, 4000, 0, 0, 100);\n  \n  if (millis() - lastSend > sendInterval) {\n    lastSend = millis();\n    sendData(tempDHT, hum, pressure, soilPercent, rainPercent, lightPercent);\n  }\n  \n  display.clearDisplay();\n  display.setTextSize(1);\n  display.setTextColor(WHITE);\n  \n  switch(screen) {\n    case 0:\n      display.setCursor(0,0);\n      display.println(\"Overview\");\n      display.print(\"T:\"); display.print(tempDHT); display.print(\"C \");\n      display.print(\"H:\"); display.print(hum); display.println(\"%\");\n      display.print(\"P:\"); display.print(pressure); display.println(\"hPa\");\n      display.print(\"Soil:\"); display.print(soilPercent); display.println(\"%\");\n      display.print(\"Rain:\"); display.print(rainPercent); display.println(\"%\");\n      display.print(\"Light:\"); display.print(lightPercent); display.println(\"%\");\n      break;\n    case 1:\n      display.setCursor(0,0);\n      display.println(\"DHT11\");\n      display.print(\"Temp: \"); display.print(tempDHT); display.println(\" C\");\n      display.print(\"Humidity: \"); display.print(hum); display.println(\" %\");\n      break;\n    case 2:\n      display.setCursor(0,0);\n      display.println(\"BMP280\");\n      display.print(\"Temp: \"); display.print(tempBMP); display.println(\" C\");\n      display.print(\"Pressure: \"); display.print(pressure); display.println(\" hPa\");\n      break;\n    case 3:\n      display.setCursor(0,0);\n      display.println(\"Soil Moisture\");\n      display.print(\"Value: \"); display.print(soilPercent); display.println(\"%\");\n      if (soilPercent < 30) display.println(\"DRY!\");\n      else display.println(\"OK\");\n      break;\n    case 4:\n      display.setCursor(0,0);\n      display.println(\"Rain Sensor\");\n      display.print(\"Value: \"); display.print(rainPercent); display.println(\"%\");\n      if (rainPercent > 70) display.println(\"RAIN!\");\n      else display.println(\"Dry\");\n      break;\n    case 5:\n      display.setCursor(0,0);\n      display.println(\"Light Sensor\");\n      display.print(\"Value: \"); display.print(lightPercent); display.println(\"%\");\n      if (lightPercent < 20) display.println(\"Dark\");\n      else display.println(\"Bright\");\n      break;\n  }\n  display.display();\n  delay(300);\n}",
+          "summary": "🔽 Prikaži kompletan Arduino kod"
+        },
+        {
+          "type": "callout",
+          "variant": "warning",
+          "text": "⚠️ <strong>Pre nego što učitaš kod:</strong>\n<ul>\n<li>Zameni <code>ssid</code> i <code>password</code> sa svojim Wi-Fi podacima.</li>\n<li>Zameni <code>serverUrl</code> sa stvarnom adresom (npr. <code>https://eucionica.onrender.com/otvoreno-racunarstvo/api/iot/sensor-data</code>).</li>\n<li>Instaliraj biblioteke: <strong>DHT sensor library</strong>, <strong>Adafruit BMP280 Library</strong>, <strong>Adafruit GFX Library</strong>, <strong>Adafruit SSD1306</strong> (Library Manager).</li>\n<li>Proveri I2C adresu BMP280 (0x76 ili 0x77) i pinove za I2C (SDA=21, SCL=22).</li>\n</ul>"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Server (Express) – rute i kontroler"
+        },
+        {
+          "type": "paragraph",
+          "text": "Na Express serveru dodajemo dva endpoint-a:"
+        },
+        {
+          "type": "code",
+          "code": "let sensorReadings = [];\n\nexport function receiveSensorData(req, res) {\n  const { t, h, p, s, r, l } = req.body;\n  if (t === undefined || h === undefined || p === undefined || s === undefined || r === undefined || l === undefined) {\n    return res.status(400).json({ error: \"Nedostaju podaci (t, h, p, s, r, l)\" });\n  }\n  const reading = {\n    device: req.body.device || \"esp32\",\n    temperature: parseFloat(t),\n    humidity: parseFloat(h),\n    pressure: parseFloat(p),\n    soil: parseInt(s),\n    rain: parseInt(r),\n    light: parseInt(l),\n    timestamp: new Date().toISOString()\n  };\n  sensorReadings.unshift(reading);\n  if (sensorReadings.length > 50) sensorReadings.pop();\n  console.log(`[IoT] ${reading.device} | T:${reading.temperature}°C H:${reading.humidity}% P:${reading.pressure}hPa S:${reading.soil}% R:${reading.rain}% L:${reading.light}%`);\n  res.status(200).json({ status: \"ok\" });\n}\n\nexport function getLatestReadings(req, res) {\n  res.json(sensorReadings.slice(0, 20));\n}",
+          "summary": "🔽 Prikaži kontroler (<code>iot.controller.js</code>)"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "<code>POST /otvoreno-racunarstvo/api/iot/sensor-data</code> – prima JSON podatke sa ključevima <code>t, h, p, s, r, l</code> i čuva ih u memoriji.",
+            "<code>GET /otvoreno-racunarstvo/api/iot/latest-readings</code> – vraća poslednjih 20 očitanja (za prikaz na dashboardu)."
+          ]
+        },
+        {
+          "type": "code",
+          "code": "import { receiveSensorData, getLatestReadings } from \"../../../controllers/web/otvoreno-racunarstvo/iot.controller.js\";\n\nrouter.post(\"/api/iot/sensor-data\", receiveSensorData);\nrouter.get(\"/api/iot/latest-readings\", getLatestReadings);",
+          "summary": "Prikaži rute"
+        },
+        {
+          "type": "callout",
+          "variant": "warning",
+          "text": "Ne zaboravi <code>express.json()</code> middleware u <code>app.js</code>."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📊 Praćenje podataka u realnom vremenu"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ispod se prikazuju poslednja očitanja koja je ESP32 poslao na server. Tabela se automatski osvežava svakih 10 sekundi."
+        },
+        {
+          "type": "dashboard",
+          "config": {
+            "tableId": "iotTable",
+            "tableBodyId": "iotTableBody",
+            "containerId": "iotReadingsContainer",
+            "apiUrl": "/api/v1/otvoreno-racunarstvo/iot/latest-readings",
+            "refreshInterval": 10000
+          },
+          "scripts": [
+            "otvoreno-racunarstvo/iot-example.js"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "💡 Ako nema podataka, proveri da li ESP32 uspešno šalje POST zahteve (prati Serial monitor) i da li je server dostupan."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta smo naučili?"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "🌐",
+              "text": "IoT povezuje fizičke uređaje sa internetom, a otvoreno računarstvo je ključno za brz razvoj i interoperabilnost."
+            },
+            {
+              "icon": "📡",
+              "text": "Postoje specijalizovani protokoli za IoT (MQTT, CoAP) pored standardnog HTTP-a."
+            },
+            {
+              "icon": "💻",
+              "text": "Kako napisati Arduino kod za ESP32 koji čita više senzora, prikazuje podatke na OLED-u i šalje JSON na server koristeći HTTP POST."
+            },
+            {
+              "icon": "⚙️",
+              "text": "Kako na serverskoj strani primiti, validirati i čuvati podatke, te ih prikazati na dashboard-u uz pomoć JavaScript polling-a."
+            },
+            {
+              "icon": "⏱️",
+              "text": "Korišćenje <code>millis()</code> umesto <code>delay()</code> i debounce tehnika za taster omogućavaju neblokirajuće izvršavanje."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "🚀 <strong>Dalji koraci:</strong> Implementiraj MQTT umesto HTTP, dodaj bazu podataka (InfluxDB) ili napravi mobilnu aplikaciju."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "open-source-licence",
+    "subjectSlug": "otvoreno-racunarstvo",
+    "title": "Open source licence",
+    "description": "Pravni okvir otvorenog softvera: MIT, GPL, Apache, Creative Commons licence i pravila korišćenja, deljenja i izmena.",
+    "week": 7,
+    "date": "2026-04-17",
+    "formattedDate": "17.04.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zašto su licence važne?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Bez licence, čak i ako je kod javno dostupan, <strong>zakonski nemaš pravo da ga koristiš</strong>. Licence odgovaraju na ključna pitanja:"
+        },
+        {
+          "type": "cards",
+          "layout": "grid",
+          "items": [
+            {
+              "title": "Šta smem da radim?",
+              "icon": "📋",
+              "text": "Da li smem da instaliram, koristim, menjam softver?"
+            },
+            {
+              "title": "Da li smem da menjam?",
+              "icon": "✏️",
+              "text": "Da li smem da prilagođavam kod svojim potrebama?"
+            },
+            {
+              "title": "Komercijalna upotreba?",
+              "icon": "💼",
+              "text": "Da li smem da uključim kod u svoj plaćeni proizvod?"
+            },
+            {
+              "title": "Dalje deljenje?",
+              "icon": "📤",
+              "text": "Da li smem da podelim izmenjenu verziju?"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "💡 Open source <strong>nije \"radi šta hoćeš\"</strong> – to je <strong>jasno definisan pravni sistem</strong> koji štiti i autora i korisnika."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Copyleft vs Permissive licence"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo je <strong>najvažnija podela</strong> koju treba razumeti. Ona određuje šta se dešava sa <strong>tvojim izmenama</strong> koda."
+        },
+        {
+          "type": "cards",
+          "layout": "pair",
+          "items": [
+            {
+              "title": "🔗 Copyleft licence",
+              "text": "<strong>Zahtevaju</strong> da izmene ostanu otvorene.",
+              "items": [
+                "Ako koristiš GPL kod → <strong>moraš otvoriti i svoj kod</strong>",
+                "Štiti slobodu softvera 'zarazno'",
+                "Primer: <strong>GPL</strong>"
+              ],
+              "example": "Linux kernel, WordPress, Git"
+            },
+            {
+              "title": "🕊️ Permissive licence",
+              "text": "<strong>Dozvoljavaju</strong> skoro sve, čak i zatvaranje koda.",
+              "items": [
+                "Možeš da integrišeš kod u <strong>proprietary</strong> softver",
+                "Samo zahtevaju navođenje autora",
+                "Primeri: <strong>MIT, BSD, Apache 2.0</strong>"
+              ],
+              "example": "React, Node.js, .NET Core"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "secondary",
+          "text": "📌 <strong>Ključna razlika:</strong> Copyleft štiti slobodu budućih korisnika, permissive daje maksimalnu slobodu <em>tebi</em> kao developeru."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "MIT licenca – najjednostavnija i najpopularnija"
+        },
+        {
+          "type": "panel",
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 4,
+              "text": "✅ MIT licenca <strong>dozvoljava</strong>:"
+            },
+            {
+              "type": "list",
+              "style": "group",
+              "items": [
+                "<strong>Privatnu i komercijalnu upotrebu</strong> – možeš da koristiš kod u svom proizvodu koji prodaješ",
+                "<strong>Menjanje koda</strong> – prilagođavanje sopstvenim potrebama",
+                "<strong>Deljenje</strong> – originala i izmenjenih verzija",
+                "<strong>Zatvaranje koda</strong> – ne moraš da objaviš svoj izvorni kod"
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 4,
+              "text": "⚠️ MIT licenca <strong>zahteva</strong>:"
+            },
+            {
+              "type": "list",
+              "style": "group",
+              "items": [
+                "<strong>Zadržavanje originalnog obaveštenja</strong> – moraš navesti autora i MIT licencu (obično u LICENSE fajlu ili komentaru u kodu)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Primer iz prakse"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ako koristiš <strong>React</strong> (MIT licenca) u svom projektu:"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "✅ Možeš da napraviš i prodaš aplikaciju",
+            "✅ Ne moraš da otvoriš svoj kod",
+            "✅ Ali u dokumentaciji moraš navesti da koristiš React i priložiti MIT licencu"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Gde se MIT često koristi?</strong> JavaScript biblioteke, frontend alati, mali open source projekti, <strong>studentski projekti</strong>."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "💡 MIT je <strong>idealna za učenje</strong> – nema zamki, jednostavno je razumeti, a štiti autora."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "GPL (General Public License) – \"sloboda mora ostati sloboda\""
+        },
+        {
+          "type": "panel",
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 4,
+              "text": "✅ GPL <strong>dozvoljava</strong>:"
+            },
+            {
+              "type": "list",
+              "style": "group",
+              "items": [
+                "Korišćenje, menjanje, deljenje, komercijalnu upotrebu"
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 4,
+              "text": "⚠️ GPL <strong>zahteva (ključno!)</strong>:"
+            },
+            {
+              "type": "list",
+              "style": "group",
+              "items": [
+                "Ako <strong>distribuiraš</strong> softver (original ili izmenjen) → <strong>moraš objaviti ceo izvorni kod</strong>",
+                "Izmene moraju biti pod <strong>istom (GPL) licencom</strong>",
+                "<strong>Ne smeš da \"zatvoriš\" GPL kod</strong> – čak ni deo!"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Primer iz prakse"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ako uzmeš <strong>Linux kernel</strong> (GPL) i napraviš sopstveni operativni sistem:"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "✅ Možeš da ga prodaješ",
+            "⚠️ Ali <strong>moraš da objaviš ceo izvorni kod</strong> (i svoje izmene) pod GPL",
+            "❌ Ne smeš da sakriješ kod – čak i ako si platio razvoj"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Česta zabluda:</strong> \"GPL znači da ne smem da naplatim softver\" – <strong>netačno</strong>! GPL dozvoljava naplatu, ali zahteva otvorenost koda."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "📌 GPL štiti <strong>zajednicu</strong> – ako koristiš, moraš i da doprineseš. Zato je čest u sistemskom softveru (Linux, Android kernel)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Apache 2.0 – permissive sa patentnom zaštitom"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Ključna razlika u odnosu na MIT"
+        },
+        {
+          "type": "paragraph",
+          "text": "Apache 2.0 <strong>izričito daje prava na korišćenje patenata</strong> koji su vezani za softver. Ako neko poseduje patent koji pokriva deo koda, davanjem koda pod Apache licencom <strong>odriče se prava da te tuži</strong> zbog korišćenja tog patenta."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Primer iz prakse"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Android OS</strong> (Google) koristi Apache 2.0 licencu za veliki deo svog koda. Zato proizvođači telefona mogu da koriste Android bez straha od patentnih tužbi."
+        },
+        {
+          "type": "panel",
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 4,
+              "text": "✅ Apache 2.0 <strong>dozvoljava</strong>:"
+            },
+            {
+              "type": "list",
+              "style": "group",
+              "items": [
+                "Korišćenje, menjanje, distribuciju, komercijalnu upotrebu, zatvaranje koda",
+                "<strong>Patentnu zaštitu</strong> – daje eksplicitnu dozvolu za korišćenje patenata"
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 4,
+              "text": "⚠️ Apache 2.0 <strong>zahteva</strong>:"
+            },
+            {
+              "type": "list",
+              "style": "group",
+              "items": [
+                "Čuvanje NOTICE fajla (ako postoji) i licence",
+                "Navođenje izmena (za svaki izmenjeni fajl moraš navesti da je izmenjen)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Gde se često koristi?</strong> Backend alati, cloud infrastruktura (Kubernetes, Hadoop), enterprise projekti."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Creative Commons licence – za sadržaj, ne za kod"
+        },
+        {
+          "type": "paragraph",
+          "text": "CC licence se koriste za <strong>tekstove, slike, muziku, video, edukativni materijal</strong> – sve što <strong>nije</strong> softverski kod."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Četiri osnovna elementa CC licenci"
+        },
+        {
+          "type": "cards",
+          "layout": "grid",
+          "columns": 4,
+          "items": [
+            {
+              "icon": "👤",
+              "title": "BY",
+              "text": "Moraš navesti autora"
+            },
+            {
+              "icon": "🚫💰",
+              "title": "NC",
+              "text": "Nekomercijalno (Non-Commercial)"
+            },
+            {
+              "icon": "🔒",
+              "title": "ND",
+              "text": "Bez izmena (No Derivatives)"
+            },
+            {
+              "icon": "🔄",
+              "title": "SA",
+              "text": "Deli pod istim uslovima (ShareAlike)"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Najčešće kombinacije"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "<strong>CC BY</strong> – najliberalnija: samo navedi autora, možeš menjati i koristiti komercijalno.",
+            "<strong>CC BY-NC</strong> – možeš koristiti i menjadi, ali <strong>ne smeš komercijalno</strong>. Idealno za obrazovne materijale.",
+            "<strong>CC BY-SA</strong> – kao MIT, ali za sadržaj: izmene moraju biti pod istom licencom (copyleft za sadržaj).",
+            "<strong>CC BY-ND</strong> – dozvoljeno deljenje, ali <strong>bez ikakvih izmena</strong>."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Primer iz prakse"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ako nađeš <strong>fotografiju pod CC BY-NC</strong> licencom na Flickr-u:"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "✅ Možeš je koristiti u <strong>studentskom projektu</strong> (nekomercijalno)",
+            "⚠️ Moraš navesti autora (by)",
+            "❌ Ne smeš je koristiti u <strong>reklami za svoju firmu</strong> (to je komercijalna upotreba)"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "💡 Za projekte iz predmeta, uvek biraj sadržaj sa <strong>CC0 (javno vlasništvo)</strong> ili <strong>CC BY</strong> ako je moguće. Izbegavaj NC ako planiraš da projekat ikada postane komercijalan!"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako student treba da razmišlja o licencama?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pre nego što iskoristiš bilo koji kod, sliku, tekst ili muziku, postavi sebi <strong>tri ključna pitanja</strong>:"
+        },
+        {
+          "type": "cards",
+          "layout": "grid",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "1️⃣",
+              "title": "Šta smem da koristim?",
+              "text": "Da li uopšte imam pravo da koristim ovaj materijal?"
+            },
+            {
+              "icon": "2️⃣",
+              "title": "Da li smem da menjam?",
+              "text": "Ako treba da prilagodim sadržaj, da li je to dozvoljeno?"
+            },
+            {
+              "icon": "3️⃣",
+              "title": "Da li smem da koristim komercijalno?",
+              "text": "Ako planiram da projekat postane proizvod, koje licence su kompatibilne?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Zlatno pravilo:</strong> Ako ne znaš odgovor → <strong>ne koristi materijal</strong> dok ne proveriš!"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Šta se dešava bez znanja o licencama?"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "❌ Možeš <strong>nesvesno prekršiti zakon</strong> (čak i ako nisi znao, odgovaraš!)",
+            "❌ Ne smeš da koristiš sadržaj u javnom projektu",
+            "❌ Ne možeš <strong>legalno objaviti svoj rad</strong> (nedostaje ti dozvola za korišćene komponente)",
+            "⚠️ Tvoj projekat može biti <strong>uklonjen sa GitHub-a</strong> zbog kršenja licence"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "🎓 <strong>Poruka ove oblasti:</strong> Open source nije haos, već <strong>uređen sistem</strong>. Licence štite <strong>autora, korisnika i zajednicu</strong>. Razumevanje licenci je <strong>deo digitalne pismenosti</strong> – bez njih nema pravog otvorenog računarstva."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Praktični primer: Koju licencu izabrati za svoj projekat?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Zamisli da si napravio <strong>biblioteku za rad sa JSON podacima</strong> i želiš da je objaviš na GitHub-u. Koju licencu da izabereš?"
+        },
+        {
+          "type": "panel",
+          "title": "Scenario 1: Studentski projekat – nikakve veze sa firmom",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "<strong>Preporuka:</strong> MIT"
+            },
+            {
+              "type": "paragraph",
+              "text": "MIT je jednostavan, popularan i omogućava drugima da ga koriste bez mnogo razmišljanja. Nema obaveza koje bi ih plašile."
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Scenario 2: Radiš u firmi i praviš alat koji će firma koristiti interno",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "<strong>Preporuka:</strong> Apache 2.0 ili MIT"
+            },
+            {
+              "type": "paragraph",
+              "text": "Permissive licence omogućavaju firmi da zatvori svoje izmene (što firme često žele). Apache 2.0 daje dodatnu patentnu zaštitu."
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Scenario 3: Želiš da <strong>sprečiš</strong> da neko zatvori tvoj kod",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "<strong>Preporuka:</strong> GPL (ili AGPL za web servise)"
+            },
+            {
+              "type": "paragraph",
+              "text": "Ako želiš da svaka izmena tvog koda <strong>ostane otvorena</strong>, GPL je pravi izbor. Koriste ga projekti koji veruju da softver treba uvek da bude slobodan."
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Scenario 4: Pravite edukativni materijal (prezentacije, radne listove)",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "<strong>Preporuka:</strong> CC BY-SA"
+            },
+            {
+              "type": "paragraph",
+              "text": "Creative Commons ShareAlike omogućava drugima da koriste i menjaju materijal, ali pod istim uslovima – to podstiče deljenje i dalje."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "🚀 <strong>Praktični savet:</strong> Ako nisi siguran, MIT je najbezbedniji izbor za kod. Uvek dodaj <strong>LICENSE</strong> fajl u repozitorijum – bez njega, po defaultu niko nema pravo da koristi tvoj kod."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "uloga-open-source-alata",
+    "subjectSlug": "otvoreno-racunarstvo",
+    "title": "Uloga open source alata",
+    "description": "Pregled open source alata u različitim oblastima – razvoj, multimedija, internet aplikacije, veštačka inteligencija.",
+    "week": 8,
+    "date": "2026-04-24",
+    "formattedDate": "24.04.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zašto uopšte govorimo o alatima?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Otvoreno računarstvo nije samo <strong>ideja ili filozofija</strong>. Da bi funkcionisalo u praksi, potrebni su <strong>alati</strong> koji tu ideju omogućavaju."
+        },
+        {
+          "type": "cards",
+          "layout": "grid",
+          "items": [
+            {
+              "title": "Omogućavaju primenu",
+              "icon": "🔓",
+              "text": "Principi otvorenosti postaju stvarni, upotrebljivi softver"
+            },
+            {
+              "title": "Povezuju zajednice",
+              "icon": "🤝",
+              "text": "Zajednički alati = zajednički jezik i način rada"
+            },
+            {
+              "title": "Standardizuju rad",
+              "icon": "📐",
+              "text": "Git, npm, Docker – isti alati širom sveta"
+            },
+            {
+              "title": "Čine znanje dostupnim",
+              "icon": "📚",
+              "text": "Uz otvoreni kod dolazi i javna dokumentacija"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "💡 <strong>Alati nisu cilj sami po sebi</strong> – već sredstvo za ostvarenje otvorenosti. Učenje alata bez razumevanja zašto postoje nema smisla."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta znači da je alat \"open source\"?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kada kažemo da je alat open source, to znači da:"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "<strong>Izvorni kod može da se proučava</strong> – nema tajni, sve je javno dostupno",
+            "<strong>Način rada nije skriven</strong> – možeš tačno da vidiš šta softver radi i kako",
+            "<strong>Postoji mogućnost izmene</strong> – možeš da prilagodiš alat svojim potrebama",
+            "<strong>Razvoj nije vezan za jednog proizvođača</strong> – nema vendor lock-in"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Time alat postaje"
+        },
+        {
+          "type": "cards",
+          "layout": "grid",
+          "columns": 4,
+          "items": [
+            {
+              "icon": "🔍",
+              "title": "Transparentan",
+              "text": "Znaš šta se dešava \"ispod haube\""
+            },
+            {
+              "icon": "✅",
+              "title": "Proverljiv",
+              "text": "Zajednica može da nađe i popravi greške"
+            },
+            {
+              "icon": "📅",
+              "title": "Dugoročno održiv",
+              "text": "Ne zavisi od hira jedne kompanije"
+            },
+            {
+              "icon": "🔧",
+              "title": "Nezavisan",
+              "text": "Možeš da ga koristiš i ulažeš u njega bez straha"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Alati kao nosioci standarda"
+        },
+        {
+          "type": "paragraph",
+          "text": "Open source alati često:"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "<strong>Implementiraju otvorene standarde</strong> – poštuju RFC, W3C, ISO specifikacije",
+            "<strong>Služe kao referentna implementacija</strong> – \"zvanična\" open source verzija standarda",
+            "<strong>Podstiču interoperabilnost</strong> – različiti alati mogu da rade zajedno"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Zašto je to važno?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kada je alat open source i poštuje standarde, tvoji podaci nisu zarobljeni u jednom ekosistemu. Možeš da pređeš sa jednog alata na drugi bez gubitka podataka."
+        },
+        {
+          "type": "panel",
+          "title": "Primer: LibreOffice i OpenDocument format (ODF)",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "LibreOffice koristi <strong>ODF</strong> – otvoreni standard za kancelarijske dokumente (ISO/IEC 26300). Zato:"
+            },
+            {
+              "type": "list",
+              "style": "group",
+              "items": [
+                "✅ Dokument napravljen u LibreOffice može da otvori i <strong>Microsoft Office</strong> (uz podršku za ODF)",
+                "✅ Tvoj rad nije zarobljen u .docx formatu",
+                "✅ I za 20 godina će postojati alat koji može da pročita ODF"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Suprotnost: <strong>Zatvoreni formati</strong> (stari .doc, .wps) – danas ih retko koji program može da otvori."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "📌 <strong>Princip:</strong> Alati koji poštuju otvorene standarde <strong>čuvaju tvoje podatke</strong> na dugoročno."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Alati i zajednica – neraskidiva veza"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kod open source alata, <strong>zajednica ima ključnu ulogu</strong>. To nije samo skup korisnika, već ljudi koji:"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "Pišu dokumentaciju i tutorijale",
+            "Prijavljuju i popravljaju greške",
+            "Predlažu nove funkcije",
+            "Odgovaraju na pitanja početnika"
+          ]
+        },
+        {
+          "type": "quote",
+          "text": "\"Alat nije samo softver, već <strong>znanje oko njega</strong> – forumi, GitHub issues, Stack Overflow odgovori, YouTube tutorijali.\""
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Primer: Git i GitHub zajednica"
+        },
+        {
+          "type": "paragraph",
+          "text": "Git je open source alat za verzionisanje koda. Ali ono što ga čini moćnim jeste <strong>zajednica oko njega</strong>:"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "📚 Hiljade tutorijala i članaka",
+            "💬 Aktivni forumi (Stack Overflow, Reddit)",
+            "🔧 Mnoštvo alata koji ga proširuju (GitHub, GitLab, Bitbucket)",
+            "👥 Milioni programera koji ga koriste i unapređuju"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "💡 Zato se kaže: <strong>Izaberi alat sa aktivnom zajednicom</strong> – to je garant da ćeš dobiti pomoć i da alat neće biti napušten."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ekosistemi kao rezultat otvorenosti"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kada su alati otvoreni, <strong>nastaju ekosistemi</strong> – mreže međusobno povezanih alata koji se oslanjaju jedni na druge."
+        },
+        {
+          "type": "panel",
+          "title": "Primer: JavaScript/Node.js ekosistem",
+          "blocks": [
+            {
+              "type": "flow",
+              "nodes": [
+                {
+                  "title": "Node.js",
+                  "sub": "(runtime)"
+                },
+                {
+                  "title": "npm",
+                  "sub": "(package manager)"
+                },
+                {
+                  "title": "Express",
+                  "sub": "(web framework)"
+                },
+                {
+                  "title": "React/Vue",
+                  "sub": "(frontend)"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Svi ovi alati su open source, nezavisno razvijeni, ali zajedno čine <strong>funkcionalnu celinu</strong>. Nijedna kompanija ne kontroliše ceo ekosistem – on se razvija <strong>organski</strong>, kroz saradnju hiljada developera širom sveta."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Karakteristike open source ekosistema"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "✅ <strong>Nije centralno kontrolisan</strong> – nema jedne tačke odlučivanja",
+            "✅ <strong>Razvija se organski</strong> – u skladu sa stvarnim potrebama korisnika",
+            "✅ <strong>Zajednica gradi dodatne slojeve</strong> – svako može da doprinese",
+            "✅ <strong>Prilagođava se potrebama</strong> – ako nešto ne radi, fork-uješ i popraviš"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Vrste open source alata prema nameni"
+        },
+        {
+          "type": "paragraph",
+          "text": "Otvoreno računarstvo nije ograničeno samo na programiranje – open source alati pokrivaju <strong>gotovo sve aspekte digitalnog rada</strong>."
+        },
+        {
+          "type": "cards",
+          "layout": "grid",
+          "columns": 3,
+          "items": [
+            {
+              "title": "🛠️ Razvojni alati",
+              "text": "<strong>Primeri:</strong> VSCodium, Git, GCC, Python<br>Omogućavaju transparentan nastanak softvera. Njihova vrednost je u <strong>uvidu u proces</strong>, ne samo u rezultatu."
+            },
+            {
+              "title": "📄 Korisničke aplikacije",
+              "text": "<strong>Primeri:</strong> LibreOffice, Firefox, Thunderbird, GIMP<br>Svakodnevni rad bez vezivanja za zatvorene formate i licence."
+            },
+            {
+              "title": "🎨 Multimedijalni alati",
+              "text": "<strong>Primeri:</strong> GIMP (slika), Audacity (zvuk), Blender (3D), OBS (striming)<br>Omogućavaju učenje principa digitalne slike i zvuka bez komercijalnih ograničenja."
+            },
+            {
+              "title": "🌐 Internet alati",
+              "text": "<strong>Primeri:</strong> Firefox, Chromium, Apache, Nginx, curl<br>Promovišu otvorene web standarde i privatnost."
+            },
+            {
+              "title": "🤖 Alati za veštačku inteligenciju",
+              "text": "<strong>Primeri:</strong> Ollama, TensorFlow, PyTorch, Hugging Face<br>Omogućavaju lokalno pokretanje modela i eksperimentisanje bez centralizovanih servisa."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ograničenja i odgovornost"
+        },
+        {
+          "type": "cards",
+          "layout": "pair",
+          "items": [
+            {
+              "title": "⚠️ Izazovi open source alata",
+              "text": "",
+              "items": [
+                "Dokumentacija je ponekad <strong>nepotpuna</strong> ili tehnička",
+                "UI/UX često nije prioritet (npr. GIMP vs Photoshop)",
+                "Podrška zavisi od <strong>volontera</strong>, ne od call centra",
+                "Neki alati imaju <strong>strmu krivu učenja</strong>"
+              ]
+            },
+            {
+              "title": "✅ Ali zauzvrat nude:",
+              "text": "",
+              "items": [
+                "<strong>Slobodu</strong> – radiš kako ti želiš, ne kako je neko zamislio",
+                "<strong>Razvijaju kritičko razmišljanje</strong> – učiš kako stvari <em>zaista</em> rade",
+                "<strong>Uče te kako da učiš</strong> – čitanje dokumentacije, traženje rešenja"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "secondary",
+          "text": "🎓 <strong>Poruka za studente:</strong> Fokus nije na savladavanju konkretnog alata (jer oni se menjaju), već na <strong>razumevanju principa</strong> koji stoje iza njih. Nauči Git, razumećeš verzionisanje – bilo koji alat za to koristio."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Praktični primeri open source alata"
+        },
+        {
+          "type": "paragraph",
+          "text": "Evo konkretnih primera za svaku kategoriju – ove alate <strong>zaista koriste</strong> milioni ljudi:"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🛠️ Razvoj i verzionisanje"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "<strong>Git</strong> – verzionisanje koda (<strong>standard</strong> u industriji, čak i Microsoft ga koristi za Windows)",
+            "<strong>VS Codium</strong> – otvorena verzija VS Code-a (bez Microsoft telemetrije)",
+            "<strong>Python</strong> – programski jezik kojim se služe milioni developera"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📄 Kancelarijski i internet alati"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "<strong>LibreOffice</strong> – kompletna zamena za Microsoft Office (ODF standard)",
+            "<strong>Mozilla Firefox</strong> – jedini <strong>nezavisni</strong> veliki pregledač (nije na Chromium engine-u)",
+            "<strong>Nextcloud</strong> – sopstveni Google Drive / Dropbox (hostuješ sam)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🎨 Multimedija i kreativa"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "<strong>GIMP</strong> – alternativa Photoshopu (moćan, ali drugačiji UI)",
+            "<strong>Blender</strong> – profesionalni 3D softver (koriste ga studiji za animaciju)",
+            "<strong>Audacity</strong> – audio editor (snimanje, montaža, efekti)",
+            "<strong>OBS Studio</strong> – striming i snimanje ekrana (standard za Twitch/YouTube)",
+            "<strong>Kdenlive / Shotcut</strong> – video editori (zamena za Premiere)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "📡 Internet i serveri (nevidljivi heroji)"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "<strong>Apache / Nginx</strong> – web serveri, služe <strong>2/3 svih vebsajtova</strong>",
+            "<strong>curl</strong> – alat za prenos podataka preko mreže (svaki developer ga koristi)",
+            "<strong>WordPress</strong> – CMS koji pokreće <strong>40% svih vebsajtova</strong>"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "🔬 Nauka i AI"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "<strong>Jupyter Notebook</strong> – interaktivno okruženje za nauku i analizu podataka",
+            "<strong>TensorFlow / PyTorch</strong> – framework-ovi za mašinsko učenje (Google i Meta ih razvijaju open source)",
+            "<strong>Ollama</strong> – lokalno pokretanje velikih jezičkih modela (LLaMA, Mistral)"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "💡 Obrati pažnju: Većinu ovih alata si <strong>već koristio</strong> – čak i ako nisi znao da su open source (curl, Python, Firefox, WordPress)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta smo naučili?"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "🛠️",
+              "text": "Open source alati su <strong>sredstvo</strong> za ostvarenje principa otvorenog računarstva, ne cilj sami po sebi."
+            },
+            {
+              "icon": "🔓",
+              "text": "Alat je open source ako je njegov <strong>izvorni kod javan</strong>, može da se menja i deli."
+            },
+            {
+              "icon": "📏",
+              "text": "Open source alati često <strong>nose standarde</strong> i omogućavaju interoperabilnost."
+            },
+            {
+              "icon": "👥",
+              "text": "Zajednica oko alata je <strong>jednako važna</strong> kao i sam alat – bez nje alat umire."
+            },
+            {
+              "icon": "🌐",
+              "text": "Open source ekosistemi (JavaScript, Linux) su primer kako <strong>organska saradnja</strong> stvara ogromne sisteme."
+            },
+            {
+              "icon": "🎯",
+              "text": "Postoje open source alati za <strong>sve namene</strong> – od kancelarijskog rada do veštačke inteligencije."
+            },
+            {
+              "icon": "🎓",
+              "text": "Izbor open source alata nosi <strong>veću odgovornost</strong> (sam čitaš dokumentaciju), ali daje <strong>veću slobodu</strong> i razvija <strong>kritičko razmišljanje</strong>."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "🚀 Otvoreno računarstvo <strong>ne bi postojalo bez alata</strong>, a alati <strong>ne bi postojali bez otvorenih principa i zajednice</strong>. Ovo dvoje je neraskidivo povezano."
+        }
+      ]
+    }
+  }
+]

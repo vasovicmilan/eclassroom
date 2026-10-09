@@ -1,0 +1,1828 @@
+[
+  {
+    "slug": "uvod-u-multimediju-i-digitalne-formate",
+    "subjectSlug": "multimedijalne-aplikacije",
+    "title": "Uvod u multimediju i digitalne formate",
+    "description": "Pojam multimedije, tipovi medija, raster i vektorska grafika, rezolucija, piksel, DPI/PPI i osnovni digitalni formati.",
+    "week": 1,
+    "date": "2026-02-19",
+    "formattedDate": "19.02.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je multimedija?",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Multimedija predstavlja integraciju više medijskih formi u jedinstvenu digitalnu strukturu zasnovanu na računarima."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Tekst",
+            "Grafiku (rastersku i vektorsku)",
+            "Audio signal",
+            "Video signal",
+            "Animaciju",
+            "Interaktivne sisteme"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Multimedijalni sistem nije samo skup medija, već tehnički sistem za obradu, skladištenje, prenos i sinhronizaciju digitalnih signala."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Analogni i digitalni signal",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Analogni signal je kontinuiran po vremenu i amplitudi. Digitalni signal je diskretan po vremenu i amplitudi."
+        },
+        {
+          "type": "cards",
+          "layout": "pair",
+          "items": [
+            {
+              "title": "Analogno",
+              "text": "Beskonačno mnogo vrednosti u kontinualnom opsegu."
+            },
+            {
+              "title": "Digitalno",
+              "text": "Konačan broj diskretnih vrednosti predstavljenih binarnim kodom (0 i 1)."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Uzorkovanje (Sampling)",
+            "Kvantizacija (Quantization)",
+            "Binarno kodiranje"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Nyquist teorema: frekvencija uzorkovanja mora biti ≥ 2 × maksimalna frekvencija signala."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovaj princip detaljno ćemo obrađivati u narednoj lekciji."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Frame, FPS i video struktura",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Video je sekvenca statičkih slika (frejmova) prikazanih velikom brzinom."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Standardne vrednosti FPS"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "24 fps – film",
+            "25 fps – PAL sistem",
+            "30 fps – NTSC sistem",
+            "50 / 60 fps – sportski i savremeni video"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Interlace vs Progressive"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "<strong>1080i</strong> – isprepletani signal (parne i neparne linije)",
+            "<strong>1080p</strong> – progresivni prikaz (ceo frejm odjednom)"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Progressive daje veću oštrinu i bolju reprodukciju pokreta."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Rezolucija i broj piksela",
+          "numbered": true
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Rezolucija = širina × visina"
+        },
+        {
+          "type": "paragraph",
+          "text": "Primer: 1920 × 1080 = 2.073.600 piksela po frejmu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Memorijski zahtev (24-bitna slika):"
+        },
+        {
+          "type": "code",
+          "code": "Broj piksela × 3 bajta (RGB)\n\n1920 × 1080 × 3 = 6.220.800 bajtova ≈ 5.93 MB po frejmu"
+        },
+        {
+          "type": "paragraph",
+          "text": "Video od 30 fps zahteva:"
+        },
+        {
+          "type": "code",
+          "code": "5.93 MB × 30 ≈ 178 MB u sekundi (nekompresovano)"
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Zato je kompresija neophodna u savremenim sistemima."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "DPI i PPI",
+          "numbered": true
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>PPI</strong> – gustina piksela na ekranu",
+            "<strong>DPI</strong> – gustina tačaka pri štampi"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Veći PPI znači veću oštrinu slike na istim fizičkim dimenzijama."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Dubina boja i kodiranje",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Dubina boja određuje broj mogućih nijansi po pikselu."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "8-bit → 256 boja",
+            "16-bit → 65.536 boja",
+            "24-bit → 16.777.216 boja",
+            "32-bit → 24-bit + Alpha kanal"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Broj boja = 2^n (gde je n broj bitova)"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "RGB model"
+        },
+        {
+          "type": "paragraph",
+          "text": "Svaki piksel sadrži tri komponente: R – crvena, G – zelena, B – plava."
+        },
+        {
+          "type": "paragraph",
+          "text": "Luminansa se aproksimira formulom:"
+        },
+        {
+          "type": "code",
+          "code": "Y = 0.59G + 0.30R + 0.11B"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Bandwidth i protok podataka",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Bandwidth predstavlja količinu podataka koja se prenosi u jedinici vremena."
+        },
+        {
+          "type": "code",
+          "code": "Bitrate = rezolucija × dubina boja × FPS"
+        },
+        {
+          "type": "paragraph",
+          "text": "Povećanjem rezolucije ili FPS eksponencijalno raste potreban protok."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zaključak"
+        },
+        {
+          "type": "paragraph",
+          "text": "Razumevanje strukture digitalne slike, video signala, dubine boja i memorijskih zahteva predstavlja osnovu za dalju obradu, kompresiju i distribuciju multimedijalnog sadržaja."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Multimedija je kombinacija matematičkih, signalnih i računarskih principa, a ne samo vizuelna prezentacija sadržaja."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "vizuelna-komunikacija-i-kompozicija",
+    "subjectSlug": "multimedijalne-aplikacije",
+    "title": "Vizuelna komunikacija i kompozicija",
+    "description": "Elementi dizajna, kompozicija, kontrast, balans, vizuelna hijerarhija i osnove tipografije.",
+    "week": 2,
+    "date": "2026-02-26",
+    "formattedDate": "26.02.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Vizuelna komunikacija kao informacioni sistem",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Vizuelna komunikacija predstavlja prenos informacije putem organizovanih vizuelnih signala: boje, forme, veličine, kontrasta i rasporeda."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Vizuelni dizajn je strukturirani sistem informacija — ne samo estetika."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Percepciju",
+            "Brzinu obrade informacije",
+            "Emocionalnu reakciju",
+            "Korisničko ponašanje"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "U multimedijalnim aplikacijama dizajn utiče na:"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Principi kompozicije i matematička ravnoteža",
+          "numbered": true
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Balans kao raspodela vizuelne mase"
+        },
+        {
+          "type": "paragraph",
+          "text": "Vizuelna masa zavisi od:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Veličine elementa",
+            "Kontrasta",
+            "Boje",
+            "Pozicije"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Tamniji i veći objekti imaju veću perceptivnu težinu."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Kontrast i luminansa"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kontrast se može izraziti kao odnos luminansi:"
+        },
+        {
+          "type": "code",
+          "code": "Kontrast = (L1 + 0.05) / (L2 + 0.05)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Gde je L luminansa definisana RGB formulom:"
+        },
+        {
+          "type": "code",
+          "code": "Y = 0.59G + 0.30R + 0.11B"
+        },
+        {
+          "type": "paragraph",
+          "text": "Veći kontrast povećava čitljivost i vizuelnu hijerarhiju."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Grid sistemi i pravilo trećina",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Grid sistem predstavlja matematičku organizaciju prostora."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "3×3 pravilo (Rule of Thirds)"
+        },
+        {
+          "type": "code",
+          "code": "|----|----|----|\n|----|----|----|\n|----|----|----|"
+        },
+        {
+          "type": "paragraph",
+          "text": "Elementi postavljeni na preseke linija imaju veću perceptivnu važnost."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Modularni grid"
+        },
+        {
+          "type": "paragraph",
+          "text": "U web dizajnu koristi se 12-kolonski sistem radi fleksibilnosti i responzivnog dizajna."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Tipografija i digitalni prikaz teksta",
+          "numbered": true
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Serif vs Sans-serif"
+        },
+        {
+          "type": "paragraph",
+          "text": "Na ekranima sa manjom rezolucijom sans-serif fontovi daju bolju čitljivost zbog jednostavnijih ivica."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Veličina fonta u pikselima"
+        },
+        {
+          "type": "code",
+          "code": "Font size (px) × DPI / 72 = fizička veličina"
+        },
+        {
+          "type": "paragraph",
+          "text": "Digitalni tekst se renderuje pomoću:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Hinting algoritama",
+            "Subpixel renderinga",
+            "Anti-aliasing tehnika"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Anti-aliasing smanjuje nazubljene ivice interpolacijom boja."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Teorija boja i modeli",
+          "numbered": true
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "RGB model (aditivni)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Svaki piksel sadrži tri komponente (0–255):"
+        },
+        {
+          "type": "code",
+          "code": "R, G, B ∈ [0,255]\nUkupno boja = 256³ = 16.777.216"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "HSL model"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Hue – ugao na spektru (0–360°)",
+            "Saturation – zasićenost",
+            "Lightness – svetlina"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "HSL je intuitivniji za dizajn jer odražava ljudsku percepciju."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Psihološki efekti boja"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Crvena – energija, hitnost",
+            "Plava – poverenje, stabilnost",
+            "Zelena – priroda, ravnoteža"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Negativan prostor i odnos površina",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Negativan prostor omogućava:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Povećanu čitljivost",
+            "Jasnu hijerarhiju",
+            "Smanjenje vizuelnog šuma"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Perceptivni kvalitet raste kada odnos popunjenog i praznog prostora ostaje u ravnoteži (~60% sadržaj / 40% praznina kao često korišćen princip)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Primena u digitalnim sistemima",
+          "numbered": true
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "UI/UX dizajn",
+            "Interfejsi mobilnih aplikacija",
+            "Web sistemi",
+            "Video grafika",
+            "Digitalni marketing"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Vizuelna komunikacija mora biti usklađena sa tehničkim ograničenjima:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Rezolucijom",
+            "Kontrastom ekrana",
+            "Bit depth ograničenjima",
+            "Bandwidth-om sistema"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zaključak"
+        },
+        {
+          "type": "paragraph",
+          "text": "Vizuelni dizajn u multimediji je spoj umetnosti i tehničkih ograničenja. Efikasan dizajn mora biti estetski, funkcionalan i tehnički izvodljiv."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Dobar dizajn je optimizovana struktura informacija."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "digitalna-obrada-slike-boja-i-korekcija",
+    "subjectSlug": "multimedijalne-aplikacije",
+    "title": "Digitalna obrada slike I – Boja i korekcija",
+    "description": "RGB i CMYK modeli, histogram, svetlina, kontrast, Levels, Curves i balans boja.",
+    "week": 3,
+    "date": "2026-03-05",
+    "formattedDate": "05.03.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je signal?",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Signal je fizička veličina koja prenosi informaciju. U multimediji najčešće radimo sa:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Audio signalom (promena pritiska vazduha)",
+            "Video signalom (promena intenziteta svetlosti)"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Matematički, signal se može posmatrati kao funkcija vremena:"
+        },
+        {
+          "type": "code",
+          "code": "x(t)"
+        },
+        {
+          "type": "paragraph",
+          "text": "gde je t kontinualna vremenska promenljiva."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Analogni vs Digitalni signal",
+          "numbered": true
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Analogni signal"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "Kontinualan u vremenu",
+            "Kontinualan po amplitudi",
+            "Beskonačno mnogo vrednosti"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Digitalni signal"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "Diskretan u vremenu",
+            "Diskretan po amplitudi",
+            "Konačan broj nivoa"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Digitalizacija = uzorkovanje + kvantizacija + binarno kodiranje"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Uzorkovanje (Sampling)",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Uzorkovanje predstavlja merenje vrednosti analognog signala u diskretnim vremenskim intervalima."
+        },
+        {
+          "type": "code",
+          "code": "x[n] = x(nT)"
+        },
+        {
+          "type": "paragraph",
+          "text": "gde je T period uzorkovanja, a fs = 1/T frekvencija uzorkovanja."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Nyquist-Shannon teorema"
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "fs ≥ 2 × fmax"
+        },
+        {
+          "type": "paragraph",
+          "text": "Frekvencija uzorkovanja mora biti najmanje dvostruko veća od maksimalne frekvencije signala."
+        },
+        {
+          "type": "paragraph",
+          "text": "U suprotnom dolazi do <strong>aliasing efekta</strong>."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Aliasing",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Aliasing je pojava kada se visoke frekvencije pogrešno interpretiraju kao niže frekvencije."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nastaje kada:"
+        },
+        {
+          "type": "code",
+          "code": "fs < 2 × fmax"
+        },
+        {
+          "type": "paragraph",
+          "text": "Rešenje:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Povećanje frekvencije uzorkovanja",
+            "Korišćenje niskopropusnog (anti-aliasing) filtera"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kvantizacija",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Kvantizacija je proces zaokruživanja kontinuirane amplitude na najbliži diskretni nivo."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Broj kvantizacionih nivoa"
+        },
+        {
+          "type": "code",
+          "code": "L = 2^n"
+        },
+        {
+          "type": "paragraph",
+          "text": "gde je n broj bitova."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "8 bit → 256 nivoa",
+            "16 bit → 65.536 nivoa",
+            "24 bit → 16.777.216 nivoa"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Kvantizaciona greška"
+        },
+        {
+          "type": "paragraph",
+          "text": "Razlika između stvarne vrednosti i kvantizovane vrednosti."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Veći broj bitova → manja greška → bolji kvalitet."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Signal-to-Noise Ratio (SNR)",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Odnos signal/šum definiše kvalitet digitalnog zapisa."
+        },
+        {
+          "type": "code",
+          "code": "SNR ≈ 6.02n + 1.76 dB"
+        },
+        {
+          "type": "paragraph",
+          "text": "gde je n broj bitova kvantizacije."
+        },
+        {
+          "type": "paragraph",
+          "text": "Primer:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "8-bit → ≈ 49.9 dB",
+            "16-bit → ≈ 98 dB"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Analogno-digitalna konverzija (ADC)",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "ADC (Analog to Digital Converter) vrši:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Uzorkovanje",
+            "Kvantizaciju",
+            "Kodiranje u binarni zapis"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Proces:"
+        },
+        {
+          "type": "code",
+          "code": "Analogni signal → Sample & Hold → Kvantizer → Binarni izlaz"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Digitalno-analogna konverzija (DAC)",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "DAC vrši obrnut proces — pretvara digitalni zapis nazad u analogni signal."
+        },
+        {
+          "type": "paragraph",
+          "text": "Koristi interpolaciju i rekonstrukcioni filter za uklanjanje visokofrekventnih komponenti."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Primena u multimediji",
+          "numbered": true
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Audio snimanje (44.1 kHz, 48 kHz)",
+            "Digitalni video",
+            "Obrada slike",
+            "Kompresija"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Bez pravilne digitalizacije, svi kasniji procesi (kompresija, obrada, streaming) gube kvalitet."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zaključak"
+        },
+        {
+          "type": "paragraph",
+          "text": "Digitalizacija signala je osnova svih savremenih multimedijalnih sistema."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Kvalitet digitalnog zapisa zavisi od: frekvencije uzorkovanja, broja bitova i pravilne filtracije."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "digitalna-obrada-slike-slojevi-i-maske",
+    "subjectSlug": "multimedijalne-aplikacije",
+    "title": "Digitalna obrada slike II – Slojevi i maske",
+    "description": "Rad sa slojevima, blend modovi, maske, selekcije, retuširanje i priprema grafike za web i štampu.",
+    "week": 4,
+    "date": "2026-03-12",
+    "formattedDate": "12.03.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Slojevi u digitalnoj obradi slike",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Slojevi (Layers) predstavljaju osnovni princip rada u modernim programima za obradu slike kao što su Photoshop ili GIMP."
+        },
+        {
+          "type": "paragraph",
+          "text": "Omogućavaju da se različiti elementi slike organizuju u nezavisne nivoe koji se mogu uređivati bez uticaja na ostatak slike."
+        },
+        {
+          "type": "paragraph",
+          "text": "Svaki sloj može sadržati:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "fotografiju",
+            "tekst",
+            "grafičke elemente",
+            "efekte"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Rad sa slojevima omogućava <strong>nedestruktivnu obradu slike</strong>, što znači da originalna slika ostaje sačuvana."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Tipovi slojeva",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "U programima za obradu slike postoji više različitih vrsta slojeva:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>Background layer</strong> – osnovni sloj slike",
+            "<strong>Image layer</strong> – sloj koji sadrži fotografiju",
+            "<strong>Text layer</strong> – sloj koji sadrži tekst",
+            "<strong>Adjustment layer</strong> – sloj za korekciju boja",
+            "<strong>Shape layer</strong> – sloj sa vektorskim oblicima"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Profesionalni dizajneri koriste veliki broj slojeva kako bi projekat bio organizovan i lak za izmene."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Blend modovi",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Blend modovi određuju način na koji se pikseli jednog sloja kombinuju sa pikselima slojeva ispod njega."
+        },
+        {
+          "type": "paragraph",
+          "text": "Najčešće korišćeni modovi su:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Normal",
+            "Multiply",
+            "Screen",
+            "Overlay",
+            "Soft Light"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Multiply mod se često koristi za senke, dok Screen mod služi za osvetljavanje slike."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Maske slojeva",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Maske slojeva omogućavaju kontrolu vidljivosti određenih delova slike bez trajnog brisanja sadržaja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Princip rada maski:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>belo</strong> – vidljivo",
+            "<strong>crno</strong> – sakriveno",
+            "<strong>sivo</strong> – delimična transparentnost"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Maske su ključne za profesionalnu foto manipulaciju i kombinovanje više fotografija u jednu kompoziciju."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Selekcije",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Selekcije omogućavaju da izaberemo određeni deo slike na koji će se primeniti obrada."
+        },
+        {
+          "type": "paragraph",
+          "text": "Najčešći alati:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Rectangular Marquee",
+            "Lasso Tool",
+            "Magic Wand",
+            "Quick Selection Tool",
+            "Pen Tool"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Retuširanje fotografija",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Retuširanje predstavlja proces uklanjanja neželjenih elemenata i poboljšanja kvaliteta fotografije."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Clone Stamp Tool",
+            "Healing Brush",
+            "Spot Healing Brush",
+            "Patch Tool"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Retuširanje treba koristiti umereno kako bi fotografija zadržala prirodan izgled."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Priprema grafike za web i štampu",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Nakon obrade slike potrebno je pripremiti grafiku u zavisnosti od krajnje namene."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Za web"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "rezolucija 72–96 PPI",
+            "RGB kolor model",
+            "JPEG ili PNG format"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Za štampu"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "rezolucija 300 DPI",
+            "CMYK kolor model",
+            "TIFF ili visokokvalitetni JPEG"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Slika koja izgleda dobro na ekranu često neće biti dovoljno kvalitetna za štampu ako nije pripremljena u odgovarajućoj rezoluciji."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "osnove-video-jezika-i-kadra",
+    "subjectSlug": "multimedijalne-aplikacije",
+    "title": "Osnove video jezika i kadra",
+    "description": "Planovi, vrste kadra, pravilo trećina, pokreti kamere i vizuelni kontinuitet – sa praktičnim uvodom u video produkcijsku opremu.",
+    "week": 6,
+    "date": "2026-03-26",
+    "formattedDate": "26.03.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Uvod u video produkciju"
+        },
+        {
+          "type": "paragraph",
+          "text": "U okviru ove lekcije bavimo se osnovama video produkcije – od opreme u studiju do načina realizacije TV programa. Fokus je na komponentama video sistema, njihovom povezivanju i ulozi u stvaranju televizijskog sadržaja."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Video režija i radna okruženja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Režija predstavlja centralno mesto odakle se upravlja celim produkcijskim procesom. Sastoji se od:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "monitorskog zida (multiview) – prikaz svih ulaznih signala",
+            "video miksera – uređaja za selekciju i obradu slike",
+            "audio režije – kontrola zvuka",
+            "komunikacionog sistema (talkback) – veza sa kamerama i terenom"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Video mikseri – osnovni elementi"
+        },
+        {
+          "type": "paragraph",
+          "text": "Video mikser (switcher) omogućava biranje i kombinovanje više ulaznih signala u jedan izlazni program. Najčešće korišćeni model u studijskim uslovima je <strong>Blackmagic ATEM 2 M/E</strong>."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Karakteristike miksera"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "16 SD/HD-SDI ulaza + HDMI ulaz",
+            "2 M/E (miks-efekta) za nezavisnu obradu signala",
+            "više programskih i multiview izlaza",
+            "mogućnost rada bez eksterne reference (genlock)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Načini upravljanja"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "broadcast panel (fizička konzola)",
+            "softver (ATEM Software Control) – omogućava rad sa više računara, unos grafike, key efekte"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Vrste prelaza i efekata"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>Cut (rez)</strong> – trenutna promena izvora",
+            "<strong>Mix (pretapanje)</strong> – postepeno ukidanje jednog i uvođenje drugog signala",
+            "<strong>Wipe</strong> – prelaz pomoću geometrijskih oblika (krug, kvadrat, zvezda…)",
+            "<strong>Key (ključ)</strong> – selektivno uklapanje slike preko druge (luminance key, chroma key)",
+            "<strong>DVE</strong> – digitalni video efekti (pomeranje, rotacija, skaliranje)"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Mikser poseduje i ugrađenu memoriju za grafiku (logotipe, potpise), koja se poziva direktno sa panela ili kroz softver."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Tipovi kamera u produkciji"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>Studijske kamere</strong> – montirane na stativ, bez medijuma, povezane preko CCU (kontrolne jedinice)",
+            "<strong>EFP kamere</strong> – za terenske prenose, slične studijskim ali prilagođene mobilnoj upotrebi",
+            "<strong>ENG kamere (kamkorderi)</strong> – samostalni uređaji sa ugrađenim snimačem (P2, SDHC kartice)",
+            "<strong>PTZ kamere</strong> – daljinski upravljive kamere za specifične kadrove (total, detalji, ptičja perspektiva)",
+            "<strong>GoPro kamere</strong> – kompaktne, otporne, koriste se za ekstremne kadrove ili 360° snimanje"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Studijski kamerni lanac (CCU i RCP)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Studijska kamera nije samostalan uređaj – čini je više komponenti:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "glava kamere + objektiv + viewfinder",
+            "CCU (Camera Control Unit) – bazna stanica koja povezuje kameru sa sistemom",
+            "RCP/OCP (Remote/Operation Control Panel) – daljinska kontrola parametara kamere"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Preko RCP panela podešavaju se: balans belog i crnog, otvor blende, gama korekcija, balans boja. Master Setup Panel (MSP) omogućava istovremeno podešavanje više kamera."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Objektivi – žižna daljina i vrste"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>Širokougaoni</strong> – kratka žižna daljina, širok ugao snimanja",
+            "<strong>Normalni</strong> – približno odgovara vidnom polju ljudskog oka",
+            "<strong>Teleobjektivi</strong> – velika žižna daljina, ugao je uži, približava udaljene objekte",
+            "<strong>Zoom objektivi</strong> – promenljiva žižna daljina (odnos max/min daje zoom faktor)",
+            "<strong>Makro</strong> – za snimanje iz male udaljenosti",
+            "<strong>Riblje oko</strong> – ekstremno širok ugao (do 180°)"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Žižna daljina (mm) direktno utiče na ugao vidnog polja – veća žižna daljina = uži ugao, veće uvećanje."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Snimači i playout sistemi"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "HyperDeck Studio"
+        },
+        {
+          "type": "paragraph",
+          "text": "Profesionalni snimač koji zapisuje na SSD diskove. Podržava Ultra HD 4K, automatski prelazak na drugi disk, mogućnost kontrole preko miksera."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "PlayOut (video server)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Računar zadužen za emitovanje programa 24/7 prema unapred definisanoj šemi. Softveri poput Elements Playout, VMix, MagicSoft Playout omogućavaju reprodukciju, grafiku i ingest."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "4G prenos – RANAC link"
+        },
+        {
+          "type": "paragraph",
+          "text": "Za direktna uključenja sa udaljenih lokacija koristi se 4G prenos. Predajna stanica ima više SIM kartica različitih operatera, čime se obezbeđuje stabilnost veze. Prijemna stanica u mašinskoj sobi uvezuje signal u sistem."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zaključak"
+        },
+        {
+          "type": "paragraph",
+          "text": "Savremena video produkcija podrazumeva integraciju različitih uređaja – od kamera preko miksera do playout sistema. Razumevanje njihovih karakteristika i načina povezivanja ključno je za uspešnu realizaciju TV programa."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "osnove-video-jezika-i-kadrau",
+    "subjectSlug": "multimedijalne-aplikacije",
+    "title": "Osnove video jezika i kadra II",
+    "description": "Ritam, linearna i nelinearna montaža, tranzicije i storytelling struktura.",
+    "week": 7,
+    "date": "2026-04-02",
+    "formattedDate": "02.04.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kadar i njegove kompozicije"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kadar je osnovna jedinica vizuelnog pripovedanja. Njegova veličina i ugao pod kojim je snimljen direktno utiču na to kako publika doživljava scenu i likove. Razlikujemo nekoliko osnovnih tipova kadra:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>Total</strong> – prikazuje širok prostor, koristi se za uspostavljanje scene (npr. enterijer studija, fudbalski stadion).",
+            "<strong>Medijum (srednji kadar)</strong> – prikazuje lik od struka na gore, koristi se za dijaloge i akciju.",
+            "<strong>Krupni plan</strong> – prikazuje lice ili detalj, intenzivira emocije ili fokus na važan predmet.",
+            "<strong>Detalj</strong> – izuzetno krupni prikaz malog objekta (npr. dugme na mikseti, kap vode)."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izbor kadra nije slučajan – <strong>reditelj i snimatelj</strong> njime vode pažnju gledaoca i stvaraju ritam priče."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pokreti kamere i njihovo značenje"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kamera u televizijskoj produkciji retko je statična. Pokreti kamere dodaju dinamiku i informaciju:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>Panoramsko pomeranje (Pan)</strong> – horizontalno okretanje kamere. Koristi se za praćenje akcije ili otkrivanje prostora.",
+            "<strong>Vertikalno pomeranje (Tilt)</strong> – pomeranje kamere gore-dole. Često za prikazivanje visine ili veličine.",
+            "<strong>Zumiranje (Zoom)</strong> – promena žižne daljine objektiva (približava ili udaljava sliku). Za razliku od \"dolly\" pokreta, zum ne menja perspektivu.",
+            "<strong>Dolly/ tracking</strong> – fizičko pomeranje cele kamere kroz prostor (npr. na kolicima). Stvara osećaj uronjenosti u scenu."
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "💡 U studijskoj produkciji, pokreti kamere (pan, tilt, zoom) se često programiraju unapred, posebno kod virtuelnih studija."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ugao snimanja i subjektivni kadar"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ugao pod kojim kamera \"gleda\" subjekat nosi snažnu psihološku poruku:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>Visoki ugao (snimanje odozgo)</strong> – subjekt izgleda maleno, slabo, inferiorno.",
+            "<strong>Niski ugao (snimanje odozdo)</strong> – subjekt izgleda moćno, dominantno, zastrašujuće.",
+            "<strong>Subjektivni kadar</strong> – kamera zauzima poziciju likova, publika vidi ono što lik vidi."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "U TV produkciji (npr. prenos fudbala), visoki ugao (kamere na tribinama) daje pregled situacije, dok niski ugao (kamere uz teren) daje osećaj brzine i snage."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "montaza-i-narativ-u-videu",
+    "subjectSlug": "multimedijalne-aplikacije",
+    "title": "Montaža i narativ u videu",
+    "description": "Ritam, linearna i nelinearna montaža, tranzicije i storytelling struktura.",
+    "week": 7,
+    "date": "2026-04-02",
+    "formattedDate": "02.04.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je montaža?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Montaža je postupak biranja, spajanja i oblikovanja snimljenog materijala u celinu. Ona nije samo tehnička operacija, već kreativni čin kojim se definiše ritam, tempo i značenje priče. U TV produkciji, montaža se često radi u realnom vremenu (npr. prenos fudbalske utakmice) – to se zove \"<strong>režija slike</strong>\"."
+        },
+        {
+          "type": "paragraph",
+          "text": "Osnovna jedinica montaže je <strong>rez</strong> – trenutni prelaz sa jednog kadra na drugi. U videu se često koriste i <strong>pretapanja (mix)</strong>, <strong>brisovi (wipe)</strong> i <strong>zamrzavanje slike (freeze frame)</strong>."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Vrste montažnih postupaka"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>Kontinuitetna montaža</strong> – cilj joj je neprimetno spajanje kadrova tako da protok vremena i prostora deluju prirodno. Koristi se u filmovima i serijama.",
+            "<strong>Paralelna montaža</strong> – naizmenično prikazivanje dve ili više radnji koje se odvijaju istovremeno na različitim mestima. Stvara napetost (npr. utakmica i reakcije u studiju).",
+            "<strong>Ritmička montaža</strong> – dužina kadrova je usklađena sa muzikom ili ritmom akcije. Tipična za spotove i sportske najave.",
+            "<strong>Asocijativna montaža</strong> – spaja kadrove na osnovu sličnosti oblika, boje ili značenja, a ne na osnovu hronologije (npr. prelazak sa loptice na mikseti na loptu na terenu)."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Video mikser i montaža uživo"
+        },
+        {
+          "type": "paragraph",
+          "text": "U televizijskom studiju, montaža uživo se obavlja pomoću <strong>video miksera</strong>. To je uređaj koji prima signale sa više kamera i servera, a <strong>reditelj (video mikser)</strong> bira koji signal ide u program. Ključni elementi miksera:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>Programska šina</strong> – signal koji trenutno ide u eter.",
+            "<strong>Prejug šina (Preview)</strong> – signal koji se priprema za sledeći kadar.",
+            "<strong>T-Bar (palica)</strong> – ručica za izvođenje pretapanja (miksa) između dve šine.",
+            "<strong>Multiviewer</strong> – ekran koji prikazuje sve ulazne signale (kamere, EVS, grafiku) kako bi reditelj imao pregled."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Profesionalni video mikseri (npr. Sony MVS serija, Blackmagic ATEM) omogućavaju i dodavanje efekata, hroma-ki (zelena pozadina) i složene tranzicije."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "💡 U današnje vreme, softverski mikseri (npr. OBS, vMix) omogućavaju profesionalnu montažu uživo i na običnim računarima, što je revolucija za striming i online produkciju."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "audio-u-multimediji",
+    "subjectSlug": "multimedijalne-aplikacije",
+    "title": "Audio u multimediji",
+    "description": "Osnove digitalnog zvuka, sample rate, bit depth, mono/stereo, balans i obrada zvuka.",
+    "week": 8,
+    "date": "2026-04-09",
+    "formattedDate": "09.04.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Osnovni koncepti audio signala"
+        },
+        {
+          "type": "paragraph",
+          "text": "Zvuk je oscilacija vazdušnog pritiska. Za rad sa audio signalom u multimediji, bitno je razumeti nekoliko pojmova:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>Amplituda</strong> – jačina zvuka (glasnoća). Meri se u decibelima (dB). U digitalnom domenu, 0 dB je maksimalni nivo pre pojave izobličenja (klipinga).",
+            "<strong>Frekvencija</strong> – visina tona (broj oscilacija u sekundi). Meri se u hercima (Hz). Ljudsko uho čuje otprilike 20 Hz – 20 kHz.",
+            "<strong>Mikrofonski vs. linijski nivo</strong> – mikrofon daje veoma slab signal (mV), dok linijski ulazi na mikseti očekuju signal jačine oko 0.775V (0 dBu). Zato mikrofoni zahtevaju predpojačivač."
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "📌 <strong>Decibel (dB)</strong> je logaritamska jedinica, što znači da povećanje od 3 dB predstavlja udvostručenje snage zvuka."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Audio formati i kompresija"
+        },
+        {
+          "type": "paragraph",
+          "text": "Digitalni audio se skladišti u raznim formatima. Razlika između njih je u tome da li koriste kompresiju i kakvu."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>WAV / AIFF</strong> – nekompresovani formati. Odličan kvalitet, ali ogromne datoteke (oko 10 MB po minuti za CD kvalitet).",
+            "<strong>MP3</strong> – lossy kompresija. Odbacuje \"nečujne\" delove spektra. Stepen kompresije se bira preko <strong>bitrate-a</strong> (npr. 128 kbps, 320 kbps). Veći bitrate = bolji kvalitet.",
+            "<strong>AAC</strong> – napredniji od MP3, bolji kvalitet pri istom bitrate-u. Koristi ga Apple (iTunes, YouTube).",
+            "<strong>FLAC, ALAC</strong> – lossless kompresija. Poput ZIP-a za audio – smanjuje veličinu, ali bez gubitka kvaliteta. Koristi se za audiofile arhive."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Za potrebe <em>striminga i veba</em>, najčešće se koriste MP3 i AAC (prvenstveno zbog brzine prenosa)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Audio oprema u studiju"
+        },
+        {
+          "type": "paragraph",
+          "text": "Profesionalni audio sistem se sastoji od nekoliko ključnih komponenti:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>Mikrofoni</strong> – dinamički (robusni, za binu), kondenzatorski (osetljivi, za studio) i bežični (za pokretne govornike).",
+            "<strong>Audio mikser (konzola)</strong> – centralni uređaj koji prima signale sa više izvora, podešava nivo (gain), EQ i efekte, i meša ih u stereo ili surround (5.1) izlaz.",
+            "<strong>Audio matrica</strong> – uređaj za rutiranje audio signala. Omogućava da se bilo koji ulaz pošalje na bilo koji izlaz (npr. komentatorska kabina prima signal sa 3 kamere).",
+            "<strong>Pro Tools</strong> – profesionalni sistem za višekanalno snimanje (64+ kanala) i obradu zvuka. Standard u muzičkoj i filmskoj industriji."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "U reportažnim kolima, ceo audio sistem je kompaktan i izolovan od buke motora."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "kompresija-i-formati-za-web",
+    "subjectSlug": "multimedijalne-aplikacije",
+    "title": "Kompresija i formati za web",
+    "description": "Lossy i lossless kompresija, bitrate, video kodeci i optimizacija za web.",
+    "week": 9,
+    "date": "2026-04-16",
+    "formattedDate": "16.04.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zašto je kompresija neophodna?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nekompresovani video signal je enormno veliki. Na primer, SDTV signal (720x576 piksela, 25 fps, 24 bita po pikselu) zahteva protok od <strong>oko 270 Mb/s</strong>. HDTV (1920x1080) ide i do <strong>1.5 Gb/s</strong>. Ovakav signal je nemoguće strimovati preko interneta ili skladištiti na kućnim medijima."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Kompresija</strong> je postupak smanjivanja količine podataka uz što manje primetan gubitak kvaliteta. Ona se zasniva na uklanjanju <strong>redundanse</strong> (suvišnih informacija)."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>Lossless (bez gubitaka)</strong> – original i dekompresovani video su identični. Stepen kompresije je mali (2:1 do 8:1). Koristi se za arhiviranje.",
+            "<strong>Lossy (sa gubicima)</strong> – odbacuje se deo informacija koje ljudsko oko/uvho teže primećuje. Stepen kompresije može biti i 100:1. Koristi se za distribuciju."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Vrste redundansi u video signalu"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kompresijski algoritmi iskorišćavaju četiri vrste suvišnosti:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>Prostorna redundansa</strong> – susedni pikseli u okviru iste slike su često slični (npr. plavo nebo). Umesto svakog piksela, šalje se samo razlika.",
+            "<strong>Vremenska redundansa</strong> – uzastopne slike (frejmovi) su veoma slične. Prenosi se samo razlika između frejmova.",
+            "<strong>Statistička redundansa</strong> – određeni kodovi (npr. sinhro signali, blanking period) se ponavljaju i mogu se predvideti.",
+            "<strong>Subjektivna redundansa</strong> – ljudsko oko je manje osetljivo na visoke frekvencije (sitne detalje) i na šum u boji. One se mogu grublje kvantizovati ili odbaciti."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "DCT i I, P, B frejmovi (MPEG)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Većina modernih formata (JPEG, MPEG-2, H.264) koristi <strong>Diskretnu kosinusnu transformaciju (DCT)</strong>. Slika se deli na blokove 8x8 piksela, DCT ih prevodi u frekvencijski domen, a zatim se visoke frekvencije jače kvantizuju (određeni broj bitova po koeficijentu)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kod video kompresije (MPEG), postoje tri tipa frejmova:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>I frejm (Intra)</strong> – kompletna slika (nezavisna). Osnova za rekonstrukciju. Najveći je po veličini.",
+            "<strong>P frejm (Predicted)</strong> – predviđa se na osnovu prethodnog I ili P frejma. Šalju se samo vektori pokreta i razlike.",
+            "<strong>B frejm (Bidirectional)</strong> – predviđa se na osnovu prethodnog i narednog frejma. Najveća kompresija, ali zahteva više memorije za dekodiranje."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Grupa frejmova koja počinje I frejmom i završava se pre sledećeg I frejma naziva se <strong>GOP (Group of Pictures)</strong>. Tipična struktura je IBBPBBPBB."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "💡 <strong>H.265 / HEVC</strong> je naslednik H.264. Omogućava isti kvalitet uz upola manji protok, koristeći veće blokove (do 64x64) i bolje predviđanje pokreta."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Formati za web i striming"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kada biramo format za web, ključni parametri su: stepen kompresije (veličina fajla), kvalitet i hardverska podržanost (da li će uređaj moći da dekoduje)."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>JPEG</strong> – za fotografije i slike sa glatkim prelazima. Lossy, odličan odnos kvalitet/veličina. Ne podržava transparentnost.",
+            "<strong>PNG</strong> – lossless, podržava transparentnost (alpha kanal). Pogodan za grafiku, logo-e, screenshot-ove. Veći fajlovi od JPEG-a.",
+            "<strong>GIF</strong> – ograničen na 256 boja. Podržava animaciju i transparentnost. Danas se retko koristi (zamenjuje ga PNG + video).",
+            "<strong>WebP</strong> – Google-ov format. Podržava i lossy i lossless, animaciju, transparentnost. Bolja kompresija od JPEG i PNG. Dobra podrška u modernim browserima.",
+            "<strong>AVIF</strong> – zasnovan na AV1 kodeku. Još bolja kompresija od WebP-a, ali sporiji za kodiranje."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Za video na webu, danas dominiraju <strong>MP4 kontejner</strong> sa <strong>H.264</strong> (za video) i <strong>AAC</strong> (za audio). Postepeno ih zamenjuju <strong>WebM</strong> (VP9/AV1 kodek) zbog bolje kompresije."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "ui-ux-principi-i-grid-sistem",
+    "subjectSlug": "multimedijalne-aplikacije",
+    "title": "UI/UX principi i grid sistem",
+    "description": "Osnove UI i UX dizajna, grid sistem, layout struktura i responzivni dizajn.",
+    "week": 10,
+    "date": "2026-04-23",
+    "formattedDate": "23.04.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta su UI i UX?"
+        },
+        {
+          "type": "paragraph",
+          "text": "UI (User Interface) i UX (User Experience) su dva pojma koja se često pomešaju, ali označavaju različite discipline:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>UI (Korisnički interfejs)</strong> – izgled aplikacije: dugmad, boje, fontovi, ikonice, razmaci. Ukratko, ono što korisnik vidi i sa čime klikće.",
+            "<strong>UX (Korisničko iskustvo)</strong> – kako se korisnik oseća dok koristi aplikaciju: da li je navigacija intuitivna, da li brzo pronalazi ono što mu treba, da li je proces jednostavan."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Dobar UI privlači pažnju, ali dobar UX zadržava korisnike. Za multimedijalne aplikacije (npr. video player, foto editor, dashboard), UX je ključan jer korisnik mora da se snađe u bogatom skupu funkcija."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Osnovni principi dobrog dizajna"
+        },
+        {
+          "type": "paragraph",
+          "text": "Bez obzira na to da li dizajniramo vebsajt, TV interfejs ili desktop aplikaciju, neki principi su univerzalni:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>Doslednost (Consistency)</strong> – iste akcije treba da izgledaju isto na svim mestima (npr. dugme za \"play\" uvek ima istu ikonicu i boju).",
+            "<strong>Povratna informacija (Feedback)</strong> – svaka akcija mora da ima reakciju sistema (npr. dugme menja boju na klik, pojavljuje se loader).",
+            "<strong>Jednostavnost (Simplicity)</strong> – ne prikazivati korisniku ono što mu u tom trenutku nije potrebno (npr. napredne opcije sakriti u \"Advanced\").",
+            "<strong>Familiarity (Poznatost)</strong> – koristiti standardne konvencije (košarica za korpu, lupa za pretragu, hamburger meni).",
+            "<strong>Accessibility (Pristupačnost)</strong> – aplikacija mora da bude upotrebljiva i osobama sa invaliditetom (dovoljan kontrast, podrška za tastaturu, alt tekstovi)."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Grid sistem i hijerarhija sadržaja"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Grid (mreža)</strong> je osnovni alat za organizaciju elemenata na ekranu. On stvara red, poravnanje i ritam. Nekoliko ključnih koncepata:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>Kolona i redova</strong> – moderna praksa je da se ekran deli na 12, 16 ili 24 kolone (npr. Bootstrap grid). To omogućava fleksibilan raspored elemenata.",
+            "<strong>Margine i oluke (gutters)</strong> – prazan prostor između kolona i sa ivica ekrana. Daje sadržaju \"prostor za disanje\".",
+            "<strong>Hierarchy (Hijerarhija)</strong> – elementi se postavljaju po važnosti. Veće, podebljane stvari i one koje su bliže vrhu su \"važnije\". Boja i kontrast takođe usmeravaju pažnju.",
+            "<strong>Responsivnost</strong> – grid se mora prilagođavati različitim širinama ekrana (mobilni, tablet, desktop). Na mobilnom, umesto 12 kolona, često se koristi 1 ili 2."
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "💡 U grafickom dizajnu (Adobe Photoshop, Illustrator), <strong>vođice (Guides)</strong> i <strong>mreža (Grid)</strong> su virtuelne linije koje pomažu pri preciznom pozicioniranju elemenata. One se ne štampaju."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Primeri u multimedijalnim aplikacijama"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pogledajmo kako se ovi principi primenjuju u praksi:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>Video editor (npr. DaVinci Resolve, Premiere)</strong> – vremenska linija (timeline) koristi mrežu frejmova, a prozori su organizovani po \"dockable\" panel sistemu (korisnik sam može da rasporedi).",
+            "<strong>Dashboard IoT meteorološke stanice</strong> – grid sistem se koristi za prikaz kartica sa senzorima. Najvažniji podaci (temperatura) su krupniji od manje važnih (pritisak).",
+            "<strong>Photoshop interfejs</strong> – palete (Layers, History, Brushes) su organizovane kao \"plivajući\" prozori koji se mogu grupisati, što daje fleksibilnost ali zahteva UX obrazovanje korisnika."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Kada dizajnirate sopstvenu aplikaciju, uvek počnite sa <strong>wireframe-om</strong> – grubom skicom rasporeda elemenata, bez boja i fontova. Tek kada se usaglasi struktura, pređite na vizuelni dizajn."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "integracija-vizuelnog-identiteta",
+    "subjectSlug": "multimedijalne-aplikacije",
+    "title": "Integracija vizuelnog identiteta",
+    "description": "Doslednost brenda kroz grafiku, video i web i povezivanje elemenata projekta.",
+    "week": 11,
+    "date": "2026-04-30",
+    "formattedDate": "30.04.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je vizuelni identitet?"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Vizuelni identitet (VI)</strong> je skup grafičkih elemenata koji na jedinstven i prepoznatljiv način predstavlja brend, TV stanicu, kompaniju ili proizvod. To nije samo logo – to je ceo sistem koji se sastoji iz:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>Logotipa (grba)</strong> – centralni element, simbol koji predstavlja entitet (npr. RTS logo, Adobe logo).",
+            "<strong>Palete boja</strong> – definisane primarne, sekundarne i neutralne boje. Ograničen broj boja (najčešće 3-5) osigurava doslednost.",
+            "<strong>Tipografije (fontova)</strong> – koji se fontovi koriste za naslove, podnaslove, osnovni tekst.",
+            "<strong>Obrasci i teksture</strong> – pozadine, šare, linije koje se ponavljaju.",
+            "<strong>Ton i stil fotografija/ilustracija</strong> – da li su fotografije tople ili hladne, da li koriste visoki kontrast ili pastelne boje."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Primena VI u multimediji i TV produkciji"
+        },
+        {
+          "type": "paragraph",
+          "text": "U televizijskoj i multimedijalnoj produkciji, VI se mora dosledno primenjivati na više kanala i medija:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>TV špic (intro program)</strong> – uvodna animacija koja koristi logo, boje i muzički džingl. To je \"vizit karta\" programa.",
+            "<strong>Donje trećine (lower thirds)</strong> – grafički prikazi koji se pojavljuju u donjem delu ekrana (ime gosta, mesto dešavanja). Boja i font moraju pratiti vizuelni identitet.",
+            "<strong>Zeleni studio (chroma key)</strong> – pozadina u virtuelnom studiju (npr. za vremensku prognozu) takođe mora da bude u skladu sa VI (boja pozadine, logo u uglu).",
+            "<strong>Vebsajt i društvene mreže</strong> – iste boje, isti logo, isti fontovi kao i na TV ekranu."
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "💡 U Photoshopu, celokupni vizuelni identitet se može pakovati u <strong>šablone (.PSD, .AI)</strong> koji sadrže sve potrebne elemente: logo, vođice za sigurnu zonu, color swatches, stilove slojeva (layer styles)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Praktična implementacija: od logoa do finalnog proizvoda"
+        },
+        {
+          "type": "paragraph",
+          "text": "Proces integracije vizuelnog identiteta u multimedijalni proizvod (npr. dashboard za IoT stanicu) obuhvata nekoliko koraka:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>1. Kreiranje logotipa</strong> – u vektorskom programu (Adobe Illustrator, CorelDRAW). Potrebne su nam verzije u boji, crno-bela (monochrome) i bela na crnoj podlozi.",
+            "<strong>2. Izrada palete boja</strong> – definisanje HEX, RGB i CMYK vrednosti. Na primer, primarne boje IoT dashboarda mogu biti tamnoplava (#1E3A8A) i cijan (#06B6D4).",
+            "<strong>3. Definisanje tipografije</strong> – za web se koriste \"web-safe\" fontovi (Google Fonts) ili sistem fontova (npr. Inter, Roboto).",
+            "<strong>4. Implementacija u CSS/HTML</strong> – definisanje CSS varijabli (custom properties) za boje, navođenje fontova, postavljanje logoa u header.",
+            "<strong>5. Kreiranje UI komponenti</strong> – dugmad, kartice, forme moraju koristiti VI (npr. dugme za \"send data\" je cijan boje)."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Primer CSS koda za VI jedne IoT aplikacije:"
+        },
+        {
+          "type": "code",
+          "code": ":root {\n  --color-primary: #1E3A8A;   /* tamnoplava */\n  --color-secondary: #06B6D4; /* cijan */\n  --color-accent: #F59E0B;    /* narandžasta (za upozorenja) */\n  --color-background: #F3F4F6; /* svetlo siva */\n  --color-text: #111827;       /* skoro crna */\n  --font-sans: 'Inter', sans-serif;\n}\n\n.btn--primary {\n  background-color: var(--color-secondary);\n  color: #fff;\n  border: none;\n  font-family: var(--font-sans);\n}\n\n.btn--primary:hover {\n  background-color: var(--color-primary);\n}"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Doslednost je ključ"
+        },
+        {
+          "type": "paragraph",
+          "text": "Najveća greška u integraciji vizuelnog identiteta je <strong>nekonzistentnost</strong>. Ako dugme na jednoj stranici izgleda ovako, a na drugoj drugačije – korisnik se zbunjuje i gubi poverenje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Saveti za održavanje doslednosti:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Napraviti <strong>style guide</strong> (dizajn sistem) – dokument koji sadrži sve komponente i pravila njihovog korišćenja.",
+            "Koristiti <strong>komponentni framework</strong> (React, Vue) tako da se UI elementi definišu na jednom mestu.",
+            "Automatizovati – koristiti <strong>CSS preprocesore (SASS, LESS)</strong> sa varijablama i mixin-ovima.",
+            "Testirati na svim medijima – ista boja može izgledati drugačije na OLED TV ekranu nego na laptop monitoru. Kalibracija je važna."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "U TV produkciji (npr. RTS reportažna kola), novinari dobijaju unapred pripremljene <strong>Photoshop šablone</strong> za donje trećine i uvodne špicove. Tako je osigurano da svi prilozi izgledaju isto, bez obzira ko ih priprema."
+        }
+      ]
+    }
+  }
+]

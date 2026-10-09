@@ -1,0 +1,6 @@
+<% if (block.summary) { %>
+<details><summary><%- block.summary %></summary><pre class="bg-dark text-white p-3 rounded mt-2"><code><%= block.code %></code></pre></details>
+<% } else { %>
+<pre class="bg-dark text-white p-3 rounded"><code><%= block.code %></code></pre>
+<% } %>
+<% if (block.description) { %><p class="small text-muted"><%- block.description %></p><% } %>

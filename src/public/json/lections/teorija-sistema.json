@@ -1,0 +1,2049 @@
+[
+  {
+    "slug": "uvod-u-sistemsko-razmisljanje",
+    "subjectSlug": "teorija-sistema",
+    "title": "Uvod u sistemsko razmišljanje",
+    "description": "Upoznavanje sa predmetom, značajem sistemskog pristupa i razlozima za proučavanje sistema u savremenim naukama.",
+    "week": 1,
+    "date": "2026-02-23",
+    "formattedDate": "23.02.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zašto proučavamo sisteme?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Savremeni informacioni sistemi postaju sve složeniji. Da bi se takvi sistemi mogli razumeti, projektovati i razvijati, potrebno je koristiti sistemski način razmišljanja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sistemsko razmišljanje podrazumeva posmatranje problema kao celine sastavljene od više međusobno povezanih delova. Umesto analize izolovanih elemenata, fokus je na njihovim odnosima i načinu na koji zajedno funkcionišu."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Cilj sistemskog pristupa je bolje razumevanje kompleksnih problema i izgradnja kvalitetnih informacionih sistema."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Modelovanje sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "U praksi se kompleksni sistemi retko posmatraju direktno. Umesto toga koristi se model – pojednostavljena predstava stvarnog sistema."
+        },
+        {
+          "type": "paragraph",
+          "text": "Model omogućava da se struktura sistema, njegovi elementi i njihove međusobne veze prikažu na jasan i razumljiv način."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "🧩",
+              "text": "pojednostavljuje složene sisteme"
+            },
+            {
+              "icon": "📊",
+              "text": "omogućava analizu sistema"
+            },
+            {
+              "icon": "👥",
+              "text": "olakšava komunikaciju između korisnika i programera"
+            },
+            {
+              "icon": "⚙️",
+              "text": "predstavlja osnovu za projektovanje informacionog sistema"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Dijagrami kao način prikaza sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "U modelovanju sistema često se koriste grafički dijagrami. Dijagrami predstavljaju vizuelni prikaz elemenata sistema i relacija između njih."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vizuelni prikaz olakšava razumevanje strukture sistema i komunikaciju između članova tima koji rade na razvoju softvera."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "ER dijagrami"
+        },
+        {
+          "type": "paragraph",
+          "text": "ER dijagram (Entity–Relationship dijagram) predstavlja grafički prikaz strukture podataka u informacionom sistemu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na ER dijagramu se prikazuju osnovni elementi modela:"
+        },
+        {
+          "type": "badges",
+          "items": [
+            "Entitet",
+            "Atribut",
+            "Veza",
+            "Ključ"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Entitet predstavlja objekat ili pojam o kome se čuvaju podaci u informacionom sistemu, dok atributi opisuju njegove osobine. Veze prikazuju odnose između različitih entiteta."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "UML – jezik za modelovanje sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "UML (Unified Modeling Language) predstavlja standardni jezik za modelovanje softverskih sistema."
+        },
+        {
+          "type": "paragraph",
+          "text": "On omogućava vizuelno predstavljanje strukture i ponašanja softverskog sistema pomoću različitih tipova dijagrama."
+        },
+        {
+          "type": "cards",
+          "layout": "pair",
+          "items": [
+            {
+              "title": "Statički dijagrami",
+              "text": "Prikazuju strukturu sistema, kao što su klase, objekti i njihove veze."
+            },
+            {
+              "title": "Dinamički dijagrami",
+              "text": "Prikazuju ponašanje sistema tokom izvršavanja, odnosno interakciju između objekata."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zaključak"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sistemsko razmišljanje omogućava bolje razumevanje kompleksnih problema i razvoj kvalitetnih informacionih sistema."
+        },
+        {
+          "type": "paragraph",
+          "text": "U modelovanju sistema koriste se različite metode i dijagrami, među kojima su najčešći ER dijagrami za modelovanje podataka i UML dijagrami za modelovanje softverskih sistema."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "uvod-u-uml-i-modelovanje",
+    "subjectSlug": "teorija-sistema",
+    "title": "Uvod u UML i modelovanje sistema",
+    "description": "Osnovni pojmovi objektno orijentisanog modelovanja i uvod u UML dijagrame koji se koriste za opis strukture i ponašanja sistema.",
+    "week": 1,
+    "date": "2026-02-23",
+    "formattedDate": "23.02.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je UML?"
+        },
+        {
+          "type": "paragraph",
+          "text": "UML (Unified Modeling Language) je standardizovan jezik za modelovanje softverskih sistema. Koristi se za vizuelno predstavljanje strukture, ponašanja i organizacije sistema pomoću različitih tipova dijagrama."
+        },
+        {
+          "type": "paragraph",
+          "text": "UML omogućava analitičarima, programerima i projektantima da na jasan i razumljiv način prikažu kako sistem funkcioniše pre nego što započne njegova implementacija."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "UML nije programski jezik — već jezik za modelovanje koji pomaže u razumevanju i projektovanju softverskih sistema."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zašto se koristi UML?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Razvoj modernih softverskih sistema podrazumeva veliki broj komponenti, funkcionalnosti i međusobnih interakcija. UML omogućava da se takvi sistemi planiraju i analiziraju na strukturisan način."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "📊",
+              "text": "Vizuelno predstavljanje sistema"
+            },
+            {
+              "icon": "🧩",
+              "text": "Bolje razumevanje strukture softvera"
+            },
+            {
+              "icon": "🤝",
+              "text": "Lakša komunikacija između članova tima"
+            },
+            {
+              "icon": "🧠",
+              "text": "Planiranje arhitekture sistema"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Osnovni elementi UML modela"
+        },
+        {
+          "type": "paragraph",
+          "text": "UML modeli se sastoje od različitih elemenata koji predstavljaju strukturu i ponašanje sistema."
+        },
+        {
+          "type": "cards",
+          "layout": "pair",
+          "items": [
+            {
+              "title": "Klasa",
+              "text": "Predstavlja tip objekata u sistemu. Klasa definiše atribute (podatke) i operacije (funkcije) koje objekti te klase mogu imati.",
+              "icon": "📦"
+            },
+            {
+              "title": "Objekat",
+              "text": "Objekat je konkretna instanca klase koja predstavlja stvarni element sistema sa određenim vrednostima atributa.",
+              "icon": "🔹"
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "layout": "pair",
+          "items": [
+            {
+              "title": "Interfejs",
+              "text": "Interfejs definiše skup operacija koje klasa mora implementirati i predstavlja ugovor između komponenti.",
+              "icon": "🔌"
+            },
+            {
+              "title": "Paketi",
+              "text": "Paketi služe za organizaciju modela i grupisanje srodnih elemenata u okviru velikih sistema.",
+              "icon": "📁"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Karakteristike objekata"
+        },
+        {
+          "type": "paragraph",
+          "text": "U objektno orijentisanim sistemima svaki objekat ima tri osnovne karakteristike koje određuju njegovu prirodu."
+        },
+        {
+          "type": "cards",
+          "layout": "grid",
+          "items": [
+            {
+              "title": "Stanje",
+              "icon": "📊"
+            },
+            {
+              "title": "Ponašanje",
+              "icon": "⚙️"
+            },
+            {
+              "title": "Identitet",
+              "icon": "🆔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Stanje</strong> predstavlja trenutne vrednosti atributa objekta."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Ponašanje</strong> opisuje operacije koje objekat može izvršavati."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Identitet</strong> omogućava razlikovanje objekata čak i kada imaju iste vrednosti atributa."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Vrste UML dijagrama"
+        },
+        {
+          "type": "paragraph",
+          "text": "UML definiše veliki broj dijagrama koji se koriste za različite aspekte modelovanja sistema."
+        },
+        {
+          "type": "cards",
+          "layout": "pair",
+          "items": [
+            {
+              "title": "Strukturni dijagrami",
+              "text": "Prikazuju statičku strukturu sistema i odnose između njegovih elemenata.",
+              "icon": "🏗️",
+              "items": [
+                "Dijagram klasa",
+                "Dijagram objekata",
+                "Dijagram paketa"
+              ]
+            },
+            {
+              "title": "Dijagrami ponašanja",
+              "text": "Prikazuju dinamiku sistema i interakcije između komponenti tokom vremena.",
+              "icon": "🔄",
+              "items": [
+                "Use Case dijagram",
+                "Dijagram sekvence",
+                "Komunikacioni dijagram"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Use Case dijagram"
+        },
+        {
+          "type": "paragraph",
+          "text": "Use Case dijagram prikazuje funkcionalnosti sistema i korisnike koji te funkcionalnosti koriste."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovaj dijagram se često koristi u ranim fazama razvoja sistema kako bi se jasno definisali zahtevi i očekivanja korisnika."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Akteri predstavljaju korisnike sistema",
+            "Use case predstavlja funkcionalnost sistema",
+            "Relacije pokazuju interakciju između aktera i sistema"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zaključak"
+        },
+        {
+          "type": "paragraph",
+          "text": "UML predstavlja jedan od najvažnijih alata u analizi i projektovanju softverskih sistema."
+        },
+        {
+          "type": "paragraph",
+          "text": "Korišćenjem različitih tipova dijagrama moguće je na jasan način prikazati strukturu sistema, odnose između njegovih komponenti i način na koji sistem funkcioniše."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "UML modeli omogućavaju da se kompleksni sistemi razumeju pre nego što započne njihova implementacija u kodu."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "uvod-u-teoriju-sistema",
+    "subjectSlug": "teorija-sistema",
+    "title": "Uvod u teoriju sistema",
+    "description": "Osnovni pojmovi teorije sistema, nastanak discipline, diferencijacija i integracija nauka i značaj sistemskog pristupa u proučavanju složenih pojava.",
+    "week": 1,
+    "date": "2026-02-23",
+    "formattedDate": "23.02.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je teorija sistema?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Teorija sistema predstavlja interdisciplinarnu naučnu oblast koja proučava zajedničke osobine, strukture i zakonitosti sistema nezavisno od njihove prirode."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sistem se može definisati kao skup međusobno povezanih elemenata koji kroz svoje relacije formiraju organizovanu celinu i zajedno ostvaruju određenu funkciju ili cilj."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Osnovna ideja teorije sistema je da se kompleksne pojave mogu razumeti analizom njihovih elemenata, relacija, strukture i interakcije sa okruženjem."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zašto je nastala teorija sistema?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Razvojem nauke i tehnologije količina informacija i znanja postala je izuzetno velika. Kompleksnost realnih problema često prevazilazi mogućnosti pojedinačnih naučnih disciplina."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zbog toga su naučne oblasti počele da se sve više dele na specijalizovane discipline koje proučavaju samo pojedine segmente stvarnosti."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Diferencijacija i integracija nauke"
+        },
+        {
+          "type": "cards",
+          "layout": "pair",
+          "items": [
+            {
+              "title": "Diferencijacija",
+              "text": "Proces u kojem se nauka deli na sve uža specijalizovana područja kao što su biologija, hemija, fizika i druge discipline.",
+              "icon": "🔬"
+            },
+            {
+              "title": "Integracija",
+              "text": "Proces povezivanja različitih naučnih disciplina radi rešavanja kompleksnih problema koji ne mogu biti objašnjeni samo iz jedne oblasti.",
+              "icon": "🧩"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "secondary",
+          "text": "Teorija sistema nastaje upravo kao rezultat potrebe za integracijom znanja iz različitih naučnih oblasti."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Sistemski pristup"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sistemski pristup predstavlja način razmišljanja u kojem se pojave posmatraju kao organizovana celina, a ne kao izolovani skup pojedinačnih delova."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "🔗",
+              "text": "Fokus na relacijama između elemenata"
+            },
+            {
+              "icon": "🧩",
+              "text": "Posmatranje sistema kao organizovane celine"
+            },
+            {
+              "icon": "📊",
+              "text": "Analiza ponašanja sistema kroz modele"
+            },
+            {
+              "icon": "🎯",
+              "text": "Razumevanje funkcija i ciljeva sistema"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Čelični zakon perspektive"
+        },
+        {
+          "type": "paragraph",
+          "text": "Posmatranje sistema zavisi od perspektive posmatrača. Svaki istraživač svet posmatra kroz sopstveni sistem vrednosti, znanja i iskustva."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Ovaj fenomen u teoriji sistema naziva se „čelični zakon perspektive“, koji naglašava da različiti posmatrači mogu imati različita tumačenja istog sistema."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Uloga teorije sistema u nauci"
+        },
+        {
+          "type": "paragraph",
+          "text": "Jedna od glavnih funkcija teorije sistema jeste da obezbedi zajednički skup pojmova, metoda i instrumenata za proučavanje kompleksnih pojava u različitim naukama."
+        },
+        {
+          "type": "cards",
+          "layout": "grid",
+          "items": [
+            {
+              "title": "Ekologija",
+              "icon": "🌱"
+            },
+            {
+              "title": "Biologija",
+              "icon": "🧬"
+            },
+            {
+              "title": "Inženjerstvo",
+              "icon": "⚙️"
+            },
+            {
+              "title": "Informatika",
+              "icon": "💻"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Nivoi kompleksnosti sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Jedna od poznatih klasifikacija sistema je Bouldingova klasifikacija koja sisteme deli prema stepenu njihove kompleksnosti."
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "Statičke strukture",
+            "Satni mehanizmi",
+            "Termostati (sistemi sa povratnom spregom)",
+            "Ćelije",
+            "Biljni organizmi",
+            "Životinje",
+            "Čovek kao pojedinac",
+            "Društveni sistemi",
+            "Transcendentalni sistemi"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zaključak"
+        },
+        {
+          "type": "paragraph",
+          "text": "Teorija sistema omogućava jedinstveni pristup proučavanju kompleksnih pojava u različitim naučnim disciplinama."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Umesto izolovanog proučavanja pojedinačnih delova, sistemski pristup naglašava važnost strukture, relacija i interakcije sistema sa okruženjem."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "definicija-i-struktura-sistema",
+    "subjectSlug": "teorija-sistema",
+    "title": "Definicija i struktura sistema",
+    "description": "Pojam sistema, elementi sistema i relacije među njima. Razmatranje sistema kao celine, odnos sistema i okruženja, hijerarhijska struktura i podsistemi.",
+    "week": 2,
+    "date": "2026-03-02",
+    "formattedDate": "02.03.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Sistem"
+        },
+        {
+          "type": "paragraph",
+          "text": "Teorija sistema, kao samostalna zaokružena disciplina, predstavlja važan korak u razvoju nauke i naučnih istraživanja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Umesto jednostavnih analitičkih i linearnih metoda istraživanja, u centar pažnje dolazi proučavanje ukupnosti sistema — njegovih globalnih karakteristika, strukture i ponašanja."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Fokus teorije sistema je razumevanje celokupnog funkcionisanja složenih celina."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Definicija sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "U mnogim naukama, naročito eksperimentalnim, definisanje pojmova nije od presudnog značaja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Međutim, formalizovane naučne discipline zahtevaju jasno definisane osnovne pojmove."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Zato je važno precizno definisati pojam sistema."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ključno pitanje"
+        },
+        {
+          "type": "paragraph",
+          "text": "Postavlja se pitanje:"
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Kako definisati sistem tako da definicija bude dovoljno opšta, ali istovremeno i praktična za primenu?"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Definicije sistema"
+        },
+        {
+          "type": "cards",
+          "layout": "pair",
+          "items": [
+            {
+              "title": "Definicija 1",
+              "text": "Sistem je totalni skup interaktivnih elemenata posmatranih na određenom nivou posmatranja. Sistem može predstavljati i skup elemenata koji su nedeljivi u okviru datog kognitivnog pristupa.",
+              "icon": "🧩"
+            },
+            {
+              "title": "Definicija 2",
+              "text": "Sistem je celina elemenata f1, f2, f3 ... fn koji su međusobno u interakciji. (Ludwig von Bertalanffy)",
+              "icon": "🌐"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "secondary",
+          "text": "Sistem se može definisati i kao uređeni skup elemenata koji su međusobno povezani i čine jednu celinu – totalitet. (Sadovskij)"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Relacije između elemenata"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nakon identifikacije elemenata sistema, sledeći korak je identifikacija relacija između njih. Elementi sistema ne mogu se razumeti bez razumevanja odnosa koji među njima postoje."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "🔗",
+              "text": "odnosi između elemenata"
+            },
+            {
+              "icon": "📈",
+              "text": "intenzitet međusobnog uticaja"
+            },
+            {
+              "icon": "⚡",
+              "text": "uzročno-posledične veze"
+            },
+            {
+              "icon": "🔄",
+              "text": "međusobna zavisnost"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Okruženje sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sistem je izdvojena celina koja je u interakciji sa okruženjem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Okruženje obuhvata sve spoljne faktore koji mogu uticati na sistem."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Sistem i njegovo okruženje zajedno čine širi totalitet."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Hijerarhijska građa sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pri analizi sistema mora se voditi računa o njegovoj hijerarhijskoj strukturi."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "elementi sistema mogu biti deljivi",
+            "pojedini elementi mogu se posmatrati kao zasebni sistemi (podsistemi)",
+            "relacije postoje i između podsistema"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Hijerarhijska struktura odnosi se i na elemente i na relacije između njih."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta dobijamo?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sistem sadrži:"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "🧩",
+              "text": "skup elemenata"
+            },
+            {
+              "icon": "🔗",
+              "text": "skup relacija između elemenata"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Kao celina, sistem poseduje:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "uređenost",
+            "organizovanost",
+            "strukturu"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "modelovanje-i-klasifikacija-sistema",
+    "subjectSlug": "teorija-sistema",
+    "title": "Modelovanje i klasifikacija sistema",
+    "description": "Metode modelovanja sistema, preslikavanje originala u model (izomorfno i homomorfno) i klasifikacija sistema prema različitim kriterijumima kao što su nastanak, složenost i odnos sa okruženjem.",
+    "week": 3,
+    "date": "2026-03-09",
+    "formattedDate": "09.03.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Dalja diskusija o teoriji sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pošto smo definisali pojam sistema, sada se fokusiramo na dalji razvoj teorije sistema i načine klasifikacije sistema."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cilj je produbljivanje razumevanja sistema kroz različite naučne pristupe i metode modelovanja."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Teorija sistema razvijala se kroz više različitih pravaca."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pravci razvoja teorije sistema"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "🌐",
+              "text": "Generalistički pravac razvoja"
+            },
+            {
+              "icon": "📐",
+              "text": "Matematičko–formalni pravac"
+            },
+            {
+              "icon": "🤝",
+              "text": "Interdisciplinarni razvoj"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Generalistički pristup"
+        },
+        {
+          "type": "paragraph",
+          "text": "Teorija sistema predstavlja opšti konceptualni model posmatranja složenih pojava."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovaj pristup zahteva korišćenje opštih naučnih metoda koji nastaju sintezom više disciplina."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Na osnovu ovih znanja razvijaju se specijalističke discipline."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Matematičko–formalni pravac"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovaj pravac koristi matematičke modele za opisivanje ponašanja sistema."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "diskretna matematika",
+            "teorija skupova",
+            "apstraktna algebra"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Primena je moguća kada se sistem može formalno opisati."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Interdisciplinarni pristup"
+        },
+        {
+          "type": "paragraph",
+          "text": "Fokus je na rešavanju kompleksnih problema koji zahtevaju saradnju više naučnih disciplina."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tipičan primer je sistem čovek–mašina."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ispitivanje sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Proces upoznavanja sistema je cikličan."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "definisanje sistema",
+            "ispitivanje sistema",
+            "ponovno definisanje"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Svaka iteracija daje bolje razumevanje sistema."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Modelovanje sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Modelovanje predstavlja preslikavanje realnog sistema na njegov model."
+        },
+        {
+          "type": "paragraph",
+          "text": "Polazi se od poznatih karakteristika originala koje se prenose na model."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Vrste preslikavanja"
+        },
+        {
+          "type": "cards",
+          "layout": "pair",
+          "items": [
+            {
+              "title": "Homomorfno",
+              "text": "Model predstavlja pojednostavljenu verziju sistema.",
+              "icon": "📉"
+            },
+            {
+              "title": "Izomorfno",
+              "text": "Model u potpunosti odgovara originalnom sistemu.",
+              "icon": "🪞"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Klasifikacija sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Svrha klasifikacije je savladavanje kompleksnosti sistema."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "globalna obeležja sistema",
+            "unutrašnje karakteristike",
+            "odnos sa okruženjem"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Sistemi prema načinu nastanka"
+        },
+        {
+          "type": "cards",
+          "layout": "grid",
+          "items": [
+            {
+              "title": "Prirodni sistemi",
+              "icon": "🌿"
+            },
+            {
+              "title": "Veštački sistemi",
+              "icon": "🏗️"
+            },
+            {
+              "title": "Prelazni sistemi",
+              "icon": "🔄"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Sistemi prema pojavnom obliku"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "Realni sistemi",
+            "Apstraktni sistemi",
+            "Kombinovani sistemi"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Sistemi prema složenosti"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "⚙️",
+              "text": "Prosti sistemi"
+            },
+            {
+              "icon": "🧩",
+              "text": "Složeni sistemi"
+            },
+            {
+              "icon": "📊",
+              "text": "Veoma složeni sistemi"
+            },
+            {
+              "icon": "🌐",
+              "text": "Kompleksni sistemi"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Sistemi prema odnosu sa okruženjem"
+        },
+        {
+          "type": "cards",
+          "layout": "grid",
+          "items": [
+            {
+              "title": "Otvoreni sistemi",
+              "icon": "🔓"
+            },
+            {
+              "title": "Zatvoreni sistemi",
+              "icon": "🔒"
+            },
+            {
+              "title": "Poluotvoreni sistemi",
+              "icon": "↔️"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zaključak"
+        },
+        {
+          "type": "paragraph",
+          "text": "Klasifikacija sistema omogućava lakše razumevanje složenih sistema i njihovih karakteristika."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Modelovanje i klasifikacija predstavljaju ključne alate za proučavanje sistema."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "analiza-i-sinteza-sistema",
+    "subjectSlug": "teorija-sistema",
+    "title": "Analiza i sinteza sistema",
+    "description": "Strategije analize sistema, vrste analize i sinteza kao proces ponovnog sastavljanja elemenata sistema.",
+    "week": 4,
+    "date": "2026-03-16",
+    "formattedDate": "16.03.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Istraživanje sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Na osnovu znanja i raspoloživih instrumenata, istraživači sistema pokušavaju da otkriju prirodu, elemente i relacije sistema."
+        },
+        {
+          "type": "paragraph",
+          "text": "Instrumenti istraživanja mogu biti:"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "🧠",
+              "text": "Idejni instrumenti – metode, teorije i metodologije"
+            },
+            {
+              "icon": "🛠️",
+              "text": "Materijalni instrumenti – alati koji proširuju ljudske sposobnosti"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "I pored toga, istraživač ne može obuhvatiti celokupan fenomen koji proučava."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Strategije analize sistema"
+        },
+        {
+          "type": "cards",
+          "layout": "pair",
+          "items": [
+            {
+              "title": "Smanjivanje prostora istraživanja",
+              "text": "Fokusiranje na manji segment sistema koji se može detaljnije proučavati.",
+              "icon": "🔍"
+            },
+            {
+              "title": "Deljenje prostora istraživanja",
+              "text": "Sistem se deli na manje delove koji se pojedinačno analiziraju.",
+              "icon": "🧩"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Analiza"
+        },
+        {
+          "type": "paragraph",
+          "text": "Analiza je metoda upoznavanja složenih pojava putem misaonog ili praktičnog rastavljanja na elemente."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Cilj analize je ispitivanje delova, njihovih osobina i odnosa među njima."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Uglovi posmatranja analize"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "teorija znanja",
+            "složenost sistema",
+            "stepen konkretnosti",
+            "predmet i cilj analize",
+            "oblast primene"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Analiza prema teoriji znanja"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "Deskriptivna analiza",
+            "Eksplikativna analiza"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Deskriptivna analiza opisuje elemente, dok eksplikativna analizira i njihove relacije."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Analiza prema složenosti"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "Elementarna analiza",
+            "Uzročno-posledična analiza",
+            "Funkcionalna analiza"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Stepen konkretnosti"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "Materijalna analiza (empirijska)",
+            "Idejna analiza"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Analiza prema predmetu i cilju"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "Generička analiza",
+            "Komparativna analiza",
+            "Funkcionalna analiza",
+            "Strukturalna analiza"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Ograničenja analize"
+        },
+        {
+          "type": "paragraph",
+          "text": "U praksi je gotovo nemoguće analizom u potpunosti istražiti složene sisteme."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Sveobuhvatnost i preciznost često isključuju jedna drugu."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Sinteza"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sinteza je metoda povezivanja jednostavnih pojmova u složenije strukture."
+        },
+        {
+          "type": "paragraph",
+          "text": "Analiza i sinteza su međusobno povezani procesi."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "⬇️",
+              "text": "Analiza: od opšteg ka posebnom"
+            },
+            {
+              "icon": "⬆️",
+              "text": "Sinteza: od posebnog ka opštem"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Vrste sinteze"
+        },
+        {
+          "type": "cards",
+          "layout": "pair",
+          "items": [
+            {
+              "title": "Reproduktivna sinteza",
+              "text": "Kreiranje sistema sličnog ili identičnog originalu."
+            },
+            {
+              "title": "Produktivna sinteza",
+              "text": "Kreiranje potpuno novog sistema ili proizvoda."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Analiza sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Zbog ograničenja klasične analize nastaje sistemska analiza."
+        },
+        {
+          "type": "paragraph",
+          "text": "Osnovna ideja je posmatranje objekta istraživanja kao sistema."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Sistem se posmatra kroz: elemente, relacije i okruženje."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Faze analize sistema"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "izbor objekta istraživanja",
+            "definisanje aspekta posmatranja",
+            "definisanje sistema",
+            "razlaganje sistema",
+            "istraživanje strukture",
+            "generisanje modela sistema",
+            "eksperimentisanje sa modelom",
+            "verifikacija rezultata",
+            "primena modela"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "struktura-i-elementi-sistema",
+    "subjectSlug": "teorija-sistema",
+    "title": "Struktura i elementi sistema",
+    "description": "Elementi sistema, relacije između elemenata, struktura sistema i kompleksnost sistema.",
+    "week": 5,
+    "date": "2026-03-23",
+    "formattedDate": "23.03.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Sprege u sistemu"
+        },
+        {
+          "type": "paragraph",
+          "text": "Analiza sprega u sistemu omogućava razumevanje unutrašnjih karakteristika sistema. Fokus se pomera sa posmatranja sistema kao celine na njegove elemente i veze između elemenata."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "🧩",
+              "text": "elementi sistema"
+            },
+            {
+              "icon": "🔗",
+              "text": "veze između elemenata"
+            },
+            {
+              "icon": "⚙️",
+              "text": "ponašanje elemenata"
+            },
+            {
+              "icon": "↔️",
+              "text": "ulazi i izlazi elemenata"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Kategorije veza u sistemu"
+        },
+        {
+          "type": "paragraph",
+          "text": "U analizi sistema razlikuju se dve osnovne kategorije veza:"
+        },
+        {
+          "type": "list",
+          "style": "group",
+          "items": [
+            "veza između celine i elemenata",
+            "veza između samih elemenata sistema"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Veza između celine i elemenata"
+        },
+        {
+          "type": "paragraph",
+          "text": "Veza između celine i elemenata posmatra se kroz različite nivoe agregacije sistema. Svaki kriterijum agregacije dovodi do određenog načina dekompozicije sistema."
+        },
+        {
+          "type": "code",
+          "code": "S = { S₁, S₂, … , Sₖ }"
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Sistem se može posmatrati kao skup svih relevantnih dekompozicionih struktura."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Veze između elemenata"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ispitivanje odnosa između elemenata sistema odvija se u dve faze:"
+        },
+        {
+          "type": "list",
+          "style": "numbered",
+          "items": [
+            "utvrđivanje da li postoji veza između elemenata (statički odnosi)",
+            "analiza karakteristika veze (intenzitet, ponašanje, promene kroz vreme)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Elementi i relacije sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Elementi predstavljaju osnovne komponente sistema, dok relacije predstavljaju veze između njih."
+        },
+        {
+          "type": "code",
+          "code": "E = {e₁, e₂, e₃, … , eₙ}"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>E</strong> – skup elemenata sistema",
+            "<strong>n</strong> – broj elemenata sistema"
+          ]
+        },
+        {
+          "type": "code",
+          "code": "R = {r₁, r₂, r₃, … , rₘ}"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>R</strong> – skup relacji",
+            "<strong>m</strong> – broj relacija"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Statička struktura sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Statička struktura predstavlja skup svih relacija između elemenata sistema."
+        },
+        {
+          "type": "code",
+          "code": "G = G₁ ∪ G₂ ∪ … ∪ Gₖ"
+        },
+        {
+          "type": "paragraph",
+          "text": "Svaki aspekt posmatranja daje određenu strukturu odnosa između elemenata sistema."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Jednostruke i višestruke relacije"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "➖",
+              "text": "jednostruke relacije"
+            },
+            {
+              "icon": "➕",
+              "text": "višestruke relacije"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "code": "r₁ = (eᵢ , eⱼ)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kod višestrukih relacija isti par elemenata može imati više različitih veza."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Grafičko predstavljanje strukture"
+        },
+        {
+          "type": "paragraph",
+          "text": "Struktura sistema često se predstavlja pomoću grafova."
+        },
+        {
+          "type": "cards",
+          "layout": "grid",
+          "items": [
+            {
+              "title": "Čvorovi (elementi)",
+              "icon": "🔵"
+            },
+            {
+              "title": "Lukovi (relacije)",
+              "icon": "➡️"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Grafički prikaz omogućava lakše razumevanje strukture sistema."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Matrični prikaz strukture"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pored grafova, struktura sistema može se predstaviti i pomoću matrica."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Najčešće se koristi incidentna matrica."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Incidentna matrica"
+        },
+        {
+          "type": "paragraph",
+          "text": "Incidentna matrica prikazuje vezu između elemenata sistema i relacija između njih. Koristi se u analizi strukture sistema."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Dinamičke strukture sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Dinamičke strukture predstavljaju usmerene grafove."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Relacije između elemenata imaju određeni smer."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Matrice prethodjenja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Koriste se za analizu dinamičkih struktura sistema."
+        },
+        {
+          "type": "code",
+          "code": "M₀₀ = M₀₁ × M₁₀"
+        },
+        {
+          "type": "code",
+          "code": "M₁₁ = M₁₀ × M₀₁"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Strukture sistema"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "➡️",
+              "text": "redno povezani elementi"
+            },
+            {
+              "icon": "🔀",
+              "text": "paralelno povezani elementi"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Kod paralelnih struktura mogu postojati:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "razvodne veze",
+            "odvodne veze"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "dinamika-i-transformacije-sistema",
+    "subjectSlug": "teorija-sistema",
+    "title": "Dinamika i transformacije sistema",
+    "description": "Promene stanja sistema kroz vreme, transformacije i odnosi između elemenata u dinamičkim sistemima.",
+    "week": 6,
+    "date": "2026-03-30",
+    "formattedDate": "30.03.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ponašanje sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nakon upoznavanja strukture sistema prelazi se na analizu njegove dinamike, odnosno ponašanja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ponašanje sistema označava šta se dešava u sistemu, šta je moguće, a šta nije moguće."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Izgrađenost sistema i njegovo ponašanje su međusobno uslovljeni."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Odnos kompleksnosti i ponašanja sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sistemi na nižem nivou kompleksnosti nemaju izražene funkcije."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tek sistemi od četvrtog nivoa kompleksnosti imaju jasno definisane funkcije."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Ponašanje sistema određuje prostor funkcija (skup funkcija i relacija među njima)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Funkcije, procesi i aktivnosti"
+        },
+        {
+          "type": "paragraph",
+          "text": "Funkcije sistema se retko ostvaruju jednim procesom. Najčešće se funkcije realizuju kroz više procesa. Izučavanjem procesa dolazimo do prostora aktivnosti."
+        },
+        {
+          "type": "cards",
+          "layout": "grid",
+          "items": [
+            {
+              "title": "Prostor funkcija",
+              "icon": "⚙️"
+            },
+            {
+              "title": "Prostor procesa",
+              "icon": "🔄"
+            },
+            {
+              "title": "Prostor aktivnosti",
+              "icon": "🧩"
+            },
+            {
+              "title": "Prostor operatora",
+              "icon": "🧮"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Pojam funkcije"
+        },
+        {
+          "type": "paragraph",
+          "text": "Funkcija predstavlja dinamičko ponašanje sistema i ishod određenih dešavanja. Bit funkcije je svrsishodnost i ostvarivanje određene uloge u sistemu."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "🧩",
+              "text": "funkcija opstanka sistema"
+            },
+            {
+              "icon": "📈",
+              "text": "funkcija razvoja sistema"
+            },
+            {
+              "icon": "🎛",
+              "text": "funkcija upravljanja"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Istraživanje funkcija"
+        },
+        {
+          "type": "paragraph",
+          "text": "Rezultati istraživanja funkcija zavise od aspekta posmatranja i znanja istraživača."
+        },
+        {
+          "type": "paragraph",
+          "text": "Različiti istraživači mogu doći do različitih rezultata analize funkcionalnog prostora sistema."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Vreme kao dimenzija sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Vreme predstavlja novu dimenziju u analizi ponašanja sistema."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tokom vremena funkcije sistema mogu:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "nestati",
+            "pojavljivati se",
+            "spajati",
+            "deliti",
+            "ostati nepromenjene"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "U svakom vremenskom trenutku postoji određeni skup funkcija koji definiše stanje sistema."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Pojam procesa"
+        },
+        {
+          "type": "paragraph",
+          "text": "Proces predstavlja niz povezanih dešavanja odnosno tok događaja u sistemu. Procesi se mogu podeliti na:"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "⚙️",
+              "text": "bazične procese"
+            },
+            {
+              "icon": "📈",
+              "text": "razvojne procese"
+            },
+            {
+              "icon": "🎛",
+              "text": "upravljačke procese"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Aktivnosti"
+        },
+        {
+          "type": "paragraph",
+          "text": "Aktivnosti predstavljaju najmanje delove procesa koji integrišu resurse sistema."
+        },
+        {
+          "type": "paragraph",
+          "text": "One omogućavaju ostvarivanje određenog dela rezultata koji proizvodi proces."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Transformacija sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ponašanje sistema može se posmatrati kroz transformacije stanja sistema."
+        },
+        {
+          "type": "paragraph",
+          "text": "Operator deluje na operande i izaziva prelaz iz jednog stanja u drugo."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Transformacija pokazuje šta se dešava, ali ne objašnjava zašto se nešto dešava."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Tipovi transformacija"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "🔒",
+              "text": "zatvorene transformacije"
+            },
+            {
+              "icon": "🌐",
+              "text": "otvorene transformacije"
+            },
+            {
+              "icon": "1️⃣",
+              "text": "jednoznačne transformacije"
+            },
+            {
+              "icon": "🔀",
+              "text": "višeznačne transformacije"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Stanje sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sistem se može opisati skupom njegovih obeležja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vrednosti tih obeležja u trenutku <strong>t</strong> predstavljaju stanje sistema u tom trenutku."
+        },
+        {
+          "type": "code",
+          "code": "Stanje(t)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Posmatranjem promena stanja kroz vreme dobijamo predstavu o ponašanju sistema."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Tipovi ponašanja sistema"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "∞",
+              "text": "determinističko beskonačno ponašanje"
+            },
+            {
+              "icon": "⏳",
+              "text": "determinističko konačno ponašanje"
+            },
+            {
+              "icon": "🎲",
+              "text": "stohastičko ponašanje"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Stohastički sistemi sadrže element neizvesnosti i slučajnosti."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "stabilnost-i-ponasanje-sistema",
+    "subjectSlug": "teorija-sistema",
+    "title": "Stabilnost i ponašanje sistema",
+    "description": "Stabilnost sistema, ravnotežna stanja, cikličnost sistema i uticaj smetnji na ponašanje sistema.",
+    "week": 8,
+    "date": "2026-04-13",
+    "formattedDate": "13.04.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Odnos delova i celine"
+        },
+        {
+          "type": "paragraph",
+          "text": "U analizi sistema često se proučava odnos između pojedinačnih elemenata i celine sistema."
+        },
+        {
+          "type": "paragraph",
+          "text": "Najčešće se koriste dva pristupa:"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "🔍",
+              "text": "Analitički pristup"
+            },
+            {
+              "icon": "🧩",
+              "text": "Sintetički pristup"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Broj relacija između elemenata zavisi od broja elemenata sistema."
+        },
+        {
+          "type": "code",
+          "code": "v = n(n − 1)"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Vreme transformacija sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Svako preslikavanje ili transformacija sistema odvija se tokom određenog vremenskog intervala."
+        },
+        {
+          "type": "code",
+          "code": "Δt = t₂ − t₁"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ova vremenska dimenzija je važna za analizu ponašanja sistema kroz vreme."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Tipovi elemenata sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "U sistemima može postojati veliki broj različitih tipova elemenata."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "➕",
+              "text": "Aditivni elementi"
+            },
+            {
+              "icon": "✖️",
+              "text": "Elementi koji množe"
+            },
+            {
+              "icon": "➖",
+              "text": "Elementi koji oduzimaju"
+            },
+            {
+              "icon": "➗",
+              "text": "Elementi koji dele"
+            },
+            {
+              "icon": "🔢",
+              "text": "Elementi sa jednom promenljivom"
+            },
+            {
+              "icon": "📊",
+              "text": "Elementi sa više promenljivih"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Stabilnost sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Stabilnost sistema predstavlja osobinu sistema da zadrži određene karakteristike kroz vreme."
+        },
+        {
+          "type": "paragraph",
+          "text": "U mnogim sistemima postoje određeni aspekti koji se ne menjaju — oni se nazivaju <strong>invarijantnim svojstvima</strong>."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Stabilni sistemi zadržavaju svoja osnovna svojstva uprkos promenama u okruženju."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Ravnotežna stanja sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Stanja sistema koja teže identičnim transformacijama nazivaju se <strong>ravnotežna stanja</strong>."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kod sistema sa vektorskim veličinama ravnoteža postoji kada sve koordinate vektora ostaju nepromenjene."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Ravnoteža znači da sistem nema tendenciju daljih promena stanja."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Cikličnost sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ravnotežni prostor predstavlja skup stanja koja se periodično ponavljaju."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ova pojava naziva se <strong>cikličnost sistema</strong>."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Sistemi sa cikličnim ponašanjem prolaze kroz iste sekvence stanja."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Smetnje u sistemu"
+        },
+        {
+          "type": "paragraph",
+          "text": "Smetnja predstavlja spoljašnji ili unutrašnji uticaj koji menja stanje sistema."
+        },
+        {
+          "type": "paragraph",
+          "text": "Stabilan sistem treba da bude u stanju da nakon smetnje ponovo dostigne svoje prethodno ravnotežno stanje."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Nestabilna stanja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Neka stanja sistema mogu biti nestabilna, što znači da i mala promena može dovesti do značajne promene ponašanja sistema."
+        },
+        {
+          "type": "code",
+          "code": "D(d), D(h)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ova stanja predstavljaju primere nestabilnih ravnotežnih stanja sistema."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zaključak"
+        },
+        {
+          "type": "paragraph",
+          "text": "Stabilnost sistema je ključni aspekt u analizi i projektovanju složenih sistema."
+        },
+        {
+          "type": "paragraph",
+          "text": "Razumevanje ravnoteže, cikličnosti i uticaja smetnji omogućava bolje predviđanje ponašanja sistema."
+        },
+        {
+          "type": "callout",
+          "variant": "primary",
+          "text": "Stabilni sistemi imaju sposobnost da se vrate u ravnotežu nakon poremećaja."
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,12 @@
+
+/* Blokovi lekcije (views/blocks/*): razmak između blokova i razdvajanje glavnih naslova */
+.lection-content > * { margin-bottom: 1rem; }
+.lection-content > h2 { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--bs-border-color, #dee2e6); }
+.lection-content > h2:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.lection-content > h3, .lection-content > h4 { margin-top: 1.5rem; margin-bottom: .5rem; }
+.lection-content .flush-last > :last-child { margin-bottom: 0; }
+
+/* Automatska numeracija glavnih naslova: u lekciji "numbered": true na heading bloku */
+.lection-content { counter-reset: sekcija; }
+.lection-content > h2.numbered { counter-increment: sekcija; }
+.lection-content > h2.numbered::before { content: counter(sekcija) ". "; }

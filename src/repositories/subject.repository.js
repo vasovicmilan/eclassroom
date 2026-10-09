@@ -1,29 +1,13 @@
-import { readFile } from 'fs/promises';
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
+import { jsonPath, readJson, memoize } from '../utils/json.utils.js';
+import { findBySlug } from '../utils/collection.utils.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const subjectsPath = join(__dirname, '..', 'public', 'json', 'subjects.json');
-let cachedSubjects = null;
-
-async function loadSubjects() {
-  if (cachedSubjects === null) {
-    const data = await readFile(subjectsPath, 'utf-8');
-    cachedSubjects = JSON.parse(data);
-  }
-  return cachedSubjects;
-}
+const loadSubjects = memoize(() => readJson(jsonPath('subjects.json')));
 
 const subjectRepository = {
-  async getAllSubjects() {
-    return await loadSubjects();
-  },
+  getAllSubjects: () => loadSubjects(),
   async getSubjectBySlug(slug) {
-    const subjects = await loadSubjects();
-    return subjects.find(s => s.slug === slug) || null;
-  }
+    return findBySlug(await loadSubjects(), slug);
+  },
 };
 
 export default subjectRepository;

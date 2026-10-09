@@ -1,3 +1,5 @@
+<%# Navigacija: predmeti dolaze iz subjects.json (res.locals.navSubjects, vidi middlewares/nav.middleware.js) %>
+<% const navList = locals.navSubjects || []; %>
 <nav class="navbar navbar-expand-lg bg-light sticky-top shadow-sm">
     <div class="container">
         <a class="navbar-brand fw-bold" href="/">E UCIONICA</a>
@@ -6,20 +8,17 @@
         </button>
         <div class="collapse navbar-collapse" id="mainNavbar">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link <%= active === 'otvoreno-racunarstvo' ? 'active' : '' %>" href="/otvoreno-racunarstvo">
-                        Otvoreno računarstvo
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link <%= active === 'multimedijalne-aplikacije' ? 'active' : '' %>" href="/multimedijalne-aplikacije">
-                        Multimedijalne i grafičke aplikacije
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link <%= active === 'teorija-sistema' ? 'active' : '' %>" href="/teorija-sistema">
-                        Teorija sistema i informacija
-                    </a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle <%= navList.some(s => s.slug === locals.active) ? 'active' : '' %>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Predmeti</a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <% navList.forEach(s => { %>
+                            <li>
+                                <a class="dropdown-item <%= locals.active === s.slug ? 'active' : '' %>" href="/<%= s.slug %>">
+                                    <%= s.name %><% if (s.inPreparation) { %> <span class="badge bg-warning text-dark ms-1">U pripremi</span><% } %>
+                                </a>
+                            </li>
+                        <% }) %>
+                    </ul>
                 </li>
             </ul>
         </div>

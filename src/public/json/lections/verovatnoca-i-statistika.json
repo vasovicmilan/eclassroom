@@ -1,0 +1,2665 @@
+[
+  {
+    "slug": "01-kombinatorika-pravila-brojanja-i-permutacije",
+    "subjectSlug": "verovatnoca-i-statistika",
+    "title": "Kombinatorika I: pravila brojanja i permutacije",
+    "description": "Pravilo zbira i proizvoda, faktorijel i permutacije sa i bez ponavljanja.",
+    "week": 1,
+    "date": "2026-10-14",
+    "formattedDate": "14.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je kombinatorika?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kombinatorika uči kako da <strong>prebrojimo</strong> na koliko načina se nešto može desiti, a da ne ispisujemo sve mogućnosti. Ona je temelj verovatnoće: klasična verovatnoća je odnos broja povoljnih i broja svih ishoda, a oba broja se najčešće dobijaju brojanjem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Osnovno pitanje pri svakom zadatku glasi: <em>da li je redosled važan i da li se elementi mogu ponavljati?</em> Od odgovora zavisi koju formulu koristimo (to je tema sledeće lekcije)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Dva osnovna pravila"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Pravilo zbira.</strong> Ako se prvi posao može obaviti na \\(m\\) načina, a drugi na \\(n\\) načina, i ne mogu se raditi istovremeno (biramo <em>ili jedno ili drugo</em>), ukupno ima \\(m+n\\) načina."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Pravilo proizvoda.</strong> Ako se prvi korak može obaviti na \\(m\\) načina, a nakon njega drugi na \\(n\\) načina (radimo <em>i jedno i drugo</em>), ukupno ima \\(m\\cdot n\\) načina. Pravilo se prirodno proširuje na više koraka."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Formule"
+        },
+        {
+          "type": "formula",
+          "items": [
+            {
+              "label": "Pravilo zbira (ILI)",
+              "tex": "m + n"
+            },
+            {
+              "label": "Pravilo proizvoda (I)",
+              "tex": "m \\cdot n \\cdot k \\cdots"
+            },
+            {
+              "label": "Faktorijel",
+              "tex": "n! = n\\cdot(n-1)\\cdots 2\\cdot 1,\\qquad 0! = 1"
+            }
+          ],
+          "note": "Zapamti vezu: <strong>ILI → sabiramo</strong>, <strong>I → množimo</strong>."
+        },
+        {
+          "type": "worked-example",
+          "title": "Putevi između gradova",
+          "source": "Primer",
+          "problem": "Iz mesta A u mesto B vodi 5 puteva, a iz B u C vodi 3 puta. Na koliko načina se može stići iz A u C preko B?",
+          "given": [
+            "A→B: 5 puteva",
+            "B→C: 3 puta"
+          ],
+          "steps": [
+            {
+              "title": "Šta se traži",
+              "content": "Broj različitih putovanja A→B→C. Jedno putovanje je par (put od A do B, put od B do C)."
+            },
+            {
+              "title": "Koje pravilo i zašto",
+              "content": "Putnik mora da prođe <strong>oba</strong> dela puta („i prvi i drugi“). Kad se radi „i“, broj načina se <strong>množi</strong> (pravilo proizvoda). Pravilo zbira bismo koristili da bira „ili A→B, ili A→C“."
+            },
+            {
+              "title": "Račun",
+              "content": "Za svaki od 5 puteva A→B postoje 3 mogućnosti za nastavak: \\(5\\cdot3=15\\)."
+            },
+            {
+              "title": "Provera",
+              "content": "Možeš da nabrojiš: put 1 sa tri nastavka, put 2 sa tri nastavka... 5 grupa po 3 daje 15."
+            }
+          ],
+          "answer": "15 načina."
+        },
+        {
+          "type": "worked-example",
+          "title": "Kodovi sa tri izbora",
+          "source": "Primer",
+          "problem": "Značka se pravi tako što se bira 1 od 4 oblika, 1 od 30 simbola i 1 od 10 boja. Koliko različitih značaka postoji?",
+          "given": [
+            "4 oblika",
+            "30 simbola",
+            "10 boja"
+          ],
+          "steps": [
+            {
+              "title": "Šta se traži",
+              "content": "Koliko različitih značaka može da se napravi izborom oblika, simbola i boje."
+            },
+            {
+              "title": "Koje pravilo i zašto",
+              "content": "Za jednu značku biramo <strong>sva tri</strong> elementa i izbori su nezavisni (izbor oblika ne ograničava izbor boje). Zato se broj mogućnosti množi."
+            },
+            {
+              "title": "Račun",
+              "content": "\\(4\\cdot30\\cdot10=1200\\)."
+            },
+            {
+              "title": "Napomena",
+              "content": "Kad god se sastavlja „nešto iz više delova“, a delovi se biraju nezavisno, množi se broj izbora u svakom delu."
+            }
+          ],
+          "answer": "1200 značaka."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Permutacije"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Permutacija</strong> je raspored svih \\(n\\) različitih elemenata u niz. Na prvo mesto može doći bilo koji od \\(n\\) elemenata, na drugo preostalih \\(n-1\\), itd. Po pravilu proizvoda dobijamo \\(n!\\)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ako među elementima ima <strong>istih</strong> (jedan element se ponavlja \\(n_1\\) puta, drugi \\(n_2\\) puta, ...), raspored se računa kao permutacija sa ponavljanjem: iste elemente ne razlikujemo, pa delimo sa brojem njihovih međusobnih premeštanja."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Permutacije"
+        },
+        {
+          "type": "formula",
+          "items": [
+            {
+              "label": "Bez ponavljanja",
+              "tex": "P_n = n!"
+            },
+            {
+              "label": "Sa ponavljanjem (ukupno \\(n\\) elemenata, grupe od \\(n_1,\\dots,n_k\\) istih)",
+              "tex": "P_n^{\\,n_1,n_2,\\dots,n_k} = \\dfrac{n!}{n_1!\\,n_2!\\cdots n_k!}"
+            }
+          ]
+        },
+        {
+          "type": "worked-example",
+          "title": "Pet učenika u redu",
+          "source": "Primer",
+          "problem": "Na koliko načina pet učenika može stati u red?",
+          "given": [
+            "5 različitih učenika",
+            "raspoređuju se svi"
+          ],
+          "steps": [
+            {
+              "title": "Šta se traži",
+              "content": "Broj različitih redosleda 5 osoba u redu."
+            },
+            {
+              "title": "Koja formula i zašto",
+              "content": "Svi elementi su različiti i svi se raspoređuju, a redosled je bitan: <strong>permutacije bez ponavljanja</strong>, \\(P_n=n!\\)."
+            },
+            {
+              "title": "Kako to izlazi iz pravila proizvoda",
+              "content": "Na prvo mesto može 5 učenika, na drugo preostala 4, na treće 3, na četvrto 2, na poslednje 1: \\(5\\cdot4\\cdot3\\cdot2\\cdot1\\)."
+            },
+            {
+              "title": "Račun",
+              "content": "\\(5!=120\\)."
+            }
+          ],
+          "answer": "120 načina."
+        },
+        {
+          "type": "worked-example",
+          "title": "Brojevi od ponovljenih cifara",
+          "source": "Primer",
+          "problem": "Koliko šestocifrenih brojeva se može napisati korišćenjem cifara 1, 1, 1, 2, 2, 2 (svaka se koristi tačno jednom)?",
+          "given": [
+            "cifre 1, 1, 1, 2, 2, 2",
+            "svaka se koristi tačno jednom"
+          ],
+          "steps": [
+            {
+              "title": "Šta se traži",
+              "content": "Broj različitih šestocifrenih brojeva koji nastaju premeštanjem datih cifara."
+            },
+            {
+              "title": "Zašto ne (6!)",
+              "content": "Da su sve cifre različite, bilo bi \\(6!=720\\). Ali kad zamenimo mesta dvema jedinicama, dobijamo <em>isti</em> broj. Zato je \\(6!\\) „previše“."
+            },
+            {
+              "title": "Korekcija",
+              "content": "Svaki raspored smo izbrojali \\(3!\\) puta zbog jedinica i još \\(3!\\) puta zbog dvojki, pa delimo: \\(\\dfrac{6!}{3!\\,3!}\\)."
+            },
+            {
+              "title": "Račun",
+              "content": "\\(\\dfrac{720}{6\\cdot6}=20\\)."
+            },
+            {
+              "title": "Drugi način (provera)",
+              "content": "Biramo na kojih 3 od 6 mesta idu jedinice, ostalo su dvojke: \\(\\dbinom63=20\\) ✓."
+            }
+          ],
+          "answer": "20 brojeva."
+        },
+        {
+          "type": "worked-example",
+          "title": "Cifre 1, 1, 1, 2, 2, 3",
+          "source": "Primer",
+          "problem": "Koliko šestocifrenih brojeva se može napraviti od cifara 1, 1, 1, 2, 2, 3?",
+          "given": [
+            "cifra 1: 3 puta",
+            "cifra 2: 2 puta",
+            "cifra 3: 1 put"
+          ],
+          "steps": [
+            {
+              "title": "Šta se traži",
+              "content": "Broj različitih šestocifrenih brojeva od ovih šest cifara."
+            },
+            {
+              "title": "Formula",
+              "content": "Permutacije sa ponavljanjem: \\(\\dfrac{n!}{n_1!\\,n_2!\\,n_3!}\\) gde su \\(n_i\\) brojevi ponavljanja svake cifre."
+            },
+            {
+              "title": "Račun",
+              "content": "\\(\\dfrac{6!}{3!\\,2!\\,1!}=\\dfrac{720}{6\\cdot2\\cdot1}=60\\)."
+            },
+            {
+              "title": "Provera drugim putem",
+              "content": "Prvo biramo mesta za jedinice \\(\\binom63=20\\), pa od preostala 3 mesta biramo mesta za dvojke \\(\\binom32=3\\), trojka ide na poslednje: \\(20\\cdot3=60\\) ✓."
+            }
+          ],
+          "answer": "60 brojeva."
+        },
+        {
+          "type": "worked-example",
+          "title": "Reč MATEMATIKA",
+          "source": "Primer",
+          "problem": "Koliko različitih „reči“ (nizova slova, sa smislom ili bez) možemo dobiti premeštanjem slova reči MATEMATIKA?",
+          "given": [
+            "M: 2×, A: 3×, T: 2×",
+            "E, I, K: po 1×",
+            "ukupno 10 slova"
+          ],
+          "steps": [
+            {
+              "title": "Šta se traži",
+              "content": "Broj različitih nizova od 10 slova dobijenih premeštanjem slova reči."
+            },
+            {
+              "title": "Prebroj ponavljanja",
+              "content": "M-A-T-E-M-A-T-I-K-A: M se javlja 2 puta, A 3 puta, T 2 puta, a E, I, K po jednom. Zbir \\(2+3+2+1+1+1=10\\) ✓."
+            },
+            {
+              "title": "Formula i zašto",
+              "content": "Premeštanje istih slova ne daje novu reč, pa \\(10!\\) delimo faktorijelima ponavljanja."
+            },
+            {
+              "title": "Račun",
+              "content": "\\(\\dfrac{10!}{2!\\,3!\\,2!}=\\dfrac{3\\,628\\,800}{2\\cdot6\\cdot2}=\\dfrac{3\\,628\\,800}{24}=151\\,200\\)."
+            }
+          ],
+          "answer": "151200 različitih nizova."
+        },
+        {
+          "type": "simulation",
+          "kind": "combinatorics",
+          "title": "Kalkulator permutacija",
+          "description": "Izaberi vrstu i brojeve, a kalkulator ispisuje formulu, račun i (za male brojeve) sve rasporede. Za permutacije se koristi samo \\(n\\). Probaj \\(n=5\\) pa uporedi sa primerom „Pet učenika u redu“ (120).",
+          "config": {
+            "type": "P",
+            "n": 5
+          },
+          "scripts": [
+            "simulations/common.js",
+            "simulations/combo.js"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "<strong>Rezime:</strong> sabiramo kada biramo „ili–ili“, množimo kada obavljamo korake „jedan za drugim“. Kada se raspoređuju svi elementi, to je permutacija; ako se neki elementi ponavljaju, delimo faktorijelima ponavljanja."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "02-kombinatorika-varijacije-i-kombinacije",
+    "subjectSlug": "verovatnoca-i-statistika",
+    "title": "Kombinatorika II: varijacije i kombinacije",
+    "description": "Kako se bira iz skupa: kada je redosled bitan, a kada nije, sa i bez ponavljanja.",
+    "week": 2,
+    "date": "2026-10-21",
+    "formattedDate": "21.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Biranje k od n elemenata"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sada ne raspoređujemo sve elemente, već <strong>biramo \\(k\\) od \\(n\\)</strong>. Dva pitanja određuju formulu:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>Da li je redosled bitan?</strong> Ako jeste (prvo, drugo, treće mesto; šifra), radi se o <em>varijacijama</em>. Ako nije (komisija, grupa karata), radi se o <em>kombinacijama</em>.",
+            "<strong>Da li se element sme ponoviti?</strong> (šifra: da; izvlačenje karata bez vraćanja: ne.)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Četiri formule"
+        },
+        {
+          "type": "formula",
+          "items": [
+            {
+              "label": "Varijacije bez ponavljanja",
+              "tex": "V_n^k = \\dfrac{n!}{(n-k)!} = n(n-1)\\cdots(n-k+1)"
+            },
+            {
+              "label": "Varijacije sa ponavljanjem",
+              "tex": "\\overline{V}_n^k = n^k"
+            },
+            {
+              "label": "Kombinacije bez ponavljanja",
+              "tex": "C_n^k = \\dbinom{n}{k} = \\dfrac{n!}{k!\\,(n-k)!}"
+            },
+            {
+              "label": "Kombinacije sa ponavljanjem",
+              "tex": "\\overline{C}_n^k = \\dbinom{n+k-1}{k}"
+            }
+          ],
+          "note": "Veza: \\(V_n^k = C_n^k\\cdot k!\\) – kombinacija prvo izabere skup, a \\(k!\\) ga zatim poređa. Takođe \\(\\binom{n}{k}=\\binom{n}{n-k}\\), \\(\\binom{n}{0}=\\binom{n}{n}=1\\)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako prepoznati vrstu zadatka"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Redosled bitan?",
+            "Ponavljanje?",
+            "Vrsta",
+            "Tipičan primer"
+          ],
+          "rows": [
+            [
+              "Da",
+              "Ne",
+              "Varijacije bez ponavljanja",
+              "Prva tri mesta na trci"
+            ],
+            [
+              "Da",
+              "Da",
+              "Varijacije sa ponavljanjem",
+              "PIN, lozinka, tablice"
+            ],
+            [
+              "Ne",
+              "Ne",
+              "Kombinacije bez ponavljanja",
+              "Loto, komisija, karte u ruci"
+            ],
+            [
+              "Ne",
+              "Da",
+              "Kombinacije sa ponavljanjem",
+              "Kupovina 6 kolača iz 4 vrste"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ključne reči u tekstu zadatka"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<em>„raspoređuje se“, „poređaju se“, „po redu“, „prvi, drugi, treći“</em> → redosled je bitan",
+            "<em>„bira se grupa“, „komisija“, „izvlači se istovremeno“, „skup“</em> → redosled nije bitan",
+            "<em>„sa vraćanjem“, „cifre se mogu ponavljati“</em> → ponavljanje je dozvoljeno",
+            "<em>„najmanje jedan“</em> → često je lakše računati suprotan događaj"
+          ]
+        },
+        {
+          "type": "worked-example",
+          "title": "Trka",
+          "source": "Primer",
+          "problem": "U trci učestvuje 8 trkača. Na koliko načina mogu biti podeljene zlatna, srebrna i bronzana medalja?",
+          "given": [
+            "\\(n=8\\) trkača",
+            "biramo \\(k=3\\) (zlato, srebro, bronza)"
+          ],
+          "steps": [
+            {
+              "title": "Šta se traži",
+              "content": "Na koliko načina se dele tri <em>različite</em> medalje među 8 trkača."
+            },
+            {
+              "title": "Da li je redosled bitan?",
+              "content": "Da: zlato i srebro nisu isto. Da li se ponavlja? Ne, jedan trkač ne može osvojiti dve medalje. To su <strong>varijacije bez ponavljanja</strong>."
+            },
+            {
+              "title": "Formula",
+              "content": "\\(V_n^k=\\dfrac{n!}{(n-k)!}=n(n-1)\\cdots(n-k+1)\\) — \\(k\\) činilaca koji počinju od \\(n\\)."
+            },
+            {
+              "title": "Račun",
+              "content": "\\(V_8^3=8\\cdot7\\cdot6=336\\). Zlato: 8 kandidata, srebro: 7 preostalih, bronza: 6."
+            }
+          ],
+          "answer": "336 načina."
+        },
+        {
+          "type": "worked-example",
+          "title": "PIN i lozinka",
+          "source": "Primer",
+          "problem": "(a) Koliko ima četvorocifrenih PIN kodova? (b) Koliko ima lozinki od 8 znakova ako se koriste mala i velika slova engleske abecede i cifre (62 znaka)?",
+          "given": [
+            "PIN: 4 cifre (10 mogućnosti po mestu)",
+            "lozinka: 8 znakova iz skupa od 62"
+          ],
+          "steps": [
+            {
+              "title": "Šta se traži",
+              "content": "Broj mogućih PIN kodova i lozinki."
+            },
+            {
+              "title": "Da li je redosled bitan, da li se ponavlja?",
+              "content": "Redosled je bitan (1234 ≠ 4321), a cifre/znaci se smeju ponavljati: <strong>varijacije sa ponavljanjem</strong>, \\(\\overline{V}_n^k=n^k\\). Svako od \\(k\\) mesta ima nezavisnih \\(n\\) izbora."
+            },
+            {
+              "title": "PIN",
+              "content": "\\(10^4=10\\,000\\) kodova (0000–9999)."
+            },
+            {
+              "title": "Lozinka",
+              "content": "\\(62^8=218\\,340\\,105\\,584\\,896\\approx2{,}2\\cdot10^{14}\\)."
+            },
+            {
+              "title": "Zaključak o jačini šifre",
+              "content": "Dužina je presudna: svaki dodatni znak množi broj mogućnosti sa 62. Probaj kalkulator jačine šifre u nastavku."
+            }
+          ],
+          "answer": "(a) 10 000; (b) 218 340 105 584 896."
+        },
+        {
+          "type": "simulation",
+          "kind": "password",
+          "title": "Jačina šifre",
+          "description": "Šifra od \\(k\\) znakova iz skupa od \\(n\\) znakova ima \\(n^k\\) mogućnosti (varijacije sa ponavljanjem). Menjaj dužinu i vrste znakova i prati koliko se broj mogućnosti i vreme probijanja menjaju.",
+          "config": {
+            "length": 4,
+            "digits": true,
+            "lower": false
+          },
+          "hint": "Probaj: 4 cifre (PIN) pa 8 znakova sa slovima i ciframa. Primeti da dužina utiče mnogo više od dodavanja još jedne vrste znakova.",
+          "scripts": [
+            "simulations/common.js",
+            "simulations/password.js"
+          ]
+        },
+        {
+          "type": "worked-example",
+          "title": "Loto 7 od 39",
+          "source": "Primer",
+          "problem": "Na koliko načina se može izabrati 7 brojeva od 39?",
+          "given": [
+            "\\(n=39\\) brojeva",
+            "izvlači se \\(k=7\\)"
+          ],
+          "steps": [
+            {
+              "title": "Šta se traži",
+              "content": "Broj različitih izvučenih kombinacija od 7 brojeva."
+            },
+            {
+              "title": "Da li je redosled bitan?",
+              "content": "Ne: kombinacija 3, 17, … je ista bez obzira kojim redom su kuglice izašle. Brojevi se ne ponavljaju: <strong>kombinacije bez ponavljanja</strong>."
+            },
+            {
+              "title": "Formula",
+              "content": "\\(C_n^k=\\dbinom nk=\\dfrac{n!}{k!(n-k)!}\\). Deljenje sa \\(k!\\) „briše“ razlike u redosledu."
+            },
+            {
+              "title": "Račun",
+              "content": "\\(\\dbinom{39}{7}=\\dfrac{39\\cdot38\\cdot37\\cdot36\\cdot35\\cdot34\\cdot33}{7!}=15\\,380\\,937\\)."
+            },
+            {
+              "title": "Verovatnoća jedne uplate",
+              "content": "Samo jedna kombinacija je dobitna, pa je \\(P=\\dfrac{1}{15\\,380\\,937}\\approx6{,}5\\cdot10^{-8}\\)."
+            }
+          ],
+          "answer": "15 380 937 načina; verovatnoća da pogodimo dobitnu kombinaciju je \\(\\dfrac{1}{15\\,380\\,937}\\)."
+        },
+        {
+          "type": "worked-example",
+          "title": "Izvlačenje karata",
+          "source": "Primer",
+          "problem": "Iz standardnog špila od 52 karte izvlači se 5 karata odjednom. Koliko je različitih „ruku“ moguće, a koliko njih sadrži sva 4 kralja?",
+          "given": [
+            "špil od 52 karte, 4 kralja",
+            "izvlače se 5 karata odjednom"
+          ],
+          "steps": [
+            {
+              "title": "Ukupan broj ruku",
+              "content": "Redosled karata u ruci nije bitan, nema ponavljanja: \\(C_{52}^5=\\dfrac{52\\cdot51\\cdot50\\cdot49\\cdot48}{5!}=2\\,598\\,960\\)."
+            },
+            {
+              "title": "Ruke sa sva 4 kralja — logika",
+              "content": "Ako ruka ima sva 4 kralja, ta četiri mesta su „zauzeta“. Preostala jedna karta je bilo koja od 48 ostalih (52 − 4 kralja)."
+            },
+            {
+              "title": "Račun",
+              "content": "\\(C_4^4\\cdot C_{48}^1=1\\cdot48=48\\)."
+            },
+            {
+              "title": "Verovatnoća (veza sa sledećom lekcijom)",
+              "content": "\\(P=\\dfrac{48}{2\\,598\\,960}\\approx1{,}85\\cdot10^{-5}\\)."
+            }
+          ],
+          "answer": "2 598 960 ruku ukupno; 48 sadrži sva četiri kralja."
+        },
+        {
+          "type": "simulation",
+          "kind": "cards",
+          "title": "Izvlačenje karata",
+          "description": "Izvuci 5 karata iz špila od 52 karte. Ovde je redosled nebitan (kombinacije). Posmatraj koliko često se među 5 karata nađe bar jedan kralj.",
+          "config": {
+            "draw": 5,
+            "replace": false,
+            "targetKind": "rank",
+            "targetValue": "K",
+            "cmp": ">=",
+            "m": 1
+          },
+          "scripts": [
+            "simulations/common.js",
+            "simulations/cards.js"
+          ]
+        },
+        {
+          "type": "worked-example",
+          "title": "Komisija",
+          "source": "Primer",
+          "problem": "U odeljenju je 12 devojčica i 8 dečaka. Na koliko načina se može izabrati komisija od 5 članova sa tačno 3 devojčice?",
+          "given": [
+            "12 devojčica, 8 dečaka",
+            "komisija od 5, tačno 3 devojčice"
+          ],
+          "steps": [
+            {
+              "title": "Šta se traži",
+              "content": "Broj različitih komisija koje imaju tačno 3 devojčice i (zato) 2 dečaka."
+            },
+            {
+              "title": "Razlaganje na dva nezavisna izbora",
+              "content": "Prvo biramo devojčice: \\(C_{12}^3\\). Zatim dečake: \\(C_8^2\\). Redosled članova nije bitan, pa su obe kombinacije."
+            },
+            {
+              "title": "Zašto množimo",
+              "content": "Svaki izbor devojčica može se spojiti sa svakim izborom dečaka („i“ → proizvod)."
+            },
+            {
+              "title": "Račun",
+              "content": "\\(C_{12}^3=\\dfrac{12\\cdot11\\cdot10}{6}=220,\\quad C_8^2=\\dfrac{8\\cdot7}{2}=28,\\quad 220\\cdot28=6160\\)."
+            }
+          ],
+          "answer": "6160 načina."
+        },
+        {
+          "type": "worked-example",
+          "title": "Kupovina kolača (kombinacije sa ponavljanjem)",
+          "source": "Primer",
+          "problem": "U poslastičarnici ima 4 vrste kolača. Na koliko načina možemo kupiti 6 kolača (može više istih)?",
+          "given": [
+            "4 vrste kolača",
+            "kupuje se 6 komada, vrste se mogu ponavljati"
+          ],
+          "steps": [
+            {
+              "title": "Šta se traži",
+              "content": "Broj različitih „korpi“ od 6 kolača (bitno je koliko kojih, a ne redosled kupovine)."
+            },
+            {
+              "title": "Koja formula",
+              "content": "Redosled nije bitan, a ponavljanje je dozvoljeno: \\(\\overline{C}_n^k=\\dbinom{n+k-1}{k}\\) sa \\(n=4\\), \\(k=6\\)."
+            },
+            {
+              "title": "Odakle formula (intuicija)",
+              "content": "Raspored 6 kolača u 4 vrste možemo zamisliti kao 6 „zvezdica“ i 3 „pregrade“ između vrsta: biramo mesta za pregrade među 9 pozicija."
+            },
+            {
+              "title": "Račun",
+              "content": "\\(\\dbinom{9}{6}=\\dbinom93=\\dfrac{9\\cdot8\\cdot7}{6}=84\\)."
+            }
+          ],
+          "answer": "84 načina."
+        },
+        {
+          "type": "simulation",
+          "kind": "combinatorics",
+          "title": "Kalkulator varijacija i kombinacija",
+          "description": "Isprobaj svih pet vrsta na istim brojevima \\(n\\) i \\(k\\) i uporedi koliko se rezultati razlikuju kada je redosled bitan, a kada nije, i kada se elementi ponavljaju.",
+          "config": {
+            "type": "C",
+            "n": 5,
+            "k": 3
+          },
+          "hint": "Pokušaj: \\(n=5,\\ k=3\\). Varijacije bez ponavljanja daju 60, kombinacije samo 10, jer se svaka trojka računa \\(3!=6\\) puta manje.",
+          "scripts": [
+            "simulations/common.js",
+            "simulations/combo.js"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "<strong>Saveti:</strong> (1) prvo odgovori na pitanja „redosled?“ i „ponavljanje?“; (2) zadatke tipa „najmanje jedan“ rešavaj preko suprotnog događaja; (3) kad se bira iz dve grupe istovremeno, binomni koeficijenti se <em>množe</em>."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "03-uvod-u-verovatnocu",
+    "subjectSlug": "verovatnoca-i-statistika",
+    "title": "Uvod u verovatnoću",
+    "description": "Slučajni eksperiment, prostor ishoda, klasična i geometrijska verovatnoća.",
+    "week": 3,
+    "date": "2026-10-28",
+    "formattedDate": "28.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Slučajni eksperiment i prostor ishoda"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Slučajni eksperiment</strong> je postupak čiji ishod ne možemo unapred sa sigurnošću odrediti (bacanje kocke, izvlačenje karte). Skup svih mogućih ishoda označavamo sa \\(\\Omega\\) i zovemo <strong>prostor ishoda</strong>. <strong>Događaj</strong> je podskup od \\(\\Omega\\)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Primer: pri bacanju kocke \\(\\Omega=\\{1,2,3,4,5,6\\}\\), a događaj „pao je paran broj“ je \\(A=\\{2,4,6\\}\\)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Klasična definicija verovatnoće"
+        },
+        {
+          "type": "formula",
+          "items": [
+            {
+              "label": "Kada su svi ishodi jednako verovatni",
+              "tex": "P(A) = \\dfrac{m}{n} = \\dfrac{\\text{broj povoljnih ishoda}}{\\text{broj svih mogućih ishoda}}"
+            }
+          ],
+          "note": "Obe vrednosti (\\(m\\) i \\(n\\)) najčešće dobijamo kombinatorikom iz prethodnih lekcija."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Osnovne osobine"
+        },
+        {
+          "type": "formula",
+          "items": [
+            {
+              "label": "Granice",
+              "tex": "0 \\le P(A) \\le 1"
+            },
+            {
+              "label": "Siguran i nemoguć događaj",
+              "tex": "P(\\Omega)=1,\\qquad P(\\emptyset)=0"
+            },
+            {
+              "label": "Suprotan događaj",
+              "tex": "P(\\overline{A}) = 1 - P(A)"
+            }
+          ],
+          "note": "Suprotan događaj je izuzetno koristan kod zadataka sa „bar jedan“: \\(P(\\text{bar jedan}) = 1 - P(\\text{nijedan})\\)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako rešavamo zadatak iz verovatnoće (5 koraka)"
+        },
+        {
+          "type": "list",
+          "style": "numbered",
+          "items": [
+            "Jasno odredi <strong>eksperiment</strong> i šta se tačno posmatra.",
+            "Definiši <strong>događaj</strong> \\(A\\) čiju verovatnoću tražiš.",
+            "Prebroj <strong>sve</strong> ishode \\(n\\) (kombinatorika).",
+            "Prebroj <strong>povoljne</strong> ishode \\(m\\).",
+            "Izračunaj \\(P(A)=m/n\\) i proveri da je rezultat između 0 i 1."
+          ]
+        },
+        {
+          "type": "worked-example",
+          "title": "Kocka: broj veći od 3",
+          "source": "Primer",
+          "problem": "Bacamo jednu kocku. Kolika je verovatnoća da padne broj veći od 3?",
+          "given": [
+            "\\(\\Omega=\\{1,2,3,4,5,6\\}\\)",
+            "\\(A\\): „pao je broj veći od 3“"
+          ],
+          "steps": [
+            {
+              "title": "Da li je klasična definicija primenljiva",
+              "content": "Da: kocka je poštena, svih 6 ishoda je jednako verovatno."
+            },
+            {
+              "title": "Broji sve ishode",
+              "content": "\\(n=6\\)."
+            },
+            {
+              "title": "Broji povoljne ishode",
+              "content": "Brojevi veći od 3 su 4, 5, 6, pa \\(m=3\\)."
+            },
+            {
+              "title": "Račun",
+              "content": "\\(P(A)=\\dfrac mn=\\dfrac36=\\dfrac12\\)."
+            }
+          ],
+          "answer": "\\(P = \\dfrac{3}{6} = \\dfrac12\\)."
+        },
+        {
+          "type": "worked-example",
+          "title": "Slova reči KAMION",
+          "source": "Primer",
+          "problem": "Slova reči KAMION nasumično se poređaju u niz. Kolika je verovatnoća da se dobije baš reč KAMION?",
+          "given": [
+            "6 različitih slova"
+          ],
+          "steps": [
+            {
+              "title": "Šta se traži",
+              "content": "Verovatnoća da nasumičan raspored slova bude upravo reč KAMION."
+            },
+            {
+              "title": "Broj svih ishoda",
+              "content": "Svaki raspored 6 različitih slova je jedan ishod. Svih rasporeda ima \\(n=6!=720\\) (permutacije; više u lekciji Kombinatorika)."
+            },
+            {
+              "title": "Broj povoljnih",
+              "content": "Samo jedan raspored daje KAMION: \\(m=1\\)."
+            },
+            {
+              "title": "Račun",
+              "content": "\\(P=\\dfrac1{720}\\approx0{,}0014\\)."
+            }
+          ],
+          "answer": "\\(P = \\dfrac{1}{720}\\)."
+        },
+        {
+          "type": "worked-example",
+          "title": "Tri kocke: bar jedna šestica",
+          "source": "Primer",
+          "problem": "Bacaju se tri kocke. Kolika je verovatnoća da bar na jednoj padne šestica?",
+          "given": [
+            "3 poštene kocke"
+          ],
+          "steps": [
+            {
+              "title": "Zašto suprotan događaj",
+              "content": "„Bar jedna šestica“ ima mnogo slučajeva (tačno jedna, tačno dve, sve tri). Lakše je izračunati „nijedna šestica“ i oduzeti od 1."
+            },
+            {
+              "title": "Svi ishodi",
+              "content": "Svaka kocka ima 6 ishoda i bacanja su nezavisna: \\(n=6^3=216\\)."
+            },
+            {
+              "title": "Ishodi bez šestice",
+              "content": "Svaka kocka sme da padne na 1–5: \\(5^3=125\\)."
+            },
+            {
+              "title": "Račun",
+              "content": "\\(P(\\text{bar jedna šestica})=1-\\dfrac{125}{216}=\\dfrac{91}{216}\\approx0{,}421\\)."
+            },
+            {
+              "title": "Probaj sam",
+              "content": "Simulator ispod ponavlja ovaj eksperiment i poredi učestalost sa \\(\\tfrac{91}{216}\\)."
+            }
+          ],
+          "answer": "\\(P = \\dfrac{91}{216}\\approx 0{,}421\\)."
+        },
+        {
+          "type": "simulation",
+          "kind": "dice",
+          "title": "Bacanje kockica",
+          "description": "Izaberi broj kockica i događaj. Podešeno je „bar jedna šestica među 3 kockice“ (teorijski \\(\\tfrac{91}{216}\\approx42{,}13\\%\\)). Menjaj broj kockica, izabrani broj i događaj, pa uporedi dobijene učestalosti sa teorijom.",
+          "config": {
+            "mode": "face",
+            "dice": 3,
+            "face": 6,
+            "cmp": ">=",
+            "target": 1
+          },
+          "hint": "Što više puta baciš, učestalost je bliža teorijskoj verovatnoći. Probaj i režim „zbir svih kockica“.",
+          "scripts": [
+            "simulations/common.js",
+            "simulations/dice.js"
+          ]
+        },
+        {
+          "type": "worked-example",
+          "title": "Zaboravljene cifre",
+          "source": "Primer",
+          "problem": "Zaboravili ste poslednje dve (različite) cifre telefonskog broja i birate ih nasumično. Kolika je verovatnoća da pogodite iz prvog pokušaja?",
+          "given": [
+            "dve nepoznate cifre, različite"
+          ],
+          "steps": [
+            {
+              "title": "Broj svih mogućnosti",
+              "content": "Prva cifra: 10 izbora, druga: 9 (različita od prve), redosled je bitan: \\(V_{10}^2=10\\cdot9=90\\)."
+            },
+            {
+              "title": "Povoljno",
+              "content": "Tačna je tačno jedna kombinacija: \\(m=1\\)."
+            },
+            {
+              "title": "Račun",
+              "content": "\\(P=\\dfrac1{90}\\approx0{,}011\\)."
+            }
+          ],
+          "answer": "\\(P = \\dfrac{1}{90}\\)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Geometrijska verovatnoća"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kada su ishodi „neprebrojivo mnogo“ (npr. tačka na duži, vreme dolaska), broj ishoda zamenjujemo <strong>merom</strong>: dužinom, površinom ili zapreminom."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Geometrijska definicija"
+        },
+        {
+          "type": "formula",
+          "items": [
+            {
+              "label": "Mera = dužina, površina ili zapremina",
+              "tex": "P(A) = \\dfrac{\\text{mera povoljnog dela}}{\\text{mera celog skupa}}"
+            }
+          ]
+        },
+        {
+          "type": "worked-example",
+          "title": "Čekanje autobusa",
+          "source": "Primer",
+          "problem": "Autobus dolazi na stanicu svakih 20 minuta. Putnik dolazi u nasumičnom trenutku. Kolika je verovatnoća da čeka najviše 5 minuta?",
+          "given": [
+            "autobus svakih 20 min",
+            "dolazak putnika je „nasumičan“"
+          ],
+          "steps": [
+            {
+              "title": "Zašto geometrijska verovatnoća",
+              "content": "Trenutak dolaska može biti bilo koja tačka intervala od 20 minuta — neprebrojivo mnogo ishoda, pa ne možemo da brojimo, već poredimo <em>dužine</em>."
+            },
+            {
+              "title": "Ceo skup",
+              "content": "Interval \\([0,20]\\), dužina 20."
+            },
+            {
+              "title": "Povoljan deo",
+              "content": "Čeka najviše 5 minuta ako stigne u poslednjih 5 minuta pred polazak: dužina 5."
+            },
+            {
+              "title": "Račun",
+              "content": "\\(P=\\dfrac{5}{20}=\\dfrac14\\)."
+            }
+          ],
+          "answer": "\\(P = \\dfrac{5}{20} = \\dfrac14\\)."
+        },
+        {
+          "type": "worked-example",
+          "title": "Tačka u krugu upisanom u kvadrat",
+          "source": "Primer",
+          "problem": "U kvadrat stranice \\(2\\) nasumično se baca tačka. Kolika je verovatnoća da upadne u upisani krug?",
+          "given": [
+            "kvadrat stranice 2",
+            "krug poluprečnika 1 upisan u njega"
+          ],
+          "steps": [
+            {
+              "title": "Mera skupa",
+              "content": "Ovde je mera <strong>površina</strong>. Površina kvadrata: \\(2\\cdot2=4\\)."
+            },
+            {
+              "title": "Povoljan deo",
+              "content": "Površina kruga: \\(r^2\\pi=\\pi\\)."
+            },
+            {
+              "title": "Račun",
+              "content": "\\(P=\\dfrac{\\pi}{4}\\approx0{,}785\\)."
+            },
+            {
+              "title": "Zanimljivost",
+              "content": "Bacanjem velikog broja nasumičnih tačaka i brojanjem onih u krugu može se proceniti broj \\(\\pi\\) (Monte Karlo metoda)."
+            }
+          ],
+          "answer": "\\(P = \\dfrac{\\pi}{4}\\approx 0{,}785\\)."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "04-dogadjaji-i-operacije-sa-njima",
+    "subjectSlug": "verovatnoca-i-statistika",
+    "title": "Događaji i operacije sa njima",
+    "description": "Unija, presek, suprotan događaj, Vennovi dijagrami i pravila verovatnoće.",
+    "week": 4,
+    "date": "2026-11-04",
+    "formattedDate": "04.11.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Događaji kao skupovi"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pošto je događaj podskup prostora ishoda \\(\\Omega\\), sa događajima radimo kao sa skupovima. Vennov dijagram je najbrži način da se zadatak „vidi“."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Operacije sa događajima"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Oznaka",
+            "Značenje",
+            "Rečima"
+          ],
+          "rows": [
+            [
+              "\\(A\\cup B\\)",
+              "Unija",
+              "desio se A <strong>ili</strong> B (bar jedan)"
+            ],
+            [
+              "\\(A\\cap B\\)",
+              "Presek",
+              "desili su se i A <strong>i</strong> B"
+            ],
+            [
+              "\\(\\overline{A}\\)",
+              "Komplement",
+              "A se nije desio"
+            ],
+            [
+              "\\(A\\setminus B\\)",
+              "Razlika",
+              "desio se A, a B nije"
+            ],
+            [
+              "\\(A\\cap B=\\emptyset\\)",
+              "Disjunktni (isključivi)",
+              "A i B se ne mogu desiti istovremeno"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "De Morganovi zakoni"
+        },
+        {
+          "type": "formula",
+          "items": [
+            {
+              "label": "Komplement unije",
+              "tex": "\\overline{A\\cup B} = \\overline{A}\\cap\\overline{B}"
+            },
+            {
+              "label": "Komplement preseka",
+              "tex": "\\overline{A\\cap B} = \\overline{A}\\cup\\overline{B}"
+            },
+            {
+              "label": "Razlika preko preseka",
+              "tex": "A\\setminus B = A\\cap\\overline{B}"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Verovatnoća unije"
+        },
+        {
+          "type": "formula",
+          "items": [
+            {
+              "label": "Disjunktni događaji",
+              "tex": "P(A\\cup B)=P(A)+P(B)"
+            },
+            {
+              "label": "Opšti slučaj (uključenje–isključenje)",
+              "tex": "P(A\\cup B)=P(A)+P(B)-P(A\\cap B)"
+            },
+            {
+              "label": "Tri događaja",
+              "tex": "P(A\\cup B\\cup C)=P(A)+P(B)+P(C)-P(A\\cap B)-P(A\\cap C)-P(B\\cap C)+P(A\\cap B\\cap C)"
+            },
+            {
+              "label": "Razlika",
+              "tex": "P(A\\setminus B)=P(A)-P(A\\cap B)"
+            },
+            {
+              "label": "Ni A ni B",
+              "tex": "P(\\overline{A}\\cap\\overline{B}) = 1-P(A\\cup B)"
+            }
+          ],
+          "note": "Razlog za oduzimanje preseka: u \\(P(A)+P(B)\\) je presek izbrojan dva puta."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Strategija sa Vennovim dijagramom"
+        },
+        {
+          "type": "list",
+          "style": "numbered",
+          "items": [
+            "Nacrtaj dva (ili tri) kruga unutar pravougaonika \\(\\Omega\\).",
+            "Počni od <strong>preseka</strong> (najuži deo) i upiši njegovu verovatnoću.",
+            "Ostale oblasti dobijaš oduzimanjem: „samo A“ = \\(P(A)-P(A\\cap B)\\).",
+            "Ono što je van svih krugova je \\(1-P(A\\cup B)\\).",
+            "Pročitaj traženi događaj sa dijagrama sabiranjem odgovarajućih oblasti."
+          ]
+        },
+        {
+          "type": "worked-example",
+          "title": "Kocka: paran ili veći od 3",
+          "source": "Primer",
+          "problem": "Bacamo kocku. Neka je \\(A\\): „pao je paran broj“, \\(B\\): „pao je broj veći od 3“. Odredi \\(P(A\\cup B)\\).",
+          "given": [
+            "\\(A\\): paran broj",
+            "\\(B\\): broj veći od 3"
+          ],
+          "steps": [
+            {
+              "title": "Zapiši događaje kao skupove",
+              "content": "\\(A=\\{2,4,6\\}\\), \\(B=\\{4,5,6\\}\\). Svaki ima \\(P=\\tfrac36=\\tfrac12\\)."
+            },
+            {
+              "title": "Nađi presek",
+              "content": "Zajednički elementi: \\(A\\cap B=\\{4,6\\}\\), pa \\(P(A\\cap B)=\\tfrac26=\\tfrac13\\)."
+            },
+            {
+              "title": "Formula unije i zašto oduzimamo presek",
+              "content": "\\(P(A\\cup B)=P(A)+P(B)-P(A\\cap B)\\). Brojevi 4 i 6 su u oba skupa, pa smo ih u zbiru izbrojali dvaput — jednom ih oduzimamo."
+            },
+            {
+              "title": "Račun",
+              "content": "\\(\\tfrac12+\\tfrac12-\\tfrac13=\\tfrac23\\)."
+            },
+            {
+              "title": "Provera",
+              "content": "\\(A\\cup B=\\{2,4,5,6\\}\\): 4 od 6 ishoda, \\(\\tfrac46=\\tfrac23\\) ✓."
+            }
+          ],
+          "answer": "\\(\\dfrac23\\)."
+        },
+        {
+          "type": "worked-example",
+          "title": "Sve oblasti Vennovog dijagrama",
+          "source": "Primer",
+          "problem": "Poznato je \\(P(A)=0{,}6\\), \\(P(B)=0{,}5\\), \\(P(A\\cap B)=0{,}3\\). Odredi verovatnoću da se desi: (a) bar jedan od događaja, (b) nijedan, (c) samo A, (d) tačno jedan.",
+          "given": [
+            "\\(P(A)=0{,}6\\)",
+            "\\(P(B)=0{,}5\\)",
+            "\\(P(A\\cap B)=0{,}3\\)"
+          ],
+          "steps": [
+            {
+              "title": "Počni od preseka",
+              "content": "U presek upiši \\(0{,}3\\). To je „unutrašnja“ oblast dijagrama."
+            },
+            {
+              "title": "Oblasti koje su samo A i samo B",
+              "content": "Samo A: \\(0{,}6-0{,}3=0{,}3\\). Samo B: \\(0{,}5-0{,}3=0{,}2\\)."
+            },
+            {
+              "title": "(a) Bar jedan",
+              "content": "Unija = samo A + presek + samo B: \\(0{,}3+0{,}3+0{,}2=0{,}8\\) (ili \\(0{,}6+0{,}5-0{,}3\\))."
+            },
+            {
+              "title": "(b) Nijedan",
+              "content": "Van oba kruga: \\(1-0{,}8=0{,}2\\)."
+            },
+            {
+              "title": "(c) Samo A",
+              "content": "\\(0{,}3\\)."
+            },
+            {
+              "title": "(d) Tačno jedan",
+              "content": "Samo A + samo B: \\(0{,}3+0{,}2=0{,}5\\). Ukupna provera: \\(0{,}3+0{,}3+0{,}2+0{,}2=1\\) ✓."
+            }
+          ],
+          "answer": "(a) 0,8; (b) 0,2; (c) 0,3; (d) 0,5."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "<strong>Disjunktni ≠ nezavisni!</strong> Disjunktni događaji (\\(A\\cap B=\\emptyset\\)) se međusobno isključuju, pa su baš zbog toga <em>zavisni</em> (ako se desio A, B se sigurno nije desio; to važi kada oba imaju pozitivnu verovatnoću). O nezavisnosti u sledećoj lekciji."
+        },
+        {
+          "type": "worked-example",
+          "title": "Konkursi: tri događaja",
+          "source": "Zadatak 41 iz zbirke",
+          "problem": "Projektna firma učestvuje na tri konkursa. Neka je \\(A_i\\) događaj „firma je dobila \\(i\\)-ti konkurs“. Poznato je: \\(P(A_1)=0{,}22\\), \\(P(A_2)=0{,}25\\), \\(P(A_3)=0{,}28\\), \\(P(A_1A_2)=0{,}11\\), \\(P(A_1A_3)=0{,}05\\), \\(P(A_2A_3)=0{,}07\\), \\(P(A_1A_2A_3)=0{,}01\\) (zapis \\(A_1A_2\\) znači presek). Izračunaj verovatnoće: (1) \\(A_1\\cup A_2\\), (2) \\(\\overline{A_1}\\,\\overline{A_2}\\), (3) \\(A_1\\cup A_2\\cup A_3\\), (4) \\(\\overline{A_1}\\,\\overline{A_2}\\,\\overline{A_3}\\), (5) \\(\\overline{A_1}\\,A_2\\,\\overline{A_3}\\).",
+          "given": [
+            "Zapis \\(A_iA_j\\) je presek \\(A_i\\cap A_j\\)",
+            "\\(\\overline{A}\\) je suprotan događaj"
+          ],
+          "steps": [
+            {
+              "title": "(1) Unija dva događaja",
+              "content": "Koristimo \\(P(A\\cup B)=P(A)+P(B)-P(A\\cap B)\\) (presek je izbrojan dvaput, pa se oduzima): \\(0{,}22+0{,}25-0{,}11=0{,}36\\)."
+            },
+            {
+              "title": "(2) Ni jedan ni drugi",
+              "content": "\\(\\overline{A_1}\\,\\overline{A_2}=\\overline{A_1\\cup A_2}\\) (De Morgan), pa je \\(1-0{,}36=0{,}64\\)."
+            },
+            {
+              "title": "(3) Unija tri događaja",
+              "content": "Formula uključenja–isključenja: \\(P(A_1)+P(A_2)+P(A_3)-P(A_1A_2)-P(A_1A_3)-P(A_2A_3)+P(A_1A_2A_3)\\). Zbir parova se oduzima, a trojni presek vraća (jer je oduzet tri puta, a trebalo bi dvaput): \\(0{,}75-0{,}23+0{,}01=0{,}53\\)."
+            },
+            {
+              "title": "(4) Nijedan konkurs",
+              "content": "Suprotan događaj od unije: \\(1-0{,}53=0{,}47\\)."
+            },
+            {
+              "title": "(5) Dobijen samo drugi konkurs",
+              "content": "\\(\\overline{A_1}A_2\\overline{A_3}\\) je „samo \\(A_2\\)“. Od \\(P(A_2)\\) oduzimamo delove koji su zajednički sa \\(A_1\\) ili \\(A_3\\): \\(P(A_2)-P(A_1A_2)-P(A_2A_3)+P(A_1A_2A_3)=0{,}25-0{,}11-0{,}07+0{,}01=0{,}08\\). Trojni presek se dodaje jer je oduzet dvaput."
+            },
+            {
+              "title": "Provera sa Vennovim dijagramom",
+              "content": "Samo \\(A_2\\): \\(0{,}08\\). Sve ostale oblasti su nenegativne (npr. samo \\(A_1\\): \\(0{,}22-0{,}11-0{,}05+0{,}01=0{,}07\\)), pa su podaci konzistentni."
+            }
+          ],
+          "answer": "(1) 0,36; (2) 0,64; (3) 0,53; (4) 0,47; (5) 0,08."
+        },
+        {
+          "type": "worked-example",
+          "title": "Dva semafora",
+          "source": "Zadatak 42 iz zbirke",
+          "problem": "Inženjer prolazi pored dva semafora \\(S_1\\) i \\(S_2\\). Poznato je: \\(P(S_1)=0{,}4\\), \\(P(S_2)=0{,}5\\), \\(P(S_1\\cup S_2)=0{,}6\\) (\\(S_i\\): mora da stane kod \\(i\\)-tog semafora). Odredi verovatnoću da: (A) mora da stane kod oba, (B) mora da stane samo kod prvog, (C) mora da stane tačno kod jednog.",
+          "given": [
+            "\\(P(S_1)=0{,}4,\\ P(S_2)=0{,}5\\)",
+            "\\(P(S_1\\cup S_2)=0{,}6\\)"
+          ],
+          "steps": [
+            {
+              "title": "(A) Presek iz unije",
+              "content": "Iz \\(P(S_1\\cup S_2)=P(S_1)+P(S_2)-P(S_1\\cap S_2)\\) izrazimo presek: \\(P(S_1\\cap S_2)=0{,}4+0{,}5-0{,}6=0{,}3\\)."
+            },
+            {
+              "title": "(B) Samo kod prvog",
+              "content": "„\\(S_1\\), ali ne \\(S_2\\)“ je razlika: \\(P(S_1\\setminus S_2)=P(S_1)-P(S_1\\cap S_2)=0{,}4-0{,}3=0{,}1\\)."
+            },
+            {
+              "title": "(C) Tačno kod jednog",
+              "content": "Ili samo prvi, ili samo drugi (međusobno isključivi slučajevi): \\((0{,}4-0{,}3)+(0{,}5-0{,}3)=0{,}1+0{,}2=0{,}3\\)."
+            },
+            {
+              "title": "Provera",
+              "content": "Oblasti: samo \\(S_1\\) 0,1, oba 0,3, samo \\(S_2\\) 0,2, nijedan \\(1-0{,}6=0{,}4\\); zbir \\(=1\\) ✓."
+            }
+          ],
+          "answer": "(A) 0,3; (B) 0,1; (C) 0,3."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "05-zadaci-dogadjaji-i-operacije",
+    "subjectSlug": "verovatnoca-i-statistika",
+    "title": "Zadaci: događaji i operacije",
+    "description": "Vežbanje iz zbirke: tri događaja, formula uključenja–isključenja i suprotni događaji.",
+    "week": 5,
+    "date": "2026-11-11",
+    "formattedDate": "11.11.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta vežbamo ove nedelje"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo je nedelja za vežbu. Zadaci iz zbirke koriste sve što smo radili: uniju, presek, suprotan događaj i pravilo \\(P(A\\cup B)=P(A)+P(B)-P(A\\cap B)\\). Prvo pokušaj sam, pa otvori rešenje."
+        },
+        {
+          "type": "worked-example",
+          "title": "Deca na bazenu",
+          "source": "Zadatak 43 iz zbirke (događaji definisani ovde)",
+          "problem": "U školi plivanja je 45 dece. Njih 15 pliva oba stila, 30 pliva kraul, a 20 pliva delfin. Dete se bira nasumično. Odredi verovatnoće događaja: \\(A_1\\): pliva samo kraul; \\(A_2\\): pliva tačno jedan stil; \\(A_3\\): pliva bar jedan stil; \\(A_4\\): ne pliva nijedan stil.",
+          "given": [
+            "\\(n=45\\)",
+            "oba: 15; kraul: 30; delfin: 20"
+          ],
+          "steps": [
+            {
+              "title": "Vennov dijagram sa brojevima",
+              "content": "Presek (oba): \\(x=15\\). Samo kraul: \\(y=30-15=15\\). Samo delfin: \\(z=20-15=5\\). Nijedan: \\(u=45-(x+y+z)=45-35=10\\)."
+            },
+            {
+              "title": "Klasična verovatnoća",
+              "content": "Svako dete je jednako verovatno, pa je \\(P=\\dfrac{\\text{broj povoljnih}}{45}\\)."
+            },
+            {
+              "title": "Računanje",
+              "content": "\\(P(A_1)=\\tfrac{y}{n}=\\tfrac{15}{45}=\\tfrac13\\); \\(P(A_2)=\\tfrac{y+z}{n}=\\tfrac{20}{45}=\\tfrac49\\); \\(P(A_3)=\\tfrac{x+y+z}{n}=\\tfrac{35}{45}=\\tfrac79\\); \\(P(A_4)=\\tfrac{u}{n}=\\tfrac{10}{45}=\\tfrac29\\)."
+            },
+            {
+              "title": "Provera",
+              "content": "\\(A_3\\) i \\(A_4\\) su suprotni događaji: \\(\\tfrac79+\\tfrac29=1\\) ✓."
+            }
+          ],
+          "answer": "\\(\\tfrac13,\\ \\tfrac49,\\ \\tfrac79,\\ \\tfrac29\\)."
+        },
+        {
+          "type": "worked-example",
+          "title": "Silvija i slatkiši",
+          "source": "Zadatak 46 iz zbirke",
+          "problem": "Silvija jede karamelu \\(K\\), čokoladu \\(C\\) i biskvit \\(B\\). Poznato je: \\(P(K)=0{,}5\\), \\(P(C)=0{,}4\\), \\(P(B)=0{,}4\\), \\(P(KC)=0{,}15\\), \\(P(KB)=0{,}25\\), \\(P(CB)=0{,}2\\), \\(P(KCB)=0{,}05\\), \\(P(K\\cup C\\cup B)=0{,}75\\). Nađi verovatnoće da: (A) jede samo čokoladu, (B) jede bar dva slatkiša, (C) ne jede nijedan.",
+          "given": [
+            "parni preseci: 0,15; 0,25; 0,2",
+            "trojni presek: 0,05"
+          ],
+          "steps": [
+            {
+              "title": "Podeli Vennov dijagram na oblasti",
+              "content": "Počinjemo od trojnog preseka \\(0{,}05\\). Samo dva slatkiša: \\(KC\\) samo \\(0{,}15-0{,}05=0{,}10\\); \\(KB\\) samo \\(0{,}25-0{,}05=0{,}20\\); \\(CB\\) samo \\(0{,}20-0{,}05=0{,}15\\)."
+            },
+            {
+              "title": "(A) Samo čokolada",
+              "content": "Od \\(P(C)\\) oduzimamo sve što deli sa ostalima: \\(0{,}4-0{,}10-0{,}15-0{,}05=0{,}10\\)."
+            },
+            {
+              "title": "(B) Bar dva slatkiša",
+              "content": "Zbir oblasti sa tačno dva i sa sva tri: \\(0{,}10+0{,}20+0{,}15+0{,}05=0{,}50\\)."
+            },
+            {
+              "title": "(C) Nijedan",
+              "content": "Suprotno od unije: \\(1-0{,}75=0{,}25\\)."
+            },
+            {
+              "title": "Provera",
+              "content": "Samo \\(K\\): \\(0{,}5-0{,}10-0{,}20-0{,}05=0{,}15\\); samo \\(B\\): \\(0{,}4-0{,}20-0{,}15-0{,}05=0\\). Zbir svih oblasti: \\(0{,}15+0{,}10+0{,}10+0{,}20+0{,}15+0{,}05+0+0{,}25=1\\) ✓."
+            }
+          ],
+          "answer": "(A) 0,1; (B) 0,5; (C) 0,25."
+        },
+        {
+          "type": "worked-example",
+          "title": "Tri strelca",
+          "source": "Zadatak 47 iz zbirke",
+          "problem": "Tri strelca nezavisno gađaju metu, sa verovatnoćama pogotka \\(p_1=0{,}3\\), \\(p_2=0{,}4\\), \\(p_3=0{,}5\\). Meta je pogođena ako pogodi bar jedan strelac. Kolika je verovatnoća da je meta pogođena?",
+          "given": [
+            "\\(p_1=0{,}3,\\ p_2=0{,}4,\\ p_3=0{,}5\\)",
+            "gađaju nezavisno"
+          ],
+          "steps": [
+            {
+              "title": "Prvi način: formula unije",
+              "content": "\\(P(A)=p_1+p_2+p_3-p_1p_2-p_1p_3-p_2p_3+p_1p_2p_3\\). Preseci nezavisnih događaja su proizvodi: \\(0{,}3+0{,}4+0{,}5-0{,}12-0{,}15-0{,}20+0{,}06=0{,}79\\)."
+            },
+            {
+              "title": "Drugi način: suprotan događaj",
+              "content": "Meta nije pogođena ako svi promaše: \\(P(\\overline A)=(1-p_1)(1-p_2)(1-p_3)=0{,}7\\cdot0{,}6\\cdot0{,}5=0{,}21\\). Zato \\(P(A)=1-0{,}21=0{,}79\\)."
+            },
+            {
+              "title": "Šta je bolje i zašto",
+              "content": "Drugi način je kraći i manje podložan greški, pa kod „bar jedan“ prvo razmisli o suprotnom događaju."
+            }
+          ],
+          "answer": "\\(P(A)=0{,}79\\)."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "06-uslovna-verovatnoca",
+    "subjectSlug": "verovatnoca-i-statistika",
+    "title": "Uslovna verovatnoća",
+    "description": "Verovatnoća događaja kada već znamo da se neki drugi desio, i pravilo množenja.",
+    "week": 6,
+    "date": "2026-11-18",
+    "formattedDate": "18.11.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Uslovna verovatnoća"
+        },
+        {
+          "type": "paragraph",
+          "text": "Informacija da se neki događaj već desio menja naše procene. Verovatnoća da se desi \\(A\\) <strong>pod uslovom</strong> da se desilo \\(B\\) označava se \\(P(A\\mid B)\\). Prostor ishoda se „sužava“ na \\(B\\)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Definicija i pravilo množenja"
+        },
+        {
+          "type": "formula",
+          "items": [
+            {
+              "label": "Uslovna verovatnoća (\\(P(B)\\gt 0\\))",
+              "tex": "P(A\\mid B)=\\dfrac{P(A\\cap B)}{P(B)}"
+            },
+            {
+              "label": "Pravilo množenja",
+              "tex": "P(A\\cap B)=P(B)\\,P(A\\mid B)=P(A)\\,P(B\\mid A)"
+            },
+            {
+              "label": "Tri događaja",
+              "tex": "P(A\\cap B\\cap C)=P(A)\\,P(B\\mid A)\\,P(C\\mid A\\cap B)"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako čitati izraze"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Izraz",
+            "Pročitaj kao"
+          ],
+          "rows": [
+            [
+              "\\(P(A\\cap B)\\)",
+              "verovatnoća da se desilo <strong>i</strong> A <strong>i</strong> B"
+            ],
+            [
+              "\\(P(A\\mid B)\\)",
+              "verovatnoća A, <strong>ako znamo</strong> da se desilo B"
+            ],
+            [
+              "\\(P(A\\cup B)\\)",
+              "verovatnoća da se desilo A <strong>ili</strong> B"
+            ],
+            [
+              "\\(P(A\\mid\\overline{B})\\)",
+              "verovatnoća A, ako se B <strong>nije</strong> desilo"
+            ]
+          ]
+        },
+        {
+          "type": "worked-example",
+          "title": "Dve kocke, zbir 8",
+          "source": "Primer",
+          "problem": "Bacaju se dve kocke i poznato je da je zbir 8. Kolika je verovatnoća da su oba broja parna?",
+          "given": [
+            "dve kocke",
+            "uslov: zbir je 8"
+          ],
+          "steps": [
+            {
+              "title": "Šta znači „ako je poznato“",
+              "content": "Informacija o zbiru „sužava“ prostor ishoda na samo one parove čiji je zbir 8. Sve verovatnoće sada računamo unutar tog suženog skupa."
+            },
+            {
+              "title": "Novi prostor ishoda",
+              "content": "(2,6), (3,5), (4,4), (5,3), (6,2): 5 jednako verovatnih ishoda."
+            },
+            {
+              "title": "Povoljni unutar njega",
+              "content": "Oba parna: (2,6), (4,4), (6,2): 3 ishoda."
+            },
+            {
+              "title": "Račun",
+              "content": "\\(P=\\dfrac35\\). Isto po formuli: \\(\\dfrac{P(A\\cap B)}{P(B)}=\\dfrac{3/36}{5/36}=\\dfrac35\\)."
+            }
+          ],
+          "answer": "\\(P=\\dfrac35\\)."
+        },
+        {
+          "type": "worked-example",
+          "title": "Izvlačenje bez vraćanja",
+          "source": "Primer",
+          "problem": "U kutiji je 5 belih i 3 crne kuglice. Izvlače se dve bez vraćanja. Kolika je verovatnoća da su obe bele?",
+          "given": [
+            "5 belih, 3 crne",
+            "2 izvlačenja bez vraćanja"
+          ],
+          "steps": [
+            {
+              "title": "Šta se traži",
+              "content": "\\(P(\\text{prva bela}\\ \\cap\\ \\text{druga bela})\\)."
+            },
+            {
+              "title": "Pravilo množenja",
+              "content": "\\(P(A_1\\cap A_2)=P(A_1)\\cdot P(A_2\\mid A_1)\\). Izvlačenja nisu nezavisna jer se sastav kutije posle prvog izvlačenja menja."
+            },
+            {
+              "title": "Prvo izvlačenje",
+              "content": "5 belih od 8 kuglica: \\(P(A_1)=\\tfrac58\\)."
+            },
+            {
+              "title": "Drugo izvlačenje (uslovno)",
+              "content": "Ako je prva bila bela, ostalo je 4 bele od 7: \\(P(A_2\\mid A_1)=\\tfrac47\\)."
+            },
+            {
+              "title": "Račun",
+              "content": "\\(\\tfrac58\\cdot\\tfrac47=\\tfrac{20}{56}=\\tfrac5{14}\\approx0{,}357\\)."
+            },
+            {
+              "title": "Provera kombinatorikom",
+              "content": "\\(\\dfrac{C_5^2}{C_8^2}=\\dfrac{10}{28}=\\dfrac5{14}\\) ✓."
+            }
+          ],
+          "answer": "\\(\\dfrac{5}{14}\\)."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "07-nezavisnost-dogadjaja",
+    "subjectSlug": "verovatnoca-i-statistika",
+    "title": "Nezavisnost događaja",
+    "description": "Kada jedan događaj ne utiče na drugi, i kako to proveriti računom.",
+    "week": 7,
+    "date": "2026-11-25",
+    "formattedDate": "25.11.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta znači „nezavisni“"
+        },
+        {
+          "type": "paragraph",
+          "text": "Dva događaja su <strong>nezavisna</strong> ako to što se desio jedan ne menja verovatnoću drugog. Bacanje dva novčića je takav slučaj. Izvlačenje dve karte bez vraćanja nije, jer prva izvučena karta menja šta je ostalo u špilu."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Nezavisni događaji"
+        },
+        {
+          "type": "formula",
+          "items": [
+            {
+              "label": "Definicija nezavisnosti",
+              "tex": "P(A\\cap B)=P(A)\\,P(B)"
+            },
+            {
+              "label": "Ekvivalentno",
+              "tex": "P(A\\mid B)=P(A)"
+            },
+            {
+              "label": "Bar jedan od \\(n\\) nezavisnih",
+              "tex": "P=1-\\bigl(1-p_1\\bigr)\\bigl(1-p_2\\bigr)\\cdots\\bigl(1-p_n\\bigr)"
+            }
+          ],
+          "note": "Ako su \\(A\\) i \\(B\\) nezavisni, nezavisni su i \\(A\\) i \\(\\overline{B}\\), \\(\\overline{A}\\) i \\(B\\), \\(\\overline{A}\\) i \\(\\overline{B}\\)."
+        },
+        {
+          "type": "worked-example",
+          "title": "Bar jedan pogodak",
+          "source": "Primer",
+          "problem": "Košarkaš pogađa penal sa verovatnoćom 0,8. Kolika je verovatnoća da pogodi bar jedan od tri šuta?",
+          "given": [
+            "\\(p=0{,}8\\)",
+            "3 nezavisna šuta"
+          ],
+          "steps": [
+            {
+              "title": "Zašto suprotan događaj",
+              "content": "„Bar jedan pogodak“ obuhvata 1, 2 ili 3 pogotka. Suprotno: „nijedan pogodak“ je samo jedan slučaj."
+            },
+            {
+              "title": "Verovatnoća promašaja",
+              "content": "\\(q=1-0{,}8=0{,}2\\)."
+            },
+            {
+              "title": "Tri promašaja zaredom",
+              "content": "Nezavisni su, pa množimo: \\(0{,}2^3=0{,}008\\)."
+            },
+            {
+              "title": "Račun",
+              "content": "\\(1-0{,}008=0{,}992\\)."
+            }
+          ],
+          "answer": "\\(1-0{,}008=0{,}992\\)."
+        },
+        {
+          "type": "worked-example",
+          "title": "Provera nezavisnosti",
+          "source": "Primer",
+          "problem": "Dato je \\(P(A)=0{,}5\\), \\(P(B)=0{,}4\\), \\(P(A\\cap B)=0{,}2\\). Da li su \\(A\\) i \\(B\\) nezavisni?",
+          "given": [
+            "\\(P(A)=0{,}5,\\ P(B)=0{,}4\\)",
+            "\\(P(A\\cap B)=0{,}2\\)"
+          ],
+          "steps": [
+            {
+              "title": "Definicija",
+              "content": "\\(A\\) i \\(B\\) su nezavisni ako i samo ako \\(P(A\\cap B)=P(A)\\,P(B)\\)."
+            },
+            {
+              "title": "Izračunaj proizvod",
+              "content": "\\(0{,}5\\cdot0{,}4=0{,}2\\)."
+            },
+            {
+              "title": "Uporedi",
+              "content": "Proizvod je jednak \\(P(A\\cap B)=0{,}2\\), pa su nezavisni. Ekvivalentno: \\(P(A\\mid B)=\\tfrac{0{,}2}{0{,}4}=0{,}5=P(A)\\) — saznanje o \\(B\\) ne menja verovatnoću \\(A\\)."
+            }
+          ],
+          "answer": "Da, nezavisni su."
+        },
+        {
+          "type": "worked-example",
+          "title": "Četiri karte, svi asovi",
+          "source": "Primer",
+          "problem": "Iz špila od 52 karte vuku se 4 karte jedna za drugom bez vraćanja. Kolika je verovatnoća da sve četiri budu asovi?",
+          "given": [
+            "52 karte, 4 asa",
+            "vuku se 4 karte jedna za drugom, bez vraćanja"
+          ],
+          "steps": [
+            {
+              "title": "Pravilo množenja za više događaja",
+              "content": "\\(P(A_1\\cap A_2\\cap A_3\\cap A_4)=P(A_1)P(A_2\\mid A_1)P(A_3\\mid A_1A_2)P(A_4\\mid A_1A_2A_3)\\)."
+            },
+            {
+              "title": "Svaki faktor",
+              "content": "Prva karta je as: \\(\\tfrac4{52}\\). Zatim je ostalo 3 asa u 51 karti: \\(\\tfrac3{51}\\); pa \\(\\tfrac2{50}\\); pa \\(\\tfrac1{49}\\)."
+            },
+            {
+              "title": "Račun",
+              "content": "\\(\\dfrac{4\\cdot3\\cdot2\\cdot1}{52\\cdot51\\cdot50\\cdot49}=\\dfrac{24}{6\\,497\\,400}=\\dfrac1{270\\,725}\\)."
+            },
+            {
+              "title": "Provera kombinatorikom",
+              "content": "\\(\\dfrac{C_4^4}{C_{52}^4}=\\dfrac1{270\\,725}\\) ✓."
+            }
+          ],
+          "answer": "\\(\\dfrac{1}{270725}\\approx 3{,}7\\cdot10^{-6}\\)."
+        },
+        {
+          "type": "simulation",
+          "kind": "cards",
+          "title": "Izvlačenje karata sa i bez vraćanja",
+          "description": "Izvuci 2 karte i prati koliko često su obe asovi. Prebaci sa „bez vraćanja“ na „sa vraćanjem“ i uporedi: bez vraćanja je \\(\\tfrac4{52}\\cdot\\tfrac3{51}\\approx0{,}0045\\), sa vraćanjem \\(\\left(\\tfrac4{52}\\right)^2\\approx0{,}0059\\).",
+          "config": {
+            "draw": 2,
+            "replace": false,
+            "targetKind": "rank",
+            "targetValue": "A",
+            "cmp": "=",
+            "m": 2
+          },
+          "scripts": [
+            "simulations/common.js",
+            "simulations/cards.js"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "<strong>Čest nesporazum:</strong> nezavisnost ne znači da se događaji „ne mogu desiti zajedno“. To je disjunktnost. Nezavisni događaji pozitivnih verovatnoća se uvek <em>mogu</em> desiti zajedno."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "08-totalna-verovatnoca",
+    "subjectSlug": "verovatnoca-i-statistika",
+    "title": "Totalna verovatnoća",
+    "description": "Kako verovatnoću događaja računamo preko više mogućih „puteva“ (potpun sistem događaja).",
+    "week": 8,
+    "date": "2026-12-02",
+    "formattedDate": "02.12.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Potpun sistem događaja (hipoteze)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Događaji \\(H_1,H_2,\\dots,H_n\\) čine <strong>potpun sistem</strong> ako su po parovima disjunktni i ako je njihova unija ceo prostor \\(\\Omega\\): tačno jedan od njih se mora desiti. Dakle \\(P(H_1)+\\dots+P(H_n)=1\\)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zamisli ih kao „uzroke“ (koja mašina je napravila proizvod, koja kutija je izabrana, da li je osoba bolesna), a događaj \\(A\\) kao „posledicu“ koju posmatramo."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Formule"
+        },
+        {
+          "type": "formula",
+          "items": [
+            {
+              "label": "Totalna verovatnoća (unapred: uzrok → posledica)",
+              "tex": "P(A)=\\sum_{i=1}^{n}P(H_i)\\,P(A\\mid H_i)"
+            },
+            {
+              "label": "Bajesova formula (unazad: posledica → uzrok)",
+              "tex": "P(H_k\\mid A)=\\dfrac{P(H_k)\\,P(A\\mid H_k)}{\\sum_{i=1}^{n}P(H_i)\\,P(A\\mid H_i)}"
+            }
+          ],
+          "note": "Imenilac Bajesove formule je upravo totalna verovatnoća \\(P(A)\\)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šablon za rešavanje"
+        },
+        {
+          "type": "list",
+          "style": "numbered",
+          "items": [
+            "Odredi <strong>hipoteze</strong> \\(H_i\\) i njihove verovatnoće (moraju davati zbir 1).",
+            "Odredi događaj \\(A\\) i uslovne verovatnoće \\(P(A\\mid H_i)\\).",
+            "Pitanje „kolika je verovatnoća da se desi \\(A\\)“ → <strong>totalna verovatnoća</strong>.",
+            "Pitanje „ako se desilo \\(A\\), kolika je verovatnoća da je bila hipoteza \\(H_k\\)“ → <strong>Bajes</strong>."
+          ]
+        },
+        {
+          "type": "worked-example",
+          "title": "Dve kutije",
+          "source": "Primer",
+          "problem": "Prva kutija ima 3 bele i 2 crne kuglice, druga 1 belu i 4 crne. Bira se nasumično kutija, pa iz nje kuglica. (a) Verovatnoća da je kuglica bela? (b) Ako je bela, kolika je verovatnoća da je iz prve kutije?",
+          "given": [
+            "kutija 1: 3 bele, 2 crne",
+            "kutija 2: 1 bela, 4 crne",
+            "kutija se bira nasumično"
+          ],
+          "steps": [
+            {
+              "title": "Hipoteze i događaj",
+              "content": "\\(H_1\\): izabrana kutija 1, \\(H_2\\): kutija 2, \\(P(H_1)=P(H_2)=\\tfrac12\\) (potpun sistem: zbir je 1). \\(A\\): izvučena bela kuglica."
+            },
+            {
+              "title": "Uslovne verovatnoće",
+              "content": "\\(P(A\\mid H_1)=\\tfrac35\\), \\(P(A\\mid H_2)=\\tfrac15\\)."
+            },
+            {
+              "title": "(a) Totalna verovatnoća — zašto",
+              "content": "Do bele kuglice se stiže na dva međusobno isključiva načina (preko \\(H_1\\) ili preko \\(H_2\\)), pa se sabiraju proizvodi „hipoteza × uslovno“."
+            },
+            {
+              "title": "(a) Račun",
+              "content": "\\(P(A)=\\tfrac12\\cdot\\tfrac35+\\tfrac12\\cdot\\tfrac15=0{,}3+0{,}1=0{,}4\\)."
+            },
+            {
+              "title": "(b) Bajes — zašto",
+              "content": "Pitanje ide „unazad“: znamo posledicu (bela), tražimo uzrok (kutija 1). Udeo puta preko \\(H_1\\) u svim putevima do bele je tražena verovatnoća."
+            },
+            {
+              "title": "(b) Račun",
+              "content": "\\(P(H_1\\mid A)=\\dfrac{0{,}3}{0{,}4}=0{,}75\\)."
+            }
+          ],
+          "answer": "(a) 0,4; (b) 0,75."
+        },
+        {
+          "type": "worked-example",
+          "title": "Tri mašine i neispravni proizvodi",
+          "source": "Zadatak 59 iz zbirke",
+          "problem": "U radionici proizvodnju čine tri mašine: M1 daje 50% proizvodnje sa 3% neispravnih, M2 daje 20% sa 5% neispravnih, M3 daje 30% sa 4% neispravnih. (a) Kolika je verovatnoća da nasumično izabran proizvod bude ispravan? (b) Ako je izabrani proizvod ispravan, kolika je verovatnoća da je napravljen na mašini M3?",
+          "given": [
+            "udeli: 0,50; 0,20; 0,30",
+            "neispravnih: 3%, 5%, 4%"
+          ],
+          "steps": [
+            {
+              "title": "Hipoteze i događaj",
+              "content": "\\(H_i\\): proizvod je sa mašine \\(M_i\\), \\(P(H_i)=0{,}5;\\,0{,}2;\\,0{,}3\\) (zbir 1). \\(A\\): proizvod je ispravan."
+            },
+            {
+              "title": "Uslovne verovatnoće ispravnosti",
+              "content": "Ispravan = suprotno od neispravnog: \\(P(A\\mid H_1)=0{,}97\\), \\(P(A\\mid H_2)=0{,}95\\), \\(P(A\\mid H_3)=0{,}96\\)."
+            },
+            {
+              "title": "(a) Totalna verovatnoća",
+              "content": "\\(P(A)=0{,}5\\cdot0{,}97+0{,}2\\cdot0{,}95+0{,}3\\cdot0{,}96=0{,}485+0{,}190+0{,}288=0{,}963\\)."
+            },
+            {
+              "title": "(b) Bajes",
+              "content": "\\(P(H_3\\mid A)=\\dfrac{0{,}3\\cdot0{,}96}{0{,}963}=\\dfrac{0{,}288}{0{,}963}=\\dfrac{288}{963}=\\dfrac{32}{107}\\approx0{,}2991\\)."
+            },
+            {
+              "title": "Provera",
+              "content": "Isto računanje za sve tri mašine mora dati zbir 1: \\(\\tfrac{0{,}485+0{,}190+0{,}288}{0{,}963}=1\\) ✓."
+            }
+          ],
+          "answer": "(a) 0,963; (b) \\(\\tfrac{32}{107}\\approx0{,}2991\\)."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "09-bajesova-formula",
+    "subjectSlug": "verovatnoca-i-statistika",
+    "title": "Bajesova formula",
+    "description": "Obrnuto pitanje: znamo ishod, a tražimo kojim putem je nastao.",
+    "week": 9,
+    "date": "2026-12-09",
+    "formattedDate": "09.12.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Od totalne verovatnoće do Bajesa"
+        },
+        {
+          "type": "paragraph",
+          "text": "Totalna verovatnoća odgovara na pitanje „koliko je verovatno da se desi \\(A\\)?“. Bajesova formula okreće pitanje: „znamo da se desilo \\(A\\), koliko je verovatno da je došlo baš preko \\(H_i\\)?“. Imenilac je ista totalna verovatnoća koju smo izračunali prošle nedelje."
+        },
+        {
+          "type": "worked-example",
+          "title": "Medicinski test",
+          "source": "Primer",
+          "problem": "Bolest ima 1% obolelih. Test je pozitivan kod 95% obolelih i, greškom, kod 5% zdravih. Test je kod osobe pozitivan. Kolika je verovatnoća da je stvarno bolesna?",
+          "given": [
+            "obolelih 1%",
+            "test pozitivan kod obolelih 95%",
+            "test pozitivan kod zdravih 5% (lažno pozitivan)"
+          ],
+          "steps": [
+            {
+              "title": "Hipoteze",
+              "content": "\\(H_1\\): bolestan, \\(P=0{,}01\\); \\(H_2\\): zdrav, \\(P=0{,}99\\). \\(A\\): test je pozitivan."
+            },
+            {
+              "title": "Verovatnoća pozitivnog testa",
+              "content": "\\(P(A)=0{,}01\\cdot0{,}95+0{,}99\\cdot0{,}05=0{,}0095+0{,}0495=0{,}059\\)."
+            },
+            {
+              "title": "Bajes",
+              "content": "\\(P(H_1\\mid A)=\\dfrac{0{,}0095}{0{,}059}\\approx0{,}161\\)."
+            },
+            {
+              "title": "Zašto je tako malo",
+              "content": "Zdravih je 99 puta više od bolesnih, pa 5% od zdravih daje mnogo više pozitivnih nego 95% od malo bolesnih. Intuitivno: od 10 000 ljudi bolesno je 100, a pozitivno kod 95 njih; od 9 900 zdravih pozitivno je 495. Od 590 pozitivnih bolesno je 95."
+            }
+          ],
+          "answer": "Oko 16,1% – iznenađujuće malo, jer je bolest retka pa je većina pozitivnih zapravo „lažno pozitivna“."
+        },
+        {
+          "type": "simulation",
+          "kind": "bayes",
+          "title": "Zašto je pozitivan test često lažna uzbuna",
+          "description": "Pomeraj klizače i prati kolika je verovatnoća da je osoba zaista bolesna kada je test pozitivan. Počni od vrednosti iz primera (1%, 95%, 5%).",
+          "config": {
+            "prevalence": 1,
+            "sensitivity": 95,
+            "falsePositive": 5
+          },
+          "hint": "Probaj da povećaš procenat obolelih na 20% ili da smanjiš lažno pozitivne na 1%. Šta se menja više?",
+          "scripts": [
+            "simulations/common.js",
+            "simulations/bayes.js"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "<strong>Zašto je rezultat tako mali?</strong> Od 10 000 ljudi bolesno je 100, test pozitivan kod 95 njih. Od 9 900 zdravih pozitivno je 495. Pozitivnih je ukupno 590, a samo 95 je zaista bolesno. Intuicija često greši kod retkih događaja – Bajesova formula je ispravlja."
+        },
+        {
+          "type": "worked-example",
+          "title": "Premeštanje kuglice",
+          "source": "Zadatak 58 iz zbirke",
+          "problem": "Prva kutija ima 5 crvenih i 6 belih kuglica, a druga 4 crvene i 4 bele. Iz prve kutije se nasumično premešta jedna kuglica u drugu. (a) Kolika je verovatnoća da se iz druge kutije (posle premeštanja) izvuče crvena kuglica? (b) Ako je izvučena crvena kuglica, kolika je verovatnoća da je premeštena bila crvena?",
+          "given": [
+            "kutija 1: 5 crvenih, 6 belih (11)",
+            "kutija 2: 4 crvene, 4 bele (8)"
+          ],
+          "steps": [
+            {
+              "title": "Hipoteze",
+              "content": "\\(H_c\\): premeštena je crvena, \\(P(H_c)=\\tfrac5{11}\\); \\(H_b\\): premeštena je bela, \\(P(H_b)=\\tfrac6{11}\\). Zbir je 1, pa je to potpun sistem."
+            },
+            {
+              "title": "Uslovne verovatnoće",
+              "content": "Ako je premeštena crvena, druga kutija ima 5 crvenih od 9: \\(P(A\\mid H_c)=\\tfrac59\\). Ako je premeštena bela, ima 4 crvene od 9: \\(P(A\\mid H_b)=\\tfrac49\\). (Kutija sada ima 9 kuglica.)"
+            },
+            {
+              "title": "(a) Totalna verovatnoća",
+              "content": "\\(P(A)=\\tfrac5{11}\\cdot\\tfrac59+\\tfrac6{11}\\cdot\\tfrac49=\\tfrac{25}{99}+\\tfrac{24}{99}=\\tfrac{49}{99}\\approx0{,}4949\\)."
+            },
+            {
+              "title": "(b) Bajesova formula",
+              "content": "\\(P(H_c\\mid A)=\\dfrac{P(H_c)P(A\\mid H_c)}{P(A)}=\\dfrac{25/99}{49/99}=\\dfrac{25}{49}\\approx0{,}5102\\)."
+            },
+            {
+              "title": "Tumačenje",
+              "content": "Pre izvlačenja je verovatnoća premeštene crvene bila \\(\\tfrac5{11}\\approx0{,}4545\\). Pošto smo izvukli crvenu, ona je porasla na \\(\\approx0{,}5102\\): to je „ažuriranje uverenja“ pomoću Bajesove formule."
+            }
+          ],
+          "answer": "(a) \\(\\tfrac{49}{99}\\approx0{,}4949\\); (b) \\(\\tfrac{25}{49}\\approx0{,}5102\\)."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "10-slucajne-promenljive-i-funkcija-raspodele",
+    "subjectSlug": "verovatnoca-i-statistika",
+    "title": "Slučajne promenljive i funkcija raspodele",
+    "description": "Zakon raspodele, funkcija raspodele i očekivanje diskretne slučajne promenljive.",
+    "week": 10,
+    "date": "2026-12-16",
+    "formattedDate": "16.12.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je slučajna promenljiva?"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Slučajna promenljiva</strong> \\(X\\) je veličina čija vrednost zavisi od ishoda eksperimenta (zbir na dve kocke, broj grbova u 10 bacanja). Diskretna uzima konačno ili prebrojivo mnogo vrednosti \\(x_i\\) sa verovatnoćama \\(p_i=P(X=x_i)\\)."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Zakon raspodele</strong> je tabela vrednosti i verovatnoća. Uvek važi \\(p_i\\ge0\\) i \\(\\sum p_i=1\\)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Brojne karakteristike"
+        },
+        {
+          "type": "formula",
+          "items": [
+            {
+              "label": "Matematičko očekivanje (srednja vrednost)",
+              "tex": "E(X)=\\sum_i x_i\\,p_i"
+            },
+            {
+              "label": "Očekivanje funkcije",
+              "tex": "E\\bigl(g(X)\\bigr)=\\sum_i g(x_i)\\,p_i,\\qquad E(X^2)=\\sum_i x_i^2\\,p_i"
+            },
+            {
+              "label": "Disperzija (varijansa)",
+              "tex": "D(X)=E(X^2)-\\bigl(E(X)\\bigr)^2"
+            },
+            {
+              "label": "Standardna devijacija",
+              "tex": "\\sigma(X)=\\sqrt{D(X)}"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Funkcija raspodele"
+        },
+        {
+          "type": "formula",
+          "items": [
+            {
+              "label": "Definicija",
+              "tex": "F(x)=P(X\\le x)=\\sum_{x_i\\le x}p_i"
+            },
+            {
+              "label": "Verovatnoća intervala",
+              "tex": "P(a\\lt X\\le b)=F(b)-F(a)"
+            }
+          ],
+          "note": "\\(F\\) je neopadajuća, stepenasta, \\(F(-\\infty)=0\\), \\(F(+\\infty)=1\\). Pažnja: u nekim zbirkama se koristi definicija \\(F(x)=P(X\\lt x)\\) – razlika je u tome da li je u skoku uzeta gornja ili donja vrednost."
+        },
+        {
+          "type": "worked-example",
+          "title": "Primer zakona raspodele",
+          "source": "Primer",
+          "problem": "Slučajna promenljiva \\(X\\) uzima vrednosti 0, 1, 2, 3 sa verovatnoćama 0,1; 0,3; 0,4; 0,2. Odredi \\(E(X)\\), \\(D(X)\\), \\(\\sigma(X)\\) i \\(F(1)\\), \\(F(2)\\).",
+          "given": [
+            "\\(X\\in\\{0,1,2,3\\}\\)",
+            "\\(p=0{,}1;\\ 0{,}3;\\ 0{,}4;\\ 0{,}2\\)"
+          ],
+          "steps": [
+            {
+              "title": "Provera da je zakon ispravan",
+              "content": "Zbir verovatnoća mora biti 1: \\(0{,}1+0{,}3+0{,}4+0{,}2=1\\) ✓."
+            },
+            {
+              "title": "Očekivanje",
+              "content": "Svaka vrednost puta njena verovatnoća: \\(E(X)=0\\cdot0{,}1+1\\cdot0{,}3+2\\cdot0{,}4+3\\cdot0{,}2=1{,}7\\). To je „težišni“ prosek dugoročnih ishoda."
+            },
+            {
+              "title": "(E(X^2))",
+              "content": "Kvadriraj vrednosti, ne verovatnoće: \\(0+1\\cdot0{,}3+4\\cdot0{,}4+9\\cdot0{,}2=3{,}7\\)."
+            },
+            {
+              "title": "Disperzija",
+              "content": "\\(D(X)=E(X^2)-(E(X))^2=3{,}7-2{,}89=0{,}81\\); \\(\\sigma=\\sqrt{0{,}81}=0{,}9\\)."
+            },
+            {
+              "title": "Funkcija raspodele",
+              "content": "\\(F(1)=P(X\\le1)=0{,}1+0{,}3=0{,}4\\), \\(F(2)=0{,}4+0{,}4=0{,}8\\). \\(F\\) se dobija kumulativnim sabiranjem."
+            }
+          ],
+          "answer": "\\(E=1{,}7\\), \\(D=0{,}81\\), \\(\\sigma=0{,}9\\), \\(F(1)=0{,}4\\), \\(F(2)=0{,}8\\)."
+        },
+        {
+          "type": "worked-example",
+          "title": "Bacanje kocke",
+          "source": "Primer",
+          "problem": "Neka je \\(X\\) broj koji padne pri bacanju kocke. Odredi \\(E(X)\\) i \\(D(X)\\).",
+          "given": [
+            "\\(X\\in\\{1,\\dots,6\\}\\)",
+            "svaka vrednost ima \\(p=\\tfrac16\\)"
+          ],
+          "steps": [
+            {
+              "title": "Očekivanje",
+              "content": "\\(E(X)=\\tfrac16(1+2+3+4+5+6)=\\tfrac{21}6=3{,}5\\). Kocka nikad ne pada na 3,5, ali je to prosek mnogo bacanja."
+            },
+            {
+              "title": "(E(X^2))",
+              "content": "\\(\\tfrac16(1+4+9+16+25+36)=\\tfrac{91}6\\)."
+            },
+            {
+              "title": "Disperzija",
+              "content": "\\(D(X)=\\tfrac{91}6-\\left(\\tfrac72\\right)^2=\\tfrac{91}6-\\tfrac{49}4=\\tfrac{182-147}{12}=\\tfrac{35}{12}\\approx2{,}92\\)."
+            },
+            {
+              "title": "Proveri simulatorom",
+              "content": "U simulatoru kocke ispod prosek velikog broja bacanja približava se 3,5."
+            }
+          ],
+          "answer": "\\(E=3{,}5\\), \\(D=\\dfrac{35}{12}\\approx2{,}92\\)."
+        },
+        {
+          "type": "simulation",
+          "kind": "dice",
+          "title": "Zbir na dve kockice (slučajna promenljiva)",
+          "description": "Slučajna promenljiva \\(X\\) je zbir dve kockice. Ispod vidiš njenu raspodelu, a prosek i disperziju možeš da uporediš sa teorijskim \\(E(X)\\) i \\(D(X)\\). Za jednu kockicu: \\(E=3{,}5,\\ D=\\tfrac{35}{12}\\).",
+          "config": {
+            "mode": "sum",
+            "dice": 2,
+            "cmp": ">=",
+            "target": 7
+          },
+          "scripts": [
+            "simulations/common.js",
+            "simulations/dice.js"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "11-linearna-transformacija-i-binomna-raspodela",
+    "subjectSlug": "verovatnoca-i-statistika",
+    "title": "Linearna transformacija i binomna raspodela",
+    "description": "Šta se dešava sa očekivanjem i disperzijom kada promenljivu pomnožimo i pomerimo; binomna raspodela.",
+    "week": 11,
+    "date": "2026-12-23",
+    "formattedDate": "23.12.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Linearna transformacija \\(Y=aX+b\\)"
+        },
+        {
+          "type": "formula",
+          "items": [
+            {
+              "label": "Očekivanje",
+              "tex": "E(aX+b)=a\\,E(X)+b"
+            },
+            {
+              "label": "Disperzija",
+              "tex": "D(aX+b)=a^2D(X)"
+            }
+          ],
+          "note": "Dodavanje konstante ne menja rasipanje, a množenje sa \\(a\\) ga povećava \\(a^2\\) puta."
+        },
+        {
+          "type": "worked-example",
+          "title": "Transformacija Y = 2X + 1",
+          "source": "Primer",
+          "problem": "Za \\(X\\) iz prvog primera (\\(E=1{,}7\\), \\(D=0{,}81\\)) odredi \\(E(Y)\\) i \\(D(Y)\\) za \\(Y=2X+1\\).",
+          "given": [
+            "\\(E(X)=1{,}7\\), \\(D(X)=0{,}81\\)",
+            "\\(Y=2X+1\\)"
+          ],
+          "steps": [
+            {
+              "title": "Očekivanje je linearno",
+              "content": "\\(E(aX+b)=aE(X)+b\\): \\(E(Y)=2\\cdot1{,}7+1=4{,}4\\)."
+            },
+            {
+              "title": "Disperzija ne zavisi od pomeranja",
+              "content": "\\(D(aX+b)=a^2D(X)\\). Konstanta \\(+1\\) samo pomera sve vrednosti, ne menja rasipanje; množenje sa 2 ga razvlači, a disperzija je u kvadratu: \\(D(Y)=4\\cdot0{,}81=3{,}24\\)."
+            }
+          ],
+          "answer": "\\(E(Y)=4{,}4\\), \\(D(Y)=3{,}24\\)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Binomna raspodela"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ponavljamo \\(n\\) nezavisnih pokušaja, u svakom je „uspeh“ sa verovatnoćom \\(p\\) (\\(q=1-p\\)). \\(X\\) je broj uspeha."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Binomna raspodela \\(B(n,p)\\)"
+        },
+        {
+          "type": "formula",
+          "items": [
+            {
+              "label": "Verovatnoća tačno \\(k\\) uspeha",
+              "tex": "P(X=k)=\\dbinom{n}{k}p^k q^{\\,n-k},\\quad k=0,1,\\dots,n"
+            },
+            {
+              "label": "Očekivanje i disperzija",
+              "tex": "E(X)=np,\\qquad D(X)=npq"
+            }
+          ]
+        },
+        {
+          "type": "worked-example",
+          "title": "Tri bacanja novčića",
+          "source": "Primer",
+          "problem": "Novčić se baca 3 puta. Kolika je verovatnoća da grb padne tačno dva puta? Koliko je očekivani broj grbova?",
+          "given": [
+            "\\(n=3\\)",
+            "\\(p=\\tfrac12\\), \\(q=\\tfrac12\\)"
+          ],
+          "steps": [
+            {
+              "title": "Zašto binomna",
+              "content": "Ponavlja se isti pokušaj 3 puta, nezavisno, a svaki ima ishod uspeh/neuspeh (grb ili pismo) sa istom verovatnoćom."
+            },
+            {
+              "title": "Verovatnoća tačno 2 grba",
+              "content": "Bira se na kojih 2 od 3 bacanja pada grb: \\(\\binom32=3\\) načina, a svaki ima verovatnoću \\(\\left(\\tfrac12\\right)^2\\cdot\\tfrac12=\\tfrac18\\). Ukupno \\(\\tfrac38\\)."
+            },
+            {
+              "title": "Očekivani broj grbova",
+              "content": "\\(E(X)=np=3\\cdot\\tfrac12=1{,}5\\)."
+            },
+            {
+              "title": "Disperzija",
+              "content": "\\(D(X)=npq=3\\cdot\\tfrac14=0{,}75\\)."
+            }
+          ],
+          "answer": "\\(P(X=2)=\\dfrac38\\), \\(E(X)=1{,}5\\)."
+        },
+        {
+          "type": "simulation",
+          "kind": "binomial",
+          "title": "Binomna raspodela B(n, p)",
+          "description": "Menjaj broj pokušaja \\(n\\) i verovatnoću uspeha \\(p\\). Vidi raspodelu, \\(E=np\\) i \\(D=npq\\), a zatim ponovi eksperiment da bi uporedio simulaciju sa teorijom.",
+          "config": {
+            "n": 3,
+            "p": 0.5,
+            "k": 2
+          },
+          "scripts": [
+            "simulations/common.js",
+            "simulations/binomial.js"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "12-neprekidne-slucajne-promenljive-gustina",
+    "subjectSlug": "verovatnoca-i-statistika",
+    "title": "Neprekidne slučajne promenljive: gustina",
+    "description": "Gustina raspodele, funkcija raspodele i određivanje konstante.",
+    "week": 12,
+    "date": "2026-12-30",
+    "formattedDate": "30.12.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Od suma do integrala"
+        },
+        {
+          "type": "paragraph",
+          "text": "Neprekidna slučajna promenljiva može uzeti bilo koju vrednost iz intervala (visina, vreme čekanja). Verovatnoća jedne tačke je 0, pa govorimo o verovatnoći <em>intervala</em>. Raspodela se opisuje <strong>gustinom</strong> \\(f(x)\\): sume iz diskretnog slučaja postaju integrali."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Gustina i funkcija raspodele"
+        },
+        {
+          "type": "formula",
+          "items": [
+            {
+              "label": "Uslovi za gustinu",
+              "tex": "f(x)\\ge0,\\qquad \\int_{-\\infty}^{+\\infty}f(x)\\,dx=1"
+            },
+            {
+              "label": "Verovatnoća intervala",
+              "tex": "P(a\\le X\\le b)=\\int_a^b f(x)\\,dx=F(b)-F(a)"
+            },
+            {
+              "label": "Funkcija raspodele",
+              "tex": "F(x)=P(X\\le x)=\\int_{-\\infty}^{x}f(t)\\,dt"
+            },
+            {
+              "label": "Veza gustine i F",
+              "tex": "f(x)=F'(x)"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Diskretno naspram neprekidno"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Pojam",
+            "Diskretna",
+            "Neprekidna"
+          ],
+          "rows": [
+            [
+              "Opis raspodele",
+              "zakon raspodele \\(p_i\\)",
+              "gustina \\(f(x)\\)"
+            ],
+            [
+              "Zbir verovatnoća",
+              "\\(\\sum p_i=1\\)",
+              "\\(\\int f=1\\)"
+            ],
+            [
+              "Očekivanje",
+              "\\(\\sum x_ip_i\\)",
+              "\\(\\int xf(x)dx\\)"
+            ],
+            [
+              "\\(P(X=a)\\)",
+              "može biti veće od 0",
+              "uvek 0"
+            ],
+            [
+              "Funkcija raspodele",
+              "stepenasta",
+              "neprekidna"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Tipičan zadatak (gustina sa parametrom)"
+        },
+        {
+          "type": "list",
+          "style": "numbered",
+          "items": [
+            "Iz uslova \\(\\int f(x)\\,dx=1\\) odredi nepoznatu konstantu.",
+            "Izračunaj tražene verovatnoće kao integral (ili preko \\(F\\)).",
+            "Odredi \\(F(x)\\) integraljenjem za svaki interval posebno: \\(0\\) levo od nosača, formula unutra, \\(1\\) desno.",
+            "Izračunaj \\(E(X)\\), \\(E(X^2)\\) pa \\(D(X)=E(X^2)-E(X)^2\\)."
+          ]
+        },
+        {
+          "type": "worked-example",
+          "title": "Odredi konstantu",
+          "source": "Primer",
+          "problem": "Gustina je \\(f(x)=cx^2\\) za \\(0\\le x\\le3\\), a van intervala \\(0\\). Odredi \\(c\\) i \\(P(X\\le1)\\).",
+          "given": [
+            "\\(f(x)=cx^2\\) na \\([0,3]\\)"
+          ],
+          "steps": [
+            {
+              "title": "Uslov normiranja",
+              "content": "Ukupna verovatnoća mora biti 1: \\(\\displaystyle\\int_0^3cx^2dx=1\\)."
+            },
+            {
+              "title": "Integral",
+              "content": "\\(c\\left[\\tfrac{x^3}3\\right]_0^3=c\\cdot9=1\\Rightarrow c=\\tfrac19\\)."
+            },
+            {
+              "title": "Tražena verovatnoća",
+              "content": "\\(P(X\\le1)=\\displaystyle\\int_0^1\\tfrac{x^2}9dx=\\tfrac19\\cdot\\tfrac13=\\tfrac1{27}\\)."
+            }
+          ],
+          "answer": "\\(c=\\tfrac19\\), \\(P(X\\le1)=\\tfrac1{27}\\)."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "13-neprekidne-ocekivanje-i-disperzija",
+    "subjectSlug": "verovatnoca-i-statistika",
+    "title": "Neprekidne: očekivanje i disperzija",
+    "description": "Kako se očekivanje i disperzija računaju integralom.",
+    "week": 13,
+    "date": "2027-01-06",
+    "formattedDate": "06.01.2027.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Isto kao kod diskretnih, samo sa integralom"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kod diskretnih promenljivih smo sabirali \\(x_i\\,p_i\\). Kod neprekidnih se zbir zamenjuje integralom, a verovatnoće gustinom \\(f(x)\\). Ideja je ista, menja se samo alat."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Brojne karakteristike"
+        },
+        {
+          "type": "formula",
+          "items": [
+            {
+              "label": "Očekivanje",
+              "tex": "E(X)=\\int_{-\\infty}^{+\\infty}x\\,f(x)\\,dx"
+            },
+            {
+              "label": "Očekivanje funkcije",
+              "tex": "E\\bigl(g(X)\\bigr)=\\int g(x)\\,f(x)\\,dx,\\quad E(X^2)=\\int x^2f(x)\\,dx"
+            },
+            {
+              "label": "Disperzija",
+              "tex": "D(X)=E(X^2)-\\bigl(E(X)\\bigr)^2"
+            },
+            {
+              "label": "Linearna transformacija",
+              "tex": "E(aX+b)=aE(X)+b,\\quad D(aX+b)=a^2D(X)"
+            }
+          ]
+        },
+        {
+          "type": "worked-example",
+          "title": "Gustina f(x) = x/2 na [0, 2]",
+          "source": "Primer",
+          "problem": "Gustina je \\(f(x)=\\tfrac{x}{2}\\) za \\(0\\le x\\le2\\), a van intervala \\(f(x)=0\\). Proveri da je gustina, odredi \\(P(1\\lt X\\lt2)\\), \\(F(x)\\), \\(E(X)\\), \\(D(X)\\), a zatim \\(E(Y)\\) i \\(D(Y)\\) za \\(Y=2X+1\\).",
+          "given": [
+            "\\(f(x)=\\tfrac x2\\) za \\(0\\le x\\le2\\), inače 0"
+          ],
+          "steps": [
+            {
+              "title": "Da li je ovo gustina",
+              "content": "Mora \\(f\\ge0\\) (jeste) i \\(\\int f=1\\): \\(\\displaystyle\\int_0^2\\tfrac x2dx=\\left[\\tfrac{x^2}4\\right]_0^2=1\\) ✓."
+            },
+            {
+              "title": "Funkcija raspodele (F)",
+              "content": "Za \\(0\\le x\\le2\\): \\(F(x)=\\displaystyle\\int_0^x\\tfrac t2dt=\\tfrac{x^2}4\\). Za \\(x\\lt0\\) je \\(F=0\\), za \\(x\\gt2\\) je \\(F=1\\)."
+            },
+            {
+              "title": "(P(1lt Xlt2))",
+              "content": "\\(F(2)-F(1)=1-\\tfrac14=\\tfrac34\\). Kod neprekidnih promenljivih nije bitno da li su granice uključene."
+            },
+            {
+              "title": "Očekivanje",
+              "content": "\\(E(X)=\\displaystyle\\int_0^2x\\cdot\\tfrac x2dx=\\left[\\tfrac{x^3}6\\right]_0^2=\\tfrac86=\\tfrac43\\)."
+            },
+            {
+              "title": "Disperzija",
+              "content": "\\(E(X^2)=\\displaystyle\\int_0^2\\tfrac{x^3}2dx=\\left[\\tfrac{x^4}8\\right]_0^2=2\\); \\(D(X)=2-\\tfrac{16}9=\\tfrac29\\)."
+            },
+            {
+              "title": "(Y=2X+1)",
+              "content": "\\(E(Y)=2\\cdot\\tfrac43+1=\\tfrac{11}3\\); \\(D(Y)=2^2\\cdot\\tfrac29=\\tfrac89\\)."
+            }
+          ],
+          "answer": "\\(P=\\tfrac34\\), \\(F(x)=\\tfrac{x^2}{4}\\), \\(E(X)=\\tfrac43\\), \\(D(X)=\\tfrac29\\), \\(E(Y)=\\tfrac{11}{3}\\), \\(D(Y)=\\tfrac89\\)."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "14-deskriptivna-statistika",
+    "subjectSlug": "verovatnoca-i-statistika",
+    "title": "Deskriptivna statistika",
+    "description": "Aritmetička sredina, disperzija uzorka, mod, medijana i empirijska funkcija raspodele.",
+    "week": 14,
+    "date": "2027-01-13",
+    "formattedDate": "13.01.2027.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Od verovatnoće ka statistici"
+        },
+        {
+          "type": "paragraph",
+          "text": "Verovatnoća polazi od poznatog modela i predviđa podatke. <strong>Statistika</strong> radi obrnuto: iz posmatranih podataka (<strong>uzorka</strong> \\(x_1,\\dots,x_n\\)) zaključuje o populaciji. Prvi korak je da podatke sažmemo nekoliko brojeva."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Mere centralne tendencije"
+        },
+        {
+          "type": "formula",
+          "items": [
+            {
+              "label": "Aritmetička sredina uzorka",
+              "tex": "\\bar{x}=\\dfrac1n\\sum_{i=1}^{n}x_i"
+            },
+            {
+              "label": "Grupisani podaci (vrednost \\(x_i\\) ima frekvenciju \\(f_i\\))",
+              "tex": "\\bar{x}=\\dfrac1n\\sum_{i=1}^{k}f_i\\,x_i,\\qquad n=\\sum f_i"
+            },
+            {
+              "label": "Mod \\(Mo\\)",
+              "tex": "Mo=\\text{vrednost sa najvećom frekvencijom}"
+            },
+            {
+              "label": "Medijana \\(Me\\) (sortiran uzorak)",
+              "tex": "Me=\\begin{cases}x_{\\left(\\frac{n+1}{2}\\right)}, & n\\text{ neparno}\\\\[4pt] \\dfrac{x_{(n/2)}+x_{(n/2+1)}}{2}, & n\\text{ parno}\\end{cases}"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Mere rasipanja"
+        },
+        {
+          "type": "formula",
+          "items": [
+            {
+              "label": "Disperzija uzorka",
+              "tex": "S^2=\\dfrac1n\\sum_{i=1}^{n}(x_i-\\bar{x})^2=\\dfrac1n\\sum_{i=1}^{n}x_i^2-\\bar{x}^2"
+            },
+            {
+              "label": "Standardna devijacija",
+              "tex": "S=\\sqrt{S^2}"
+            },
+            {
+              "label": "Ispravljena disperzija",
+              "tex": "S_*^2=\\dfrac{n}{n-1}\\,S^2=\\dfrac1{n-1}\\sum_{i=1}^{n}(x_i-\\bar{x})^2"
+            }
+          ],
+          "note": "Ispravljena disperzija je nepristrasna ocena disperzije populacije; u zadacima proveri koja se verzija traži (deli se sa \\(n\\) ili sa \\(n-1\\))."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Intervalna medijana i empirijska funkcija raspodele"
+        },
+        {
+          "type": "formula",
+          "items": [
+            {
+              "label": "Medijana iz grupisanih intervala (\\(L\\) donja granica medijalnog intervala, \\(F_{pr}\\) kumulativna frekvencija pre njega, \\(f_m\\) njegova frekvencija, \\(h\\) širina)",
+              "tex": "Me=L+\\dfrac{\\frac n2-F_{pr}}{f_m}\\cdot h"
+            },
+            {
+              "label": "Empirijska funkcija raspodele",
+              "tex": "F_n(x)=\\dfrac{\\text{broj elemenata uzorka}\\le x}{n}"
+            }
+          ]
+        },
+        {
+          "type": "worked-example",
+          "title": "Mali uzorak",
+          "source": "Primer",
+          "problem": "Dat je uzorak: 2, 3, 3, 5, 7. Odredi \\(\\bar{x}\\), \\(S^2\\), \\(S\\), \\(Mo\\), \\(Me\\).",
+          "given": [
+            "uzorak: 2, 3, 3, 5, 7 (\\(n=5\\))"
+          ],
+          "steps": [
+            {
+              "title": "Aritmetička sredina",
+              "content": "\\(\\bar x=\\tfrac{2+3+3+5+7}5=\\tfrac{20}5=4\\)."
+            },
+            {
+              "title": "Disperzija uzorka",
+              "content": "Preko formule \\(S^2=\\tfrac1n\\sum x_i^2-\\bar x^2\\): \\(\\sum x_i^2=4+9+9+25+49=96\\), pa \\(S^2=19{,}2-16=3{,}2\\)."
+            },
+            {
+              "title": "Provera po definiciji",
+              "content": "Odstupanja od 4: \\(-2,-1,-1,1,3\\); kvadrati \\(4,1,1,1,9\\), zbir 16, \\(16/5=3{,}2\\) ✓."
+            },
+            {
+              "title": "Standardna devijacija i ispravljena",
+              "content": "\\(S=\\sqrt{3{,}2}\\approx1{,}79\\). Ispravljena disperzija deli sa \\(n-1\\): \\(\\tfrac{16}4=4\\)."
+            },
+            {
+              "title": "Mod i medijana",
+              "content": "Mod: najčešća vrednost je 3. Medijana: uređen uzorak je već sortiran, srednji (treći) član je 3."
+            }
+          ],
+          "answer": "\\(\\bar{x}=4\\), \\(S^2=3{,}2\\), \\(S\\approx1{,}79\\), \\(Mo=Me=3\\)."
+        },
+        {
+          "type": "simulation",
+          "kind": "stats",
+          "title": "Statistički kalkulator",
+          "description": "Unesi svoj uzorak ili pritisni „Nasumičan uzorak“. Kalkulator računa sredinu, medijanu, mod i disperziju i pokazuje tabelu odstupanja koju bi radio ručno.",
+          "config": {
+            "sample": [
+              2,
+              3,
+              3,
+              5,
+              7
+            ]
+          },
+          "scripts": [
+            "simulations/common.js",
+            "simulations/stats.js"
+          ]
+        },
+        {
+          "type": "worked-example",
+          "title": "Grupisani podaci",
+          "source": "Primer",
+          "problem": "Ocene 10 učenika: ocena 1 dobila su 2 učenika, ocenu 2 njih 5, ocenu 3 njih 3. Odredi \\(\\bar{x}\\) i \\(S^2\\).",
+          "given": [
+            "ocena 1: 2 učenika",
+            "ocena 2: 5",
+            "ocena 3: 3",
+            "\\(n=10\\)"
+          ],
+          "steps": [
+            {
+              "title": "Sredina sa frekvencijama",
+              "content": "Umesto da sabiramo 10 brojeva, množimo vrednost frekvencijom: \\(\\bar x=\\tfrac{2\\cdot1+5\\cdot2+3\\cdot3}{10}=\\tfrac{21}{10}=2{,}1\\)."
+            },
+            {
+              "title": "Srednja vrednost kvadrata",
+              "content": "\\(\\tfrac{2\\cdot1+5\\cdot4+3\\cdot9}{10}=\\tfrac{49}{10}=4{,}9\\)."
+            },
+            {
+              "title": "Disperzija",
+              "content": "\\(S^2=4{,}9-2{,}1^2=4{,}9-4{,}41=0{,}49\\), pa \\(S=0{,}7\\)."
+            }
+          ],
+          "answer": "\\(\\bar{x}=2{,}1\\), \\(S^2=0{,}49\\), \\(S=0{,}7\\)."
+        },
+        {
+          "type": "worked-example",
+          "title": "Empirijska funkcija raspodele",
+          "source": "Primer",
+          "problem": "Za uzorak 2, 3, 3, 5, 7 odredi \\(F_n(x)\\).",
+          "given": [
+            "uzorak: 2, 3, 3, 5, 7"
+          ],
+          "steps": [
+            {
+              "title": "Šta je (F_n(x))",
+              "content": "Udeo elemenata uzorka koji nisu veći od \\(x\\): \\(F_n(x)=\\tfrac{\\#\\{x_i\\le x\\}}n\\). Menja se samo u vrednostima uzorka."
+            },
+            {
+              "title": "Vrednosti i skokovi",
+              "content": "2 (jednom): skok \\(\\tfrac15\\); 3 (dvaput): skok \\(\\tfrac25\\); 5: \\(\\tfrac15\\); 7: \\(\\tfrac15\\)."
+            },
+            {
+              "title": "Kumulativno",
+              "content": "Posle 2: \\(\\tfrac15\\); posle 3: \\(\\tfrac35\\); posle 5: \\(\\tfrac45\\); posle 7: 1."
+            }
+          ],
+          "answer": "\\(F_5(x)=0\\) za \\(x\\lt2\\); \\(\\tfrac15\\) za \\(2\\le x\\lt3\\); \\(\\tfrac35\\) za \\(3\\le x\\lt5\\); \\(\\tfrac45\\) za \\(5\\le x\\lt7\\); \\(1\\) za \\(x\\ge7\\)."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "<strong>Sledeći korak:</strong> u zbirci zadataka slede intervalne ocene, Poissonova i normalna raspodela i testiranje hipoteza. To još nije u ovim lekcijama."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "15-pregled-gradiva-i-priprema",
+    "subjectSlug": "verovatnoca-i-statistika",
+    "title": "Pregled gradiva i priprema za kolokvijume",
+    "description": "Koja formula kada, najčešće greške i pregled svih lekcija.",
+    "week": 15,
+    "date": "2027-01-20",
+    "formattedDate": "20.01.2027.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Koju formulu kada koristim"
+        },
+        {
+          "type": "paragraph",
+          "text": "Najveći deo posla na kolokvijumu je prepoznati o kom tipu zadatka se radi. Tabela ti u tome pomaže."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Ako u zadatku piše…",
+            "Radi",
+            "Lekcija"
+          ],
+          "rows": [
+            [
+              "„na koliko načina“, redosled bitan, svi elementi",
+              "permutacije \\(n!\\)",
+              "<a href=\"/verovatnoca-i-statistika/lekcija/01-kombinatorika-pravila-brojanja-i-permutacije\">1. nedelja</a>"
+            ],
+            [
+              "biramo \\(k\\) od \\(n\\), redosled bitan",
+              "varijacije",
+              "<a href=\"/verovatnoca-i-statistika/lekcija/02-kombinatorika-varijacije-i-kombinacije\">2. nedelja</a>"
+            ],
+            [
+              "biramo \\(k\\) od \\(n\\), redosled nije bitan",
+              "kombinacije \\(\\binom nk\\)",
+              "<a href=\"/verovatnoca-i-statistika/lekcija/02-kombinatorika-varijacije-i-kombinacije\">2. nedelja</a>"
+            ],
+            [
+              "povoljni / mogući ishodi",
+              "klasična verovatnoća",
+              "<a href=\"/verovatnoca-i-statistika/lekcija/03-uvod-u-verovatnocu\">3. nedelja</a>"
+            ],
+            [
+              "„ili“, „bar jedan“, „nijedan“",
+              "unija, suprotan događaj",
+              "<a href=\"/verovatnoca-i-statistika/lekcija/04-dogadjaji-i-operacije-sa-njima\">4. i 5. nedelja</a>"
+            ],
+            [
+              "„ako se zna da…“, „pod uslovom“",
+              "uslovna verovatnoća",
+              "<a href=\"/verovatnoca-i-statistika/lekcija/06-uslovna-verovatnoca\">6. nedelja</a>"
+            ],
+            [
+              "„i“ za nezavisne događaje",
+              "množenje verovatnoća",
+              "<a href=\"/verovatnoca-i-statistika/lekcija/07-nezavisnost-dogadjaja\">7. nedelja</a>"
+            ],
+            [
+              "više kutija / mašina / grupa, tražimo ukupnu verovatnoću",
+              "totalna verovatnoća",
+              "<a href=\"/verovatnoca-i-statistika/lekcija/08-totalna-verovatnoca\">8. nedelja</a>"
+            ],
+            [
+              "znamo ishod, tražimo „iz koje grupe“",
+              "Bajesova formula",
+              "<a href=\"/verovatnoca-i-statistika/lekcija/09-bajesova-formula\">9. nedelja</a>"
+            ],
+            [
+              "tabela \\(x_i\\) i \\(p_i\\)",
+              "zakon raspodele, \\(E(X)\\), \\(D(X)\\)",
+              "<a href=\"/verovatnoca-i-statistika/lekcija/10-slucajne-promenljive-i-funkcija-raspodele\">10. nedelja</a>"
+            ],
+            [
+              "\\(aX+b\\)",
+              "\\(E=aE(X)+b,\\ D=a^2D(X)\\)",
+              "<a href=\"/verovatnoca-i-statistika/lekcija/11-linearna-transformacija-i-binomna-raspodela\">11. nedelja</a>"
+            ],
+            [
+              "\\(n\\) nezavisnih pokušaja, uspeh sa \\(p\\)",
+              "binomna \\(B(n,p)\\)",
+              "<a href=\"/verovatnoca-i-statistika/lekcija/11-linearna-transformacija-i-binomna-raspodela\">11. nedelja</a>"
+            ],
+            [
+              "funkcija \\(f(x)\\) koja je gustina",
+              "\\(\\int f=1\\), \\(F(x)\\), \\(E\\), \\(D\\)",
+              "<a href=\"/verovatnoca-i-statistika/lekcija/12-neprekidne-slucajne-promenljive-gustina\">12. i 13. nedelja</a>"
+            ],
+            [
+              "uzorak podataka",
+              "sredina, mod, medijana, disperzija",
+              "<a href=\"/verovatnoca-i-statistika/lekcija/14-deskriptivna-statistika\">14. nedelja</a>"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Najčešće greške"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Mešanje varijacija i kombinacija: pitaj se „da li zamena mesta daje drugačiji ishod?“",
+            "Zaboravljeno oduzimanje preseka kod unije: \\(P(A\\cup B)=P(A)+P(B)-P(A\\cap B)\\).",
+            "Množenje verovatnoća kada događaji nisu nezavisni (izvlačenje bez vraćanja).",
+            "Kod Bajesa: u imenilac ide cela totalna verovatnoća, a ne samo jedan sabirak.",
+            "Disperzija: \\(D(aX+b)=a^2D(X)\\), konstanta \\(b\\) ne utiče, a \\(a\\) ide na kvadrat.",
+            "Kod gustine: pre svega proveri da je \\(\\int f(x)\\,dx=1\\)."
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Za kolokvijum ti trebaju formule i razumevanje primera, ne učenje napamet. Prođi još jednom primere označene „Zadatak iz zbirke“ i pokušaj da ih rešiš bez gledanja koraka."
+        }
+      ]
+    }
+  }
+]

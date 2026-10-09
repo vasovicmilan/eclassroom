@@ -5,21 +5,22 @@
   <!-- HERO -->
   <div class="row mb-4">
     <div class="col-12">
-      <div class="bg-primary text-white rounded-3 p-4 p-md-5">
+      <div class="subject-hero bg-primary text-white rounded-3 p-4 p-md-5">
         <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
           <div>
             <h1 class="display-5 fw-bold mb-2"><%= subject.name %></h1>
+            <% if (isInPreparation(subject)) { %><span class="badge bg-warning text-dark mb-2">U pripremi</span><% } %>
             <div class="d-flex flex-wrap gap-2">
-              <span class="badge bg-light text-primary">ESPB: <%= subject.espb %></span>
+              <span class="badge bg-light text-primary">ESPB: <%= subject.espb ?? '–' %></span>
               <span class="badge bg-light text-primary">Šifra: <%= subject.code %></span>
-              <span class="badge bg-light text-primary">Predavanja: <%= subject.lectures %></span>
-              <span class="badge bg-light text-primary">Vežbe: <%= subject.exercises %></span>
+              <span class="badge bg-light text-primary">Predavanja: <%= subject.lectures || '–' %></span>
+              <span class="badge bg-light text-primary">Vežbe: <%= subject.exercises || '–' %></span>
             </div>
           </div>
           <div class="text-end">
             <div class="display-6 fw-bold"><%= stats.available %>/<%= stats.total %></div>
             <div class="small">dostupnih lekcija</div>
-            <div class="progress mt-2" style="width: 150px;">
+            <div class="progress mt-2 ms-auto" style="width: 150px;">
               <div class="progress-bar" role="progressbar" style="width: <%= stats.percent %>%" aria-valuenow="<%= stats.percent %>" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </div>
@@ -35,7 +36,7 @@
         <div class="card-body">
           <div class="display-6">📅</div>
           <div class="small text-muted">Početak</div>
-          <div class="fw-bold"><%= subject.startDate %></div>
+          <div class="fw-bold"><%= subject.startDate.split('-').reverse().join('.') %>.</div>
         </div>
       </div>
     </div>
@@ -44,7 +45,7 @@
         <div class="card-body">
           <div class="display-6">🏁</div>
           <div class="small text-muted">Kraj</div>
-          <div class="fw-bold"><%= subject.endDate %></div>
+          <div class="fw-bold"><%= subject.endDate.split('-').reverse().join('.') %>.</div>
         </div>
       </div>
     </div>
@@ -53,7 +54,7 @@
         <div class="card-body">
           <div class="display-6">🎓</div>
           <div class="small text-muted">ESPB</div>
-          <div class="fw-bold"><%= subject.espb %></div>
+          <div class="fw-bold"><%= subject.espb ?? '–' %></div>
         </div>
       </div>
     </div>
@@ -79,8 +80,6 @@
         </div>
         <div class="card-body">
           <p class="lead"><%= subject.description %></p>
-          <p>Fokus predmeta nije samo na konkretnim alatima, već na razumevanju principa otvorenih sistema i njihove uloge u modernom IT okruženju.</p>
-          <p>Internet, web servisi, cloud platforme i razvojni alati u velikoj meri koriste tehnologije koje su javno dostupne i otvorene.</p>
         </div>
       </div>
 
@@ -154,12 +153,15 @@
         </div>
       </div>
 
-      <!-- Način ocenjivanja (može se učitati iz JSON-a ili ostati statički) -->
+      <!-- Način ocenjivanja: subject.grading (izostavljeno = standardna podela 10/10/30/30/20) -->
+      <% const grading = subject.grading; %>
+      <% const gradingItems = grading ? grading.items : null; %>
       <div class="card shadow-sm mb-4">
         <div class="card-header bg-white">
           <h2 class="h5 mb-0">Način ocenjivanja</h2>
         </div>
         <div class="card-body">
+          <% if (!grading) { %>
           <div class="d-flex justify-content-between mb-2">
             <span>📋 Prisustvo na predavanjima</span>
             <span class="fw-bold">10</span>
@@ -191,6 +193,27 @@
               <div class="progress-bar bg-success" role="progressbar" style="width: 51%" aria-valuenow="51" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </div>
+          <% } else if (!gradingItems.length) { %>
+            <p class="mb-0 text-muted"><%= (grading.note) || 'Način ocenjivanja biće objavljen.' %></p>
+          <% } else { %>
+            <% gradingItems.forEach(item => { %>
+              <div class="d-flex justify-content-between mb-2">
+                <span><%= item.icon || '📝' %> <%= item.label %></span>
+                <span class="fw-bold"><%= item.points === null || item.points === undefined ? '–' : item.points %></span>
+              </div>
+            <% }) %>
+            <% if (gradingItems.every(i => typeof i.points === 'number')) { %>
+              <hr>
+              <div class="d-flex justify-content-between fw-bold"><span>UKUPNO</span><span><%= gradingItems.reduce((sum, i) => sum + i.points, 0) %></span></div>
+            <% } %>
+            <% if (grading.passThreshold) { %>
+              <div class="mt-3">
+                <div class="small">Prag za prolaz: <%= grading.passThreshold %>/100</div>
+                <div class="progress mt-1"><div class="progress-bar bg-success" role="progressbar" style="width: <%= grading.passThreshold %>%" aria-valuenow="<%= grading.passThreshold %>" aria-valuemin="0" aria-valuemax="100"></div></div>
+              </div>
+            <% } %>
+            <% if (grading.note) { %><div class="alert alert-secondary small mt-3 mb-0"><%= grading.note %></div><% } %>
+          <% } %>
         </div>
       </div>
 

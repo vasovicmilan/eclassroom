@@ -1,0 +1,10 @@
+<%# Interaktivna vežba. kind: dice | cards | combinatorics | password | bayes | binomial | stats. Početna podešavanja idu u config.
+    Skripte vežbe navode se u polju scripts bloka (js/simulations/common.js + js/simulations/<kind>.js). %>
+<div class="card border-success mb-4 sim-card">
+  <div class="card-header bg-success text-white">🎮 <%- block.title || 'Interaktivna vežba' %></div>
+  <div class="card-body">
+    <% if (block.description) { %><p><%- block.description %></p><% } %>
+    <div class="sim" data-sim="<%= block.kind %>" data-config="<%= JSON.stringify(block.config || {}) %>"><noscript>Za ovu vežbu je potreban JavaScript.</noscript></div>
+    <% if (block.hint) { %><div class="alert alert-secondary small mt-3 mb-0"><%- block.hint %></div><% } %>
+  </div>
+</div>

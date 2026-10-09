@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "01-uvodno-predavanje",
+    "subjectSlug": "internet-marketing",
+    "title": "Uvodno predavanje",
+    "description": "Upoznavanje sa predmetom: čime se bavimo, kako radimo i šta se očekuje tokom semestra.",
+    "week": 1,
+    "date": "2026-10-12",
+    "formattedDate": "12.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Dobro došli na predmet"
+        },
+        {
+          "type": "paragraph",
+          "text": "Internet marketing bavi se načinom na koji se proizvodi, usluge i ideje predstavljaju ljudima putem interneta. Na ovom predmetu upoznajemo digitalne kanale i alate koje koriste kompanije, i učimo kako da ih razumemo i primenimo."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Čime ćemo se baviti"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "digitalna strategija i ciljna grupa",
+            "veb sajt i korisničko iskustvo",
+            "optimizacija za pretraživače (SEO) i sadržajni marketing",
+            "društvene mreže i plaćeno oglašavanje",
+            "e-mail marketing, analitika i optimizacija",
+            "pravni i etički aspekti digitalnog marketinga"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako radimo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Predavanja daju teorijsku osnovu. Vežbe su zamišljene da se praktično prođe ono što se radi na predavanjima: prolazićemo kroz različite alate i metode marketinga, radićemo na realnim projektima, pravićemo analize i rešavati zadatke."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Tačna raspodela bodova i druge informacije o obavezama biće naknadno objavljene na stranici predmeta."
+        }
+      ]
+    }
+  }
+]

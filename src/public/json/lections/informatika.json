@@ -1,0 +1,327 @@
+[
+  {
+    "slug": "01-uvodno-predavanje",
+    "subjectSlug": "informatika",
+    "title": "Uvodno predavanje",
+    "description": "Zašto nam je potrebna informatička pismenost, gde se sve koriste informacioni sistemi i jedan primer iz prakse: anketa na papiru, preko interneta i bez interneta.",
+    "week": 1,
+    "date": "2026-10-09",
+    "formattedDate": "09.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Dobro došli na predmet"
+        },
+        {
+          "type": "paragraph",
+          "text": "Informatika je predmet o tome kako računari i tehnologija rade i kako ih koristimo u životu i poslu. Ne morate da znate ništa unapred: krećemo od osnova i idemo korak po korak, običnim jezikom."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zašto nam je potrebna informatička pismenost"
+        },
+        {
+          "type": "paragraph",
+          "text": "Danas se gotovo sve oko nas oslanja na tehnologiju: banka, prodavnica, zdravstvo, škola, saobraćaj, posao. Kao što je nekada bilo važno znati da čitamo i pišemo, danas je važno snaći se u digitalnom svetu. Informatička i tehnološka pismenost znači da:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "umemo da koristimo uređaje i alate bez straha i bez zavisnosti od tuđe pomoći",
+            "razumemo šta radimo kada nešto kliknemo, pošaljemo ili sačuvamo",
+            "znamo da zaštitimo svoje podatke, naloge i novac",
+            "umemo da proverimo da li je nešto pouzdano ili je prevara",
+            "možemo da pratimo promene, na primer veštačku inteligenciju, bez osećaja da nas je tehnologija prestigla"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Informacioni sistemi svuda oko nas"
+        },
+        {
+          "type": "paragraph",
+          "text": "Informacioni sistem je skup ljudi, računara, programa i podataka koji zajedno obavljaju neki posao: prikupljaju podatke, čuvaju ih, obrađuju i daju korisne informacije. Većina nas ih koristi svaki dan, često i ne primećujući."
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "🏦",
+              "title": "Banka",
+              "text": "stanje na računu, plaćanja, kartice"
+            },
+            {
+              "icon": "🛒",
+              "title": "Prodavnica",
+              "text": "kasa, zalihe, porudžbine"
+            },
+            {
+              "icon": "🏥",
+              "title": "Zdravstvo",
+              "text": "zakazivanje pregleda, karton, recepti"
+            },
+            {
+              "icon": "🎓",
+              "title": "Škola i fakultet",
+              "text": "upis, ocene, raspored, e-učionica"
+            },
+            {
+              "icon": "🚌",
+              "title": "Saobraćaj",
+              "text": "karte, red vožnje, navigacija"
+            },
+            {
+              "icon": "🏛️",
+              "title": "Država",
+              "text": "dokumenta, porezi, e-uprava"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Čime ćemo se baviti"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tokom semestra ćemo u grubim crtama proći kroz oblasti koje svako od nas svakodnevno koristi na studijama i u poslu. To su upravo oblasti o kojima smo vas pitali u anketi o digitalnoj pismenosti. Svaka će biti objašnjena jednostavno i uz primere:"
+        },
+        {
+          "type": "cards",
+          "columns": 4,
+          "items": [
+            {
+              "icon": "🖥️",
+              "title": "Osnove rada na računaru",
+              "text": "fajlovi, folderi i cloud (Google Drive, OneDrive)"
+            },
+            {
+              "icon": "📝",
+              "title": "Word / Docs",
+              "text": "tekst, stilovi, naslovi i tabele"
+            },
+            {
+              "icon": "📊",
+              "title": "Excel / Sheets",
+              "text": "tabele, formule, sortiranje i filteri"
+            },
+            {
+              "icon": "📽️",
+              "title": "PowerPoint / Slides",
+              "text": "prezentacije, slike i grafikoni"
+            },
+            {
+              "icon": "✉️",
+              "title": "E-pošta",
+              "text": "CC i BCC, prilozi, lepo ponašanje"
+            },
+            {
+              "icon": "🤖",
+              "title": "Veštačka inteligencija",
+              "text": "ChatGPT, Gemini, Claude i drugi: čemu služe i koliko im verovati"
+            },
+            {
+              "icon": "🔒",
+              "title": "Bezbednost",
+              "text": "lozinke, 2FA i prepoznavanje prevara (phishing)"
+            },
+            {
+              "icon": "🧭",
+              "title": "Samostalno učenje",
+              "text": "kako sami savladati nove alate"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Primer iz stvarnog života: anketa na vežbama"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pogledajmo jedan stvaran problem sa kojim smo se sreli upravo na ovom predmetu. Cilj je da vidite kako informacioni sistem pomaže da se posao brže i lakše obavi."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Situacija"
+        },
+        {
+          "type": "paragraph",
+          "text": "Na vežbama su studenti sa <strong>4 smera</strong> i iz <strong>2 različite godine</strong>, što znači više grupa, a u grupi je i do stotinak studenata. Želimo da saznamo koliko su studenti informatički pismeni, da bismo gradivo prilagodili stvarnom znanju. Zato svaki student odgovara na isti niz od <strong>25 pitanja</strong> iz oblasti koje smo gore naveli (na primer „Koliko često koristiš Excel ili Google Sheets?“ ili „Da li koristiš dvofaktorsku autentikaciju?“), a mi treba da dobijemo pregled odgovora."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Kako bi to izgledalo na papiru"
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Štampanje",
+              "sub": "upitnik za svakog studenta"
+            },
+            {
+              "title": "Deljenje",
+              "sub": "u svakoj grupi"
+            },
+            {
+              "title": "Popunjavanje",
+              "sub": "olovkom"
+            },
+            {
+              "title": "Prikupljanje",
+              "sub": "sa svih grupa"
+            },
+            {
+              "title": "Ručno brojanje",
+              "sub": "i unos u tabelu"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo radi, ali ima izazove: potrebno je odštampati stotine listova, listovi se gube ili se rukopis ne može pročitati, a neko mora satima da ručno prebrojava odgovore i unosi ih u tabelu. Pri tome se lako pogreši, a rezultat dobijemo tek posle nekoliko dana."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Šta kada bi to bilo preko interneta"
+        },
+        {
+          "type": "paragraph",
+          "text": "Informacioni sistem to rešava: napravi se anketa kao veb stranica, a studenti je otvore na telefonu preko linka ili QR koda."
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Link ili QR kod",
+              "sub": "studenti ga otvore"
+            },
+            {
+              "title": "Odgovaranje",
+              "sub": "na telefonu"
+            },
+            {
+              "title": "Čuvanje",
+              "sub": "odgovori idu u bazu"
+            },
+            {
+              "title": "Pregled",
+              "sub": "rezultati odmah"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Nema štampanja, nema prepisivanja i nema grešaka pri brojanju, a rezultati su vidljivi čim studenti odgovore. Tako izgleda koristan informacioni sistem: <strong>prikupi</strong> podatke, <strong>sačuva</strong> ih i <strong>obradi</strong> u informaciju."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "A šta ako nema interneta?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tu nastaje novi problem. U učionici internet može da bude spor ili da ga uopšte nema, a kada se sto telefona odjednom priključi na istu mrežu, ona često ne izdrži. Anketa preko interneta tada ne radi, a vreme vežbi teče."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Rešenje koje smo napravili za demonstraciju"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pokazali smo da internet za ovakvu anketu zapravo nije neophodan. Napravili smo malu napravu na osnovu pločice veličine kutije šibica koja se zove <strong>ESP32</strong>. Košta nekoliko evra, a radi kao pravi mali računar. Na njoj su još mali ekran, džojstik (palica kao na igračkim kontrolerima) i lampica. Evo kako to izgleda jednostavnim rečima:"
+        },
+        {
+          "type": "list",
+          "style": "numbered",
+          "items": [
+            "Pločica sama napravi svoju malu Wi-Fi mrežu, baš kao kućni ruter, samo bez veze sa internetom. Mreža se zove <strong>ESP32-ANKETA</strong> i ima lozinku.",
+            "Student na telefonu izabere tu mrežu, isto kao što bira bilo koji Wi-Fi, i otvori adresu <strong>192.168.4.1</strong> u pregledaču.",
+            "Na pločici radi mali <strong>veb server</strong>, tj. program koji prikazuje stranicu sa pitanjima. Telefon je otvori kao običan sajt, jedno po jedno pitanje.",
+            "Kada student završi svih 25 pitanja, odgovori se šalju nazad na pločicu i čuvaju na njoj.",
+            "Pločica ima ograničenje: na nju istovremeno može da se poveže samo oko 10 telefona. Zato ona sama odjavi telefon nekoliko sekundi pošto student pošalje anketu, pa na red dolazi sledeći.",
+            "Mi odmah vidimo rezultate: na malom ekranu pločice (džojstikom biramo šta prikazati) i na stranici sa pregledom, a podatke možemo da preuzmemo kao tabelu i otvorimo u Excelu ili Google Sheets."
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Šta se ovde zapravo desilo? Isti delovi koje ima svaki informacioni sistem, samo u malom: <strong>mreža</strong> (povezivanje uređaja), <strong>server</strong> (program koji daje stranicu), <strong>podaci</strong> (odgovori studenata), <strong>korisnici</strong> (studenti i mi) i <strong>izveštaj</strong> (pregled rezultata). Ovo je primer koji ćemo kasnije razlagati deo po deo."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "",
+            "Papir",
+            "Internet",
+            "Naša pločica (bez interneta)"
+          ],
+          "rows": [
+            [
+              "Priprema",
+              "štampanje svih listova",
+              "pravljenje stranice",
+              "pravljenje stranice, jednom"
+            ],
+            [
+              "Potreban internet",
+              "ne",
+              "da",
+              "ne"
+            ],
+            [
+              "Prebrojavanje odgovora",
+              "ručno, satima",
+              "automatski",
+              "automatski"
+            ],
+            [
+              "Rezultat",
+              "za nekoliko dana",
+              "odmah",
+              "odmah"
+            ],
+            [
+              "Rizik",
+              "greške, izgubljeni listovi",
+              "ispad interneta ili preopterećena mreža",
+              "najviše 10 telefona odjednom, a podaci su u memoriji pločice (ako se isključi, brišu se, pa se na vreme preuzmu)"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "informacioni sistemi nisu samo veliki programi, oni su svuda oko nas",
+            "isti problem može da se reši na više načina, a bolji izbor zavisi od uslova (na primer, od toga da li postoji internet)",
+            "tehnologija nije čarolija: kada razumemo kako radi, lakše je koristimo i biramo pravo rešenje",
+            "kroz ovaj predmet ćete steći osnovu da razumete takve sisteme i da se u digitalnom svetu snalazite sigurno"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Tačna raspodela bodova i druge informacije o obavezama biće naknadno objavljene na stranici predmeta."
+        }
+      ]
+    }
+  }
+]

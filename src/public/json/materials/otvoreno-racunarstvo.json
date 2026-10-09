@@ -1,0 +1,74 @@
+[
+  {
+    "week": 0,
+    "title": "Uvodna prezentacija",
+    "file": "otvoreno-racunarstvo/UVODNA-PREZENTACIJA.pdf",
+    "date": "2026-02-26",
+    "formattedDate": "26.02.2026.",
+    "available": true,
+    "subjectSlug": "otvoreno-racunarstvo"
+  },
+  {
+    "week": 1,
+    "title": "Open source softver – ideja, istorija i zajednica",
+    "file": "otvoreno-racunarstvo/1. Open source softver, ideja, istorija i zajednica.pdf",
+    "date": "2026-02-26",
+    "formattedDate": "26.02.2026.",
+    "available": true,
+    "subjectSlug": "otvoreno-racunarstvo"
+  },
+  {
+    "week": 2,
+    "title": "Linux i otvoreni operativni sistemi",
+    "file": "otvoreno-racunarstvo/2. Linux i otvoreni operativni sistemi.pdf",
+    "date": "2026-03-06",
+    "formattedDate": "06.03.2026.",
+    "available": true,
+    "subjectSlug": "otvoreno-racunarstvo"
+  },
+  {
+    "week": 3,
+    "title": "Git i kolaborativni razvoj softvera",
+    "file": "otvoreno-racunarstvo/3. Git i kolaborativni razvoj softvera.pdf",
+    "date": "2026-03-13",
+    "formattedDate": "13.03.2026.",
+    "available": true,
+    "subjectSlug": "otvoreno-racunarstvo"
+  },
+  {
+    "week": 4,
+    "title": "Otvoreni protokoli i standardi",
+    "file": "otvoreno-racunarstvo/4. Otvoreni protokoli i standardi.pdf",
+    "date": "2026-03-20",
+    "formattedDate": "20.03.2026.",
+    "available": true,
+    "subjectSlug": "otvoreno-racunarstvo"
+  },
+  {
+    "week": 5,
+    "title": "API i REST",
+    "file": "otvoreno-racunarstvo/5. API & REST.pdf",
+    "date": "2026-03-27",
+    "formattedDate": "27.03.2026.",
+    "available": true,
+    "subjectSlug": "otvoreno-racunarstvo"
+  },
+  {
+    "week": 6,
+    "title": "Open Source licence",
+    "file": "otvoreno-racunarstvo/6. Open Source Licence, Pravila Koriscenja, Deljenja i Izmena.pdf",
+    "date": "2026-04-10",
+    "formattedDate": "10.04.2026.",
+    "available": true,
+    "subjectSlug": "otvoreno-racunarstvo"
+  },
+  {
+    "week": 7,
+    "title": "Uloga Open Source alata u otvorenom računarstvu",
+    "file": "otvoreno-racunarstvo/7. Uloga Open Source Alata u Otvorenom Racunarstvu.pdf",
+    "date": "2026-04-17",
+    "formattedDate": "17.04.2026.",
+    "available": true,
+    "subjectSlug": "otvoreno-racunarstvo"
+  }
+]

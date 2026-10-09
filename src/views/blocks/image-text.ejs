@@ -1,0 +1,1 @@
+<div class="row"><div class="col-md-6"><% (block.images || []).forEach(img => { %><img src="<%= img.src %>" class="img-fluid rounded" alt="<%= img.caption %>"><% }) %></div><div class="col-md-6"><% (block.paragraphs || []).forEach(p => { %><p><%- p %></p><% }) %><% if (block.items) { %><ul><% block.items.forEach(item => { %><li><%- item %></li><% }) %></ul><% } %></div></div>

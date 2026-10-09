@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "01-uvodno-predavanje",
+    "subjectSlug": "projektovanje-informacionih-sistema",
+    "title": "Uvodno predavanje",
+    "description": "Upoznavanje sa predmetom: šta je projektovanje informacionih sistema, kako radimo i šta se očekuje tokom semestra.",
+    "week": 1,
+    "date": "2026-10-13",
+    "formattedDate": "13.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Dobro došli na predmet"
+        },
+        {
+          "type": "paragraph",
+          "text": "Informacioni sistemi su svuda oko nas: od školskog dnevnika i bankarske aplikacije do sistema u bolnicama i prodavnicama. Na ovom predmetu učimo kako se takvi sistemi planiraju, modeluju i razvijaju."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Čime ćemo se baviti"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "životni ciklus razvoja sistema i metodologije razvoja",
+            "analiza i specifikacija zahteva, modelovanje poslovnih procesa",
+            "UML dijagrami",
+            "modelovanje podataka: ER i relacioni model",
+            "arhitektura sistema i korisnički interfejs",
+            "testiranje, uvođenje i održavanje"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako radimo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Vežbe su orijentisane na praktičnu primenu teorije. Posmatraćemo realne sisteme i analizirati ih, a naučeno ćemo primenjivati kroz konkretne zadatke."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Tačna raspodela bodova i druge informacije o obavezama biće naknadno objavljene na stranici predmeta."
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,4 @@
+<% if (block.level === 3) { %><h3 class="h5 mt-4 mb-2"><%- block.text %></h3>
+<% } else if (block.level === 4) { %><h4 class="h6 mt-3 mb-2"><%- block.text %></h4>
+<% } else { %><h2 class="h3 mb-3<%= block.numbered ? ' numbered' : '' %>"><%- block.text %></h2>
+<% } %>

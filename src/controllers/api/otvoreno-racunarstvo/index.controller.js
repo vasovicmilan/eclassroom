@@ -1,9 +1,6 @@
 import path from 'path';
-import { fileURLToPath } from 'url';
 import sharp from 'sharp';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import { PUBLIC_DIR } from '../../../config/paths.config.js';
 
 async function exploreHttp(url, protocol = 'https') {
   let targetUrl = url;
@@ -126,7 +123,7 @@ export async function getHtmlExample(req, res) {
 }
 
 export async function getImageExample(req, res) {
-  const imagePath = path.join(process.cwd(), 'src', 'public', 'images', 'otvoreno-racunarstvo', 'api-example.png');
+  const imagePath = path.join(PUBLIC_DIR, 'images', 'otvoreno-racunarstvo', 'api-example.png');
   try {
     const buffer = await sharp(imagePath)
       .resize(800, 600, { fit: 'inside' })
@@ -141,7 +138,7 @@ export async function getImageExample(req, res) {
 }
 
 export async function getPdfExample(req, res) {
-  const pdfPath = path.join(process.cwd(), 'src', 'public', 'pdf', 'api-example.pdf');
+  const pdfPath = path.join(PUBLIC_DIR, 'pdf', 'api-example.pdf');
   res.setHeader('Content-Type', 'application/pdf');
   res.setHeader('Content-Disposition', 'inline; filename="api-example.pdf"');
   res.setHeader('X-Frame-Options', 'SAMEORIGIN');

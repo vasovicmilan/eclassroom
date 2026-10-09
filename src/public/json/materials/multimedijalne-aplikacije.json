@@ -1,0 +1,146 @@
+[
+  {
+    "week": 0,
+    "title": "Knjiga – Photoshop (dodatna literatura)",
+    "file": "multimedijalne-aplikacije/Knjiga - Photoshop - dodatna literatura.pdf",
+    "date": "2026-02-19",
+    "formattedDate": "Dostupno tokom celog semestra",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 1,
+    "title": "Prvo predavanje",
+    "file": "multimedijalne-aplikacije/Prvo i drugo predavanje.pdf",
+    "date": "2026-02-19",
+    "formattedDate": "19.02.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 2,
+    "title": "Drugo predavanje",
+    "file": "multimedijalne-aplikacije/Prvo i drugo predavanje.pdf",
+    "date": "2026-02-26",
+    "formattedDate": "26.02.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 3,
+    "title": "Treće predavanje",
+    "file": "multimedijalne-aplikacije/Treće i četvrto predavanje.pdf",
+    "date": "2026-03-05",
+    "formattedDate": "05.03.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 4,
+    "title": "Četvrto predavanje",
+    "file": "multimedijalne-aplikacije/Treće i četvrto predavanje.pdf",
+    "date": "2026-03-12",
+    "formattedDate": "12.03.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 5,
+    "title": "Peto predavanje",
+    "file": "multimedijalne-aplikacije/Peto i šesto predavanje.pdf",
+    "date": "2026-03-19",
+    "formattedDate": "19.03.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 6,
+    "title": "Šesto predavanje",
+    "file": "multimedijalne-aplikacije/Peto i šesto predavanje.pdf",
+    "date": "2026-03-26",
+    "formattedDate": "26.03.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 7,
+    "title": "Sedmo predavanje",
+    "file": "multimedijalne-aplikacije/Sedmo i osmo predavanje.pdf",
+    "date": "2026-04-02",
+    "formattedDate": "02.04.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 8,
+    "title": "Osmo predavanje",
+    "file": "multimedijalne-aplikacije/Sedmo i osmo predavanje.pdf",
+    "date": "2026-04-09",
+    "formattedDate": "09.04.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 9,
+    "title": "Deveto predavanje",
+    "file": "multimedijalne-aplikacije/Deveto i deseto predavanje.pdf",
+    "date": "2026-04-09",
+    "formattedDate": "16.04.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 10,
+    "title": "Deseto predavanje",
+    "file": "multimedijalne-aplikacije/Deveto i deseto predavanje.pdf",
+    "date": "2026-04-09",
+    "formattedDate": "23.04.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 11,
+    "title": "Jedanaesto predavanje",
+    "file": "multimedijalne-aplikacije/Jedanaesto i dvanaesto predavanje.pdf",
+    "date": "2026-04-09",
+    "formattedDate": "30.04.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 12,
+    "title": "Dvanaesto predavanje",
+    "file": "multimedijalne-aplikacije/Jedanaesto i dvanaesto predavanje.pdf",
+    "date": "2026-04-09",
+    "formattedDate": "07.05.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 12,
+    "title": "Trinaesto predavanje",
+    "file": "multimedijalne-aplikacije/Trinaesto predavanje.pdf",
+    "date": "2026-04-09",
+    "formattedDate": "07.05.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 12,
+    "title": "Četrnaesto predavanje",
+    "file": "multimedijalne-aplikacije/Četrnaesto i petnaesto predavanje.pdf",
+    "date": "2026-04-09",
+    "formattedDate": "07.05.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  },
+  {
+    "week": 12,
+    "title": "Petnaesto predavanje",
+    "file": "multimedijalne-aplikacije/Četrnaesto i petnaesto predavanje.pdf",
+    "date": "2026-04-09",
+    "formattedDate": "07.05.2026.",
+    "available": true,
+    "subjectSlug": "multimedijalne-aplikacije"
+  }
+]

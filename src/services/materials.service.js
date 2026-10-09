@@ -1,19 +1,16 @@
 import materialsRepository from '../repositories/materials.repository.js';
+import { isUnlocked } from '../utils/unlock.utils.js';
+import { groupBy } from '../utils/collection.utils.js';
 
 class MaterialsService {
+  // Materijali budućih nedelja se ne prikazuju dok ne nastupi njihov datum.
   async getMaterialsBySubjectSlug(subjectSlug) {
-    return await materialsRepository.getMaterialsBySubjectSlug(subjectSlug);
+    return (await materialsRepository.getMaterialsBySubjectSlug(subjectSlug)).filter(isUnlocked);
   }
 
+  /** { 0: [...], 1: [...] } – materijali po nedeljama (0 = ceo semestar). */
   async getMaterialsGroupedByWeek(subjectSlug) {
-    const materials = await this.getMaterialsBySubjectSlug(subjectSlug);
-    const grouped = materials.reduce((acc, m) => {
-      const week = m.week;
-      if (!acc[week]) acc[week] = [];
-      acc[week].push(m);
-      return acc;
-    }, {});
-    return grouped;
+    return groupBy(await this.getMaterialsBySubjectSlug(subjectSlug), m => m.week);
   }
 }
 

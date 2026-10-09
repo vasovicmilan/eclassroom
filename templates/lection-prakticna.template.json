@@ -1,0 +1,91 @@
+{
+  "slug": "naslov-lekcije",
+  "subjectSlug": "novi-predmet",
+  "title": "Naslov lekcije",
+  "description": "Kratak opis lekcije.",
+  "week": 1,
+  "date": "2026-10-05",
+  "formattedDate": "05.10.2026.",
+  "available": false,
+  "content": {
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Cilj vežbe"
+      },
+      {
+        "type": "paragraph",
+        "text": "Šta će student napraviti ili naučiti da radi."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Priprema"
+      },
+      {
+        "type": "list",
+        "style": "bullets",
+        "items": [
+          "Potreban alat ili program",
+          "Potrebni fajlovi"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Koraci"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1. Prvi korak"
+      },
+      {
+        "type": "paragraph",
+        "text": "Opis prvog koraka."
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "code": "komanda --opcija"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2. Drugi korak"
+      },
+      {
+        "type": "paragraph",
+        "text": "Opis drugog koraka."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Zadaci za samostalni rad"
+      },
+      {
+        "type": "list",
+        "style": "numbered",
+        "items": [
+          "Zadatak 1",
+          "Zadatak 2"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Korisni linkovi"
+      },
+      {
+        "type": "links",
+        "items": [
+          {
+            "title": "Dokumentacija",
+            "url": "https://example.com"
+          }
+        ]
+      }
+    ]
+  }
+}

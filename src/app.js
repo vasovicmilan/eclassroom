@@ -1,7 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import helmet from 'helmet';
-import methodOverride from 'method-override';
 
 import { helmetConfig } from './config/helmet.config.js';
 import { viewEngineConfig } from './config/view.engine.config.js';
@@ -28,8 +27,6 @@ app.use(httpLogger);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-app.use(methodOverride('_method'));
 
 viewEngineConfig(app);
 

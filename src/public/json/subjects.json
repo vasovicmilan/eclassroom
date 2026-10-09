@@ -55,5 +55,117 @@
       "results": "#",
       "questions": "#"
     }
+  },
+  {
+    "id": 5,
+    "slug": "internet-marketing",
+    "name": "Internet marketing",
+    "code": "IM",
+    "icon": "📣",
+    "description": "Predmet daje pregled digitalnih kanala i alata koji se koriste u savremenom marketingu: od strategije, veb sajta i SEO-a, preko društvenih mreža i plaćenog oglašavanja, do analitike i optimizacije. Vežbe su zamišljene kao praktičan nastavak predavanja: prolazimo kroz različite alate i metode marketinga, radimo na realnim projektima, pravimo analize i rešavamo zadatke. Tačna raspodela bodova i ostale informacije biće naknadno dodate.",
+    "weeks": 15,
+    "espb": null,
+    "lectures": null,
+    "exercises": null,
+    "startDate": "2026-10-12",
+    "endDate": "2027-01-18",
+    "resources": {
+      "plan": "https://www.fimek.edu.rs/downloads/studije-2026-27/oas/soi/20.2.Internet_merketing.pdf",
+      "results": "#",
+      "questions": "#"
+    },
+    "grading": {
+      "items": [],
+      "passThreshold": null,
+      "note": "Tačna raspodela bodova biće objavljena naknadno."
+    }
+  },
+  {
+    "id": 6,
+    "slug": "projektovanje-informacionih-sistema",
+    "name": "Projektovanje informacionih sistema",
+    "code": "PIS",
+    "icon": "🗂️",
+    "description": "Predmet obrađuje način na koji se informacioni sistemi planiraju, modeluju i razvijaju: životni ciklus, analiza zahteva, UML, ER model, relacioni model, arhitektura i testiranje. Vežbe su orijentisane na praktičnu primenu teorije: posmatramo realne sisteme i analiziramo ih, a znanje primenjujemo kroz modelovanje i projektni zadatak. Tačna raspodela bodova i ostale informacije biće naknadno dodate.",
+    "weeks": 15,
+    "espb": null,
+    "lectures": null,
+    "exercises": null,
+    "startDate": "2026-10-13",
+    "endDate": "2027-01-19",
+    "resources": {
+      "plan": "https://www.fimek.edu.rs/downloads/studije-2026-27/oas/soi/25.Projektovanje_informacionih_sistema.pdf",
+      "results": "#",
+      "questions": "#"
+    },
+    "grading": {
+      "items": [],
+      "passThreshold": null,
+      "note": "Tačna raspodela bodova biće objavljena naknadno."
+    }
+  },
+  {
+    "id": 7,
+    "slug": "informatika",
+    "name": "Informatika",
+    "code": "INF",
+    "icon": "🖥️",
+    "description": "Predmet je usmeren na razumevanje savremenih tehnologija i upoznavanje sa najpoznatijim i najčešće korišćenim alatima. Cilj je povećanje tehnološke i informatičke pismenosti, uvid u to kako se informacioni sistemi primenjuju u stvarnosti i zašto su potrebni, kao i svest o važnosti osnovne edukacije i razumevanja tehnologije koju svakodnevno koristimo. Tačna raspodela bodova i ostale informacije biće naknadno dodate.",
+    "weeks": 15,
+    "espb": null,
+    "lectures": null,
+    "exercises": null,
+    "startDate": "2026-10-09",
+    "endDate": "2027-01-15",
+    "resources": {
+      "plan": "#",
+      "results": "#",
+      "questions": "#"
+    },
+    "grading": {
+      "items": [],
+      "passThreshold": null,
+      "note": "Tačna raspodela bodova biće objavljena naknadno."
+    }
+  },
+  {
+    "id": 4,
+    "slug": "verovatnoca-i-statistika",
+    "name": "Verovatnoća i statistika",
+    "code": "VIS",
+    "icon": "🎲",
+    "description": "Kombinatorika, verovatnoća događaja, uslovna verovatnoća i Bayesova formula, slučajne promenljive i osnove statistike uzorka.",
+    "weeks": 15,
+    "espb": null,
+    "lectures": null,
+    "exercises": null,
+    "startDate": "2026-10-14",
+    "endDate": "2027-01-20",
+    "resources": {
+      "plan": "https://www.fimek.edu.rs/downloads/studije-2026-27/oas/soi/10.Verovatnoca_i_statistika.pdf",
+      "results": "#",
+      "questions": "#"
+    },
+    "grading": {
+      "items": [
+        {
+          "label": "Kolokvijum 1",
+          "icon": "📝",
+          "points": null
+        },
+        {
+          "label": "Kolokvijum 2",
+          "icon": "📝",
+          "points": null
+        },
+        {
+          "label": "Seminarski rad",
+          "icon": "📄",
+          "points": null
+        }
+      ],
+      "passThreshold": null,
+      "note": "Bez završnog ispita. Raspodela poena biće naknadno objavljena."
+    }
   }
 ]

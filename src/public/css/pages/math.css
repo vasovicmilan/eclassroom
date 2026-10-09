@@ -1,0 +1,6 @@
+/* Stilovi za lekcije sa formulama (verovatnoća i statistika) */
+.formula-tex { overflow-x: auto; overflow-y: hidden; }
+.formula-card .katex-display { margin: 0.35rem 0; }
+.worked-example summary { cursor: pointer; }
+.worked-example details[open] summary { margin-bottom: 0.25rem; }
+.lection-content .katex { font-size: 1.05em; }

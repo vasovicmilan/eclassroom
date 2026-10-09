@@ -1,37 +1,12 @@
-import { readFile } from 'fs/promises';
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
+import { jsonPath, readJson, memoize } from '../utils/json.utils.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const landingPath = join(__dirname, '..', 'public', 'json', 'landing.json');
-let cachedData = null;
-
-async function loadLandingData() {
-  if (cachedData === null) {
-    const data = await readFile(landingPath, 'utf-8');
-    cachedData = JSON.parse(data);
-  }
-  return cachedData;
-}
+const loadLanding = memoize(() => readJson(jsonPath('landing.json')));
 
 const landingRepository = {
-  async getFeatures() {
-    const data = await loadLandingData();
-    return data.features;
-  },
-  async getProjectInfo() {
-    const data = await loadLandingData();
-    return data.projectInfo;
-  },
-  async getMeta() {
-    const data = await loadLandingData();
-    return data.meta;
-  },
-  async getAll() {
-    return await loadLandingData();
-  }
+  getAll: () => loadLanding(),
+  getFeatures: async () => (await loadLanding()).features,
+  getProjectInfo: async () => (await loadLanding()).projectInfo,
+  getMeta: async () => (await loadLanding()).meta,
 };
 
 export default landingRepository;

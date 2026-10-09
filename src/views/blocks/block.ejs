@@ -1,0 +1,6 @@
+<%# Dispatcher: jedan blok -> jedan partial istog imena. Tipovi su definisani u src/utils/block.types.js %>
+<% if ((locals.blockTypes || []).includes(block.type)) { %>
+<%- include('./' + block.type, { block }) %>
+<% } else { %>
+<div class="alert alert-danger">Nepoznat tip bloka: <strong><%= block.type %></strong></div>
+<% } %>

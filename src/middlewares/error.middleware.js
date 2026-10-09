@@ -1,4 +1,5 @@
 import { logger } from '../config/logger.config.js';
+import { errors } from '../utils/error.utils.js';
 
 function isApiRequest(req) {
   return (
@@ -10,21 +11,15 @@ function isApiRequest(req) {
 }
 
 export function notFound(req, res, next) {
-  const error = new Error(`Stranica nije pronađena: ${req.originalUrl}`);
-  error.status = 404;
-  next(error);
+  next(errors.notFound(`Stranica nije pronađena: ${req.originalUrl}`));
 }
 
 export function errorHandler(err, req, res, next) {
   const status = err.status || err.statusCode || 500;
   const errorId = Math.random().toString(36).substring(2, 10);
+  const isDev = process.env.NODE_ENV === 'development';
 
   logger.error({ err, errorId, status, url: req.originalUrl }, err.message);
-  if (process.env.NODE_ENV === 'development') {
-    // Ako logger ne prikaže stack dovoljno jasno, možemo i console.error
-    // console.error(err.stack); // može ostati, ali nije obavezno
-  }
-
   if (isApiRequest(req)) {
     const response = {
       success: false,
@@ -34,9 +29,7 @@ export function errorHandler(err, req, res, next) {
         status,
       },
     };
-    if (process.env.NODE_ENV === 'development') {
-      response.error.stack = err.stack;
-    }
+    if (isDev) response.error.stack = err.stack;
     return res.status(status).json(response);
   }
 
@@ -45,6 +38,6 @@ export function errorHandler(err, req, res, next) {
     message: err.message || 'Došlo je do greške',
     status,
     errorId,
-    stack: process.env.NODE_ENV === 'development' ? err.stack : null,
+    stack: isDev ? err.stack : null,
   });
 }

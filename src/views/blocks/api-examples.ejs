@@ -1,0 +1,3 @@
+<div class="mb-3"><label class="form-label">Izaberi tip odgovora:</label><select id="<%= block.config.selector.id %>" class="form-select"><% block.config.selector.options.forEach(opt => { %><option value="<%= opt.value %>"><%= opt.label %></option><% }) %></select></div>
+<button id="<%= block.config.selector.buttonId %>" class="btn btn-primary mb-3">Prikaži u iframe-u 🚀</button>
+<div class="ratio ratio-16x9"><iframe id="<%= block.config.selector.iframeId %>" title="Prikaz odgovora" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-downloads"></iframe></div>

@@ -1,0 +1,2 @@
+<%# Kartica koja može imati zaglavlje (title) i unutra druge blokove %>
+<div class="card mb-3"><% if (block.title) { %><div class="card-header"><%- block.title %></div><% } %><div class="card-body"><% (block.blocks || []).forEach(child => { %><%- include('./block', { block: child }) %><% }) %></div></div>

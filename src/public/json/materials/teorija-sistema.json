@@ -1,0 +1,119 @@
+[
+  {
+    "week": 1,
+    "title": "Uvod u predmet",
+    "file": "teorija-sistema/Uvod.pptx",
+    "date": "2026-02-23",
+    "formattedDate": "23.02.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 1,
+    "title": "UML – osnovni pojmovi i dijagrami",
+    "file": "teorija-sistema/1. čas.pptx",
+    "date": "2026-02-23",
+    "formattedDate": "23.02.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 1,
+    "title": "UML and OO Design Foundations",
+    "file": "teorija-sistema/UML-and-OO-Design-Foundations-v1_2.pdf",
+    "date": "2026-02-23",
+    "formattedDate": "23.02.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 1,
+    "title": "Klasni dijagram – uvod",
+    "file": "teorija-sistema/Klasni dijagram uvod.pptx",
+    "date": "2026-02-23",
+    "formattedDate": "23.02.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 1,
+    "title": "ER dijagrami – vežbe",
+    "file": "teorija-sistema/ER DIJAGRAMI 2. vezbe.pptx",
+    "date": "2026-02-23",
+    "formattedDate": "23.02.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 1,
+    "title": "Teorija sistema i informacija 1",
+    "file": "teorija-sistema/Teorija sistema i informacija 1.pptx",
+    "date": "2026-02-23",
+    "formattedDate": "23.02.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 2,
+    "title": "Teorija sistema i informacija 2",
+    "file": "teorija-sistema/Teorija sistema i informacija 2.pptx",
+    "date": "2026-03-02",
+    "formattedDate": "02.03.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 3,
+    "title": "Teorija sistema i informacija 3",
+    "file": "teorija-sistema/Teorija sistema i informacija 3.pptx",
+    "date": "2026-03-09",
+    "formattedDate": "09.03.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 4,
+    "title": "Teorija sistema i informacija 4",
+    "file": "teorija-sistema/Teorija sistema i informacija 4.pptx",
+    "date": "2026-03-16",
+    "formattedDate": "16.03.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 5,
+    "title": "Teorija sistema i informacija 5",
+    "file": "teorija-sistema/Teorija sistema i informacija 5.pptx",
+    "date": "2026-03-23",
+    "formattedDate": "23.03.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 6,
+    "title": "Teorija sistema i informacija 6",
+    "file": "teorija-sistema/Teorija sistema i informacija 6.pptx",
+    "date": "2026-03-30",
+    "formattedDate": "30.03.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 7,
+    "title": "Teorija sistema i informacija 7",
+    "file": "teorija-sistema/Teorija sistema i informacija 7.pptx",
+    "date": "2026-04-06",
+    "formattedDate": "06.04.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  },
+  {
+    "week": 8,
+    "title": "Teorija sistema i informacija 8",
+    "file": "teorija-sistema/Teorija sistema i informacija 8.pptx",
+    "date": "2026-04-13",
+    "formattedDate": "13.04.2026.",
+    "available": true,
+    "subjectSlug": "teorija-sistema"
+  }
+]

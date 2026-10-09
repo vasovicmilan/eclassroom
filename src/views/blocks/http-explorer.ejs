@@ -1,0 +1,12 @@
+<div class="card p-3 mb-3">
+  <form id="<%= block.config.form.formId || 'httpForm' %>" action="javascript:void(0);">
+    <div class="mb-3"><label class="form-label">Izaberi endpoint:</label><div><% (block.config.form.endpoints || []).forEach(ep => { %><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="endpoint" value="<%= ep.value %>" id="<%= ep.id %>Radio" <%= ep.default ? 'checked' : '' %>><label class="form-check-label" for="<%= ep.id %>Radio"><span class="badge bg-<%= ep.badge %>"><%= ep.label %></span></label></div><% }) %></div></div>
+    <div class="mb-3"><label class="form-label">URL:</label><input type="text" id="customUrl" class="form-control" value="<%= block.config.form.defaultUrl %>"></div>
+    <button type="submit" class="btn btn-primary">Pošalji zahtev ➡️</button>
+  </form>
+  <div id="<%= block.config.form.statusContainerId %>" class="mt-3"></div>
+  <pre id="<%= block.config.form.responseContainerId %>" class="bg-light p-2 mt-2 border rounded">Čekam tvoj zahtev...</pre>
+  <div id="<%= block.config.form.handshakeContainerId %>" class="d-none mt-3"></div>
+</div>
+<% if (block.config.curlExamples) { %><div class="row g-3 mt-2"><div class="col-md-6"><div class="card"><div class="card-header">📡 HTTP Request (curl)</div><div class="card-body"><pre class="mb-0"><code><%= block.config.curlExamples.http.textCode %></code></pre></div></div></div><div class="col-md-6"><div class="card"><div class="card-header">🔒 HTTPS Request (curl)</div><div class="card-body"><pre class="mb-0"><code><%= block.config.curlExamples.https.textCode %></code></pre></div></div></div></div><% } %>
+<% if (block.config.handshakeExplanation) { %><div class="card mt-3"><div class="card-header"><%= block.config.handshakeExplanation.title %></div><div class="card-body"><ol><% block.config.handshakeExplanation.steps.forEach(step => { %><li><%- step %></li><% }) %></ol></div></div><% } %>

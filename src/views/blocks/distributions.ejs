@@ -1,0 +1,1 @@
+<% block.items.forEach(dist => { %><div class="card mb-3"><div class="card-body"><h3 class="h5"><%= dist.name %></h3><p><%- dist.description %></p><a href="<%= dist.url %>" target="_blank" class="btn btn-sm btn-primary"><%= dist.label || 'Preuzmi' %></a></div></div><% }) %>

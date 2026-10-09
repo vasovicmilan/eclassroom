@@ -1,6 +1,6 @@
 <%- include('../includes/head', { 
-    title: title || 'Greška', 
-    pageDescription: message || 'Došlo je do greške', 
+    title: locals.title || 'Greška', 
+    pageDescription: locals.message || 'Došlo je do greške', 
     pageStyles: 'pages/error.css' 
 }) %>
 
@@ -11,17 +11,17 @@
         <div class="col-md-8 col-lg-6 text-center">
             <div class="error-card border rounded-3 shadow-sm p-5 bg-white">
                 <div class="error-status mb-4">
-                    <span class="display-1 fw-bold text-danger"><%= status || '???' %></span>
+                    <span class="display-1 fw-bold text-danger"><%= locals.status || '404' %></span>
                 </div>
 
-                <h1 class="h3 mb-3"><%= title || 'Greška' %></h1>
-                <p class="text-muted mb-4"><%= message || 'Došlo je do neočekivane greške.' %></p>
+                <h1 class="h3 mb-3"><%= locals.title || 'Greška' %></h1>
+                <p class="text-muted mb-4"><%= locals.message || 'Došlo je do neočekivane greške.' %></p>
 
-                <% if (errorId) { %>
+                <% if (locals.errorId) { %>
                     <p class="small text-muted mb-4">ID greške: <%= errorId %></p>
                 <% } %>
 
-                <% if (stack && process.env.NODE_ENV === 'development') { %>
+                <% if (locals.stack && process.env.NODE_ENV === 'development') { %>
                     <details class="mt-4 text-start">
                         <summary class="text-muted">Detalji greške</summary>
                         <pre class="bg-light p-3 rounded mt-2 small"><code><%= stack %></code></pre>

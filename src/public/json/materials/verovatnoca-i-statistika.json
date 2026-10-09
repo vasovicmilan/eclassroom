@@ -1,0 +1,65 @@
+[
+  {
+    "week": 0,
+    "title": "Zbirka zadataka iz statistike",
+    "file": "verovatnoca-i-statistika/Zbirka_zadataka_iz_statistike.pdf",
+    "date": "2026-10-14",
+    "formattedDate": "Dostupno tokom celog semestra",
+    "available": true,
+    "subjectSlug": "verovatnoca-i-statistika"
+  },
+  {
+    "week": 1,
+    "title": "Predavanje I: kombinatorika",
+    "file": "verovatnoca-i-statistika/Verovatnoca i Statistika Predavanje I.pdf",
+    "date": "2026-10-14",
+    "formattedDate": "14.10.2026.",
+    "available": true,
+    "subjectSlug": "verovatnoca-i-statistika"
+  },
+  {
+    "week": 3,
+    "title": "Predavanje II: uvod u verovatnoću",
+    "file": "verovatnoca-i-statistika/Uvod-u-Verovatnocu Predavanje II.pdf",
+    "date": "2026-10-28",
+    "formattedDate": "28.10.2026.",
+    "available": true,
+    "subjectSlug": "verovatnoca-i-statistika"
+  },
+  {
+    "week": 4,
+    "title": "Događaji, formule i ključne razlike",
+    "file": "verovatnoca-i-statistika/Razumevanje-Verovatnoce-Dogadjaji-Formule-i-Kljucne-Razlike.pdf",
+    "date": "2026-11-04",
+    "formattedDate": "04.11.2026.",
+    "available": true,
+    "subjectSlug": "verovatnoca-i-statistika"
+  },
+  {
+    "week": 5,
+    "title": "Verovatnoća: nastavak i zadaci",
+    "file": "verovatnoca-i-statistika/verovatnoca-nastavak.pdf",
+    "date": "2026-11-11",
+    "formattedDate": "11.11.2026.",
+    "available": true,
+    "subjectSlug": "verovatnoca-i-statistika"
+  },
+  {
+    "week": 6,
+    "title": "Uslovna verovatnoća i Bajesova formula",
+    "file": "verovatnoca-i-statistika/USLOVNA-VEROVATNOCA-BAJESOVA-FORMULA.pdf",
+    "date": "2026-11-18",
+    "formattedDate": "18.11.2026.",
+    "available": true,
+    "subjectSlug": "verovatnoca-i-statistika"
+  },
+  {
+    "week": 10,
+    "title": "Slučajne promenljive (apsolutno neprekidnog tipa)",
+    "file": "verovatnoca-i-statistika/Verovatnoca-i-Statistika-Slucajne-Promenljive-apsolutnog-neprekidnog-tipa.pdf",
+    "date": "2026-12-16",
+    "formattedDate": "16.12.2026.",
+    "available": true,
+    "subjectSlug": "verovatnoca-i-statistika"
+  }
+]

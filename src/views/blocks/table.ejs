@@ -1,0 +1,1 @@
+<div class="table-responsive"><table class="table table-bordered"><thead class="table-light"><tr><% block.headers.forEach(h => { %><th><%= h %></th><% }) %></tr></thead><tbody><% block.rows.forEach(row => { %><tr><% row.forEach(cell => { %><td><%- cell %></td><% }) %></tr><% }) %></tbody></table></div>

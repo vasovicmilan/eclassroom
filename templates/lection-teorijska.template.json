@@ -1,0 +1,75 @@
+{
+  "slug": "naslov-lekcije",
+  "subjectSlug": "novi-predmet",
+  "title": "Naslov lekcije",
+  "description": "Kratak opis lekcije.",
+  "week": 1,
+  "date": "2026-10-05",
+  "formattedDate": "05.10.2026.",
+  "available": false,
+  "content": {
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Uvod"
+      },
+      {
+        "type": "paragraph",
+        "text": "Šta se obrađuje i zašto je važno."
+      },
+      {
+        "type": "callout",
+        "variant": "info",
+        "title": "Cilj lekcije",
+        "text": "Šta student treba da zna nakon ove lekcije."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Osnovni pojmovi"
+      },
+      {
+        "type": "paragraph",
+        "text": "Definicije i objašnjenja ključnih pojmova."
+      },
+      {
+        "type": "list",
+        "style": "bullets",
+        "items": [
+          "Pojam 1",
+          "Pojam 2"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "Podtema"
+      },
+      {
+        "type": "paragraph",
+        "text": "Detaljnije objašnjenje jedne podteme."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Primer iz prakse"
+      },
+      {
+        "type": "paragraph",
+        "text": "Konkretan primer koji povezuje teoriju sa praksom."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Zaključak"
+      },
+      {
+        "type": "callout",
+        "variant": "success",
+        "title": "Naslov (opciono)",
+        "text": "Najvažnija poruka lekcije u jednoj do dve rečenice."
+      }
+    ]
+  }
+}

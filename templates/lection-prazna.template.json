@@ -1,0 +1,32 @@
+{
+  "slug": "naslov-lekcije",
+  "subjectSlug": "novi-predmet",
+  "title": "Naslov lekcije",
+  "description": "Kratak opis lekcije.",
+  "week": 1,
+  "date": "2026-10-05",
+  "formattedDate": "05.10.2026.",
+  "available": false,
+  "content": {
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Uvod"
+      },
+      {
+        "type": "paragraph",
+        "text": "Napiši uvod u temu."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Zaključak"
+      },
+      {
+        "type": "paragraph",
+        "text": "Rezime najvažnijeg iz lekcije."
+      }
+    ]
+  }
+}

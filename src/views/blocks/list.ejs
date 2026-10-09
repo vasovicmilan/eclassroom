@@ -1,0 +1,12 @@
+<% const style = block.style || 'group'; %>
+<% if (style === 'numbered') { %>
+<ol class="list-group list-group-numbered"><% block.items.forEach(item => { %><li class="list-group-item"><%- item %></li><% }) %></ol>
+<% } else if (style === 'flush') { %>
+<ul class="list-group list-group-flush mb-3"><% block.items.forEach(item => { %><li class="list-group-item bg-transparent"><%- item %></li><% }) %></ul>
+<% } else if (style === 'bullets') { %>
+<ul><% block.items.forEach(item => { %><li><%- item %></li><% }) %></ul>
+<% } else if (style === 'ordered') { %>
+<ol><% block.items.forEach(item => { %><li><%- item %></li><% }) %></ol>
+<% } else { %>
+<ul class="list-group"><% block.items.forEach(item => { %><li class="list-group-item"><%- item %></li><% }) %></ul>
+<% } %>

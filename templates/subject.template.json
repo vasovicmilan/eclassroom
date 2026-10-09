@@ -1,0 +1,25 @@
+{
+  "id": 0,
+  "slug": "novi-predmet",
+  "name": "Novi predmet",
+  "code": "NP",
+  "icon": "📘",
+  "description": "",
+  "weeks": 15,
+  "espb": null,
+  "lectures": null,
+  "exercises": null,
+  "startDate": "2026-10-05",
+  "endDate": "2027-01-11",
+  "resources": {
+    "plan": "#",
+    "results": "#",
+    "questions": "#"
+  },
+  "status": "u-pripremi",
+  "grading": {
+    "items": [],
+    "passThreshold": null,
+    "note": null
+  }
+}

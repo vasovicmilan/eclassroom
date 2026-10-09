@@ -1,0 +1,32 @@
+/* Interaktivne vežbe u lekcijama (blok "simulation") */
+.sim { font-size: .95rem; }
+.sim .sim-row { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: flex-end; margin-bottom: .75rem; }
+.sim .sim-row label { font-size: .8rem; color: var(--bs-secondary-color, #6c757d); display: block; margin-bottom: .15rem; }
+.sim .sim-out { background: var(--bs-tertiary-bg, #f8f9fa); border-radius: .5rem; padding: .75rem 1rem; margin-top: .75rem; }
+.sim .sim-big { font-size: 1.4rem; font-weight: 700; }
+.sim .sim-dice { display: flex; flex-wrap: wrap; gap: .6rem; min-height: 80px; padding: .5rem 0; }
+.sim .sim-dice .die { filter: drop-shadow(0 2px 3px rgba(0,0,0,.25)); }
+.sim .sim-dice.rolling .die { animation: sim-shake .25s linear infinite; }
+@keyframes sim-shake { 0% { transform: rotate(-12deg); } 50% { transform: rotate(12deg); } 100% { transform: rotate(-12deg); } }
+.sim .sim-cards { display: flex; flex-wrap: wrap; gap: .4rem; min-height: 5.2rem; }
+.sim .playing-card { width: 3.6rem; height: 5rem; border: 1px solid #adb5bd; border-radius: .35rem; background: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 700; font-size: 1.05rem; line-height: 1.1; box-shadow: 0 1px 2px rgba(0,0,0,.15); }
+.sim .playing-card.red { color: #c0392b; }
+.sim .playing-card.hit { outline: 3px solid #198754; }
+.sim .playing-card small { font-size: 1.1rem; }
+.sim .sim-chart { display: flex; align-items: flex-end; gap: 2px; height: 180px; padding-top: 6px; border-bottom: 1px solid #adb5bd; }
+.sim .sim-col { flex: 1 1 0; min-width: 3px; height: 100%; position: relative; display: flex; align-items: flex-end; }
+.sim .sim-col .bar { width: 100%; background: #6c8ebf; border-radius: 2px 2px 0 0; min-height: 0; }
+.sim .sim-col.hit .bar { background: #198754; }
+.sim .sim-col .theo { position: absolute; left: -1px; right: -1px; height: 0; border-top: 3px solid #dc3545; }
+.sim .sim-labels { display: flex; gap: 2px; font-size: .7rem; color: #6c757d; }
+.sim .sim-labels span { flex: 1 1 0; min-width: 3px; text-align: center; overflow: visible; white-space: nowrap; }
+.sim .sim-legend { font-size: .8rem; margin-top: .4rem; }
+.sim .sim-legend i { display: inline-block; width: 1rem; height: .6rem; margin-right: .25rem; vertical-align: middle; }
+.sim .sim-meter { height: .8rem; border-radius: .4rem; background: #e9ecef; overflow: hidden; }
+.sim .sim-meter div { height: 100%; transition: width .2s; }
+.sim .sim-dots { display: grid; grid-template-columns: repeat(40, 1fr); gap: 2px; max-width: 560px; }
+.sim .sim-dots i { aspect-ratio: 1; border-radius: 50%; display: block; }
+.sim .sim-list { display: flex; flex-wrap: wrap; gap: .3rem; max-height: 9rem; overflow: auto; font-family: monospace; }
+.sim .sim-list span { background: #e7f1ff; border-radius: .3rem; padding: .05rem .4rem; }
+.sim table { font-size: .85rem; }
+.sim input[type=number], .sim select { max-width: 8rem; }

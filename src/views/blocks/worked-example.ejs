@@ -1,0 +1,13 @@
+<%# Rešen zadatak: tekst zadatka, a korake i odgovor student otvara sam (details). %>
+<div class="card border-primary mb-4 worked-example">
+  <div class="card-header bg-primary text-white"><%- block.title || 'Primer' %><% if (block.source) { %> <span class="badge bg-light text-primary ms-2"><%= block.source %></span><% } %></div>
+  <div class="card-body">
+    <div class="mb-3"><%- block.problem %></div>
+    <% if (block.given && block.given.length) { %><ul class="mb-3"><% block.given.forEach(g => { %><li><%- g %></li><% }) %></ul><% } %>
+    <details>
+      <summary class="fw-bold">Prikaži rešenje</summary>
+      <ol class="mt-3"><% block.steps.forEach(step => { %><li class="mb-2"><% if (step.title) { %><strong><%- step.title %></strong><br><% } %><%- step.content %></li><% }) %></ol>
+      <div class="alert alert-success mt-3 mb-0"><strong>Odgovor:</strong> <%- block.answer %></div>
+    </details>
+  </div>
+</div>

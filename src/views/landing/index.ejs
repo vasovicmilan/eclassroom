@@ -170,10 +170,11 @@
               <div class="card-body">
                 <div class="subject-icon display-1 mb-3"><%= subject.icon || "📘" %></div>
                 <h3 class="h5 fw-semibold"><%= subject.name %></h3>
+                <% if (isInPreparation(subject)) { %><span class="badge bg-warning text-dark mb-2">U pripremi</span><% } %>
                 <p class="text-muted"><%= subject.description || "Opis predmeta uskoro." %></p>
                 <div class="d-flex justify-content-center gap-3 mb-3 text-muted small">
                   <span><%= subject.weeks %> nedelja</span>
-                  <span><%= subject.espb %> ESPB</span>
+                  <% if (subject.espb) { %><span><%= subject.espb %> ESPB</span><% } %>
                 </div>
                 <a href="/<%= subject.slug %>" class="btn btn-outline-primary">Istraži predmet →</a>
               </div>
