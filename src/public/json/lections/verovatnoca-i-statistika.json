@@ -5,7 +5,7 @@
     "title": "Kombinatorika I: pravila brojanja i permutacije",
     "description": "Pravilo zbira i proizvoda, faktorijel i permutacije sa i bez ponavljanja.",
     "week": 1,
-    "date": "2026-10-14",
+    "date": "2026-10-12",
     "formattedDate": "12.10.2026.",
     "available": true,
     "content": {
@@ -299,7 +299,7 @@
     "title": "Kombinatorika II: varijacije i kombinacije",
     "description": "Kako se bira iz skupa: kada je redosled bitan, a kada nije, sa i bez ponavljanja.",
     "week": 2,
-    "date": "2026-10-21",
+    "date": "2026-10-12",
     "formattedDate": "12.10.2026.",
     "available": true,
     "content": {
@@ -649,7 +649,7 @@
     "title": "Uvod u verovatnoću",
     "description": "Slučajni eksperiment, prostor ishoda, klasična i geometrijska verovatnoća.",
     "week": 3,
-    "date": "2026-10-28",
+    "date": "2026-10-12",
     "formattedDate": "12.10.2026.",
     "available": true,
     "content": {
