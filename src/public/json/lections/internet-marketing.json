@@ -1,9 +1,9 @@
 [
   {
-    "slug": "01-uvodno-predavanje",
+    "slug": "01-uvod-u-internet-marketing",
     "subjectSlug": "internet-marketing",
-    "title": "Uvodno predavanje",
-    "description": "Upoznavanje sa predmetom: čime se bavimo, kako radimo i šta se očekuje tokom semestra.",
+    "title": "Uvod u internet marketing",
+    "description": "Definicija i svrha marketinga, marketing miks (P), SMART ciljevi, tradicionalni i internet marketing i svest o brendu.",
     "week": 1,
     "date": "2026-10-12",
     "formattedDate": "12.10.2026.",
@@ -13,42 +13,1714 @@
         {
           "type": "heading",
           "level": 2,
-          "text": "Dobro došli na predmet"
+          "text": "Šta je marketing"
         },
         {
           "type": "paragraph",
-          "text": "Internet marketing bavi se načinom na koji se proizvodi, usluge i ideje predstavljaju ljudima putem interneta. Na ovom predmetu upoznajemo digitalne kanale i alate koje koriste kompanije, i učimo kako da ih razumemo i primenimo."
+          "text": "<strong>Marketing</strong> je skup aktivnosti kojima firma otkriva šta ljudi žele, pravi ponudu koja im to daje i obaveštava ih o njoj, tako da se uspostavi korisna razmena za obe strane. Svrha marketinga nije samo reklama, nego da se pravi proizvod prave vrste, po pravoj ceni, na pravom mestu i da ljudi za njega saznaju."
         },
         {
           "type": "heading",
           "level": 2,
-          "text": "Čime ćemo se baviti"
+          "text": "Marketing miks (P)"
         },
         {
-          "type": "list",
-          "style": "flush",
-          "items": [
-            "digitalna strategija i ciljna grupa",
-            "veb sajt i korisničko iskustvo",
-            "optimizacija za pretraživače (SEO) i sadržajni marketing",
-            "društvene mreže i plaćeno oglašavanje",
-            "e-mail marketing, analitika i optimizacija",
-            "pravni i etički aspekti digitalnog marketinga"
+          "type": "paragraph",
+          "text": "Marketing miks je skup stvari koje firma sama kontroliše. Osnova su 4P, a proširene verzije dodaju još P (npr. ljude, proces i materijalne dokaze). Koji su tačno 12P, proveri u skripti."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "P",
+            "Šta znači",
+            "Primer"
+          ],
+          "rows": [
+            [
+              "Proizvod (<em>product</em>)",
+              "šta nudimo",
+              "telefon, usluga, aplikacija"
+            ],
+            [
+              "Cena (<em>price</em>)",
+              "koliko košta i kako se plaća",
+              "popust, rate, pretplata"
+            ],
+            [
+              "Distribucija (<em>place</em>)",
+              "gde i kako dolazi do kupca",
+              "internet prodavnica, prodavnica u gradu"
+            ],
+            [
+              "Promocija (<em>promotion</em>)",
+              "kako ljudi saznaju za ponudu",
+              "oglasi, društvene mreže, e-mail"
+            ]
           ]
         },
         {
           "type": "heading",
           "level": 2,
-          "text": "Kako radimo"
+          "text": "SMART ciljevi"
         },
         {
           "type": "paragraph",
-          "text": "Predavanja daju teorijsku osnovu. Vežbe su zamišljene da se praktično prođe ono što se radi na predavanjima: prolazićemo kroz različite alate i metode marketinga, radićemo na realnim projektima, pravićemo analize i rešavati zadatke."
+          "text": "Cilj treba postaviti tako da se zna da li je ostvaren. SMART je pravilo koje to omogućava:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Slovo",
+            "Značenje",
+            "Primer"
+          ],
+          "rows": [
+            [
+              "S",
+              "konkretan (<em>specific</em>)",
+              "povećati broj posetilaca sajta"
+            ],
+            [
+              "M",
+              "merljiv (<em>measurable</em>)",
+              "za 20%"
+            ],
+            [
+              "A",
+              "dostižan (<em>achievable</em>)",
+              "realno u odnosu na budžet i resurse"
+            ],
+            [
+              "R",
+              "relevantan (<em>relevant</em>)",
+              "povezan sa ciljem poslovanja"
+            ],
+            [
+              "T",
+              "vremenski ograničen (<em>time-bound</em>)",
+              "u naredna 3 meseca"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Tradicionalni i internet marketing"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "",
+            "Tradicionalni",
+            "Internet"
+          ],
+          "rows": [
+            [
+              "Kanali",
+              "TV, radio, štampa, plakati",
+              "sajt, pretraživači, mreže, e-mail"
+            ],
+            [
+              "Merenje",
+              "teško i neprecizno",
+              "detaljno, skoro u realnom vremenu"
+            ],
+            [
+              "Cena",
+              "obično skuplje, veći minimalni budžet",
+              "moguće i sa malim budžetom"
+            ],
+            [
+              "Ciljanje",
+              "široka publika",
+              "precizno (interesovanje, lokacija, ponašanje)"
+            ],
+            [
+              "Komunikacija",
+              "jednosmerna",
+              "dvosmerna, korisnik može da odgovori"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Sličnost: oba imaju isti cilj, da se ponuda predstavi pravoj publici. Prednosti interneta su merljivost, ciljanje i brzina promene. Mane su preopterećenost oglasima, zavisnost od platformi i potreba za stalnim praćenjem."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Svest o brendu (brand awareness)"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Brand awareness</strong> je koliko ljudi zna da brend postoji i prepoznaje ga. Na internetu se meri na primer brojem pretraga imena brenda, direktnim posetama sajtu, dosegom i prikazima objava, brojem pomena i pratilaca."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pitanja za proveru znanja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo su ispitna pitanja koja se odnose na ovu lekciju. Pokušaj da odgovoriš svojim rečima."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Definicija i svrha marketinga",
+            "12P marketing miksa",
+            "SMART ciljevi",
+            "Sličnosti i razlike, prednosti i mane tradicionalnog i internet marketinga",
+            "Šta je brand awareness i kako se meri u onlajn okruženju"
+          ]
         },
         {
           "type": "callout",
           "variant": "info",
-          "text": "Tačna raspodela bodova i druge informacije o obavezama biće naknadno objavljene na stranici predmeta."
+          "text": "Lekcija je osnovni pregled teme. Detalji i primeri biće dopunjeni prema skripti predmeta."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "02-brend-inbound-i-ponasanje-korisnika",
+    "subjectSlug": "internet-marketing",
+    "title": "Inbound marketing, personalizacija i ponašanje korisnika",
+    "description": "Kako privući korisnike korisnim sadržajem, kako ih personalizovano nagovoriti i zašto je važno razumeti njihovo ponašanje.",
+    "week": 2,
+    "date": "2026-10-19",
+    "formattedDate": "19.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Inbound marketing"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Inbound marketing</strong> znači da korisnike privlačimo korisnim sadržajem (tekstovi, video, vodiči) umesto da ih prekidamo reklamama. Čovek sam dolazi kada mu je potrebno rešenje. Suprotno je <em>outbound</em>, gde firma gura poruku ka ljudima (klasična reklama, hladni pozivi)."
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Privući",
+              "sub": "sadržaj, SEO, mreže"
+            },
+            {
+              "title": "Angažovati",
+              "sub": "e-mail, razgovor"
+            },
+            {
+              "title": "Zadržati",
+              "sub": "podrška, zadovoljstvo"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Personalizacija"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Personalizacija</strong> je prilagođavanje poruke konkretnoj osobi na osnovu onoga što o njoj znamo (ime, interesovanja, prethodne posete, kupovine)."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "e-mail koji počinje imenom i preporučuje proizvode koje je osoba gledala",
+            "sajt koji prikazuje sadržaj prema lokaciji",
+            "oglas za proizvod koji je osoba ostavila u korpi"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Prednost je veća relevantnost i konverzija. Mana je rizik za privatnost, pa se mora poštovati zaštita podataka o ličnosti."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ponašanje korisnika"
+        },
+        {
+          "type": "paragraph",
+          "text": "Korisničko ponašanje su radnje koje posetilac radi: odakle je došao, šta je gledao, koliko se zadržao, gde je odustao. Važno je jer se na tome zasniva svaka odluka o poboljšanju sajta i kampanje: umesto pretpostavki, odlučujemo na osnovu podataka. Ovo se prati alatima za analitiku (lekcija 11)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pitanja za proveru znanja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo su ispitna pitanja koja se odnose na ovu lekciju. Pokušaj da odgovoriš svojim rečima."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Inbound marketing",
+            "Pojam personalizacije u internet marketingu",
+            "Važnost korisničkog ponašanja u internet marketingu"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Lekcija je osnovni pregled teme. Detalji i primeri biće dopunjeni prema skripti predmeta."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "03-seo-osnove",
+    "subjectSlug": "internet-marketing",
+    "title": "SEO osnove",
+    "description": "Šta je SEO, kako pretraživač indeksira sadržaj, SERP i CTR, organski saobraćaj i istraživanje ključnih reči.",
+    "week": 3,
+    "date": "2026-10-26",
+    "formattedDate": "26.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je SEO"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>SEO</strong> (<em>Search Engine Optimization</em>) je optimizacija sajta da se što bolje prikazuje u rezultatima pretrage, bez plaćanja. Sastoji se od tri dela:"
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "📝",
+              "title": "On-page",
+              "text": "sadržaj i elementi na stranici"
+            },
+            {
+              "icon": "🔗",
+              "title": "Off-page",
+              "text": "linkovi i ugled van sajta"
+            },
+            {
+              "icon": "⚙️",
+              "title": "Tehnički SEO",
+              "text": "brzina, kod, struktura"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "SERP, CTR i njihova veza"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>SERP</strong> je stranica sa rezultatima pretrage.",
+            "<strong>CTR</strong> (<em>click-through rate</em>) je procenat prikaza koji su završili klikom. Računa se: klikovi / prikazi × 100."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Veza: što je naš rezultat na SERP-u bolje rangiran i privlačnije napisan (naslov i opis), to je veći CTR, a veći CTR donosi više posetilaca."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Indeksiranje"
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Pronalaženje",
+              "sub": "crawl"
+            },
+            {
+              "title": "Indeksiranje",
+              "sub": "unos u bazu"
+            },
+            {
+              "title": "Rangiranje",
+              "sub": "redosled u rezultatima"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Pretraživač prvo pronađe stranicu (preko linkova i mape sajta), zatim je pročita i unese u bazu (indeks), pa je rangira kada neko pretražuje. Stranica se lakše indeksira kada je dostupna, brza, ima jasnu strukturu, jedinstven i koristan sadržaj i interne linkove. Može se blokirati greškama ili oznakom <code>noindex</code>."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Organski saobraćaj"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Organski saobraćaj</strong> su posetioci koji dolaze preko pretrage, a ne preko plaćenih oglasa. Važan je jer je besplatan po poseti, dugoročan i dolazi od ljudi koji aktivno traže ono što nudimo."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Istraživanje ključnih reči"
+        },
+        {
+          "type": "list",
+          "style": "numbered",
+          "items": [
+            "Odrediti temu i ciljnu publiku.",
+            "Prikupiti ideje (šta ljudi ukucavaju, predlozi pretraživača, alati za ključne reči).",
+            "Proceniti broj pretraga i konkurenciju.",
+            "Razumeti nameru pretrage (informacija, poređenje, kupovina).",
+            "Odabrati reči i rasporediti ih po stranicama."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pitanja za proveru znanja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo su ispitna pitanja koja se odnose na ovu lekciju. Pokušaj da odgovoriš svojim rečima."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Šta je SEO i od čega se sastoji",
+            "Šta je SERP, a šta CTR i njihova veza",
+            "Principi i kriterijumi za indeksiranje veb sadržaja na pretraživačima",
+            "Objasni proces istraživanja ključnih reči",
+            "Šta znači pojam organski saobraćaj i zašto je značajan"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Lekcija je osnovni pregled teme. Detalji i primeri biće dopunjeni prema skripti predmeta."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "04-on-page-seo",
+    "subjectSlug": "internet-marketing",
+    "title": "On-page SEO i meta podaci",
+    "description": "Optimizacija sadržaja i elemenata stranice: naslovi, meta tagovi, H1, slike, kvalitet sadržaja i duplirani sadržaj.",
+    "week": 4,
+    "date": "2026-11-02",
+    "formattedDate": "02.11.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je on-page optimizacija"
+        },
+        {
+          "type": "paragraph",
+          "text": "On-page optimizacija je sve što menjamo na samoj stranici da bi je pretraživač razumeo, a korisnik rado pročitao."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Element",
+            "Uloga u rangiranju i kliku"
+          ],
+          "rows": [
+            [
+              "<code>title</code> (naslov stranice)",
+              "prikazuje se kao plavi naslov u pretrazi, najvažniji je element; treba da sadrži glavnu temu"
+            ],
+            [
+              "<code>meta description</code>",
+              "opis ispod naslova; ne rangira direktno, ali utiče na to da li će neko kliknuti (CTR)"
+            ],
+            [
+              "H1",
+              "glavni naslov na stranici, jedan po stranici, kaže o čemu je stranica"
+            ],
+            [
+              "H2, H3",
+              "podnaslovi koji strukturišu tekst"
+            ],
+            [
+              "<code>alt</code> tekst slike",
+              "opis slike za pretraživač i čitače ekrana"
+            ],
+            [
+              "URL",
+              "kratka i razumljiva adresa"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Meta tagovi"
+        },
+        {
+          "type": "paragraph",
+          "text": "Meta podaci su podaci o stranici u njenom kodu. Najčešće vrste:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<code>title</code> i <code>meta description</code>: tekst u rezultatima pretrage",
+            "<code>meta robots</code>: da li stranicu indeksirati (npr. <code>noindex</code>)",
+            "<code>canonical</code>: koja je glavna verzija stranice",
+            "<code>viewport</code>: prilagođavanje mobilnim uređajima",
+            "<code>Open Graph</code>: kako izgleda link kada se podeli na društvenim mrežama"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Optimizacija sadržaja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sadržaj je jedan od najvažnijih faktora. Dobar sadržaj odgovara na pitanje korisnika, jedinstven je, sadrži ključne reči prirodno (bez nabacivanja), dobro je struktuiran i redovno se ažurira."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Duplirani sadržaj i canonical tag"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Duplirani sadržaj</strong> je isti ili vrlo sličan tekst na više adresa. Pretraživač ne zna koju verziju da prikaže. <strong>Preslikani sadržaj</strong> je kopija tuđeg teksta na drugom sajtu. Problem se rešava tako što se u kodu navede <em>canonical</em> tag koji pokazuje na glavnu (originalnu) verziju."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pitanja za proveru znanja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo su ispitna pitanja koja se odnose na ovu lekciju. Pokušaj da odgovoriš svojim rečima."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Onpejdž optimizacija",
+            "Optimizacija naslova i image tagova",
+            "Vrste, značaj i uticaj meta podataka u SEO optimizaciji",
+            "Vrste i značaj meta tagova",
+            "Kakvu ulogu imaju title, meta description i H1 u rangiranju i kliku",
+            "Značaj optimizacije sadržaja za SEO",
+            "Šta je duplirani, a šta preslikani sadržaj i kako canonical tag rešava problem"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Lekcija je osnovni pregled teme. Detalji i primeri biće dopunjeni prema skripti predmeta."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "05-tehnicki-seo-i-off-page",
+    "subjectSlug": "internet-marketing",
+    "title": "Tehnički SEO, bounce rate i off-page",
+    "description": "Tehnički faktori rangiranja, kvalitet koda, HTTPS, bounce rate i razlika između on-site i off-page optimizacije.",
+    "week": 5,
+    "date": "2026-11-09",
+    "formattedDate": "09.11.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Tehnički SEO elementi"
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "⚡",
+              "title": "Brzina",
+              "text": "brzo učitavanje stranice"
+            },
+            {
+              "icon": "📱",
+              "title": "Mobilni prikaz",
+              "text": "sajt prilagođen telefonu"
+            },
+            {
+              "icon": "🔒",
+              "title": "HTTPS",
+              "text": "šifrovana veza"
+            },
+            {
+              "icon": "🗺️",
+              "title": "Mapa sajta",
+              "text": "sitemap.xml pomaže pronalaženju"
+            },
+            {
+              "icon": "🤖",
+              "title": "robots.txt",
+              "text": "šta botovi smeju da čitaju"
+            },
+            {
+              "icon": "🔗",
+              "title": "Linkovi",
+              "text": "bez neispravnih (404) linkova"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kvalitet koda i SEO"
+        },
+        {
+          "type": "paragraph",
+          "text": "Čist i ispravan HTML (pravilni naslovi, semantički elementi, bez suvišnog koda) pretraživaču olakšava razumevanje stranice, a brzi, lagani kod ubrzava učitavanje. Brzina i upotrebljivost direktno utiču na rangiranje i na to da li će posetilac ostati."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Bezbednosni protokoli"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>HTTPS</strong> šifruje komunikaciju između pretraživača i sajta. Google ga smatra signalom kvaliteta, a pregledači upozoravaju korisnike na sajtove bez njega, što povećava odlazak sa sajta."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Bounce rate"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Bounce rate</strong> je udeo posetilaca koji odmah napuste sajt bez ikakve interakcije. Visok bounce rate često znači da stranica nije ono što je korisnik tražio, da je spora ili loše napravljena, pa može da loše utiče na SEO. Napomena: u GA4 se umesto njega prvenstveno prati angažovanje (lekcija 11)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "On-site i off-page optimizacija"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "",
+            "On-site (on-page)",
+            "Off-page"
+          ],
+          "rows": [
+            [
+              "Gde se radi",
+              "na samom sajtu",
+              "van sajta"
+            ],
+            [
+              "Primeri",
+              "sadržaj, naslovi, kod, brzina",
+              "linkovi sa drugih sajtova, pomeni, ugled brenda"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pitanja za proveru znanja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo su ispitna pitanja koja se odnose na ovu lekciju. Pokušaj da odgovoriš svojim rečima."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Tehnički SEO elementi kao faktori rangiranja",
+            "Veza između kvaliteta koda i SEO optimizacije veb-sajta",
+            "Bezbednosni protokoli i uticaj na SEO",
+            "Uticaj bounce rate-a na SEO optimizaciju",
+            "Onsajt i ofpejdž optimizacija"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Lekcija je osnovni pregled teme. Detalji i primeri biće dopunjeni prema skripti predmeta."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "06-lokalni-seo-i-aso",
+    "subjectSlug": "internet-marketing",
+    "title": "Lokalni SEO i ASO",
+    "description": "Optimizacija za Google Maps (lokalna pretraga) i optimizacija mobilnih aplikacija u prodavnicama aplikacija (ASO).",
+    "week": 6,
+    "date": "2026-11-16",
+    "formattedDate": "16.11.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Google Maps i lokalni SEO"
+        },
+        {
+          "type": "paragraph",
+          "text": "Lokalni SEO pomaže da se firma pojavi kada neko traži nešto u blizini (npr. „frizer blizu mene“). Za to se uređuje <strong>Google profil firme</strong> (Google Business Profile), čiji podaci se prikazuju u Google Maps i u pretrazi."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "tačni i ujednačeni podaci: naziv, adresa, telefon, radno vreme",
+            "izbor odgovarajuće kategorije delatnosti",
+            "fotografije i opis usluga",
+            "ocene korisnika i odgovori na njih",
+            "link ka sajtu"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "ASO (App Store Optimization)"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>ASO</strong> je isto što i SEO, samo za mobilne aplikacije u prodavnicama (App Store, Google Play). Cilj je da se aplikacija lakše pronađe i da je više ljudi instalira."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Element",
+            "Šta radimo"
+          ],
+          "rows": [
+            [
+              "Naziv i ključne reči",
+              "naziv jasan i sa glavnom ključnom rečju"
+            ],
+            [
+              "Opis",
+              "jasno objašnjenje šta aplikacija radi"
+            ],
+            [
+              "Ikonica i slike ekrana",
+              "privlače pažnju i pokazuju aplikaciju"
+            ],
+            [
+              "Ocene i komentari",
+              "utiču na poverenje i rang"
+            ],
+            [
+              "Broj instalacija",
+              "jači signal popularnosti"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pitanja za proveru znanja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo su ispitna pitanja koja se odnose na ovu lekciju. Pokušaj da odgovoriš svojim rečima."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "ASO optimizacija za mobilne uređaje",
+            "Google Maps optimizacija"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Lekcija je osnovni pregled teme. Detalji i primeri biće dopunjeni prema skripti predmeta."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "07-sem-i-ppc",
+    "subjectSlug": "internet-marketing",
+    "title": "SEM i PPC oglašavanje",
+    "description": "Vrste SEM-a, plaćeno oglašavanje po kliku, modeli plaćanja (PPC, CPC, CPM) i princip rada Google Ads sistema.",
+    "week": 7,
+    "date": "2026-11-23",
+    "formattedDate": "23.11.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je SEM"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>SEM</strong> (<em>Search Engine Marketing</em>) je marketing preko pretraživača. Obuhvata <strong>SEO</strong> (neplaćeni, organski deo) i <strong>plaćeno oglašavanje</strong> (oglasi u pretrazi i na mreži, najčešće Google Ads). U užem smislu SEM se često odnosi samo na plaćeni deo."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "PPC oglašavanje"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>PPC</strong> (<em>pay per click</em>) znači da oglašivač plaća samo kada neko klikne na oglas. Prikazivanje oglasa je besplatno."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "PPC, CPC i CPM"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Pojam",
+            "Šta je",
+            "Kada ima smisla"
+          ],
+          "rows": [
+            [
+              "PPC",
+              "model plaćanja po kliku",
+              "kada želimo posetioce i akciju"
+            ],
+            [
+              "CPC",
+              "<em>cost per click</em>, cena jednog klika",
+              "merenje koliko nas košta jedan klik"
+            ],
+            [
+              "CPM",
+              "<em>cost per mille</em>, cena za 1000 prikaza",
+              "kada nam je cilj da nas što više ljudi vidi (svest o brendu)"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako funkcioniše Google Ads"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kad neko pretražuje, Google u tom trenutku pokreće <strong>aukciju</strong> između oglašivača. Pobednik ne zavisi samo od najviše ponude, već i od kvaliteta oglasa. Što je oglas relevantniji i stranica na koju vodi bolja (tzv. <em>Quality Score</em>), to je prikaz jeftiniji ili bolji."
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Ponuda",
+              "sub": "koliko smo spremni da platimo"
+            },
+            {
+              "title": "Kvalitet",
+              "sub": "relevantnost oglasa i stranice"
+            },
+            {
+              "title": "Aukcija",
+              "sub": "određuje poziciju"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pitanja za proveru znanja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo su ispitna pitanja koja se odnose na ovu lekciju. Pokušaj da odgovoriš svojim rečima."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Vrste SEM (Search Engine Marketing)",
+            "PPC (Pay Per Click oglašavanje)",
+            "Razlika između PPC, CPC i CPM modela oglašavanja",
+            "Kako funkcioniše Google Ads algoritam"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Lekcija je osnovni pregled teme. Detalji i primeri biće dopunjeni prema skripti predmeta."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "08-display-remarketing-i-sem-vs-seo",
+    "subjectSlug": "internet-marketing",
+    "title": "Display oglašavanje, remarketing i poređenje SEO i SEM",
+    "description": "Google Display mreža, remarketing i uporedna analiza SEO-a i SEM-a.",
+    "week": 8,
+    "date": "2026-11-30",
+    "formattedDate": "30.11.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Google Display"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Google Display mreža</strong> prikazuje slikovne i tekstualne oglase (baneri) na ogromnom broju sajtova, aplikacija i servisa. Najpogodnija je za podizanje svesti o brendu i za doseg, a manje za trenutnu kupovinu. Ciljanje je moguće po interesovanjima, temama, lokaciji i demografiji."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Remarketing"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Remarketing</strong> prikazuje oglase ljudima koji su već posetili sajt ili imali interakciju, ali nisu izvršili željenu radnju. Primer: osoba je ostavila proizvod u korpi, pa mu se nekoliko dana kasnije taj proizvod ponovo prikazuje. Primena: podsećanje, vraćanje kupaca, dodatna prodaja."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "SEO i SEM, uporedna analiza"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "",
+            "SEO",
+            "SEM (plaćeno)"
+          ],
+          "rows": [
+            [
+              "Cena",
+              "nema cenu po kliku, ali traži rad i vreme",
+              "plaća se po kliku ili prikazu"
+            ],
+            [
+              "Brzina rezultata",
+              "spora (nedelje do meseci)",
+              "brza, odmah posle pokretanja"
+            ],
+            [
+              "Trajanje",
+              "dugoročan efekat",
+              "prestaje kada se prestane sa plaćanjem"
+            ],
+            [
+              "Poverenje",
+              "korisnici organskim rezultatima češće veruju",
+              "oglasi su označeni kao oglasi"
+            ],
+            [
+              "Kontrola",
+              "manja (zavisi od algoritma)",
+              "veća (budžet, ciljanje, poruka)"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "U praksi se najčešće kombinuju: plaćeno daje brz rezultat, a SEO gradi dugoročni temelj."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pitanja za proveru znanja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo su ispitna pitanja koja se odnose na ovu lekciju. Pokušaj da odgovoriš svojim rečima."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Google Display i njegova primena",
+            "Pojam remarketinga i njegova primena",
+            "SEO i SEM, uporedna analiza"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Lekcija je osnovni pregled teme. Detalji i primeri biće dopunjeni prema skripti predmeta."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "09-ux-landing-page-ab-i-cro",
+    "subjectSlug": "internet-marketing",
+    "title": "UX/UI, landing page, A/B testiranje i CRO",
+    "description": "Kako dizajn i testiranje povećavaju konverziju: UX/UI, landing stranica, A/B testovi i optimizacija konverzije.",
+    "week": 9,
+    "date": "2026-12-07",
+    "formattedDate": "07.12.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Konverzija i stopa konverzije"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Konverzija</strong> je željena radnja posetioca (kupovina, prijava, popunjen formular). <strong>Stopa konverzije</strong> = broj konverzija / broj poseta × 100. Ako od 1000 poseta 20 ljudi kupi, stopa je 2%."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "UX/UI dizajn"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>UX</strong> (<em>user experience</em>) je iskustvo korišćenja: da li je sajt jasan, brz i lak.",
+            "<strong>UI</strong> (<em>user interface</em>) je izgled: boje, dugmad, raspored."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Jasna navigacija, brzo učitavanje, prilagođenost mobilnom i lak put do cilja smanjuju odustajanje i povećavaju konverziju."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Landing page"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Landing page</strong> je stranica na koju posetilac sleti, najčešće posle klika na oglas, i ima jedan jasan cilj. Elementi koji najviše utiču na konverziju (tačnu trojku proveri u skripti):"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "jasan naslov i ponuda",
+            "jasan poziv na akciju (dugme)",
+            "elementi poverenja: ocene, reference, garancije",
+            "jednostavan formular i bez nepotrebnih linkova koji odvlače pažnju"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "A/B testiranje"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>A/B testiranje</strong> upoređuje dve verzije (npr. dugme različite boje) tako što ih prikažemo različitim posetiocima i merimo koja ima više konverzija. Služi da odluke zasnivamo na podacima, a ne na pretpostavkama. Menja se jedna stvar po testu, a rezultat se prihvata kada je uzorak dovoljno veliki."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "CRO"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>CRO</strong> (<em>Conversion Rate Optimization</em>) je sistematsko povećavanje procenta posetilaca koji izvrše željenu radnju. Radi se analizom ponašanja, testiranjem i poboljšanjem sajta."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pitanja za proveru znanja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo su ispitna pitanja koja se odnose na ovu lekciju. Pokušaj da odgovoriš svojim rečima."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Uloga UX/UI dizajna u povećanju konverzije",
+            "Šta je landing page i koja 3 elementa najviše utiču na konverziju",
+            "Šta je A/B testiranje i čemu služi",
+            "Optimizacija konverzije (CRO)"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Lekcija je osnovni pregled teme. Detalji i primeri biće dopunjeni prema skripti predmeta."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "10-email-marketing-i-automatizacija",
+    "subjectSlug": "internet-marketing",
+    "title": "E-mail marketing i automatizacija",
+    "description": "Šta je e-mail marketing, osnovne metrike kampanje i kako automatizacija pomaže, uz njena ograničenja.",
+    "week": 10,
+    "date": "2026-12-14",
+    "formattedDate": "14.12.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "E-mail marketing"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>E-mail marketing</strong> je slanje poruka osobama koje su pristale da ih primaju (ponude, vesti, podsetnici). Jeftin je, direktan i lako merljiv. Primena: dobrodošlica novim pretplatnicima, promocije, podsećanje na zaboravljenu korpu, obaveštenja."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pokazatelji uspeha kampanje"
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Impression",
+              "sub": "prikaz"
+            },
+            {
+              "title": "Open",
+              "sub": "otvaranje"
+            },
+            {
+              "title": "Click",
+              "sub": "klik"
+            },
+            {
+              "title": "Conversion",
+              "sub": "konverzija"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Pojam",
+            "Značenje"
+          ],
+          "rows": [
+            [
+              "<em>Impression</em>",
+              "oglas ili poruka je prikazana"
+            ],
+            [
+              "<em>Open</em>",
+              "primalac je otvorio e-mail"
+            ],
+            [
+              "<em>Click</em>",
+              "kliknuo je na link ili oglas"
+            ],
+            [
+              "<em>Conversion</em>",
+              "izvršio je željenu radnju (kupovina, prijava)"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Automatizacija digitalnog marketinga"
+        },
+        {
+          "type": "paragraph",
+          "text": "Automatizacija znači da alati sami šalju poruke i izvršavaju radnje po unapred zadatim pravilima (npr. automatski e-mail posle prijave ili zaboravljene korpe, zakazivanje objava)."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Prednosti",
+            "Ograničenja"
+          ],
+          "rows": [
+            [
+              "štedi vreme",
+              "poruke mogu da deluju bezlično"
+            ],
+            [
+              "ujednačena komunikacija",
+              "pogrešno podešena pravila prave štetu"
+            ],
+            [
+              "bolje praćenje i personalizacija",
+              "zahteva podatke, dobru pripremu i održavanje"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pitanja za proveru znanja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo su ispitna pitanja koja se odnose na ovu lekciju. Pokušaj da odgovoriš svojim rečima."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Šta je e-mail marketing i njegova primena",
+            "Značenje pojmova uspešnosti kampanje: impression, open, click, conversion",
+            "Automatizacija digitalnog marketinga: alati, prednosti i ograničenja"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Lekcija je osnovni pregled teme. Detalji i primeri biće dopunjeni prema skripti predmeta."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "11-analitika-ga4-i-kpi",
+    "subjectSlug": "internet-marketing",
+    "title": "Analitika: Google Analytics 4 i KPI",
+    "description": "Praćenje ponašanja korisnika alatom Google Analytics 4 i ključni pokazatelji uspešnosti (KPI).",
+    "week": 11,
+    "date": "2026-12-21",
+    "formattedDate": "21.12.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zašto merimo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Bez merenja ne znamo šta radi, a šta ne. Analitika pokazuje ko dolazi na sajt, odakle, šta radi i gde odustaje."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Google Analytics 4 (GA4)"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>GA4</strong> je Googleov besplatan alat za analitiku sajtova i aplikacija. Zasniva se na <strong>događajima</strong> (<em>events</em>): svaka radnja korisnika (pregled stranice, klik, kupovina) beleži se kao događaj."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "izvori saobraćaja (odakle korisnici dolaze)",
+            "stranice koje se najviše posećuju",
+            "angažovanost: koliko se korisnici zadržavaju i šta rade",
+            "konverzije: koliko je ostvareno željenih radnji",
+            "tok korisnika kroz sajt i mesta odustajanja"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "KPI parametri"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>KPI</strong> su ključni pokazatelji uspešnosti, brojke po kojima procenjujemo da li smo ostvarili cilj."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "KPI",
+            "Šta pokazuje"
+          ],
+          "rows": [
+            [
+              "Broj posetilaca",
+              "koliko ljudi dolazi na sajt"
+            ],
+            [
+              "CTR",
+              "koliko prikaza je završilo klikom"
+            ],
+            [
+              "Stopa konverzije",
+              "koliko poseta završi željenom radnjom"
+            ],
+            [
+              "Bounce rate / angažovanje",
+              "da li su posetioci zainteresovani"
+            ],
+            [
+              "CPC / CPA",
+              "cena klika / cena jedne konverzije"
+            ],
+            [
+              "ROI / ROAS",
+              "povraćaj uloženog novca"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pitanja za proveru znanja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo su ispitna pitanja koja se odnose na ovu lekciju. Pokušaj da odgovoriš svojim rečima."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Analiza korisničkog ponašanja uz pomoć Google Analytics 4",
+            "Navedi nekoliko KPI parametara"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Lekcija je osnovni pregled teme. Detalji i primeri biće dopunjeni prema skripti predmeta."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "12-drustvene-mreze-smm",
+    "subjectSlug": "internet-marketing",
+    "title": "Marketing na društvenim mrežama",
+    "description": "SMM, razlika između SEO sadržaja i sadržaja za društvene mreže, i specifičnosti Facebook-a, Instagram-a i LinkedIn-a.",
+    "week": 12,
+    "date": "2026-12-28",
+    "formattedDate": "28.12.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je SMM"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>SMM</strong> (<em>Social Media Marketing</em>) je promocija brenda, proizvoda ili usluge na društvenim mrežama: objavama, oglasima i komunikacijom sa pratiocima."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "SEO sadržaj i sadržaj za društvene mreže"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "",
+            "SEO sadržaj",
+            "Sadržaj za mreže"
+          ],
+          "rows": [
+            [
+              "Cilj",
+              "da bude pronađen u pretrazi",
+              "da se vidi, podeli i izazove reakciju"
+            ],
+            [
+              "Oblik",
+              "duži tekst, struktura, ključne reči",
+              "kratak, vizuelan, video i slika"
+            ],
+            [
+              "Vek trajanja",
+              "dug (godinama se pronalazi)",
+              "kratak (brzo nestaje iz feda)"
+            ],
+            [
+              "Ton",
+              "informativan",
+              "bliži, razgovorni"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Facebook, Instagram i LinkedIn"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Mreža",
+            "Publika i sadržaj",
+            "Najbolje za"
+          ],
+          "rows": [
+            [
+              "Facebook",
+              "široka publika, grupe, oglasi sa preciznim ciljanjem",
+              "lokalne firme, zajednice, široku prodaju"
+            ],
+            [
+              "Instagram",
+              "vizuelni sadržaj (slike, video, priče), mlađa publika",
+              "modu, hranu, lifestyle, proizvode"
+            ],
+            [
+              "LinkedIn",
+              "profesionalna mreža, poslovni sadržaj",
+              "B2B, zapošljavanje, ugled stručnjaka"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pitanja za proveru znanja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo su ispitna pitanja koja se odnose na ovu lekciju. Pokušaj da odgovoriš svojim rečima."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Marketing putem društvenih mreža (SMM)",
+            "Razlike između SEO sadržaja i sadržaja za društvene mreže",
+            "Facebook marketing",
+            "Instagram marketing",
+            "LinkedIn marketing"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Lekcija je osnovni pregled teme. Detalji i primeri biće dopunjeni prema skripti predmeta."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "13-influenseri-i-affiliate",
+    "subjectSlug": "internet-marketing",
+    "title": "Influenser i affiliate marketing",
+    "description": "Saradnja sa influenserima, procena njihovog kvaliteta i partnerski (affiliate) marketing.",
+    "week": 13,
+    "date": "2027-01-04",
+    "formattedDate": "04.01.2027.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Influenser marketing"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Influenser marketing</strong> je saradnja brenda sa osobama koje imaju poverenje svojih pratilaca, a koje preporučuju proizvod ili uslugu u svom sadržaju."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako se procenjuje kvalitet influensera"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>angažovanost</strong>: lajkovi, komentari i deljenja u odnosu na broj pratilaca (važnije od samog broja pratilaca)",
+            "<strong>publika</strong>: da li se poklapa sa našom ciljnom grupom",
+            "<strong>autentičnost</strong>: da li su pratioci stvarni i da li je sadržaj iskren",
+            "<strong>tema i vrednosti</strong>: da li odgovaraju brendu",
+            "prethodne saradnje i rezultati"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Affiliate marketing"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Affiliate (partnerski) marketing</strong> je model u kojem partner promoviše naš proizvod preko svog posebnog linka i dobija proviziju za svaku ostvarenu prodaju ili akciju. Firma plaća samo za rezultat."
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Trgovac",
+              "sub": "ima proizvod"
+            },
+            {
+              "title": "Affiliate",
+              "sub": "promoviše preko linka"
+            },
+            {
+              "title": "Kupac",
+              "sub": "kupuje"
+            },
+            {
+              "title": "Provizija",
+              "sub": "affiliate dobija deo"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pitanja za proveru znanja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo su ispitna pitanja koja se odnose na ovu lekciju. Pokušaj da odgovoriš svojim rečima."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Affiliate marketing",
+            "Influenser marketing i kako se procenjuje kvalitet influensera"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Lekcija je osnovni pregled teme. Detalji i primeri biće dopunjeni prema skripti predmeta."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "14-vestacka-inteligencija-u-marketingu",
+    "subjectSlug": "internet-marketing",
+    "title": "Veštačka inteligencija u marketingu",
+    "description": "Uloga veštačke inteligencije u kreiranju marketinških strategija: primene, prednosti i ograničenja.",
+    "week": 14,
+    "date": "2027-01-11",
+    "formattedDate": "11.01.2027.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta VI radi u marketingu"
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "✍️",
+              "title": "Sadržaj",
+              "text": "nacrti tekstova, naslova i slika"
+            },
+            {
+              "icon": "📈",
+              "title": "Analiza",
+              "text": "pronalaženje obrazaca u velikim podacima"
+            },
+            {
+              "icon": "🎯",
+              "title": "Personalizacija",
+              "text": "preporuke i poruke po korisniku"
+            },
+            {
+              "icon": "🔮",
+              "title": "Predviđanje",
+              "text": "ko će verovatno kupiti, šta će se prodavati"
+            },
+            {
+              "icon": "💬",
+              "title": "Podrška",
+              "text": "četbotovi koji odgovaraju na pitanja"
+            },
+            {
+              "icon": "⚙️",
+              "title": "Automatizacija",
+              "text": "optimizacija oglasa i kampanja"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Uloga u kreiranju strategije"
+        },
+        {
+          "type": "paragraph",
+          "text": "Veštačka inteligencija pomaže da se brže analizira tržište i konkurencija, segmentira publika, predvidi ponašanje kupaca i testiraju različite verzije poruka. Strategiju, ciljeve i krajnju odluku i dalje postavlja čovek."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Prednosti",
+            "Ograničenja"
+          ],
+          "rows": [
+            [
+              "brzina i ušteda vremena",
+              "može da pogreši ili izmisli podatke, pa se proverava"
+            ],
+            [
+              "rad sa velikom količinom podataka",
+              "opšti, ponavljajući sadržaj bez ljudskog pečata"
+            ],
+            [
+              "bolja personalizacija",
+              "pitanja privatnosti i zaštite podataka"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pitanja za proveru znanja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo su ispitna pitanja koja se odnose na ovu lekciju. Pokušaj da odgovoriš svojim rečima."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Uloga veštačke inteligencije (AI) u kreiranju marketinških strategija"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Lekcija je osnovni pregled teme. Detalji i primeri biće dopunjeni prema skripti predmeta."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "15-ponavljanje-i-priprema-za-ispit",
+    "subjectSlug": "internet-marketing",
+    "title": "Ponavljanje i priprema za ispit",
+    "description": "Pregled svih tema i ispitnih pitanja po lekcijama.",
+    "week": 15,
+    "date": "2027-01-18",
+    "formattedDate": "18.01.2027.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako se pripremati"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ispitna pitanja su grupisana po lekcijama. Za svako pitanje pokušaj da odgovoriš svojim rečima, a zatim otvori odgovarajuću lekciju i proveri. Najvažnije je da razumeš vezu među pojmovima (na primer SERP, CTR i SEO), a ne samo definicije."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Oblast",
+            "Lekcija"
+          ],
+          "rows": [
+            [
+              "Definicija marketinga, 12P, SMART, tradicionalni i internet marketing, brand awareness",
+              "<a href=\"/internet-marketing/lekcija/01-uvod-u-internet-marketing\">1. nedelja</a>"
+            ],
+            [
+              "Inbound, personalizacija, ponašanje korisnika",
+              "<a href=\"/internet-marketing/lekcija/02-brend-inbound-i-ponasanje-korisnika\">2. nedelja</a>"
+            ],
+            [
+              "SEO, SERP, CTR, indeksiranje, ključne reči, organski saobraćaj",
+              "<a href=\"/internet-marketing/lekcija/03-seo-osnove\">3. nedelja</a>"
+            ],
+            [
+              "On-page, naslovi, meta tagovi, sadržaj, duplirani sadržaj i canonical",
+              "<a href=\"/internet-marketing/lekcija/04-on-page-seo\">4. nedelja</a>"
+            ],
+            [
+              "Tehnički SEO, kod, HTTPS, bounce rate, on-site i off-page",
+              "<a href=\"/internet-marketing/lekcija/05-tehnicki-seo-i-off-page\">5. nedelja</a>"
+            ],
+            [
+              "Google Maps i ASO",
+              "<a href=\"/internet-marketing/lekcija/06-lokalni-seo-i-aso\">6. nedelja</a>"
+            ],
+            [
+              "SEM, PPC, CPC, CPM, Google Ads",
+              "<a href=\"/internet-marketing/lekcija/07-sem-i-ppc\">7. nedelja</a>"
+            ],
+            [
+              "Display, remarketing, SEO i SEM",
+              "<a href=\"/internet-marketing/lekcija/08-display-remarketing-i-sem-vs-seo\">8. nedelja</a>"
+            ],
+            [
+              "UX/UI, landing page, A/B testiranje, CRO",
+              "<a href=\"/internet-marketing/lekcija/09-ux-landing-page-ab-i-cro\">9. nedelja</a>"
+            ],
+            [
+              "E-mail marketing, metrike kampanje, automatizacija",
+              "<a href=\"/internet-marketing/lekcija/10-email-marketing-i-automatizacija\">10. nedelja</a>"
+            ],
+            [
+              "Google Analytics 4 i KPI",
+              "<a href=\"/internet-marketing/lekcija/11-analitika-ga4-i-kpi\">11. nedelja</a>"
+            ],
+            [
+              "SMM, Facebook, Instagram, LinkedIn",
+              "<a href=\"/internet-marketing/lekcija/12-drustvene-mreze-smm\">12. nedelja</a>"
+            ],
+            [
+              "Influenseri i affiliate marketing",
+              "<a href=\"/internet-marketing/lekcija/13-influenseri-i-affiliate\">13. nedelja</a>"
+            ],
+            [
+              "Veštačka inteligencija u marketingu",
+              "<a href=\"/internet-marketing/lekcija/14-vestacka-inteligencija-u-marketingu\">14. nedelja</a>"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Najčešće greške"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "mešanje pojmova CTR (klikovi / prikazi) i stope konverzije (konverzije / posete)",
+            "mešanje PPC modela (plaćanje po kliku) i CPM-a (plaćanje po 1000 prikaza)",
+            "mešanje preslikanog (kopija tuđeg) i dupliranog sadržaja (isti sadržaj na više adresa)",
+            "mešanje SEO-a (organski) i SEM-a (uže: plaćeno)"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Tačna raspodela bodova i informacije o ispitu biće naknadno objavljene na stranici predmeta."
         }
       ]
     }
