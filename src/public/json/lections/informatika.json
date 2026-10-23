@@ -323,5 +323,773 @@
         }
       ]
     }
+  },
+  {
+    "slug": "02-google-nalog-i-osnovni-alati",
+    "subjectSlug": "informatika",
+    "title": "Google nalog i osnovni alati",
+    "description": "Pravimo Google nalog, štitimo ga lozinkom i dvostepenom verifikacijom i učimo osnove Drive-a, Docs-a i Sheets-a, kao i prijavu preko Googlea na YouTube, Canvu i Figmu.",
+    "week": 3,
+    "date": "2026-10-22",
+    "formattedDate": "22.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Cilj lekcije"
+        },
+        {
+          "type": "paragraph",
+          "text": "Skoro svaki servis koji ćete koristiti na studijama i u poslu traži <strong>nalog</strong>: platforma za učenje, alat za dizajn, mejl, video-sajt. Umesto da pravite desetine naloga i pamtite desetine lozinki, danas pravimo <strong>jedan Google nalog</strong> koji otvara vrata ka većini tih alata."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Nalog koji napravimo danas koristićemo do kraja semestra, a sigurno i posle njega. Zato ga pravimo pažljivo i štitimo kako treba.",
+          "title": "Zašto je ovo važno."
+        },
+        {
+          "type": "paragraph",
+          "text": "Posle ove lekcije umećete da:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "napravite Gmail nalog sa pristojnom adresom i jakom lozinkom",
+            "uključite dvostepenu verifikaciju i znate zašto je važna",
+            "organizujete fajlove u Google Drive-u i bezbedno ih delite",
+            "napišete i oblikujete tekst u Google Docs-u",
+            "unesete podatke i izračunate zbir i prosek u Google Sheets-u",
+            "se prijavite preko Googlea na YouTube, Canvu, Figmu i slične servise",
+            "prepoznate lažnu poruku koja pokušava da vam ukrade nalog"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je nalog i zašto nam je dovoljan jedan",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Nalog</strong> je vaš digitalni identitet: korisničko ime (kod Googlea je to adresa e-pošte) i lozinka. Servis po njima zna ko ste, čuva vaše fajlove i podešavanja i ne dozvoljava drugima da im pristupe."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Google nalog</strong> je jedan nalog za čitav niz servisa. Kada ga napravite, automatski dobijate:"
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "✉️",
+              "title": "Gmail",
+              "text": "e-pošta sa adresom ime.prezime@gmail.com"
+            },
+            {
+              "icon": "☁️",
+              "title": "Google Drive",
+              "text": "prostor za fajlove na internetu (15 GB besplatno)"
+            },
+            {
+              "icon": "📝",
+              "title": "Google Docs",
+              "text": "pisanje tekstova, kao Word, ali u pregledaču"
+            },
+            {
+              "icon": "📊",
+              "title": "Google Sheets",
+              "text": "tabele i formule, kao Excel"
+            },
+            {
+              "icon": "📽️",
+              "title": "Google Slides",
+              "text": "prezentacije, kao PowerPoint"
+            },
+            {
+              "icon": "▶️",
+              "title": "YouTube",
+              "text": "pretplate, plejliste, komentari i sopstveni kanal"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Još jedna velika prednost: mnogi drugi sajtovi nude dugme <strong>„Nastavi pomoću Googlea“</strong>. Tada ne pravite novi nalog i novu lozinku, već samo potvrdite da to želite svojim Google nalogom. Detaljno o tome kasnije u lekciji."
+        },
+        {
+          "type": "callout",
+          "variant": "warning",
+          "text": "Jedan nalog za sve je zgodno, ali znači i da je to <strong>ključ od mnogo vrata</strong>. Ko dođe do vašeg Google naloga, može da dođe i do vaših fajlova, mejlova i naloga na drugim servisima. Zato su lozinka i dvostepena verifikacija iz sledećih odeljaka obavezni, a ne opcioni.",
+          "title": "Pažnja."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pravimo Gmail nalog korak po korak",
+          "numbered": true
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Ako već imate Gmail nalog sa ozbiljnom adresom (na primer ime.prezime), slobodno ga koristite i preskočite pravljenje. Ako je adresa nešto poput „carobnjak_2005“, bolje je napraviti novu, jer će se ova koristiti za fakultet, prijave za posao i komunikaciju sa ljudima koji vas ne poznaju.",
+          "title": "Već imate nalog?"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "1. Otvorite stranicu za pravljenje naloga"
+        },
+        {
+          "type": "paragraph",
+          "text": "U pregledaču otvorite <strong>accounts.google.com</strong> (ili gmail.com) i kliknite na <strong>Napravite nalog</strong> (<em>Create account</em>). Izaberite opciju <strong>Za lične potrebe</strong> (<em>For my personal use</em>)."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "2. Ime, prezime i datum rođenja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Upišite svoje pravo ime i prezime i tačan datum rođenja. Google datum koristi za zaštitu naloga i uzrasna ograničenja, a ne prikazuje ga drugima. Pol možete da izaberete po želji."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "3. Izaberite adresu"
+        },
+        {
+          "type": "paragraph",
+          "text": "Adresa je ono po čemu će vas ljudi znati, pa neka izgleda ozbiljno. Dobar obrazac je <code>ime.prezime</code>."
+        },
+        {
+          "type": "list",
+          "style": "bullets",
+          "items": [
+            "<strong>Da:</strong> marko.markovic, marko.m.markovic, markomarkovic",
+            "<strong>Ne:</strong> nadimci, šale, godina rođenja, „kralj_klupe“",
+            "Ako je adresa zauzeta, dodajte srednje slovo ili broj, ali ne nadimak"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "4. Smislite lozinku"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google traži najmanje 8 znakova, ali <strong>duže je bolje</strong>. Najlakše je da smislite rečenicu ili niz od tri do četiri nepovezane reči. O tome više u sledećem odeljku."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "5. Telefon i rezervna adresa"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google može da zatraži broj telefona i da pošalje kod za potvrdu. To nije da bi vas gnjavio, već da biste mogli da povratite nalog ako zaboravite lozinku. Ako želite, dodajte i rezervnu e-adresu."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "6. Uslovi korišćenja i prva prijava"
+        },
+        {
+          "type": "paragraph",
+          "text": "Na kraju Google prikazuje uslove korišćenja i politiku privatnosti. Pročitajte bar kratak pregled i kliknite na prihvatanje. Posle toga ste prijavljeni, a nalog je napravljen."
+        },
+        {
+          "type": "callout",
+          "variant": "success",
+          "text": "Adresu i lozinku sačuvajte na bezbednom mestu (na primer u upravljaču lozinkama koji nudi pregledač) i <strong>ne šaljite ih nikome</strong>, ni drugu ni profesoru.",
+          "title": "Sačuvajte podatke."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zaštitite nalog: jaka lozinka i dvostepena verifikacija",
+          "numbered": true
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Šta je jaka lozinka"
+        },
+        {
+          "type": "paragraph",
+          "text": "Računari mogu da pogađaju lozinke vrlo brzo, ali duge lozinke ih usporavaju mnogo više nego one sa „šašavim“ znacima. Zato je <strong>dužina važnija od komplikovanosti</strong>."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Primer",
+            "Ocena",
+            "Zašto"
+          ],
+          "rows": [
+            [
+              "marko2005",
+              "Slaba",
+              "ime i godina rođenja se lako pogode"
+            ],
+            [
+              "12345678",
+              "Slaba",
+              "jedna od najčešćih lozinki na svetu"
+            ],
+            [
+              "Marko!2005",
+              "Slaba",
+              "samo izgleda komplikovano, a obrazac je poznat"
+            ],
+            [
+              "sivi-konj-pije-kafu-7",
+              "Dobra",
+              "dugačka, lako se pamti, nema veze sa vama"
+            ]
+          ]
+        },
+        {
+          "type": "list",
+          "style": "bullets",
+          "items": [
+            "svaki važan nalog treba da ima <strong>svoju</strong> lozinku, nikada ne koristite istu svuda",
+            "ne koristite lične podatke: ime, datum rođenja, ime kućnog ljubimca",
+            "lozinku nikome ne govorite i ne šaljite je porukom"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Dvostepena verifikacija (2FA)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Čak i najjača lozinka može da procuri. Zato postoji <strong>dvostepena verifikacija</strong>: pored lozinke, pri prijavi na novom uređaju potvrđujete da ste to zaista vi, na primer odgovorom na telefonu ili kodom iz aplikacije. Ko ukrade lozinku, bez vašeg telefona ne može da uđe."
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Unesete lozinku",
+              "sub": "prvi korak"
+            },
+            {
+              "title": "Potvrdite na telefonu",
+              "sub": "drugi korak"
+            },
+            {
+              "title": "Ulazite u nalog",
+              "sub": "samo vi"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Kako se uključuje: otvorite <strong>myaccount.google.com</strong>, izaberite <strong>Bezbednost</strong> (<em>Security</em>) i zatim <strong>Dvostepena verifikacija</strong> (<em>2-Step Verification</em>). Prati korake na ekranu. Obavezno dodajte i način oporavka (rezervni telefon ili e-adresu)."
+        },
+        {
+          "type": "callout",
+          "variant": "danger",
+          "text": "Šestocifreni kod koji stigne na telefon <strong>nikome ne diktirajte</strong>, ni preko poruke ni preko telefona, bez obzira ko se predstavlja. Prevaranti se često predstavljaju kao „Google podrška“ ili „banka“.",
+          "title": "Važno."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Google Drive: vaš prostor na internetu",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Google Drive</strong> je mesto gde se vaši fajlovi čuvaju na Googleovim serverima, a ne na jednom računaru. To se zove <strong>cloud</strong> (oblak). Zato im možete pristupiti sa telefona, laptopa ili računara na fakultetu, samo uz prijavu na svoj nalog."
+        },
+        {
+          "type": "paragraph",
+          "text": "Besplatno dobijate <strong>15 GB</strong>, a taj prostor se deli između Gmaila, Drive-a i Google fotografija. Drive otvarate na <strong>drive.google.com</strong> ili preko ikonice sa devet tačkica u gornjem desnom uglu bilo koje Googleove stranice."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Osnovno upravljanje fajlovima"
+        },
+        {
+          "type": "list",
+          "style": "bullets",
+          "items": [
+            "dugme <strong>Novo</strong> (<em>New</em>) pravi novi folder, otpremi fajl sa računara ili napravi nov Docs, Sheets ili Slides dokument",
+            "fajlove držite u folderima sa jasnim imenima, na primer „Informatika“, „Fakultet“, „Privatno“",
+            "dajte dokumentima imena koja govore sadržaj, a ne „Dokument1“ ili „novi final (2)“",
+            "obrisani fajl prvo ide u <strong>Korpu</strong> (<em>Trash</em>) i može da se vrati",
+            "dokumenti napravljeni u Docs-u i Sheets-u se čuvaju sami, ne treba ništa da pritiskate"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Deljenje fajlova"
+        },
+        {
+          "type": "paragraph",
+          "text": "Desni klik na fajl i opcija <strong>Podeli</strong> (<em>Share</em>). Možete da unesete e-adrese osoba kojima dajete pristup i da izaberete šta smeju da rade:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Uloga",
+            "Šta osoba može",
+            "Kada se koristi"
+          ],
+          "rows": [
+            [
+              "Gledalac (Viewer)",
+              "samo da otvori i pročita",
+              "kada šaljete gotov rad na pregled"
+            ],
+            [
+              "Komentator (Commenter)",
+              "da čita i ostavlja komentare",
+              "kada tražite mišljenje ili ispravke"
+            ],
+            [
+              "Urednik (Editor)",
+              "da menja sadržaj",
+              "kada zajedno radite na istom dokumentu"
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "warning",
+          "text": "Opcija „Svako ko ima link“ znači da svako ko dobije vaš link može da otvori fajl, čak i ako ga nikada niste poslali toj osobi. Kad god možete, dodajte konkretne e-adrese, a ne javni link.",
+          "title": "Pazite sa linkom."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Google Docs: pisanje dokumenata",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Google Docs</strong> je program za pisanje teksta koji radi u pregledaču, kao Word. Nema instalacije, sve se čuva samo, a više ljudi može da piše u istom dokumentu u isto vreme. Novi dokument se pravi preko <strong>Novo → Google Docs</strong> ili na adresi <strong>docs.google.com</strong>."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Nazivi menija zavise od jezika naloga, pa pored srpskog nazivamo i engleski. Meni <em>File</em> u srpskom prikazu može da se zove <em>Fajl</em> ili <em>Datoteka</em>.",
+          "title": "Jezik menija."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Šta želite",
+            "Kako"
+          ],
+          "rows": [
+            [
+              "podebljan, kosi ili podvučen tekst",
+              "označite tekst i pritisnite Ctrl+B, Ctrl+I ili Ctrl+U"
+            ],
+            [
+              "naslov i podnaslov",
+              "padajući meni sa stilovima u alatnoj traci (<em>Naslov 1</em>, <em>Naslov 2</em>), a ne samo veća slova"
+            ],
+            [
+              "nabrajanje i numerisana lista",
+              "dugmad za liste u alatnoj traci"
+            ],
+            [
+              "tabela",
+              "<em>Umetni</em> (Insert) → <em>Tabela</em> (Table)"
+            ],
+            [
+              "slika",
+              "<em>Umetni</em> → <em>Slika</em> (Image)"
+            ],
+            [
+              "komentar",
+              "označite tekst i kliknite na ikonicu komentara"
+            ],
+            [
+              "poništavanje greške",
+              "Ctrl+Z (a Ctrl+Y vraća poništeno)"
+            ],
+            [
+              "ranije verzije dokumenta",
+              "<em>Fajl</em> → <em>Istorija verzija</em> (Version history)"
+            ],
+            [
+              "preuzimanje kao PDF ili Word",
+              "<em>Fajl</em> → <em>Preuzmi</em> (Download)"
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "success",
+          "text": "Naslove pravite preko <strong>stilova</strong>, a ne ručnim uvećavanjem slova. Tako Docs sam pravi sadržaj dokumenta, a vi lako menjate izgled svih naslova odjednom. To je razlika između urednog i neurednog dokumenta.",
+          "title": "Najvažnija navika."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Google Sheets: tabele i formule",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Google Sheets</strong> je tabelarni program, kao Excel. Tabela se sastoji od <strong>kolona</strong> (A, B, C...) i <strong>redova</strong> (1, 2, 3...), a presek je <strong>ćelija</strong> sa adresom, na primer B3. Nov dokument pravite preko <strong>Novo → Google Sheets</strong> ili na <strong>sheets.google.com</strong>."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Primer: lični troškovi"
+        },
+        {
+          "type": "paragraph",
+          "text": "Upišite podatke ovako, u ćelije A1 do B6:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "A (stavka)",
+            "B (iznos u dinarima)"
+          ],
+          "rows": [
+            [
+              "Prevoz",
+              "2500"
+            ],
+            [
+              "Hrana",
+              "9000"
+            ],
+            [
+              "Knjige",
+              "3500"
+            ],
+            [
+              "Telefon",
+              "1500"
+            ],
+            [
+              "Izlasci",
+              "4000"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Formule"
+        },
+        {
+          "type": "paragraph",
+          "text": "Svaka formula počinje znakom <code>=</code>. Ne pišete rezultat, već kažete tabeli <em>kako</em> da ga izračuna. Kad se vrednost u nekoj ćeliji promeni, rezultat se sam ažurira."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Formula",
+            "Šta radi",
+            "Primer"
+          ],
+          "rows": [
+            [
+              "SUM",
+              "sabira ćelije",
+              "<code>=SUM(B2:B6)</code>"
+            ],
+            [
+              "AVERAGE",
+              "računa prosek",
+              "<code>=AVERAGE(B2:B6)</code>"
+            ],
+            [
+              "MAX / MIN",
+              "najveća i najmanja vrednost",
+              "<code>=MAX(B2:B6)</code>"
+            ],
+            [
+              "COUNT",
+              "broji ćelije sa brojevima",
+              "<code>=COUNT(B2:B6)</code>"
+            ],
+            [
+              "IF",
+              "bira rezultat po uslovu",
+              "<code>=IF(B2&gt;3000;&quot;Skupo&quot;;&quot;U redu&quot;)</code>"
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "warning",
+          "text": "U zavisnosti od podešavanja jezika i regiona, argumenti u formuli se razdvajaju <strong>tačkom-zarezom (;)</strong> ili <strong>zarezom (,)</strong>. Ako vam formula javlja grešku, probajte drugi znak.",
+          "title": "Ako formula ne radi."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Sortiranje, filter i grafikon"
+        },
+        {
+          "type": "list",
+          "style": "bullets",
+          "items": [
+            "<strong>sortiranje:</strong> označite tabelu, pa <em>Podaci</em> (Data) → <em>Sortiraj opseg</em> (Sort range)",
+            "<strong>filter:</strong> označite tabelu, pa <em>Podaci</em> → <em>Napravi filter</em> (Create a filter), što omogućava da prikažete samo neke redove",
+            "<strong>grafikon:</strong> označite podatke, pa <em>Umetni</em> (Insert) → <em>Grafikon</em> (Chart)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Prijava preko Googlea na druge servise",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Kada ste prijavljeni u Google nalog, mnogi servisi vam omogućavaju da se registrujete jednim klikom. Na stranici za prijavu potražite dugme <strong>„Nastavi pomoću Googlea“</strong> (<em>Continue with Google</em>)."
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Otvorite sajt",
+              "sub": "na primer canva.com"
+            },
+            {
+              "title": "Kliknite na prijavu",
+              "sub": "Sign up / Log in"
+            },
+            {
+              "title": "Nastavi pomoću Googlea",
+              "sub": "Continue with Google"
+            },
+            {
+              "title": "Izaberite svoj nalog",
+              "sub": "pazite koji"
+            },
+            {
+              "title": "Potvrdite",
+              "sub": "i pregledajte dozvole"
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "columns": 2,
+          "items": [
+            {
+              "icon": "▶️",
+              "title": "YouTube",
+              "text": "već ste prijavljeni preko Google naloga: pretplate, plejliste, komentari i sopstveni kanal"
+            },
+            {
+              "icon": "🎨",
+              "title": "Canva",
+              "text": "dizajn prezentacija, postera i objava; ima besplatan paket"
+            },
+            {
+              "icon": "🧩",
+              "title": "Figma",
+              "text": "dizajn izgleda aplikacija i sajtova; ima besplatan paket"
+            },
+            {
+              "icon": "🤖",
+              "title": "AI alati",
+              "text": "Gemini koristi Google nalog, a mnogi drugi alati nude prijavu preko Googlea"
+            }
+          ]
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Prednosti",
+            "items": [
+              "brza registracija bez novih lozinki",
+              "manje lozinki za pamćenje",
+              "Google štiti prijavu (uključujući 2FA)"
+            ]
+          },
+          "right": {
+            "title": "Rizici",
+            "items": [
+              "ko dobije vaš Google nalog, dobija i sve povezane servise",
+              "servis dobija vaše ime, e-adresu i sliku",
+              "ako izgubite pristup Googleu, gubite i pristup tim servisima"
+            ]
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": "Pregled aplikacija kojima ste dali pristup nalazi se u podešavanjima Google naloga, u delu <strong>Bezbednost</strong>. Tamo možete da uklonite ono što više ne koristite."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Bezbednost: kako ne nasesti na prevaru",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Phishing</strong> je pokušaj prevare u kome vam neko, preko lažne poruke ili lažne stranice, pokušava da izmami lozinku ili kod. Najčešće izgleda kao poruka od Googlea, banke ili kurirske službe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Znaci upozorenja:"
+        },
+        {
+          "type": "list",
+          "style": "bullets",
+          "items": [
+            "poruka je hitna: „vaš nalog će biti blokiran u roku od 24 sata“",
+            "traži da kliknete na link i unesete lozinku ili kod",
+            "adresa pošiljaoca ili sajta je malo drugačija od prave (na primer <code>g00gle</code> umesto <code>google</code>)",
+            "ima pravopisnih grešaka ili čudnog prevoda",
+            "nudi nagradu ili poklon koji niste tražili"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "danger",
+          "text": "Google vas nikada neće tražiti lozinku ni kod porukom, mejlom ili telefonom. Ako sumnjate, ne klikćite na link iz poruke. Otvorite sajt sami, ukucavanjem adrese u pregledač, i proverite da li tamo postoji obaveštenje.",
+          "title": "Pravilo koje vredi zapamtiti."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Najčešći problemi i rešenja",
+          "numbered": true
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Problem",
+            "Rešenje"
+          ],
+          "rows": [
+            [
+              "adresa je zauzeta",
+              "dodajte srednje slovo ili broj, ili probajte drugi redosled imena"
+            ],
+            [
+              "ne stiže kod za potvrdu",
+              "sačekajte minut, proverite broj telefona i izaberite opciju da kod stigne ponovo"
+            ],
+            [
+              "zaboravljena lozinka",
+              "na stranici za prijavu izaberite „Zaboravili ste lozinku?“ i pratite postupak oporavka"
+            ],
+            [
+              "ne mogu da otvorim dokument koji mi je neko poslao",
+              "kliknite na „Zatraži pristup“ ili proverite da li ste prijavljeni pravim nalogom"
+            ],
+            [
+              "formula pokazuje grešku",
+              "proverite da li počinje sa =, da li je ime formule tačno i probajte ; umesto ,"
+            ],
+            [
+              "prijavljen sam pogrešnim nalogom",
+              "u gornjem desnom uglu kliknite na sliku profila i izaberite pravi nalog ili se odjavite"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zadatak za kraj časa",
+          "numbered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Do kraja časa uradite sledeće, redom:"
+        },
+        {
+          "type": "list",
+          "style": "numbered",
+          "items": [
+            "napravite Google nalog (ili proverite da vaš postojeći ima pristojnu adresu)",
+            "uključite dvostepenu verifikaciju",
+            "u Drive-u napravite folder pod nazivom „Informatika“",
+            "u tom folderu napravite Docs dokument „Moj prvi dokument“ sa jednim naslovom, jednom listom i jednom tabelom",
+            "u tom folderu napravite Sheets dokument „Troškovi“ sa pet stavki, zbirom i prosekom",
+            "podelite Docs dokument sa asistentom kao <strong>Komentator</strong> (e-adresu ćete dobiti na času)",
+            "prijavite se na Canvu preko Googlea i napravite jedan prazan dizajn"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Ako vam nešto ne polazi za rukom, to je u redu. Pitajte kolegu pored sebe ili nas. Snalaženje u ovakvim alatima i znači da naučite sami da tražite rešenje.",
+          "title": "Usput."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "bullets",
+          "items": [
+            "jedan Google nalog otvara vrata ka Gmailu, Drive-u, Docs-u, Sheets-u, YouTube-u i mnogim drugim servisima",
+            "adresa treba da bude ozbiljna (ime.prezime), a lozinka dugačka i samo vaša",
+            "dvostepena verifikacija je najbolja zaštita koju možete uključiti za nekoliko minuta",
+            "naslove pravimo stilovima, a formule počinju znakom =",
+            "fajlove delimo sa konkretnim ljudima i najmanjim potrebnim pravima",
+            "ni lozinku ni šestocifreni kod ne dajemo nikome, bez obzira ko se predstavlja"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Korisni linkovi"
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "title": "Upravljanje Google nalogom",
+              "url": "https://myaccount.google.com"
+            },
+            {
+              "title": "Google Drive",
+              "url": "https://drive.google.com"
+            },
+            {
+              "title": "Google Docs",
+              "url": "https://docs.google.com"
+            },
+            {
+              "title": "Google Sheets",
+              "url": "https://sheets.google.com"
+            },
+            {
+              "title": "Pomoć za Google Docs uređivače",
+              "url": "https://support.google.com/docs"
+            },
+            {
+              "title": "Pomoć za Google nalog",
+              "url": "https://support.google.com/accounts"
+            },
+            {
+              "title": "Canva",
+              "url": "https://www.canva.com"
+            },
+            {
+              "title": "Figma",
+              "url": "https://www.figma.com"
+            }
+          ]
+        }
+      ]
+    }
   }
 ]
