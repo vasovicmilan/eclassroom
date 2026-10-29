@@ -2,6 +2,7 @@
   {
     "slug": "01-uvod-u-internet-marketing",
     "subjectSlug": "internet-marketing",
+    "kind": "predavanje",
     "title": "Uvod u internet marketing",
     "description": "Definicija i svrha marketinga, marketing miks (P), SMART ciljevi, tradicionalni i internet marketing i svest o brendu.",
     "week": 1,
@@ -186,6 +187,7 @@
   {
     "slug": "02-brend-inbound-i-ponasanje-korisnika",
     "subjectSlug": "internet-marketing",
+    "kind": "predavanje",
     "title": "Inbound marketing, personalizacija i ponašanje korisnika",
     "description": "Kako privući korisnike korisnim sadržajem, kako ih personalizovano nagovoriti i zašto je važno razumeti njihovo ponašanje.",
     "week": 2,
@@ -280,6 +282,7 @@
   {
     "slug": "03-seo-osnove",
     "subjectSlug": "internet-marketing",
+    "kind": "predavanje",
     "title": "SEO osnove",
     "description": "Šta je SEO, kako pretraživač indeksira sadržaj, SERP i CTR, organski saobraćaj i istraživanje ključnih reči.",
     "week": 3,
@@ -417,6 +420,7 @@
   {
     "slug": "04-on-page-seo",
     "subjectSlug": "internet-marketing",
+    "kind": "predavanje",
     "title": "On-page SEO i meta podaci",
     "description": "Optimizacija sadržaja i elemenata stranice: naslovi, meta tagovi, H1, slike, kvalitet sadržaja i duplirani sadržaj.",
     "week": 4,
@@ -538,6 +542,7 @@
   {
     "slug": "05-tehnicki-seo-i-off-page",
     "subjectSlug": "internet-marketing",
+    "kind": "predavanje",
     "title": "Tehnički SEO, bounce rate i off-page",
     "description": "Tehnički faktori rangiranja, kvalitet koda, HTTPS, bounce rate i razlika između on-site i off-page optimizacije.",
     "week": 5,
@@ -670,6 +675,7 @@
   {
     "slug": "06-lokalni-seo-i-aso",
     "subjectSlug": "internet-marketing",
+    "kind": "predavanje",
     "title": "Lokalni SEO i ASO",
     "description": "Optimizacija za Google Maps (lokalna pretraga) i optimizacija mobilnih aplikacija u prodavnicama aplikacija (ASO).",
     "week": 6,
@@ -764,6 +770,7 @@
   {
     "slug": "07-sem-i-ppc",
     "subjectSlug": "internet-marketing",
+    "kind": "predavanje",
     "title": "SEM i PPC oglašavanje",
     "description": "Vrste SEM-a, plaćeno oglašavanje po kliku, modeli plaćanja (PPC, CPC, CPM) i princip rada Google Ads sistema.",
     "week": 7,
@@ -876,6 +883,7 @@
   {
     "slug": "08-display-remarketing-i-sem-vs-seo",
     "subjectSlug": "internet-marketing",
+    "kind": "predavanje",
     "title": "Display oglašavanje, remarketing i poređenje SEO i SEM",
     "description": "Google Display mreža, remarketing i uporedna analiza SEO-a i SEM-a.",
     "week": 8,
@@ -975,6 +983,7 @@
   {
     "slug": "09-ux-landing-page-ab-i-cro",
     "subjectSlug": "internet-marketing",
+    "kind": "predavanje",
     "title": "UX/UI, landing page, A/B testiranje i CRO",
     "description": "Kako dizajn i testiranje povećavaju konverziju: UX/UI, landing stranica, A/B testovi i optimizacija konverzije.",
     "week": 9,
@@ -1076,6 +1085,7 @@
   {
     "slug": "10-email-marketing-i-automatizacija",
     "subjectSlug": "internet-marketing",
+    "kind": "predavanje",
     "title": "E-mail marketing i automatizacija",
     "description": "Šta je e-mail marketing, osnovne metrike kampanje i kako automatizacija pomaže, uz njena ograničenja.",
     "week": 10,
@@ -1203,6 +1213,7 @@
   {
     "slug": "11-analitika-ga4-i-kpi",
     "subjectSlug": "internet-marketing",
+    "kind": "predavanje",
     "title": "Analitika: Google Analytics 4 i KPI",
     "description": "Praćenje ponašanja korisnika alatom Google Analytics 4 i ključni pokazatelji uspešnosti (KPI).",
     "week": 11,
@@ -1310,6 +1321,7 @@
   {
     "slug": "12-drustvene-mreze-smm",
     "subjectSlug": "internet-marketing",
+    "kind": "predavanje",
     "title": "Marketing na društvenim mrežama",
     "description": "SMM, razlika između SEO sadržaja i sadržaja za društvene mreže, i specifičnosti Facebook-a, Instagram-a i LinkedIn-a.",
     "week": 12,
@@ -1423,6 +1435,7 @@
   {
     "slug": "13-influenseri-i-affiliate",
     "subjectSlug": "internet-marketing",
+    "kind": "predavanje",
     "title": "Influenser i affiliate marketing",
     "description": "Saradnja sa influenserima, procena njihovog kvaliteta i partnerski (affiliate) marketing.",
     "week": 13,
@@ -1514,6 +1527,7 @@
   {
     "slug": "14-vestacka-inteligencija-u-marketingu",
     "subjectSlug": "internet-marketing",
+    "kind": "predavanje",
     "title": "Veštačka inteligencija u marketingu",
     "description": "Uloga veštačke inteligencije u kreiranju marketinških strategija: primene, prednosti i ograničenja.",
     "week": 14,
@@ -1620,6 +1634,7 @@
   {
     "slug": "15-ponavljanje-i-priprema-za-ispit",
     "subjectSlug": "internet-marketing",
+    "kind": "predavanje",
     "title": "Ponavljanje i priprema za ispit",
     "description": "Pregled svih tema i ispitnih pitanja po lekcijama.",
     "week": 15,

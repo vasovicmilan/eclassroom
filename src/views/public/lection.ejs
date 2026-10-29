@@ -23,6 +23,7 @@
         <article>
           <div class="mb-4">
             <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="badge bg-primary"><%= lectionKind(lection).icon %> <%= lectionKind(lection).label %></span>
               <span class="badge bg-secondary">📅 Nedelja <%= lection.week %></span>
               <span class="badge bg-secondary">📌 <%= lection.formattedDate %></span>
             </div>

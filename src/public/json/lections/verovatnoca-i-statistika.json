@@ -2,6 +2,7 @@
   {
     "slug": "01-kombinatorika-pravila-brojanja-i-permutacije",
     "subjectSlug": "verovatnoca-i-statistika",
+    "kind": "predavanje",
     "title": "Kombinatorika I: pravila brojanja i permutacije",
     "description": "Pravilo zbira i proizvoda, faktorijel i permutacije sa i bez ponavljanja.",
     "week": 1,
@@ -296,6 +297,7 @@
   {
     "slug": "02-kombinatorika-varijacije-i-kombinacije",
     "subjectSlug": "verovatnoca-i-statistika",
+    "kind": "predavanje",
     "title": "Kombinatorika II: varijacije i kombinacije",
     "description": "Kako se bira iz skupa: kada je redosled bitan, a kada nije, sa i bez ponavljanja.",
     "week": 2,
@@ -646,6 +648,7 @@
   {
     "slug": "03-uvod-u-verovatnocu",
     "subjectSlug": "verovatnoca-i-statistika",
+    "kind": "predavanje",
     "title": "Uvod u verovatnoću",
     "description": "Slučajni eksperiment, prostor ishoda, klasična i geometrijska verovatnoća.",
     "week": 3,
@@ -939,6 +942,7 @@
   {
     "slug": "04-dogadjaji-i-operacije-sa-njima",
     "subjectSlug": "verovatnoca-i-statistika",
+    "kind": "predavanje",
     "title": "Događaji i operacije sa njima",
     "description": "Unija, presek, suprotan događaj, Vennovi dijagrami i pravila verovatnoće.",
     "week": 4,
@@ -1213,6 +1217,7 @@
   {
     "slug": "05-zadaci-dogadjaji-i-operacije",
     "subjectSlug": "verovatnoca-i-statistika",
+    "kind": "vezba",
     "title": "Zadaci: događaji i operacije",
     "description": "Vežbanje iz zbirke: tri događaja, formula uključenja–isključenja i suprotni događaji.",
     "week": 5,
@@ -1323,6 +1328,7 @@
   {
     "slug": "06-uslovna-verovatnoca",
     "subjectSlug": "verovatnoca-i-statistika",
+    "kind": "predavanje",
     "title": "Uslovna verovatnoća",
     "description": "Verovatnoća događaja kada već znamo da se neki drugi desio, i pravilo množenja.",
     "week": 6,
@@ -1464,6 +1470,7 @@
   {
     "slug": "07-nezavisnost-dogadjaja",
     "subjectSlug": "verovatnoca-i-statistika",
+    "kind": "predavanje",
     "title": "Nezavisnost događaja",
     "description": "Kada jedan događaj ne utiče na drugi, i kako to proveriti računom.",
     "week": 7,
@@ -1616,6 +1623,7 @@
   {
     "slug": "08-totalna-verovatnoca",
     "subjectSlug": "verovatnoca-i-statistika",
+    "kind": "predavanje",
     "title": "Totalna verovatnoća",
     "description": "Kako verovatnoću događaja računamo preko više mogućih „puteva“ (potpun sistem događaja).",
     "week": 8,
@@ -1748,6 +1756,7 @@
   {
     "slug": "09-bajesova-formula",
     "subjectSlug": "verovatnoca-i-statistika",
+    "kind": "predavanje",
     "title": "Bajesova formula",
     "description": "Obrnuto pitanje: znamo ishod, a tražimo kojim putem je nastao.",
     "week": 9,
@@ -1855,6 +1864,7 @@
   {
     "slug": "10-slucajne-promenljive-i-funkcija-raspodele",
     "subjectSlug": "verovatnoca-i-statistika",
+    "kind": "predavanje",
     "title": "Slučajne promenljive i funkcija raspodele",
     "description": "Zakon raspodele, funkcija raspodele i očekivanje diskretne slučajne promenljive.",
     "week": 10,
@@ -2005,6 +2015,7 @@
   {
     "slug": "11-linearna-transformacija-i-binomna-raspodela",
     "subjectSlug": "verovatnoca-i-statistika",
+    "kind": "predavanje",
     "title": "Linearna transformacija i binomna raspodela",
     "description": "Šta se dešava sa očekivanjem i disperzijom kada promenljivu pomnožimo i pomerimo; binomna raspodela.",
     "week": 11,
@@ -2130,6 +2141,7 @@
   {
     "slug": "12-neprekidne-slucajne-promenljive-gustina",
     "subjectSlug": "verovatnoca-i-statistika",
+    "kind": "predavanje",
     "title": "Neprekidne slučajne promenljive: gustina",
     "description": "Gustina raspodele, funkcija raspodele i određivanje konstante.",
     "week": 12,
@@ -2258,6 +2270,7 @@
   {
     "slug": "13-neprekidne-ocekivanje-i-disperzija",
     "subjectSlug": "verovatnoca-i-statistika",
+    "kind": "predavanje",
     "title": "Neprekidne: očekivanje i disperzija",
     "description": "Kako se očekivanje i disperzija računaju integralom.",
     "week": 13,
@@ -2343,6 +2356,7 @@
   {
     "slug": "14-deskriptivna-statistika",
     "subjectSlug": "verovatnoca-i-statistika",
+    "kind": "predavanje",
     "title": "Deskriptivna statistika",
     "description": "Aritmetička sredina, disperzija uzorka, mod, medijana i empirijska funkcija raspodele.",
     "week": 14,
@@ -2540,6 +2554,7 @@
   {
     "slug": "15-pregled-gradiva-i-priprema",
     "subjectSlug": "verovatnoca-i-statistika",
+    "kind": "predavanje",
     "title": "Pregled gradiva i priprema za kolokvijume",
     "description": "Koja formula kada, najčešće greške i pregled svih lekcija.",
     "week": 15,

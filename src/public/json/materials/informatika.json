@@ -1,0 +1,83 @@
+[
+  {
+    "week": 4,
+    "title": "Moderna organizacija u globalnom okruženju (Poglavlje 1)",
+    "file": "ois/ch01.ppt",
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "subjectSlug": "informatika"
+  },
+  {
+    "week": 7,
+    "title": "Trendovi razvoja informacionih sistema",
+    "file": "ois/ch02.ppt",
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "subjectSlug": "informatika"
+  },
+  {
+    "week": 8,
+    "title": "Etika informacionih sistema",
+    "file": "ois/ch03.ppt",
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "subjectSlug": "informatika"
+  },
+  {
+    "week": 9,
+    "title": "Koncept elektronskog poslovanja",
+    "file": "ois/ch06.ppt",
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "subjectSlug": "informatika"
+  },
+  {
+    "week": 10,
+    "title": "Modeli elektronskog poslovanja",
+    "file": "ois/ch07.ppt",
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "subjectSlug": "informatika"
+  },
+  {
+    "week": 11,
+    "title": "Aplikacije elektronskog poslovanja",
+    "file": "ois/ch08.ppt",
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "subjectSlug": "informatika"
+  },
+  {
+    "week": 12,
+    "title": "ERP",
+    "file": "ois/ch10.ppt",
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "subjectSlug": "informatika"
+  },
+  {
+    "week": 13,
+    "title": "CRM",
+    "file": "ois/ch11.ppt",
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "subjectSlug": "informatika"
+  },
+  {
+    "week": 14,
+    "title": "Sistemi za podršku odlučivanju",
+    "file": "ois/ch09.ppt",
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "subjectSlug": "informatika"
+  }
+]

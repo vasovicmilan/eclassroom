@@ -2,6 +2,7 @@
   {
     "slug": "01-uvodno-predavanje",
     "subjectSlug": "informatika",
+    "kind": "predavanje",
     "title": "Uvodno predavanje",
     "description": "Zašto nam je potrebna informatička pismenost, gde se sve koriste informacioni sistemi i jedan primer iz prakse: anketa na papiru, preko interneta i bez interneta.",
     "week": 1,
@@ -327,6 +328,7 @@
   {
     "slug": "02-google-nalog-i-osnovni-alati",
     "subjectSlug": "informatika",
+    "kind": "vezba",
     "title": "Google nalog i osnovni alati",
     "description": "Pravimo Google nalog, štitimo ga lozinkom i dvostepenom verifikacijom i učimo osnove Drive-a, Docs-a i Sheets-a, kao i prijavu preko Googlea na YouTube, Canvu i Figmu.",
     "week": 3,
@@ -1088,6 +1090,2580 @@
               "url": "https://www.figma.com"
             }
           ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "03-podaci-informacije-i-znanje",
+    "subjectSlug": "informatika",
+    "kind": "predavanje",
+    "title": "Podaci, informacije i znanje",
+    "description": "Razlika između podatka, informacije i znanja, šta je informacioni sistem, od čega se sastoji i po čemu se razlikuju arhitektura i infrastruktura.",
+    "week": 4,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Tri reči koje stalno mešamo"
+        },
+        {
+          "type": "paragraph",
+          "text": "U svakodnevnom govoru reči <strong>podatak</strong>, <strong>informacija</strong> i <strong>znanje</strong> koristimo kao da znače isto. U informatici one znače tri različite stvari, a razumevanje te razlike je osnova za sve ostalo što radimo na ovom predmetu."
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "🔢",
+              "title": "Podatak",
+              "text": "elementarni opis stvari, događaja, aktivnosti ili transakcije koji je zabeležen i sačuvan, ali nije organizovan i sam po sebi ne nosi značenje"
+            },
+            {
+              "icon": "💡",
+              "title": "Informacija",
+              "text": "podaci organizovani tako da imaju značenje i vrednost za onoga ko ih prima"
+            },
+            {
+              "icon": "🧠",
+              "title": "Znanje",
+              "text": "podaci i informacije obrađeni tako da se uz iskustvo i ranije učenje mogu primeniti na konkretan problem"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Primer: banka i klijent"
+        },
+        {
+          "type": "paragraph",
+          "text": "Banka beleži svaku isplatu sa računa. Pojedinačno, to su samo podaci. Kada ih povežemo, dobijamo informaciju, a kada je razumemo i iskoristimo, znanje."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Nivo",
+            "Primer",
+            "Šta imamo"
+          ],
+          "rows": [
+            [
+              "Podatak",
+              "„Klijent N. N. je jutros podigao 50 evra u Travniku“",
+              "jedan zapis o jednoj transakciji"
+            ],
+            [
+              "Informacija",
+              "„U poslednjih pet meseci N. N. je podizao novac u Londonu, Oslu i Stokholmu“",
+              "podaci spojeni u celinu koja nešto govori"
+            ],
+            [
+              "Znanje",
+              "„N. N. često putuje po Evropi, pa bi mu mogla odgovarati kartica sa pristupom računu u više zemalja“",
+              "zaključak na osnovu koga banka može da donese odluku"
+            ]
+          ]
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Podatak",
+              "sub": "sirova činjenica"
+            },
+            {
+              "title": "Informacija",
+              "sub": "organizovani podaci"
+            },
+            {
+              "title": "Znanje",
+              "sub": "razumevanje i iskustvo"
+            },
+            {
+              "title": "Odluka",
+              "sub": "šta ćemo da uradimo"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Isti podatak može biti beskoristan jednoj osobi, a dragocen drugoj. Zato definicija informacije uvek kaže „vrednost za primaoca“: broj telefona je informacija tek kada nam treba."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je informacioni sistem"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Informacioni sistem (IS)</strong> je sistem koji prikuplja, obrađuje, čuva, analizira i prosleđuje informacije za određene potrebe. Njegov zadatak je da pravi podatke korisnim i da ih u pravom trenutku dostavi pravoj osobi."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "📥",
+              "text": "<strong>prikuplja</strong> podatke (unos, kasa, senzor, formular)"
+            },
+            {
+              "icon": "⚙️",
+              "text": "<strong>obrađuje</strong> ih (računa, sortira, povezuje)"
+            },
+            {
+              "icon": "🗄️",
+              "text": "<strong>čuva</strong> ih (baza podataka, arhiva)"
+            },
+            {
+              "icon": "📊",
+              "text": "<strong>analizira</strong> ih (izveštaji, trendovi)"
+            },
+            {
+              "icon": "📤",
+              "text": "<strong>prosleđuje</strong> informacije onima kojima trebaju"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Informacioni sistemi koji za deo ili celinu svojih zadataka koriste računare nazivaju se <strong>računarski podržani informacioni sistemi</strong>."
+        },
+        {
+          "type": "callout",
+          "variant": "warning",
+          "text": "Nisu svi informacioni sistemi zasnovani na računarima. Sveska u koju prodavac upisuje dugovanja ili papirna kartoteka u ordinaciji takođe su informacioni sistemi. Anketa na papiru sa prvog predavanja je primer sistema bez računara, a ista anketa na telefonu je računarski podržan sistem.",
+          "title": "Važno:"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Od čega se sastoji informacioni sistem"
+        },
+        {
+          "type": "paragraph",
+          "text": "Računarski podržan informacioni sistem ima šest osnovnih komponenti:"
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "🖥️",
+              "title": "Hardver",
+              "text": "uređaji: računari, telefoni, serveri, štampači"
+            },
+            {
+              "icon": "💿",
+              "title": "Softver",
+              "text": "programi koji upravljaju hardverom i obavljaju posao"
+            },
+            {
+              "icon": "🗄️",
+              "title": "Baza podataka",
+              "text": "organizovana zbirka podataka"
+            },
+            {
+              "icon": "🌐",
+              "title": "Mreža",
+              "text": "veze koje povezuju računare i omogućavaju razmenu podataka"
+            },
+            {
+              "icon": "📋",
+              "title": "Procedure",
+              "text": "uputstva i pravila: ko šta radi, kojim redom i kada"
+            },
+            {
+              "icon": "👥",
+              "title": "Ljudi",
+              "text": "korisnici, administratori i svi koji sistem koriste i održavaju"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Aplikativni program</strong> je računarski program koji rešava konkretan zadatak ili podržava poslovni proces, na primer program za obračun plata ili aplikacija za zakazivanje pregleda."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Arhitektura i infrastruktura informacione tehnologije"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ova dva pojma se lako pobrkaju, a razlikuju se kao plan grada i sam grad. Urbanistički plan određuje šta gde ide, a ulice, zgrade i električna mreža su ono što se stvarno gradi i koristi."
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Arhitektura IT",
+            "items": [
+              "konceptualni, opšti plan svih informacionih resursa organizacije",
+              "vodič za tekuće operacije",
+              "nacrt za dalji razvoj",
+              "odgovara na pitanje: <em>kako sve treba da bude povezano</em>"
+            ]
+          },
+          "right": {
+            "title": "Infrastruktura IT",
+            "items": [
+              "fizički objekti, komponente IT, usluge i zaposleni",
+              "hardver, softver i komunikacione tehnologije",
+              "osoblje koje koristi tehnologiju da pruži usluge",
+              "odgovara na pitanje: <em>šta konkretno imamo</em>"
+            ]
+          }
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zašto su informacioni sistemi važni"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "oni su sastavni deo života: banka, prodavnica, škola, zdravstvo, saobraćaj",
+            "nude mogućnost zaposlenja, jer ih treba osmisliti, održavati i koristiti",
+            "informacionu tehnologiju koriste sva odeljenja jedne organizacije, na primer za analizu proizvoda, lokacije, pozicije i cene"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "podatak je sirova činjenica, informacija je podatak sa značenjem, a znanje je primena informacija uz iskustvo",
+            "informacioni sistem prikuplja, obrađuje, čuva, analizira i prosleđuje informacije",
+            "komponente IS su hardver, softver, baza podataka, mreža, procedure i ljudi",
+            "arhitektura je plan svih informacionih resursa, a infrastruktura je ono što stvarno postoji"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Definišite informaciju i podatak. Koja je razlika između njih?",
+                "Definišite znanje.",
+                "Šta je arhitektura, a šta infrastruktura informacionog sistema i po čemu se razlikuju?",
+                "Definišite informacioni sistem. Koji su njegovi zadaci?",
+                "Da li su svi informacioni sistemi zasnovani na računarima?",
+                "Navedite nekoliko primera gde se koriste informacioni sistemi.",
+                "Navedite osnovne komponente informacionog sistema."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Rainer, Turban: Uvod u informacione sisteme, poglavlje 1; predavanja iz predmeta Osnove informacionih sistema.",
+          "muted": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "04-tipovi-informacionih-sistema",
+    "subjectSlug": "informatika",
+    "kind": "predavanje",
+    "title": "Tipovi informacionih sistema",
+    "description": "Kako se informacioni sistemi dele prema obuhvatu i prema tome koga podržavaju: od kase u prodavnici do kontrolnih tabli za menadžere.",
+    "week": 5,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Nisu svi informacioni sistemi isti"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sistem koji naplaćuje račun na kasi i sistem koji pomaže direktoru da odluči o novoj fabrici rade sasvim različite poslove. Zato informacione sisteme delimo na tipove. Dve najčešće podele su po <strong>obuhvatu</strong> (koliko široko podržavaju organizaciju) i po tome <strong>koga podržavaju</strong> (koje zaposlene)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Podela po obuhvatu"
+        },
+        {
+          "type": "paragraph",
+          "text": "Neki sistemi služe jednom delu firme, neki celoj firmi, a neki povezuju više firmi."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Tip sistema",
+            "Šta radi",
+            "Primer"
+          ],
+          "rows": [
+            [
+              "Informacioni sistem funkcionalne celine (FAIS)",
+              "podržava aktivnosti u okviru jedne oblasti, na primer računovodstva ili prodaje",
+              "računovodstveni program"
+            ],
+            [
+              "Sistem za obradu transakcija (TPS)",
+              "obrađuje podatke o transakcijama koje nastaju u poslovanju",
+              "kasa (POS terminal) u supermarketu"
+            ],
+            [
+              "Sistem za planiranje resursa preduzeća (ERP)",
+              "povezuje sve funkcionalne celine preduzeća u jednu celinu",
+              "SAP, Oracle"
+            ],
+            [
+              "Interorganizacioni sistem (IOS)",
+              "povezuje dve ili više organizacija i upravlja tokovima proizvoda, usluga i informacija među njima",
+              "Walmartov sistem koji povezuje dobavljače sa prodavnicama"
+            ],
+            [
+              "Sistem elektronske trgovine",
+              "omogućava transakcije između organizacija, kao i između organizacija i potrošača (B2B, B2C)",
+              "internet prodavnica proizvođača računara"
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "<strong>Lanac snabdevanja</strong> prikazuje kretanje robe, tok informacija i novca od sirovina, preko fabrika i skladišta, do krajnjeg kupca. Interorganizacioni sistemi omogućavaju da svi učesnici u lancu vide iste podatke."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Podela po tome koga podržavaju"
+        },
+        {
+          "type": "paragraph",
+          "text": "Različiti ljudi u organizaciji trebaju različite informacije: administratoru su važni tekstovi i tabele, menadžeru pregledi i izveštaji, a eksperti traže dubinsku analizu."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Tip sistema",
+            "Funkcija",
+            "Za koga je"
+          ],
+          "rows": [
+            [
+              "Kancelarijska automatizacija (OAS)",
+              "podrška svakodnevnim aktivnostima pojedinaca i grupa, na primer Microsoft Office",
+              "administrativno osoblje, niži i srednji menadžment, eksperti"
+            ],
+            [
+              "Informacioni sistem funkcionalne celine (FAIS)",
+              "objedinjuje podatke i priprema izveštaje (generator izveštaja)",
+              "pre svega srednji menadžment, ponekad i niži"
+            ],
+            [
+              "Poslovna inteligencija (BI)",
+              "podrška složenim odlukama koje se ne ponavljaju rutinski",
+              "srednji menadžment i eksperti"
+            ],
+            [
+              "Ekspertni sistemi (ES)",
+              "pokušavaju da oponašaju rad ljudskog eksperta",
+              "eksperti"
+            ],
+            [
+              "Digitalne kontrolne table (dashboards)",
+              "pristup aktuelnim informacijama i izveštajima na jednom ekranu, na primer berzanske platforme",
+              "svi menadžeri"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Primeri iz našeg okruženja"
+        },
+        {
+          "type": "cards",
+          "columns": 4,
+          "items": [
+            {
+              "icon": "🧾",
+              "title": "Kasa u prodavnici",
+              "text": "TPS: svaki račun je transakcija koja se odmah beleži"
+            },
+            {
+              "icon": "📄",
+              "title": "Word, Excel, Docs",
+              "text": "OAS: alati kojima svakodnevno radimo"
+            },
+            {
+              "icon": "🏭",
+              "title": "SAP u fabrici",
+              "text": "ERP: nabavka, proizvodnja, skladište i finansije u jednom sistemu"
+            },
+            {
+              "icon": "📈",
+              "title": "Berzanska aplikacija",
+              "text": "dashboard: aktuelni podaci na jednom mestu"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "U sledećim lekcijama detaljnije ćemo obraditi ERP, sisteme za podršku odlučivanju i poslovnu inteligenciju, jer se svi oni nalaze u ovoj tabeli."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "po obuhvatu razlikujemo FAIS, TPS, ERP, IOS i sisteme elektronske trgovine",
+            "po tome koga podržavaju razlikujemo OAS, FAIS, BI, ekspertne sisteme i dashboards",
+            "viši nivo organizacije traži manje detalja, a više pregleda i analize"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Navedite tipove informacionih sistema.",
+                "Koji su glavni informacioni sistemi koji podržavaju svaki od nivoa organizacije?",
+                "Šta je TPS, a šta ERP? Navedite primere.",
+                "Šta je interorganizacioni informacioni sistem i čemu služi?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Rainer, Turban: Uvod u informacione sisteme, poglavlje 2 (2.1); predavanja iz predmeta Osnove informacionih sistema.",
+          "muted": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "05-konkurentska-prednost-i-strategijski-is",
+    "subjectSlug": "informatika",
+    "kind": "predavanje",
+    "title": "Konkurentska prednost i strategijski informacioni sistemi",
+    "description": "Kako informacione tehnologije pomažu firmama da budu bolje od konkurencije: Porterov model pet sila, lanac vrednosti i strategije za sticanje prednosti.",
+    "week": 6,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zašto se firme takmiče informacijama"
+        },
+        {
+          "type": "paragraph",
+          "text": "Svaka firma želi da bude bolja od konkurencije. <strong>Konkurentska strategija</strong> određuje kako će firma da se takmiči na tržištu, koje su joj ciljevi i planovi i kakvu poslovnu politiku vodi. Cilj je <strong>konkurentska prednost</strong>: kontrola tržišta i natprosečan profit."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Strategijski informacioni sistemi (SIS)</strong> su sistemi koji organizaciji omogućavaju da stekne konkurentsku prednost, tako što podržavaju njene strateške ciljeve ili poboljšavaju njene performanse i produktivnost."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Porterov model sila konkurencije"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ekonomista Michael Porter je pokazao da na položaj firme utiče pet sila. Firme koriste ovaj model da bi smislile kako da povećaju svoju konkurentnost, a informacione tehnologije im u tome pomažu."
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "🆕",
+              "title": "Novi konkurenti",
+              "text": "opasnost da se pojave novi igrači; barijere za ulazak na tržište (veliki troškovi, licence, brend) tu opasnost smanjuju"
+            },
+            {
+              "icon": "🏭",
+              "title": "Moć dobavljača",
+              "text": "što je dobavljača manje, to lakše diktiraju uslove"
+            },
+            {
+              "icon": "🛒",
+              "title": "Moć kupaca",
+              "text": "kupci koji lako porede cene i prelaze kod drugih pritiskaju cene"
+            },
+            {
+              "icon": "🔄",
+              "title": "Supstituti",
+              "text": "proizvodi iz drugih grana koji rešavaju isti problem"
+            },
+            {
+              "icon": "⚔️",
+              "title": "Konkurencija u grani",
+              "text": "borba postojećih firmi za iste kupce"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Primer: internet je kupcima znatno povećao moć. Nekada se cena proveravala u dve-tri prodavnice, a danas se za nekoliko minuta uporede ponude svih prodavaca."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Model lanca vrednosti"
+        },
+        {
+          "type": "paragraph",
+          "text": "Lanac vrednosti prikazuje aktivnosti kroz koje firma stvara vrednost. Cilj je da se pronađe gde informaciona tehnologija može da smanji troškove ili poveća vrednost."
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Primarne aktivnosti",
+            "items": [
+              "ulazna logistika",
+              "proizvodnja i kontrola",
+              "izlazna logistika",
+              "marketing i prodaja",
+              "usluge"
+            ]
+          },
+          "right": {
+            "title": "Sekundarne (pomoćne) aktivnosti",
+            "items": [
+              "infrastruktura firme (računovodstvo, finansije…)",
+              "menadžment ljudskih resursa",
+              "razvoj proizvoda i tehnologije",
+              "nabavka"
+            ]
+          }
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pet strategija za sticanje konkurentske prednosti"
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "💰",
+              "title": "Najniži troškovi",
+              "text": "biti najjeftiniji u grani"
+            },
+            {
+              "icon": "🎨",
+              "title": "Diferencijacija",
+              "text": "ponuditi nešto što drugi nemaju"
+            },
+            {
+              "icon": "💡",
+              "title": "Inovacija",
+              "text": "uvoditi nove proizvode, usluge ili načine rada"
+            },
+            {
+              "icon": "⚡",
+              "title": "Efektivnost poslovanja",
+              "text": "raditi brže i bolje od drugih"
+            },
+            {
+              "icon": "❤️",
+              "title": "Orijentisanost prema kupcu",
+              "text": "prilagoditi se kupcu i zadržati ga"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ko upravlja informacionim resursima"
+        },
+        {
+          "type": "paragraph",
+          "text": "Informacioni resursi obuhvataju sav hardver, softver, podatke i mreže. U velikim organizacijama o njima brine posebno <strong>odeljenje za informacione sisteme</strong>, a na njegovom čelu je <strong>direktor informatičkog sektora (CIO – Chief Information Officer)</strong>. Ne postoji jedinstveno pravilo kako se deli odgovornost za razvoj i održavanje informacionih sistema."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "strategijski informacioni sistem pomaže da organizacija stekne konkurentsku prednost",
+            "Porterov model ima pet sila: novi konkurenti, dobavljači, kupci, supstituti i konkurencija u grani",
+            "lanac vrednosti deli aktivnosti na primarne i pomoćne",
+            "prednost se stiče niskim troškovima, diferencijacijom, inovacijom, efektivnošću ili orijentacijom ka kupcu"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Šta su strategijski informacioni sistemi i koje su njihove prednosti?",
+                "Objasnite Porterov model sila konkurencije.",
+                "Šta je model lanca vrednosti? Koje su primarne, a koje pomoćne aktivnosti?",
+                "Navedite pet strategija koje kompanije koriste da steknu konkurentsku prednost."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Rainer, Turban: Uvod u informacione sisteme, poglavlje 2 (2.2); predavanja iz predmeta Osnove informacionih sistema.",
+          "muted": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "06-poslovno-okruzenje-i-tehnoloski-trendovi",
+    "subjectSlug": "informatika",
+    "kind": "predavanje",
+    "title": "Poslovno okruženje i tehnološki trendovi",
+    "description": "Globalizacija, pritisci na poslovanje i trendovi koji menjaju informacione sisteme: cloud computing, Web 2.0 i sveprisutno računarstvo.",
+    "week": 7,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Svet je postao ravniji"
+        },
+        {
+          "type": "paragraph",
+          "text": "Novinar Tomas Fridman opisuje globalizaciju u tri stadijuma. Prvi je trajao od 1492. do 1800. i oslanjao se na snagu država i broj ljudi, drugi od 1800. do 2000. donosi multinacionalne kompanije, a treći počinje 2000. godine. Treći stadijum pokreće deset „izravnjivača“, tj. događaja koji su učinili da se mali igrači takmiče sa velikima."
+        },
+        {
+          "type": "badges",
+          "items": [
+            "pad Berlinskog zida",
+            "Netscape (veb pregledač)",
+            "radni softver",
+            "upload (predaja datoteka)",
+            "spoljna saradnja (outsourcing)",
+            "ofšor poslovanje",
+            "lanac snabdevanja",
+            "insourcing",
+            "informisanje (pretraga)",
+            "„steroidi“ (mobilni i bežični uređaji)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pritisci na poslovanje"
+        },
+        {
+          "type": "paragraph",
+          "text": "Firme danas rade pod pritiscima iz više pravaca. Informacione tehnologije pomažu da se na njih odgovori."
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "🌍",
+              "title": "Tržišni pritisci",
+              "text": "globalna ekonomija i jaka konkurencija, promenljiva radna snaga, moćni kupci"
+            },
+            {
+              "icon": "🔧",
+              "title": "Tehnološki pritisci",
+              "text": "nove tehnologije brzo zastarevaju, a informacija ima previše"
+            },
+            {
+              "icon": "⚖️",
+              "title": "Društveni, politički i zakonski",
+              "text": "društvena odgovornost, usklađivanje sa propisima, etička pitanja"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Odgovori organizacija su <strong>strategijski sistemi</strong>, usredsređenost na kupce, proizvodnja po porudžbini i masovno prilagođavanje, kao i elektronsko poslovanje."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Tehnološki trendovi"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tehnologija se razvija brzo: snaga čipova se udvostručava otprilike na svakih 18 meseci, a performanse optičkih tehnologija povećavaju se oko deset puta na tri godine. Zato organizacije stalno prate nove trendove."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Cloud computing (računarstvo u oblaku)"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Cloud computing</strong> je korišćenje računarskih resursa preko interneta. Reč „oblak“ je metafora za internet. Umesto da programe i podatke držimo na svom računaru ili serveru, koristimo ih na računarima velikih provajdera."
+        },
+        {
+          "type": "list",
+          "style": "bullets",
+          "items": [
+            "javne usluge „oblaka“: pretraživanje na internetu, lični e-mail servisi (Gmail, Yahoo, Hotmail), društvene mreže, druge primene Web 2.0",
+            "za male firme: aplikacije za upravljanje dokumentima, rasporedom zaposlenih, ljudskim resursima",
+            "glavna prednost: smanjenje troškova vezanih za IT, jer firma ne kupuje i ne održava sopstvenu opremu"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Google Docs, Gmail i Google Drive koje ćemo koristiti na vežbama su primeri cloud usluga: dokument je sačuvan „u oblaku“ i može da se otvori sa bilo kog uređaja."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Sveprisutno računarstvo (pervasive computing)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Mali, jeftini i umreženi uređaji koji nam pomažu u svakodnevnom životu: mobilni telefoni, digitalni plejeri, uređaji za radio-frekvencijsku identifikaciju (RFID) i interaktivni paneli."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Web 2.0"
+        },
+        {
+          "type": "paragraph",
+          "text": "Web 2.0 je druga velika faza razvoja World Wide Web-a. Težište je na povezivanju (networking) i dinamičnim izvorima informacija. Sadržaj je odvojen od izgleda stranice, pa može lako da se preuzme i prikaže na drugim stranicama i uređajima."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "",
+            "Web 1.0",
+            "Web 2.0"
+          ],
+          "rows": [
+            [
+              "Ko unosi sadržaj",
+              "stručnjaci za izradu sajtova (administratori)",
+              "svako ko ima osnovna znanja o računaru"
+            ],
+            [
+              "Ko uređuje informacije",
+              "oni koji znaju veb tehnologiju",
+              "oni koji su stvarno eksperti za temu"
+            ],
+            [
+              "Sadržaj",
+              "vezan za izgled stranice",
+              "strukturiran i odvojen od izgleda, može se ponovo koristiti"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Pošto su podaci strukturirani i opisani standardima, računar može i sam da pretražuje i pronalazi informacije koje nas zanimaju."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Šta su 2012. godine prepoznavali analitičari"
+        },
+        {
+          "type": "paragraph",
+          "text": "Na predavanju je dat Gartnerov spisak trendova iz 2012. Mnogi od njih su danas svakodnevica, što najbolje pokazuje koliko brzo se tehnologija menja."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Trend iz 2012.",
+            "Gde smo danas"
+          ],
+          "rows": [
+            [
+              "tablet računari",
+              "svakodnevni uređaji"
+            ],
+            [
+              "aplikacije prilagođene mobilnim uređajima",
+              "podrazumevaju se"
+            ],
+            [
+              "prodavnice aplikacija",
+              "glavni način instalacije softvera na telefonima"
+            ],
+            [
+              "internet svega (Internet of everything)",
+              "pametni satovi, kućni uređaji, senzori"
+            ],
+            [
+              "velike količine podataka (big data) i napredna analitika",
+              "osnova poslovanja velikih firmi"
+            ],
+            [
+              "cloud computing",
+              "standardni način rada"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "globalizacija i internet su izravnali tržište i povećali konkurenciju",
+            "firme trpe tržišne, tehnološke i društveno-zakonske pritiske i odgovaraju elektronskim poslovanjem i usredsređenošću na kupce",
+            "cloud computing znači korišćenje računarskih resursa preko interneta, uz manje troškove IT-a",
+            "Web 2.0 omogućava da sadržaj unose svi, a ne samo stručnjaci za veb"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Definišite „cloud computing“.",
+                "Navedite prednosti „cloud computinga“.",
+                "Koje su prednosti Web 2.0 tehnologije?",
+                "Šta je sveprisutno (pervasive) računarstvo? Navedite primere."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Rainer, Turban: Uvod u informacione sisteme, poglavlje 1 (1.2, 1.3); predavanje Trendovi razvoja informacionih sistema.",
+          "muted": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "07-etika-i-drustveni-uticaj-is",
+    "subjectSlug": "informatika",
+    "kind": "predavanje",
+    "title": "Etika i društveni uticaj informacionih sistema",
+    "description": "Privatnost, intelektualna svojina i pravila računarske etike, kao i kako informaciona tehnologija menja posao, organizacije i društvo.",
+    "week": 8,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je etika i zašto je važna u IT-u"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Etika</strong> je nauka o moralu. Proučava i procenjuje moralne vrednosti, tj. šta je dobro, a šta nije prema opšteprihvaćenom mišljenju, i određuje principe ispravnog ponašanja. <strong>Kodeks etičkog i profesionalnog ponašanja</strong> je skup principa koji služi kao vodič ljudima u kompanijama i samim organizacijama."
+        },
+        {
+          "type": "paragraph",
+          "text": "Informacioni sistemi čuvaju lične podatke, novac i poslovne tajne, pa se često postavlja pitanje ko sme šta da vidi i koristi."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Četiri etička pitanja i prava pojedinca"
+        },
+        {
+          "type": "cards",
+          "columns": 4,
+          "items": [
+            {
+              "icon": "🔒",
+              "title": "Privatnost",
+              "text": "ko može da prikuplja i koristi podatke o meni"
+            },
+            {
+              "icon": "✅",
+              "title": "Tačnost",
+              "text": "ko je odgovoran da podaci budu tačni"
+            },
+            {
+              "icon": "🏷️",
+              "title": "Svojina",
+              "text": "kome pripadaju podaci i informacije"
+            },
+            {
+              "icon": "🚪",
+              "title": "Pristup",
+              "text": "ko sme da im pristupi i pod kojim uslovima"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Tim pitanjima odgovaraju prava pojedinca: pravo na privatnost i slobodan pristanak, pravo na ispravku netačnih podataka, pravo na ličnu svojinu i pravo na korektan tretman."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zaštita privatnosti"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Privatnost</strong> je pravo da budemo ostavljeni na miru, bez uznemiravanja od strane drugih. U većini zemalja zakonom su zaštićena dva principa:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "pravo na privatnost nije apsolutno, privatnost mora biti u ravnoteži sa potrebama društva",
+            "pravo društva da zna je iznad individualnog prava na privatnost"
+          ]
+        },
+        {
+          "type": "list",
+          "style": "bullets",
+          "items": [
+            "<strong>elektronsko nadgledanje</strong>: praćenje aktivnosti čoveka, na mreži ili van nje, uz pomoć računara",
+            "<strong>politike privatnosti</strong>: smernice organizacijama kako da štite podatke kupaca, partnera i zaposlenih",
+            "<strong>krađa identiteta</strong>: kriminal u kome neko koristi tuđe lične podatke da bi stvorio lažni identitet"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "success",
+          "text": "Šta možete sami: ne koristite istu lozinku na više mesta, proverite ko vidi vaše objave, ne otvarajte sumnjive linkove i ne delite lične podatke bez razloga.",
+          "title": "Praktičan savet:"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zaštita intelektualne svojine"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Intelektualna svojina</strong> je neopipljiva svojina koju stvara pojedinac ili grupa, a zaštićena je kao patent, žig ili autorsko pravo."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Pojam",
+            "Šta znači"
+          ],
+          "rows": [
+            [
+              "Poslovna tajna",
+              "intelektualni proizvod, na primer biznis plan, koji je tajna kompanije i nije za javnost"
+            ],
+            [
+              "Patent",
+              "dokument koji vlasniku garantuje ekskluzivno pravo korišćenja 20 godina"
+            ],
+            [
+              "Copyright (autorsko pravo)",
+              "dozvola koja vlasniku omogućava korišćenje intelektualnog proizvoda do kraja života plus 70 godina"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Deset pravila računarske etike"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ova pravila je sastavio Computer Ethics Institute:"
+        },
+        {
+          "type": "list",
+          "style": "numbered",
+          "items": [
+            "Ne koristiti računar tako da ugrožava druge ljude.",
+            "Ne ometati rad drugih na računaru.",
+            "Ne pristupati sadržaju tuđih datoteka.",
+            "Ne koristiti računar kao sredstvo za krađu.",
+            "Ne koristiti računar u cilju lažnog svedočenja.",
+            "Ne koristiti kopije softvera koje niste kupili, tj. za koje nemate licencu.",
+            "Ne koristiti računarske resurse drugih ljudi bez njihove saglasnosti.",
+            "Ne prisvajati intelektualne rezultate rada drugih ljudi.",
+            "Voditi računa o društvenim posledicama programa koje pišete ili sistema koje projektujete.",
+            "U svakoj situaciji koristiti računar tako da se poštuje ugled i integritet drugih."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako IT menja organizacije i posao"
+        },
+        {
+          "type": "paragraph",
+          "text": "Upotreba informacionih tehnologija, naročito veba, donosi promene u strukturi organizacije, odgovornostima, pravima, sadržaju posla, razvoju karijere, upravljanju i kontroli."
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Organizacije",
+            "items": [
+              "hijerarhija se menja, a upravljanje se menja jer se skraćuje vreme kontrole",
+              "baze znanja smanjuju moć nekih menadžerskih struktura",
+              "pomeranje „od plavih ka belim kragnama“ (manje fizičkog, više kancelarijskog rada)",
+              "nastaju posebne organizacione celine: tehnološki centri, centri za e-trgovinu"
+            ]
+          },
+          "right": {
+            "title": "Posao",
+            "items": [
+              "potrebne su česte obuke",
+              "nove lestvice za razvoj karijere",
+              "menadžerski poslovi menjaju sadržaj",
+              "otvara se pitanje masovne nezaposlenosti zbog tehnologije"
+            ]
+          }
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Uticaj na pojedinca"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pitanje „hoće li moj posao biti ukinut?“ prati svaku novu tehnologiju. Pored toga se pominju <strong>dehumanizacija</strong> (osećaj gubljenja identiteta), <strong>informaciona bojazan</strong> (uznemirenost zbog preplavljenosti informacijama) i uticaj na zdravlje. <strong>Ergonomija</strong> je nauka o prilagođavanju mašina i radnog okruženja čoveku."
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Potencijalno pozitivni uticaji",
+            "items": [
+              "više mogućnosti za razvoj sposobnosti pojedinca",
+              "inteligentna pomoć u radu",
+              "rasprostranjenost informacija doprinosi objektivnosti",
+              "socijalna interakcija",
+              "integracija rada u smislenu celinu",
+              "šansa za osobe sa invaliditetom"
+            ]
+          },
+          "right": {
+            "title": "Potencijalno negativni uticaji",
+            "items": [
+              "smanjenje individualnih sposobnosti i sužavanje znanja",
+              "stroga kontrola učinka",
+              "monotonost rutinskog posla i razbijanje posla na sitne delove",
+              "izolacija pojedinca",
+              "rizici po zdravlje",
+              "globalizacija kulture"
+            ]
+          }
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Društveni uticaj i internet društvo"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Digitalni jaz (digitalno raslojavanje)"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Digitalni jaz</strong> je razlika koju izaziva računarska tehnologija, a naročito veb, između onih koji je koriste i onih koji to ne mogu. Godine 2001. samo oko 5% svetske populacije koristilo je veb, i to uglavnom u razvijenim zemljama. Veb istovremeno omogućava zemljama u razvoju da se brže uključe u svetsku ekonomiju, a internet kafei su mesta gde je internet svima dostupan za male pare."
+        },
+        {
+          "type": "paragraph",
+          "text": "Moguće negativne posledice: ljudi bez pristupa i znanja gube prilike za obrazovanje, posao i usluge, pa se razlike među društvenim slojevima i državama povećavaju."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Sloboda govora i cenzura"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Spam</strong> je neselektivno slanje poruka preko interneta. Pitanje je kako ga kontrolisati, a da se ne ugrozi sloboda govora. Veb je doprineo i širenju neprimerenih sadržaja."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Virtuelna društva"
+        },
+        {
+          "type": "paragraph",
+          "text": "Grupe ljudi sa sličnim interesovanjima koji komuniciraju i sarađuju preko interneta. Vrste: društva za transakcije (kupovina i prodaja), interesna društva, društva sa istim potrebama (način života, bolesti) i fantastična društva u kojima učesnici stvaraju svoj imaginarni svet."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "etika su principi ispravnog ponašanja, a IT postavlja pitanja privatnosti, tačnosti, svojine i pristupa",
+            "privatnost nije apsolutna, ali ima pravo na zaštitu, a krađa identiteta je stvarna pretnja",
+            "tehnologija donosi i prednosti i mane po posao i pojedinca",
+            "digitalni jaz je razlika između onih koji imaju pristup tehnologiji i znanje da je koriste i onih koji nemaju"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Definišite etiku.",
+                "Navedite potencijalne prednosti i mane razvoja informacionih sistema (uticaj IT na pojedinca i posao).",
+                "Šta je digitalno raslojavanje (digitalni jaz)?",
+                "Koje moguće negativne posledice digitalno raslojavanje može da izazove?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Predavanje Etika informacionih sistema, predmet Osnove informacionih sistema (Rainer, Turban).",
+          "muted": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "08-elektronsko-poslovanje",
+    "subjectSlug": "informatika",
+    "kind": "predavanje",
+    "title": "Elektronsko poslovanje",
+    "description": "Šta je e-poslovanje, zašto ga firme uvode, u kojim oblastima se koristi i kako se razvijalo od prvih sajtova do povezanih poslovnih zajednica.",
+    "week": 9,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je elektronsko poslovanje"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Elektronsko poslovanje (e-poslovanje, e-business)</strong> je vođenje poslova preko interneta. To ne znači samo kupovinu i prodaju, nego i brigu o klijentima i poslovnim partnerima, kao i organizaciju poslovanja unutar firme."
+        },
+        {
+          "type": "paragraph",
+          "text": "Može se definisati i kao obavljanje poslovnih operacija primenom savremene elektronske tehnologije. Jedna poznata definicija (IBM, 1996) kaže da je to siguran, fleksibilan i celovit pristup isporuci raznih ekonomskih vrednosti preko povezanih sistema i procesa."
+        },
+        {
+          "type": "paragraph",
+          "text": "E-poslovanje se zasniva na:"
+        },
+        {
+          "type": "list",
+          "style": "bullets",
+          "items": [
+            "savremenoj organizaciji rada i savremenim informaciono-komunikacionim tehnologijama (ICT)",
+            "internetu kao mestu za većinu poslovnih transakcija",
+            "informacionom sistemu, standardizovanim dokumentima i elektronskom potpisu",
+            "digitalizaciji poslova i kriptografskoj zaštiti"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "E-poslovanje može da eliminiše problem vremenske razlike i geografske udaljenosti između partnera: naručivanje, isporuka i plaćanje obavljaju se elektronski."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Podela po stepenu elektronizacije"
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Potpuno elektronsko poslovanje",
+            "items": [
+              "ceo posao se obavlja elektronski",
+              "primer: digitalni proizvodi kao što su softver, e-knjiga ili film koji se kupuju, plaćaju i isporučuju preko interneta"
+            ]
+          },
+          "right": {
+            "title": "Delimično elektronsko poslovanje",
+            "items": [
+              "samo deo posla je elektronski",
+              "primer: porudžbina preko internet prodavnice, a roba stiže kurirskom službom"
+            ]
+          }
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Oblasti elektronskog poslovanja"
+        },
+        {
+          "type": "cards",
+          "columns": 4,
+          "items": [
+            {
+              "icon": "🛍️",
+              "title": "Online prodaja",
+              "text": "sopstvenih dobara i usluga"
+            },
+            {
+              "icon": "📉",
+              "title": "Elektronsko trgovanje",
+              "text": "kupovina i prodaja na elektronskim tržištima"
+            },
+            {
+              "icon": "🏦",
+              "title": "E-bankarstvo",
+              "text": "online finansijske transakcije"
+            },
+            {
+              "icon": "🏛️",
+              "title": "E-uprava",
+              "text": "elektronska vlada"
+            },
+            {
+              "icon": "📣",
+              "title": "E-marketing",
+              "text": "oglašavanje i promocija"
+            },
+            {
+              "icon": "🎓",
+              "title": "Učenje na daljinu",
+              "text": "obrazovanje preko mreže"
+            },
+            {
+              "icon": "📰",
+              "title": "E-izdavaštvo",
+              "text": "elektronske knjige i mediji"
+            },
+            {
+              "icon": "🎮",
+              "title": "Zabava i rekreacija",
+              "text": "online igre, filmovi, muzika"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zašto firme uvode e-poslovanje"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "bolje iskorišćavanje raspoloživih resursa, naročito informacionih",
+            "bolja tržišna pozicija",
+            "bolji poslovni rezultati, pre svega finansijski",
+            "veći komfor za zaposlene i menadžment",
+            "održavanje koraka sa razvojem tehnologije, što se smatra ulaganjem u budućnost"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Klijenti danas očekuju da proizvodima i uslugama mogu da pristupe u svako doba, 24 sata dnevno. Firme koje ponude najpouzdaniju i najprilagođeniju uslugu imaju najveće šanse da uspeju dugoročno. Pritom nove mogućnosti donose i veću složenost i jaču konkurenciju, jer je konkurent sada „na jedan klik“."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako se razvijalo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Razvoj informacionih sistema kroz decenije:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Period",
+            "Računarstvo",
+            "Obeležja"
+          ],
+          "rows": [
+            [
+              "1980-te",
+              "mainframe (veliki centralizovani računari)",
+              "pakovane aplikacije, centralizovan obračun"
+            ],
+            [
+              "1990-te",
+              "klijent-server",
+              "računari (PC), razvoj orijentisan na predmet poslovanja"
+            ],
+            [
+              "2000-te",
+              "internet / e-poslovanje, uslužno orijentisano računarstvo",
+              "veb aplikacije, e-trgovina, veb usluge, brz razvoj"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Isto tako se razvijao i sam e-business, kroz nekoliko faza:"
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Veb sajt",
+              "sub": "prezentacija firme"
+            },
+            {
+              "title": "E-business I",
+              "sub": "kupovina i prodaja"
+            },
+            {
+              "title": "E-business II",
+              "sub": "kupovina, prodaja i deljenje informacija"
+            },
+            {
+              "title": "Inteligentni e-business",
+              "sub": "povezani poslovni procesi"
+            },
+            {
+              "title": "Poslovne zajednice",
+              "sub": "saradnja više industrija"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "e-poslovanje je vođenje poslova preko interneta, a ne samo prodaja",
+            "može biti potpuno ili delimično elektronsko",
+            "uvodi se radi bolje tržišne pozicije, boljih rezultata i smanjenja troškova"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Objasnite koncept elektronskog poslovanja.",
+                "Koje su oblasti elektronskog poslovanja?",
+                "Kako možemo podeliti elektronsko poslovanje po stepenu elektronizacije?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Predavanje Koncept elektronskog poslovanja, prof. dr Branko Latinović.",
+          "muted": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "09-modeli-elektronskog-poslovanja",
+    "subjectSlug": "informatika",
+    "kind": "predavanje",
+    "title": "Modeli elektronskog poslovanja",
+    "description": "Ko sa kim posluje: B2B, B2C, C2C, e-uprava (G2G, G2B, G2C, G2E) i mobilna trgovina, uz EDI i elektronska tržišta.",
+    "week": 10,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ko sa kim posluje"
+        },
+        {
+          "type": "paragraph",
+          "text": "Elektronsko poslovanje se deli na modele prema tome ko su učesnici. Oznake čitamo kao „od prema“: <em>B</em> je business (firma), <em>C</em> je consumer (potrošač), <em>G</em> je government (država), <em>E</em> je employees (zaposleni)."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Model",
+            "Učesnici",
+            "Primer"
+          ],
+          "rows": [
+            [
+              "B2B",
+              "firma – firma",
+              "proizvođač poručuje materijal od dobavljača"
+            ],
+            [
+              "B2C",
+              "firma – potrošač",
+              "internet prodavnica (Amazon)"
+            ],
+            [
+              "C2C",
+              "potrošač – potrošač",
+              "aukcije i oglasi (eBay)"
+            ],
+            [
+              "G2B",
+              "država – firme",
+              "javne nabavke, e-prijave za firme"
+            ],
+            [
+              "G2C",
+              "država – građani",
+              "podnošenje zahteva, obnova dozvola, plaćanje poreza"
+            ],
+            [
+              "G2G",
+              "država – država",
+              "razmena podataka između državnih organa"
+            ],
+            [
+              "G2E",
+              "država – zaposleni u upravi",
+              "komunikacija i obuka zaposlenih u javnim službama"
+            ],
+            [
+              "m-commerce",
+              "trgovina preko mobilnih uređaja",
+              "kupovina karata i bankarske transakcije preko telefona"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "B2B – firma sa firmom"
+        },
+        {
+          "type": "paragraph",
+          "text": "B2B je razmena proizvoda, usluga ili informacija između preduzeća. Za razliku od B2C modela koji vodi do krajnjeg potrošača, B2B povezuje sve učesnike pre njega: dobavljače, posrednike i distributere. Razvijao se kroz tri faze: <strong>EDI</strong>, osnovni B2B e-commerce i <strong>elektronska tržišta (e-markets)</strong>."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "EDI – elektronska razmena podataka"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pre EDI-ja firme su narudžbine i račune štampale i slale poštom, a primalac ih je ponovo ručno unosio u svoj sistem. To je sporo i skupo, uz stalnu opasnost od grešaka. <strong>EDI (Electronic Data Interchange)</strong> je razmena strukturiranih poslovnih podataka između računara različitih firmi, bez ručne intervencije, preko standardizovanih poruka koje zamenjuju papirne dokumente."
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Dokument nastaje",
+              "sub": "u informacionom sistemu"
+            },
+            {
+              "title": "Prevod u standard",
+              "sub": "dogovoreni format"
+            },
+            {
+              "title": "Slanje",
+              "sub": "preko mreže"
+            },
+            {
+              "title": "Prijem i prevod",
+              "sub": "u format primaoca"
+            },
+            {
+              "title": "Potvrda",
+              "sub": "o prijemu"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Za EDI su potrebni: standard za prenos poruka, softver koji konvertuje poruke i komunikacioni medijum (javna ili privatna mreža). Svrha EDI standarda je da računari različitih firmi, sa različitim programima, mogu da razmenjuju dokumente bez ljudske intervencije. Rezultat su brža dostava, manje grešaka, manji troškovi papirne dokumentacije, bolje upravljanje zalihama i niži troškovi nabavke."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "B2B na internetu i elektronska tržišta"
+        },
+        {
+          "type": "list",
+          "style": "bullets",
+          "items": [
+            "<strong>katalog</strong> (catalog sites): kupci i prodavci se uparuju prema cenama; transakcije su manje, ali česte",
+            "<strong>razmena</strong> (exchange sites): sofisticiranija trgovina, na primer hartijama od vrednosti",
+            "<strong>aukcije</strong> (auction sites): slično prodaji krajnjem kupcu, ali među firmama"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Elektronska tržišta (e-markets)</strong> su veleprodajni centri na internetu, gde veliki broj prodavaca i kupaca na jednom mestu iznosi svoju ponudu i potražnju. Kupcima donose niže troškove nabavke i nove dobavljače, a dobavljačima niže troškove prodaje i nove kupce. Prema organizatoru razlikujemo tržišta koja vode veliki kupci, veliki snabdevači ili neutralna treća strana (na primer privredna komora), a prema načinu organizovanja vertikalna (jedna industrija) i horizontalna (jedna kategorija proizvoda ili kupaca)."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "B2B poslovanje preko interneta ima više prednosti: skraćuje proizvodni ciklus, smanjuje troškove nabavke (prema predavanju za 10–15%) i smanjuje zalihe (za 20–25%)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "B2C – firma sa potrošačem"
+        },
+        {
+          "type": "paragraph",
+          "text": "B2C je svaka trgovina preko interneta između firme i kupca za njegove lične potrebe. Tipičan primer je maloprodaja. Kupci uštede vreme, imaju veći izbor, lako porede cene i često plaćaju manje nego u klasičnoj prodavnici."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "narudžbine stižu 24 sata dnevno, čak i kada svi u firmi spavaju",
+            "tržište se proširuje i van lokalnih granica",
+            "kupci lakše kupuju iz impulsa",
+            "predstavljanje proizvoda u online katalogu košta manje nego drugi načini"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "C2C – potrošač sa potrošačem"
+        },
+        {
+          "type": "paragraph",
+          "text": "Krajnji kupac prodaje i kupuje od drugog krajnjeg kupca. Kompanija koja podržava ove transakcije zarađuje na proviziji, članarini ili reklamama. Najveći deo C2C trgovine čine aukcije (eBay)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Elektronska uprava (e-government)"
+        },
+        {
+          "type": "paragraph",
+          "text": "E-uprava povećava kvalitet i efikasnost državne i lokalne uprave i čini poslovanje transparentnijim. Postoje tri ciljne grupe: sama uprava, građani i poslovni sektor."
+        },
+        {
+          "type": "cards",
+          "columns": 4,
+          "items": [
+            {
+              "icon": "🏛️",
+              "title": "G2G",
+              "text": "razmena podataka među organima na nacionalnom, regionalnom i lokalnom nivou; vlade prvo moraju da unaprede svoje interne sisteme"
+            },
+            {
+              "icon": "🏢",
+              "title": "G2B",
+              "text": "bolje usluge za firme: javne nabavke i prodaje, brže usluge i niži troškovi"
+            },
+            {
+              "icon": "🧑",
+              "title": "G2C",
+              "text": "građani podnose zahteve, obnavljaju dozvole i plaćaju poreze elektronski"
+            },
+            {
+              "icon": "👔",
+              "title": "G2E",
+              "text": "saradnja i komunikacija zaposlenih u državnim organima, e-obrazovanje, upravljanje znanjem"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Mobilna trgovina (m-commerce)"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>M-commerce</strong> je kupovina i prodaja robe i usluga pomoću bežičnih mobilnih uređaja: mobilnih telefona, ručnih računara i laptopova. Omogućava obavljanje transakcije praktično s bilo kog mesta i u bilo koje vreme, i to kupovinom karata, knjiga, bankarskim transakcijama i pristupom plaćenim informacijama (vremenska prognoza, kursna lista, red vožnje)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Razvoju m-commerce-a doprineli su razvoj interneta i e-trgovine, masovno tržište mobilne telefonije, novi principi tarifiranja i usavršavanje uređaja. Značajan uticaj bežične tehnologije imaju na upravljanje transportnom flotom, automatizaciju prodaje, odnose sa korisnicima i lanac snabdevanja."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "modeli e-poslovanja se razlikuju po učesnicima: B2B, B2C, C2C i četiri vrste e-uprave",
+            "EDI je prvi oblik B2B poslovanja: dokumenti se razmenjuju između računara bez ručnog unosa",
+            "m-commerce je trgovina preko mobilnih uređaja, s bilo kog mesta"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Navedite modele elektronskog poslovanja.",
+                "Objasnite B2B, B2C i C2C.",
+                "Objasnite G2B, G2C, G2G i G2E.",
+                "Šta je mobilna trgovina (m-commerce)?",
+                "Koja je svrha EDI standarda?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Predavanje Modeli elektronskog poslovanja, prof. dr Branko Latinović.",
+          "muted": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "10-aplikacije-elektronskog-poslovanja",
+    "subjectSlug": "informatika",
+    "kind": "predavanje",
+    "title": "Aplikacije elektronskog poslovanja",
+    "description": "Gde se e-poslovanje najviše koristi: automatizacija lanca vrednosti, prodaja, odnosi sa kupcima i elektronsko plaćanje.",
+    "week": 11,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Gde e-poslovanje daje rezultate"
+        },
+        {
+          "type": "paragraph",
+          "text": "Uvođenje e-poslovanja je za kompanije jedna od najuzbudljivijih promena od izuma računara. Ulaganja se isplaćuju boljom uslugom kupaca, većom zaradom i konkurentskom prednošću, ali treba izbegavati prevelike i prečeste promene: svaka se uvodi pažljivo i uz dovoljno vremena za integraciju."
+        },
+        {
+          "type": "paragraph",
+          "text": "E-poslovanje je najuspešnije primenjeno u pet glavnih oblasti:"
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "🔗",
+              "title": "Automatizacija lanca vrednosti",
+              "text": "Supply Chain Automation"
+            },
+            {
+              "icon": "📦",
+              "title": "Upravljanje resursima potrošača",
+              "text": "Customer Asset Management"
+            },
+            {
+              "icon": "🧑‍💼",
+              "title": "Automatizacija prodaje",
+              "text": "Sales Force Automation"
+            },
+            {
+              "icon": "🤝",
+              "title": "Upravljanje odnosima sa potrošačima",
+              "text": "CRM"
+            },
+            {
+              "icon": "💳",
+              "title": "Plaćanje i izmirenje",
+              "text": "Payment or Settlement"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Automatizacija lanca vrednosti"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Lanac vrednosti</strong> je skup poslovnih procesa koji povezuje snabdevače, proizvođače, prodavce, poslovne korisnike i sve ostale uključene u stvaranje, prodaju i isporuku robe do krajnjeg kupca. Automatizacija koristi svima u lancu: unapređuje procedure, proširuje obim poslovanja, omogućava razmenu dobrih informacija i zajedničko odlučivanje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Primer: kada izađete iz prodavnice, bar-kod čitač i kasa (POS) pokreću elektronske poruke kroz ceo lanac, pa dobavljač zna da treba da dopuni zalihe, a da pritom niko ništa nije prepisivao. Tehnologije koje se tu koriste su <strong>bar kodovi, POS i EDI</strong>."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Krajnji cilj je pravi proizvod, u pravo vreme, po pravoj ceni i na pravom mestu (right product, right time, right price, right place)."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Tri sistema koja moraju biti e-business sposobna"
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "🛒",
+              "title": "Sistemi upravljanja nabavkom (procurement)",
+              "text": "polaze od onoga što kupac traži; prikupljaju zahteve i brzo šire naloge kroz ceo lanac, do dobavljača sirovina"
+            },
+            {
+              "icon": "🚚",
+              "title": "Sistemi fizičkog upravljanja",
+              "text": "automatizuju dostavu: zalihe, logistika, transport i distributivni centri"
+            },
+            {
+              "icon": "📊",
+              "title": "Sistemi za analizu performansi",
+              "text": "stalno mere koliko dobro lanac radi, uz finansijske sisteme, data mining i data mart"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Lanac je jak koliko i njegova najslabija karika: ako se jedna karika prekine, oštećeni su svi učesnici. Zato konkurenti ponekad sarađuju. Poznat primer je <strong>ANX (Automotive Network Exchange)</strong>, zajednička ekstramreža koju su osnovali konkurenti Ford, GM i Chrysler."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Prodaja i odnosi sa kupcima"
+        },
+        {
+          "type": "paragraph",
+          "text": "Bez stalne i profitabilne prodaje nijedna firma ne opstaje. Nekada je prodavac išao od vrata do vrata sa robom koju je imao, a danas mu je potrebna napredna tehnologija: softver na laptopu pomoću koga zna cene, popuste i zalihe, pa kupcu može odmah da ponudi najbolje rešenje (<strong>Sales Force Automation</strong>)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kupac nije važan samo pre i tokom prodaje, već i posle nje: može mu se ponuditi dodatni proizvod, prikupiti povratna informacija i izmeriti zadovoljstvo. Taj pristup zove se <strong>CRM</strong>, a posvećujemo mu posebnu lekciju."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Elektronsko plaćanje"
+        },
+        {
+          "type": "paragraph",
+          "text": "Gotovina i čekovi su skupi i spori, pa banke preferiraju elektronske finansijske transakcije (EFT). Banke nude dva tipa plaćanja:"
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Plaćanje u realnom vremenu",
+            "items": [
+              "<strong>pametne kartice (smart cards)</strong>: interaktivne kartice za trenutne transakcije",
+              "<strong>digitalni keš (digital cash)</strong>: zamena za papirni novac na mreži; mora biti pokriven kreditom koji odobrava banka"
+            ]
+          },
+          "right": {
+            "title": "Naknadno plaćanje",
+            "items": [
+              "<strong>kreditne kartice</strong>: najviše korišćen način plaćanja u e-poslovanju",
+              "<strong>elektronski čekovi (e-checks)</strong>: elektronski potpis i digitalni sertifikati ovlašćuju platioca i banku",
+              "<strong>procurement kartice</strong>: za manje nabavke u firmama, bez nabavnih naloga i faktura za svaku kupovinu"
+            ]
+          }
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Kako prodavnica obrađuje podatke kartice"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Pristup",
+            "Opis",
+            "Ocena"
+          ],
+          "rows": [
+            [
+              "Nešifrovani podaci",
+              "najjeftiniji za uvođenje, ali hakeri mogu lako da pročitaju podatke dok putuju internetom",
+              "ne preporučuje se"
+            ],
+            [
+              "Šifrovani podaci",
+              "skuplje za uvođenje, ali sigurno, pouzdano i brzo",
+              "dovoljno sigurno da ga koriste banke"
+            ],
+            [
+              "Treća strana",
+              "posrednik čuva novac dok kupac ne primi i proveri proizvod, pa tek onda autorizuje isplatu",
+              "relativno jeftino, razumni troškovi"
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "success",
+          "text": "Kada kupujete na internetu, proverite da adresa počinje sa <strong>https://</strong> i da se u adresnoj liniji vidi katanac. To znači da su podaci šifrovani dok putuju do prodavca.",
+          "title": "Praktičan savet:"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "e-poslovanje najviše koristi lancu vrednosti, prodaji, odnosima sa kupcima i plaćanju",
+            "tri sistema za upravljanje lancem vrednosti su sistem nabavke, sistem fizičkog upravljanja i sistem za analizu performansi",
+            "plaćanje može biti u realnom vremenu (pametne kartice, digitalni keš) ili naknadno (kreditne kartice, e-čekovi, procurement kartice)",
+            "podaci o kartici treba da putuju šifrovani"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Koja tri bitna sistema moraju biti e-business sposobna da upravljaju lancem vrednosti?",
+                "Šta je lanac vrednosti i kako ga e-poslovanje automatizuje?",
+                "Navedite načine elektronskog plaćanja."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Predavanje Aplikacije elektronskog poslovanja, predmet Osnove informacionih sistema.",
+          "muted": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "11-erp-sistemi",
+    "subjectSlug": "informatika",
+    "kind": "predavanje",
+    "title": "ERP sistemi",
+    "description": "Šta je ERP, čemu služi preduzećima, po čemu se razlikuje od klasičnog informacionog sistema i koje su njegove prednosti, mane i troškovi.",
+    "week": 12,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je ERP i šta radi"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>ERP (Enterprise Resource Planning)</strong>, tj. planiranje resursa preduzeća, je skup upravljačkih alata kojima preduzeće balansira ponudu i potražnju. Povezuje kupce i dobavljače u jedan lanac snabdevanja i koristi dokazane poslovne procese da poveže prodaju, marketing, proizvodnju, logistiku, nabavku, finansije, razvoj proizvoda i ljudske resurse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Najlakše ga je zamisliti kao <strong>jednu zajedničku bazu podataka i program</strong> koji koriste svi sektori firme, umesto da svaki sektor ima svoje odvojene programe i tabele. Prodavac unese porudžbinu, a skladište, proizvodnja i računovodstvo odmah vide istu informaciju."
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "🏢",
+              "title": "E – Enterprise",
+              "text": "preduzeće: celokupan poslovni sistem"
+            },
+            {
+              "icon": "📦",
+              "title": "R – Resources",
+              "text": "svi resursi: ljudski, materijalni, finansijski, informacioni, organizacioni"
+            },
+            {
+              "icon": "🗓️",
+              "title": "P – Planning",
+              "text": "planiranje: pribavljanje resursa i njihova najbolja raspodela za postizanje ciljeva"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Odakle dolazi"
+        },
+        {
+          "type": "paragraph",
+          "text": "Termin je 1992. uvela kompanija Gartner Group da opiše novu generaciju softvera za proizvodna preduzeća, koja je nasledila MRP II. Ta generacija koristi klijent-server arhitekturu i grafički korisnički interfejs. Lider u razvoju ERP sistema je kompanija SAP, a poznati su i Oracle, PeopleSoft, JD Edwards, Baan i Navision. Postoje sistemi za mala, srednja i velika preduzeća."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Čemu služi ERP: ciljevi"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "bolje poslovati u brzo promenljivom i jako konkurentskom okruženju",
+            "predvideti i uravnotežiti potražnju i ponudu povezivanjem podataka iz svih delova poslovanja",
+            "visok nivo usluge kupcima, veća produktivnost, niži troškovi i veći obrt zaliha",
+            "osnova za efikasno upravljanje lancem snabdevanja (SCM) i e-poslovanje"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Integracija na dva nivoa"
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Interna integracija",
+            "items": [
+              "svi podaci i programi u jednom preduzeću rade zajedno"
+            ]
+          },
+          "right": {
+            "title": "Eksterna integracija",
+            "items": [
+              "povezivanje više preduzeća, dobavljača, saradnika i kupaca",
+              "integracija tehničkih i tehnoloških podataka i „inženjerskih“ paketa (CAD, CAM)"
+            ]
+          }
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Šta su resursi"
+        },
+        {
+          "type": "paragraph",
+          "text": "Resursi obuhvataju sve što ulazi u izradu proizvoda ili usluge: osnovni, pomoćni i potrošni materijal, alate i sredstva, tehničku dokumentaciju, programe za rad mašina, proizvodne i uslužne kapacitete, proizvodne specifikacije, ljudske i finansijske resurse."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "ERP u odnosu na klasični integrisani informacioni sistem"
+        },
+        {
+          "type": "paragraph",
+          "text": "Klasični sistem uglavnom beleži ono što se već desilo (račune, knjiženja, stanje na skladištu). ERP je usmeren na budućnost: predviđa i planira."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Procesi koje ima i klasičan sistem",
+            "Procesi koje donosi tek ERP"
+          ],
+          "rows": [
+            [
+              "ulazni i izlazni računi, glavna knjiga",
+              "prognoziranje prodaje"
+            ],
+            [
+              "upravljanje tokovima novca, ljudski resursi",
+              "planiranje prodaje i operativnih zadataka"
+            ],
+            [
+              "narudžbine kupaca",
+              "napredni sistemi planiranja"
+            ],
+            [
+              "planiranje zahteva za materijalima i kapacitetima",
+              "ocenjivanje dobavljača i merenje performansi sistema"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Gde može da se koristi"
+        },
+        {
+          "type": "paragraph",
+          "text": "ERP se koristi u proizvodnji za skladište i po narudžbini, u proizvodnji složenih i jednostavnih proizvoda, u višepogonskim i jednopogonskim sistemima, kod ugovornih proizvođača, proizvođača sa distributerima ili distributivnom mrežom i u strogo regulisanim proizvodnjama. Pokriva procesnu, serijsku i komadnu proizvodnju. Danas ga koriste i trgovinske i uslužne firme."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Filozofije koje stoje iza ERP-a"
+        },
+        {
+          "type": "list",
+          "style": "bullets",
+          "items": [
+            "<strong>Lean manufacturing / Just-In-Time</strong>: eliminacija gubitaka (zastoji, nepotrebne zalihe, škart, suvišan transport), stalno unapređenje kvaliteta",
+            "<strong>Agilna proizvodnja</strong>: jednostavnost, brzo prilagođavanje procesima, fokus na ključne aktivnosti",
+            "<strong>Six Sigma</strong>: statističko merenje kvaliteta, cilj je oko 3,4 greške na milion; metodologije DMAIC i DMADV",
+            "<strong>CIM</strong> (računarski integrisana proizvodnja): povezuje CAD/CAM, CNC, robote i kontrolu kvaliteta"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Prednosti, nedostaci i troškovi"
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Prednosti",
+            "items": [
+              "bolji pristup informacijama i efikasniji procesi",
+              "podatak se unosi jednom",
+              "ugrađeno iskustvo eksperata i usklađenost sa standardima",
+              "omogućava reinženjering poslovnih procesa",
+              "uz sistem ide stručna obuka"
+            ]
+          },
+          "right": {
+            "title": "Nedostaci",
+            "items": [
+              "implementacija je duga i skupa (oko 12 do 18 meseci, a za potpunu transformaciju 1 do 3 godine)",
+              "zahteva organizacione promene",
+              "prilagođavanje može biti neplanirano i otežano",
+              "greške se repliciraju kroz ceo sistem",
+              "često se odbacuje mali interni softver koji je dobro radio"
+            ]
+          }
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Stavka troška",
+            "Šta znači"
+          ],
+          "rows": [
+            [
+              "Obuka",
+              "veliki broj zaposlenih mora da prođe obuku"
+            ],
+            [
+              "Integracija i testiranje",
+              "svaka postojeća aplikacija mora da se poveže sa ERP-om"
+            ],
+            [
+              "Prilagođavanje",
+              "jezgro ERP-a se prilagođava postojećim procesima"
+            ],
+            [
+              "Konverzija podataka",
+              "prebacivanje podataka iz starog sistema, koji su često neuređeni"
+            ],
+            [
+              "Konsultanti",
+              "naknade su velike kada firma sama ne može da obavi sve"
+            ],
+            [
+              "Povraćaj investicije",
+              "rezultati ne dolaze odmah nakon instalacije"
+            ],
+            [
+              "„Post-ERP depresija“",
+              "performanse često padaju odmah posle uvođenja jer se sve radi drugačije"
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Uspeh implementacije zavisi od plana uvođenja, potpunog razumevanja poslovanja i sposobnosti organizacije da prihvati promene. ERP nije samo program, nego ulaganje u poslovanje i u ljude."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "ERP je jedinstveni sistem koji povezuje sve resurse i sektore preduzeća",
+            "razlikuje se od klasičnog sistema po tome što planira i predviđa",
+            "uvođenje je skupo i dugotrajno, ali može doneti uštede i bolju kontrolu poslovanja"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Šta je ERP i šta ERP radi?",
+                "Šta sve obuhvataju resursi sa kojima ERP sistemi rade?",
+                "Gde i za šta se može koristiti ERP?",
+                "Navedite prednosti i nedostatke ERP sistema."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Predavanje ERP, prof. dr Branko Latinović.",
+          "muted": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "12-crm-upravljanje-odnosima-sa-klijentima",
+    "subjectSlug": "informatika",
+    "kind": "predavanje",
+    "title": "CRM: upravljanje odnosima sa klijentima",
+    "description": "Zašto je kupac u središtu poslovanja, šta je CRM, kako se sastoji i koje koristi donosi firmi.",
+    "week": 13,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je CRM"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>CRM (Customer Relationship Management)</strong> je upravljanje odnosima sa klijentima. To je pre svega <strong>poslovna strategija</strong>, a tek zatim softver. Ideja je da se fokus firme sa proizvoda prebaci na klijenta, i da se sa njim gradi trajno partnerstvo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neki CRM vide kao tehnologiju kojom saznajemo više o svakom kupcu i sa svakim gradimo odnos „jedan na jedan“. Drugi ga vide kao pitanje čovečnosti: prema svakom kupcu se odnosimo sa empatijom i pažnjom. Prava istina je u kombinaciji: tehnologija omogućava da znamo šta kupac želi, a ljudi da to i pruže."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Mnogo je teže i skuplje steći novog klijenta nego zadržati postojećeg. Kvalitet proizvoda više nije dovoljan: kupci porede cene na internetu, pa je važan odnos tokom celog procesa kupovine."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako je nastao"
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Direktna pošta",
+              "sub": "pisma sa imenom i prezimenom"
+            },
+            {
+              "title": "Direktni marketing",
+              "sub": "kupci podeljeni u grupe"
+            },
+            {
+              "title": "Database marketing",
+              "sub": "baza podataka o kupcima"
+            },
+            {
+              "title": "CRM",
+              "sub": "povezan sa ERP-om i analitikom"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Sastavni delovi CRM-a"
+        },
+        {
+          "type": "paragraph",
+          "text": "Arhitektura CRM sistema obično ima tri dela:"
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "📞",
+              "title": "Operativni",
+              "text": "front-office procesi: kontakt sa klijentima (prodaja, marketing, servis, call centar)"
+            },
+            {
+              "icon": "📈",
+              "title": "Analitički",
+              "text": "analizira prikupljene podatke, deli klijente u segmente i traži načine da se odnos poboljša"
+            },
+            {
+              "icon": "🤝",
+              "title": "Kolaborativni",
+              "text": "komunikacija sa klijentom svim kanalima: lično, telefonom, e-poštom, vebom, pismom"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Tipična funkcionalnost CRM rešenja: skalabilnost (može da raste sa firmom), više komunikacionih kanala, automatsko usmeravanje posla, centralna baza podataka i zaštita privatnosti (šifrovanje i zaštita od uništenja podataka). Tri glavna područja CRM-a su servis zasnovan na automatizovanim procesima, prikupljanje i obrada ličnih podataka o klijentima i direktan pristup informacijama po principu samouslužnosti."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zašto firme uvode CRM"
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Bolje opsluživanje klijenata",
+            "items": [
+              "brza identifikacija problema i prevencija",
+              "jednostavna prijava žalbi i brza reakcija",
+              "podrška, servis i informacije o proizvodu na veb sajtu"
+            ]
+          },
+          "right": {
+            "title": "Bolji poslovni odnosi",
+            "items": [
+              "CRM beleži šta klijenta zanima, njegove potrebe i navike, pa se pravi odgovarajuća marketinška strategija",
+              "beleži kako koristi proizvod, pa se pravi strategija podrške",
+              "veće zadovoljstvo vodi ponovnoj kupovini, lojalnosti, nižim troškovima marketinga i većem profitu"
+            ]
+          }
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Nisu svi klijenti isti"
+        },
+        {
+          "type": "paragraph",
+          "text": "Prema pravilu 80:20 (Pareto), mali deo klijenata donosi najveći deo profita. Na predavanju se navodi istraživanje prema kome 20% klijenata stvara 150% profita, a 40% klijenata odnosi čak polovinu profita. Zato CRM razlikuje klijente prema vrednosti, ne samo prema tome koliko su do sada potrošili, već i koliko je u njih uloženo i kakav je njihov potencijal."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Kupac, zaposleni i odnos"
+        },
+        {
+          "type": "paragraph",
+          "text": "Uspeh CRM-a ne zavisi samo od softvera. Treba kombinovati upravljanje <strong>vrednošću kupca</strong> (CVM), <strong>vrednošću zaposlenih</strong> (EVM) i <strong>odnosom sa kupcem</strong> (CRM). Zaposleni zadovoljni poslom bolje opslužuju klijente, a klijent pamti ljubaznost, brzinu i profesionalnost zaposlenih mnogo pre nego što proceni sam proizvod."
+        },
+        {
+          "type": "paragraph",
+          "text": "Poznata priča navodi se kao ilustracija: dekan jednog univerziteta ignorisao je dvoje skromno obučenih posetilaca koji su hteli da poklone zgradu, pa su oni osnovali sopstveni univerzitet. Pouka je da kupca ne treba procenjivati po izgledu, a CRM sistem bi sekretarici odmah pokazao da je reč o vrlo vrednim posetiocima."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Primeri primene"
+        },
+        {
+          "type": "cards",
+          "columns": 4,
+          "items": [
+            {
+              "icon": "🚗",
+              "title": "Peugeot",
+              "text": "sajt sa modelima, cenama i procenom starog vozila; 15.000 poseta za tri meseca, a 60% posetilaca vraćalo se više od 10 puta"
+            },
+            {
+              "icon": "🖥️",
+              "title": "Dell",
+              "text": "računar po narudžbini, direktan kontakt sa klijentima, bez maloprodaje"
+            },
+            {
+              "icon": "📚",
+              "title": "Amazon",
+              "text": "prvi uveo kupovinu klikom, virtuelnu korpu i mišljenja drugih kupaca"
+            },
+            {
+              "icon": "📧",
+              "title": "Sony Canada",
+              "text": "marketinške kampanje pismima i e-poštom u sezoni praznika"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kada CRM ima smisla, a kada nema"
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Ima smisla kada",
+            "items": [
+              "istom kupcu se prodaje više različitih proizvoda",
+              "proizvodi brzo zastarevaju ili se stalno unapređuju",
+              "firma ima VIP klijente o kojima mora mnogo da zna"
+            ]
+          },
+          "right": {
+            "title": "Nema smisla kada",
+            "items": [
+              "kupac proizvod kupuje samo jednom u životu",
+              "vrednost jedinice je izuzetno mala",
+              "nema potrebe za direktnim kontaktom prodavca i kupca"
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "variant": "warning",
+          "text": "CRM može da naruši privatnost jer sakuplja mnogo podataka o ljudima. Zato je zaštita privatnosti i poštovanje etike (tema ranijeg predavanja) sastavni deo svakog dobrog CRM-a."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "CRM je strategija usmerena na klijenta, a softver samo pomaže",
+            "ima operativni, analitički i kolaborativni deo",
+            "najvredniji klijenti donose najveći deo profita",
+            "uspeh zavisi i od zaposlenih, ne samo od tehnologije"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Objasnite prednosti CRM-a.",
+                "Koje su prednosti CRM-a u poslovanju?",
+                "Navedite glavna područja CRM-a."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Predavanje CRM, prof. dr Branko Latinović.",
+          "muted": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "13-sistemi-za-podrsku-odlucivanju",
+    "subjectSlug": "informatika",
+    "kind": "predavanje",
+    "title": "Sistemi za podršku odlučivanju",
+    "description": "Kako računar pomaže menadžerima da odluče: definicija, delovi sistema, vrste i ograničenja sistema za podršku odlučivanju.",
+    "week": 14,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je sistem za podršku odlučivanju"
+        },
+        {
+          "type": "paragraph",
+          "text": "Menadžeri svakodnevno donose odluke: koliko robe naručiti, koju cenu postaviti, u koju novu radnju uložiti. Neke su jasne i ponavljaju se, a neke su loše definisane i zahtevaju procenu. <strong>Sistem za podršku odlučivanju (SPO, DSS)</strong> je interaktivni računarski sistem koji pomaže donosiocima odluka da koriste podatke i modele za rešavanje <strong>polustrukturiranih i nestrukturiranih problema</strong>."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>Scott-Morton (1970)</strong>: interaktivni računarski sistem koji pomaže donosiocima odluka da iskoriste podatke i modele za rešavanje nestrukturiranih problema",
+            "<strong>Keen i Scott-Morton (1978)</strong>: povezuje ljudske intelektualne resurse sa mogućnostima računara radi boljeg kvaliteta odluka",
+            "<strong>Turban i Aronson</strong>: interaktivni, fleksibilni i prilagodljivi sistemi razvijeni za nestrukturirane menadžerske probleme"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "SPO ne odlučuje umesto čoveka. On pomaže da se podaci prikupe, analiziraju i uporede alternative, a odluku donosi čovek."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Od čega se sastoji SPO"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tipičan SPO ima tri podsistema, a savremeni dodaju još dva:"
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "🗄️",
+              "title": "Podsistem za podatke (DBMS)",
+              "text": "baza podataka SPO, upravljanje podacima, rečnik podataka i upiti"
+            },
+            {
+              "icon": "🧮",
+              "title": "Podsistem za modele (MBMS)",
+              "text": "finansijski, statistički i drugi kvantitativni modeli i upravljanje njima"
+            },
+            {
+              "icon": "💬",
+              "title": "Podsistem za dijalog (DGMS)",
+              "text": "korisnički interfejs: kako korisnik zadaje zahteve i vidi rezultate"
+            },
+            {
+              "icon": "🧠",
+              "title": "Podsistem za znanje",
+              "text": "baza znanja koja daje stručne savete; takvi sistemi su „inteligentni“ SPO"
+            },
+            {
+              "icon": "👤",
+              "title": "Korisnik",
+              "text": "donosilac odluke, najvažniji deo sistema"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Podaci se u SPO unose iz spoljašnjih izvora (baza podataka preduzeća, drugih institucija, informacionih servisa), a proces ekstrakcije obuhvata uvoz, sumiranje, filtriranje i sažimanje. Zajedno, podaci, modeli i dijalog čine osnovu SPO."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Vrste sistema za podršku odlučivanju"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Vrsta",
+            "Šta radi",
+            "Primer"
+          ],
+          "rows": [
+            [
+              "Komunikacioni SPO",
+              "podržava komunikaciju, saradnju i zajedničko odlučivanje",
+              "e-pošta, oglasne table, grupni alati (groupware)"
+            ],
+            [
+              "SPO zasnovan na podacima",
+              "pristup i obrada vremenskih serija internih podataka firme",
+              "skladište podataka; izvršni informacioni sistemi (EIS) i geografski sistemi (GIS)"
+            ],
+            [
+              "SPO zasnovan na dokumentima",
+              "pretraga nestrukturiranih dokumenata, slika, zvuka i videa",
+              "policijske baze, katalozi, specifikacije proizvoda"
+            ],
+            [
+              "SPO zasnovan na znanju (sugestivni)",
+              "preporučuje ili predlaže akcije menadžeru",
+              "ekspertni sistemi, data mining"
+            ],
+            [
+              "Veb SPO",
+              "pristup preko veb pregledača",
+              "alati u kojima menadžeri rade iz browsera"
+            ],
+            [
+              "Funkcionalni SPO",
+              "podrška jednoj poslovnoj funkciji",
+              "raspored letenja u avio kompaniji"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Prema nameni, SPO može biti namenjen celom preduzeću (povezan sa velikim bazama i skladištima, opslužuje više menadžera) ili jednom korisniku na jednom računaru (desktop SPO). Na primer, Excel sa modelima je SPO orijentisan na tabelarni rad."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Prednosti i ograničenja"
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Prednosti",
+            "items": [
+              "bolji kvalitet odluka",
+              "bolja komunikacija",
+              "manji troškovi i ušteda vremena",
+              "veća produktivnost",
+              "veće zadovoljstvo kupaca i zaposlenih",
+              "može da podstakne donosioca odluke da dublje razmisli o problemu"
+            ]
+          },
+          "right": {
+            "title": "Ograničenja",
+            "items": [
+              "ne mogu se ugraditi sve urođene veštine i talenti čoveka",
+              "sistem zna samo ono što mu je „naučeno“",
+              "ograničen je mogućnostima računara i softvera",
+              "korisnik mora da prihvati način izražavanja zahteva",
+              "obično pokriva usku oblast; kada ih ima više, postavlja se pitanje ko ih koordiniše"
+            ]
+          }
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "SPO pomaže da se reše polustrukturirani i nestrukturirani problemi",
+            "tri osnovna podsistema su podaci, modeli i dijalog (uz znanje u inteligentnim sistemima)",
+            "postoji više vrsta: komunikacioni, zasnovani na podacima, dokumentima, znanju, veb i funkcionalni"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Objasnite šta su sistemi za podršku odlučivanju.",
+                "Tipičan SPO se sastoji od kojih podsistema?",
+                "Navedite prednosti i ograničenja SPO."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Predavanje Sistemi za podršku odlučivanju, prof. dr Branko Latinović.",
+          "muted": true
         }
       ]
     }

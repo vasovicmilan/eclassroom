@@ -2,6 +2,7 @@
   {
     "slug": "uvod-u-sistemsko-razmisljanje",
     "subjectSlug": "teorija-sistema",
+    "kind": "predavanje",
     "title": "Uvod u sistemsko razmišljanje",
     "description": "Upoznavanje sa predmetom, značajem sistemskog pristupa i razlozima za proučavanje sistema u savremenim naukama.",
     "week": 1,
@@ -147,6 +148,7 @@
   {
     "slug": "uvod-u-uml-i-modelovanje",
     "subjectSlug": "teorija-sistema",
+    "kind": "predavanje",
     "title": "Uvod u UML i modelovanje sistema",
     "description": "Osnovni pojmovi objektno orijentisanog modelovanja i uvod u UML dijagrame koji se koriste za opis strukture i ponašanja sistema.",
     "week": 1,
@@ -364,6 +366,7 @@
   {
     "slug": "uvod-u-teoriju-sistema",
     "subjectSlug": "teorija-sistema",
+    "kind": "predavanje",
     "title": "Uvod u teoriju sistema",
     "description": "Osnovni pojmovi teorije sistema, nastanak discipline, diferencijacija i integracija nauka i značaj sistemskog pristupa u proučavanju složenih pojava.",
     "week": 1,
@@ -548,6 +551,7 @@
   {
     "slug": "definicija-i-struktura-sistema",
     "subjectSlug": "teorija-sistema",
+    "kind": "predavanje",
     "title": "Definicija i struktura sistema",
     "description": "Pojam sistema, elementi sistema i relacije među njima. Razmatranje sistema kao celine, odnos sistema i okruženja, hijerarhijska struktura i podsistemi.",
     "week": 2,
@@ -744,6 +748,7 @@
   {
     "slug": "modelovanje-i-klasifikacija-sistema",
     "subjectSlug": "teorija-sistema",
+    "kind": "predavanje",
     "title": "Modelovanje i klasifikacija sistema",
     "description": "Metode modelovanja sistema, preslikavanje originala u model (izomorfno i homomorfno) i klasifikacija sistema prema različitim kriterijumima kao što su nastanak, složenost i odnos sa okruženjem.",
     "week": 3,
@@ -1027,6 +1032,7 @@
   {
     "slug": "analiza-i-sinteza-sistema",
     "subjectSlug": "teorija-sistema",
+    "kind": "predavanje",
     "title": "Analiza i sinteza sistema",
     "description": "Strategije analize sistema, vrste analize i sinteza kao proces ponovnog sastavljanja elemenata sistema.",
     "week": 4,
@@ -1280,6 +1286,7 @@
   {
     "slug": "struktura-i-elementi-sistema",
     "subjectSlug": "teorija-sistema",
+    "kind": "predavanje",
     "title": "Struktura i elementi sistema",
     "description": "Elementi sistema, relacije između elemenata, struktura sistema i kompleksnost sistema.",
     "week": 5,
@@ -1563,6 +1570,7 @@
   {
     "slug": "dinamika-i-transformacije-sistema",
     "subjectSlug": "teorija-sistema",
+    "kind": "predavanje",
     "title": "Dinamika i transformacije sistema",
     "description": "Promene stanja sistema kroz vreme, transformacije i odnosi između elemenata u dinamičkim sistemima.",
     "week": 6,
@@ -1843,6 +1851,7 @@
   {
     "slug": "stabilnost-i-ponasanje-sistema",
     "subjectSlug": "teorija-sistema",
+    "kind": "predavanje",
     "title": "Stabilnost i ponašanje sistema",
     "description": "Stabilnost sistema, ravnotežna stanja, cikličnost sistema i uticaj smetnji na ponašanje sistema.",
     "week": 8,

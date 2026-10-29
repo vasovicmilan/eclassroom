@@ -86,3 +86,12 @@ Blok `simulation` ubacuje malu interaktivnu vežbu u lekciju (`src/public/js/sim
 | `scripts` | obavezno: `["simulations/common.js", "simulations/<kind>.js"]` (za `combinatorics` je fajl `combo.js`) |
 
 Nova vežba: fajl `js/simulations/<naziv>.js` sa `Sim.register('<kind>', function (root, config) {...})`, naziv dodat u `SIMULATION_KINDS` u `utils/block.types.js`.
+
+## Vrsta lekcije (`kind`)
+
+Svaka lekcija može imati polje `kind` na nivou lekcije (pored `title`, `week`, `date`):
+
+- `"predavanje"` (podrazumevano, ako polje nedostaje) – prikazuje se oznaka 🎓 Predavanje
+- `"vezba"` – prikazuje se oznaka ✏️ Vežba
+
+Oznaka se vidi na stranici lekcije, u bočnoj navigaciji i u planu rada predmeta. Skripta `scripts/new-lection.js` postavlja `vezba` za šablon `prakticna`, a `predavanje` za ostale.

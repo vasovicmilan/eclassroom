@@ -2,6 +2,7 @@
   {
     "slug": "01-uvodno-predavanje",
     "subjectSlug": "projektovanje-informacionih-sistema",
+    "kind": "predavanje",
     "title": "Uvodno predavanje",
     "description": "Upoznavanje sa predmetom: šta je projektovanje informacionih sistema, kako radimo i šta se očekuje tokom semestra.",
     "week": 1,
@@ -49,6 +50,4153 @@
           "type": "callout",
           "variant": "info",
           "text": "Tačna raspodela bodova i druge informacije o obavezama biće naknadno objavljene na stranici predmeta."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "02-baze-podataka-od-datoteka-do-subp",
+    "subjectSlug": "projektovanje-informacionih-sistema",
+    "kind": "predavanje",
+    "title": "Baze podataka: od datoteka do SUBP",
+    "description": "Zašto su nastale baze podataka: problemi klasične organizacije datoteka, redundantnost i uloga sistema za upravljanje bazom podataka (SUBP).",
+    "week": 2,
+    "date": "2026-10-20",
+    "formattedDate": "20.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zašto nam uopšte trebaju baze podataka"
+        },
+        {
+          "type": "paragraph",
+          "text": "Vrednost svakog sistema, pa i sistema baza podataka, najbolje se shvata kada se vidi kakav problem rešava. Zato prvo pogledajmo kako su informacioni sistemi izgledali pre baza podataka."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Klasična organizacija datoteka"
+        },
+        {
+          "type": "paragraph",
+          "text": "Najstariji informacioni sistemi radili su „na kartici“, bez podrške računara. Zatim su se podaci smeštali u <strong>datoteke</strong>, a svaka aplikacija imala je sopstvene datoteke i sopstveni program za njihovo čitanje."
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Aplikacija 1",
+              "sub": "svoje datoteke"
+            },
+            {
+              "title": "Aplikacija 2",
+              "sub": "svoje datoteke"
+            },
+            {
+              "title": "Aplikacija n",
+              "sub": "svoje datoteke"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Isti entitet (na primer student) pojavljuje se u datotekama više aplikacija, ali se podaci razlikuju. U predavanju je prikazan primer jednog studenta sa brojem indeksa 13 u tri aplikacije:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Aplikacija",
+            "Ime koje je zapisano",
+            "Vrednost atributa BPI"
+          ],
+          "rows": [
+            [
+              "Aplikacija 1",
+              "Nikola",
+              "10"
+            ],
+            [
+              "Aplikacija 2",
+              "Nina",
+              "15"
+            ],
+            [
+              "Aplikacija n",
+              "Niki",
+              "12"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Nije jasno koji je zapis tačan: to je posledica <strong>redundantnosti</strong> (višestrukog čuvanja istih podataka), a ona je u klasičnoj organizaciji datoteka neizbežna."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Osnovni nedostaci"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>nepovezanost aplikacija</strong>: potreba da se isti ili slični podaci prepisuju ručno",
+            "<strong>redundantnost podataka</strong>: višestruko pamćenje istih ili sličnih podataka",
+            "<strong>čvrsta povezanost programa i podataka</strong>: program mora da zna kako je datoteka organizovana, pa svaka promena strukture zahteva izmenu programa"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "U predavanju je za ilustraciju korišćen jezik COBOL: u programu se moraju opisati datoteka, njen ključ, polja i način pristupa. Čak i najmanja promena (dodatno polje) znači da se mora menjati svaki program koji tu datoteku koristi."
+        },
+        {
+          "type": "callout",
+          "variant": "warning",
+          "text": "Posledice: otežano održavanje informacionog sistema i otežan dalji razvoj. Redundantnost povlači i <strong>nekonzistentnost</strong>, tj. situaciju u kojoj različite aplikacije različito „znaju“ isti podatak."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ideja baze podataka"
+        },
+        {
+          "type": "paragraph",
+          "text": "Osnovne ideje rešenja:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "svi podaci jednog informacionog sistema integrišu se u jednu veliku „datoteku“, a to je <strong>baza podataka</strong>",
+            "podaci se pamte <strong>neredundantno</strong>, tj. bez nepotrebnog višestrukog zapisivanja",
+            "uvodi se posebna softverska celina za kreiranje i korišćenje baze: <strong>sistem za upravljanje bazom podataka (SUBP)</strong>"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Programi više ne čitaju datoteke direktno, već traže podatke od SUBP-a, koji se brine da se oni ispravno čuvaju i ažuriraju."
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Aplikacija 1"
+            },
+            {
+              "title": "Aplikacija 2"
+            },
+            {
+              "title": "SUBP",
+              "sub": "jedini ulaz u bazu"
+            },
+            {
+              "title": "Baza podataka"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "SUBP (DBMS)"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Sistem za upravljanje bazama podataka (SUBP, Database Management System – DBMS)</strong> je softverski proizvod namenjen da omogući izgradnju i korišćenje baza podataka. Sadrži:"
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "📐",
+              "title": "Jezik za opis podataka",
+              "text": "Data Definition Language (DDL): kako se definiše struktura baze"
+            },
+            {
+              "icon": "✏️",
+              "title": "Jezik za manipulisanje podacima",
+              "text": "Data Manipulation Language (DML): unos, izmena, brisanje"
+            },
+            {
+              "icon": "🔎",
+              "title": "Upitni jezik",
+              "text": "Query Language (QL): pretraživanje, na primer SQL"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Jezgro SUBP-a</strong> obezbeđuje:"
+        },
+        {
+          "type": "list",
+          "style": "bullets",
+          "items": [
+            "fizičku organizaciju podataka",
+            "rutine za upravljanje podacima",
+            "zaštitu od neovlašćenog pristupa i od uništenja podataka",
+            "višekorisnički režim rada",
+            "zadavanje šeme baze podataka (nad skupom datoteka se oblikuje struktura šeme, a nad šemom se kreira i koristi baza)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Mala ilustracija: šta znači DDL, DML i QL"
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "-- DDL: opisujemo strukturu\nCREATE TABLE student (\n  bri   INT PRIMARY KEY,\n  ime   VARCHAR(50),\n  bpi   INT\n);\n\n-- DML: unosimo i menjamo podatke\nINSERT INTO student (bri, ime, bpi) VALUES (13, 'Nikola', 10);\nUPDATE student SET bpi = 12 WHERE bri = 13;\n\n-- QL: postavljamo upit\nSELECT ime, bpi FROM student WHERE bpi >= 10;",
+          "description": "SQL je najrasprostranjeniji jezik koji objedinjuje sva tri dela."
+        },
+        {
+          "type": "paragraph",
+          "text": "Student 13 sada postoji samo na jednom mestu. Ako se ime promeni, menja se jednom, a sve aplikacije vide istu vrednost."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "u klasičnoj organizaciji svaka aplikacija ima svoje datoteke, što vodi do redundantnosti i čvrste povezanosti programa i podataka",
+            "baza podataka čuva integrisane, neredundantne podatke",
+            "SUBP je posrednik između programa i podataka i obezbeđuje DDL, DML i upitni jezik"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Koje su prednosti korišćenja baza podataka u informacionom sistemu?",
+                "Šta je to redundantnost i kakve posledice može da izazove?",
+                "Koje su prednosti korišćenja baza podataka u odnosu na ostale sisteme čuvanja podataka?",
+                "Šta je SUBP i šta sadrži?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Predavanje Baze podataka, prof. dr Branko Latinović.",
+          "muted": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "03-sema-podsema-i-pogled",
+    "subjectSlug": "projektovanje-informacionih-sistema",
+    "kind": "predavanje",
+    "title": "Šema, podšema i pogled",
+    "description": "Kako baza podataka ostaje nezavisna od programa: šema baze, podšema (eksterna šema), logička i fizička nezavisnost i pogled.",
+    "week": 3,
+    "date": "2026-10-27",
+    "formattedDate": "27.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šema baze podataka"
+        },
+        {
+          "type": "paragraph",
+          "text": "Program koji koristi usluge SUBP-a ne zna kako su podaci fizički smešteni. On poznaje samo <strong>šemu baze podataka</strong>, tj. njenu logičku strukturu. Šema je opis cele baze: koji entiteti postoje, koje atribute imaju i kako su povezani."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Pojam",
+            "Skraćenica",
+            "Šta je"
+          ],
+          "rows": [
+            [
+              "Logička struktura podataka",
+              "LSP",
+              "ono što vidi program: tabele, polja, veze"
+            ],
+            [
+              "Fizička struktura podataka",
+              "FSP",
+              "kako su podaci stvarno zapisani na disku"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "SUBP preslikava logičku strukturu u fizičku (<strong>LSP ↔ FSP</strong>). Na primer, program traži „studenta sa brojem indeksa 13“, a SUBP odlučuje da li će ga pronaći po primarnom ključu, po sekundarnom ključu ili direktnim pristupom."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Šta nam donosi uvođenje šeme"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "manja zavisnost programa i šeme baze od promena u fizičkoj strukturi",
+            "manja redundantnost i veća konzistentnost podataka",
+            "uvode se nove uloge: <strong>projektant baze</strong> (projektuje šemu i fizičku strukturu) i <strong>administrator baze podataka (DBA)</strong>"
+          ]
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Program 1"
+            },
+            {
+              "title": "Program 2"
+            },
+            {
+              "title": "Program n"
+            },
+            {
+              "title": "Šema",
+              "sub": "logička struktura"
+            },
+            {
+              "title": "Baza podataka",
+              "sub": "fizička struktura"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Podšema (eksterna šema)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Šema cele baze je obično obimna, složena i često se menja. Ako bi programi direktno koristili šemu, svaka njena promena bi se prenela na programe. Zato se uvodi novi sloj: <strong>podšema</strong>."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "podšema (eksterna šema) je logička struktura koja se dobija na osnovu <strong>dela šeme</strong> baze",
+            "obuhvata podatke koji su potrebni jednom zadatku ili grupi sličnih transakcionih programa",
+            "predstavlja model dela realnog sistema, a projektuje se kao deo razvoja informacionog sistema",
+            "program koristi bazu isključivo preko podšeme"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "SUBP preslikava podšemu u šemu, a šemu u fizičku strukturu. Zahtev programa se definiše preko pojmova podšeme, a SUBP ga prevodi u pojmove šeme, a zatim i fizičke strukture."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Primer: student, fakultet i stan"
+        },
+        {
+          "type": "paragraph",
+          "text": "Šema male baze u mrežnom modelu: <em>Student</em> (BRI, IME, PRZ, BPI, STA) pripada <em>Fakultetu</em> (NAF, BRS, BST) i stanuje u <em>Stanu</em> (ADR, KST)."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Podšema",
+            "Šta sadrži"
+          ],
+          "rows": [
+            [
+              "Podšema 1: Student_Fakultet",
+              "BRI, IME, PRZ, BPI, NAF (student i naziv fakulteta)"
+            ],
+            [
+              "Podšema 2: Student i Stan",
+              "BRI, IME, PRZ, STA, uz stan (ADR, KST)"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Program za evidenciju studenata koristi podšemu 1 i uopšte ne vidi podatke o stanovanju, a program za domove koristi podšemu 2. Svaki vidi samo ono što mu treba."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Logička i fizička nezavisnost"
+        },
+        {
+          "type": "cards",
+          "columns": 2,
+          "items": [
+            {
+              "icon": "🧩",
+              "title": "Logička nezavisnost",
+              "text": "promena šeme ne izaziva promenu podšeme i programa"
+            },
+            {
+              "icon": "💾",
+              "title": "Fizička nezavisnost",
+              "text": "promena fizičke strukture ne izaziva promenu šeme, podšema i programa"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Fizička i logička nezavisnost su <strong>uslovi, a ne apsolutne kategorije</strong>. Jednostavno rečeno, postižu se u meri u kojoj su projektanti dobro raspodelili podatke po slojevima."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Pogled (view)"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Pogled</strong> je pojava logičke strukture podataka nad podšemom, tj. slika dela baze onako kako ga vidi programer ili korisnik. Postoje dve vrste:"
+        },
+        {
+          "type": "list",
+          "style": "bullets",
+          "items": [
+            "<strong>pogled</strong> nad podšemom: ono što vidi pojedinačan program ili korisnik",
+            "<strong>globalni pogled</strong> nad celom šemom: slika celog modelovanog dela sistema (baze podataka)"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ista ideja postoji i u današnjim relacionim bazama: tabele čine šemu, a pogled se pravi komandom <code>CREATE VIEW</code>."
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "CREATE VIEW student_fakultet AS\nSELECT s.bri, s.ime, s.prz, s.bpi, f.naf\nFROM student s\nJOIN fakultet f ON f.id = s.fakultet_id;\n\n-- korisnik pita pogled kao da je običan tabela:\nSELECT * FROM student_fakultet WHERE bpi > 8;"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Sistemi baza podataka"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Sistem baza podataka</strong> obuhvata: bazu podataka, SUBP, tj. sistemski softver i računare (servere) na kojima SUBP radi, šemu baze, kao i jezike i operacije za kreiranje, ažuriranje i korišćenje baze."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tehnološki razvoj je tekao od mašinskih i asemblerskih jezika, preko jezika treće generacije (3GL), do jezika četvrte generacije (4GL) i CASE alata. Svaka generacija smanjuje napor potreban za pisanje delova programa koji upravljaju podacima i povećava nezavisnost od fizičke strukture. Kvalitet sistema zavisi od projektanta baze, izabranih metoda projektovanja, osobina SUBP-a i primenjenih tehnologija."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "šema je logički opis cele baze, a SUBP preslikava logičku strukturu u fizičku",
+            "podšema (eksterna šema) je deo šeme prilagođen jednom programu ili korisniku",
+            "logička nezavisnost štiti programe od promena šeme, a fizička od promena načina čuvanja podataka",
+            "pogled je slika dela baze onako kako ga vidi korisnik"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Šta je šema baze podataka, a šta podšema?",
+                "Objasnite fizičku i logičku nezavisnost.",
+                "Šta je pogled i koja je razlika između pogleda i globalnog pogleda?",
+                "Koje uloge u radu sa bazom podataka uvodi pojam šeme?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Predavanje Baze podataka, prof. dr Branko Latinović.",
+          "muted": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "04-skladista-podataka",
+    "subjectSlug": "projektovanje-informacionih-sistema",
+    "kind": "predavanje",
+    "title": "Skladišta podataka (data warehouse)",
+    "description": "Zašto firme prave posebna skladišta za analizu, kako se podaci pripremaju (ETL) i kako izgleda dimenziono modelovanje i OLAP kocka.",
+    "week": 4,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Od sirovih podataka do poslovnih informacija"
+        },
+        {
+          "type": "paragraph",
+          "text": "Firma svakodnevno prikuplja velike količine podataka koji opisuju tekuće stanje: svaki prodati artikal, svaku uplatu i isplatu. Sami po sebi to su <strong>sirovi podaci</strong>. Ako ih analiziramo, dobijamo <strong>poslovne informacije</strong>."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Sirov podatak",
+            "Izvedena informacija i pitanja koja se postavljaju"
+          ],
+          "rows": [
+            [
+              "Lanac prodavnica je u junu 2010. prodao robe u vrednosti od 10.000 evra",
+              "Prodaja je bila 15.000 evra godinu ranije, a cilj je bio 20.000, pa cilj nije ispunjen. Koji se proizvodi prodaju, a koji ne? Kakav je efekat promocije?"
+            ],
+            [
+              "N. N. je jutros podigao 50 evra u Travniku",
+              "N. N. u pet meseci podiže novac u više evropskih gradova, pa često putuje. Možda bi ga zanimala posebna kartica."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Osnovna namena sistema za podršku odlučivanju je da donosiocima odluka pribavi takve informacije. Valjana arhitektura okruženja za podršku odlučivanju ima trojstvo: <strong>data warehouse, OLAP i data mining</strong>."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "OLTP i analitički sistemi"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>OLTP (On-Line Transaction Processing)</strong> sistemi su operativni sistemi koji beleže poslovne transakcije: narudžbine, otvaranje računa, uplate. Dizajnirani su da što brže upisuju i menjaju podatke i održavaju njihov integritet. Analitički sistemi su drugačiji: dizajniraju se za veliki broj podataka koji se samo čitaju i služe za donošenje odluka."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "",
+            "OLTP (operativni sistem)",
+            "Skladište podataka (analitički sistem)"
+          ],
+          "rows": [
+            [
+              "Cilj",
+              "brzo evidentirati transakcije",
+              "pomoći u analizi i odlučivanju"
+            ],
+            [
+              "Rad sa podacima",
+              "upis, izmena, brisanje",
+              "uglavnom samo čitanje"
+            ],
+            [
+              "Podaci",
+              "tekuće stanje",
+              "istorija, često godinama unazad"
+            ],
+            [
+              "Dizajn baze",
+              "normalizovan, bez ponavljanja",
+              "prilagođen upitima i analizi (dimenzioni)"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je skladište podataka"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Skladište podataka (data warehouse, DW)</strong> je zbirka podataka izdvojena iz operativnih baza i smeštena u posebnu bazu. Ralph Kimball ga definiše kao kopiju transakcionih podataka specifično strukturiranu za upite i analizu. To je veliki, jedinstveni, integrisani registar podataka koji služi kao osnova informacionim aplikacijama."
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "🎯",
+              "title": "Organizovano po predmetu",
+              "text": "podaci su grupisani po temama relevantnim za odlučivanje"
+            },
+            {
+              "icon": "🔗",
+              "title": "Konzistentno",
+              "text": "podaci iz različitih sistema šifriraju se na isti način"
+            },
+            {
+              "icon": "🕰️",
+              "title": "Vremenski",
+              "text": "čuva se istorija za praćenje trendova i prognoze"
+            },
+            {
+              "icon": "🧊",
+              "title": "Višedimenzionalno",
+              "text": "obično struktura sa više dimenzija"
+            },
+            {
+              "icon": "🌐",
+              "title": "Veb zasnovano",
+              "text": "pristup preko veb pregledača"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Data mart"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Data mart</strong> je malo skladište za potrebe jednog sektora (na primer prodaje ili finansija). Mnogo je jeftiniji (prema predavanju oko 100.000 dolara naspram više od milion za skladište) i brži za izgradnju (oko 90 dana u odnosu na više od godinu dana), a jednostavniji za korišćenje."
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Izvori podataka",
+              "sub": "OLTP sistemi, spoljni podaci"
+            },
+            {
+              "title": "Priprema podataka",
+              "sub": "čišćenje i transformacija"
+            },
+            {
+              "title": "Skladište podataka",
+              "sub": "integrisani podaci"
+            },
+            {
+              "title": "Data martovi",
+              "sub": "po sektorima"
+            },
+            {
+              "title": "Korisnici",
+              "sub": "izveštaji, OLAP, data mining"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako se razvija skladište podataka"
+        },
+        {
+          "type": "paragraph",
+          "text": "Za razliku od transakcionih sistema, ovde su najvažniji sami podaci, a ne poslovni procesi. Razvoj ima tri koraka: analiza izvora podataka, priprema podataka i izgradnja skladišta."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Analiza izvora"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo je ključni korak i troši oko 80% vremena. Prolazi kroz prikupljanje zahteva, planiranje skladišta i izbor tehnike analize."
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Zahtevi vođeni izvorima (source-driven)",
+            "items": [
+              "polazi se od modela podataka u operativnim sistemima",
+              "prednost: obuhvata sve podatke, korisnik je malo uključen",
+              "mana: veći rizik da se promaše stvarne potrebe korisnika i oduzima puno vremena"
+            ]
+          },
+          "right": {
+            "title": "Zahtevi vođeni korisnicima (user-driven)",
+            "items": [
+              "polazi se od funkcija koje korisnik obavlja, kroz intervjue i sastanke",
+              "prednost: fokus je na onome što je potrebno, a ne na onome što je dostupno; skladište je upotrebljivo za kraće vreme"
+            ]
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": "Tehnike analize koje skladište treba da podrži: <strong>upiti i izveštaji</strong>, <strong>višedimenzionalna analiza</strong> i <strong>data mining</strong>. Data mining se razlikuje po tome što ne postavljamo pitanje: algoritmi sami traže obrasce u podacima i javljaju šta su našli."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Priprema podataka: ETL"
+        },
+        {
+          "type": "paragraph",
+          "text": "ETL (ekstrakcija, transformacija, punjenje) je najsloženiji deo projekta. Izvori su na različitim platformama, pod različitim operativnim sistemima i aplikacijama, a cilj je da se podaci spoje u standardni format. Po pravilu 80/20, oko 80% ETL procesa je transformacija."
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Ekstrakcija",
+              "sub": "iz izvornih sistema"
+            },
+            {
+              "title": "Čišćenje",
+              "sub": "provera i ispravka"
+            },
+            {
+              "title": "Transformacija",
+              "sub": "ujednačavanje i preračunavanje"
+            },
+            {
+              "title": "Punjenje",
+              "sub": "u skladište"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Tipični problemi sa izvorima"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>nekonzistentni primarni ključevi</strong>: pet datoteka o klijentima, svaka sa drugim ključem",
+            "<strong>nekonzistentne vrednosti</strong>: duplirani podaci vremenom dobiju različite vrednosti",
+            "<strong>različiti formati</strong> datuma i novčanih iznosa",
+            "<strong>netačne vrednosti</strong> koje se moraju ispraviti logičkim čišćenjem",
+            "<strong>sinonimi i homonimi</strong>: isti podatak sa različitim nazivima ili različiti podaci sa istim nazivom",
+            "<strong>ugrađena logika procesa</strong>: stari sistemi sa nedokumentovanim kodovima (na primer „00“ znači vraćena pošiljka)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Izgradnja: dimenziono modelovanje"
+        },
+        {
+          "type": "paragraph",
+          "text": "Izgradnja obuhvata denormalizaciju podataka, definisanje hijerarhija, kreiranje agregacija, kreiranje fizičkog modela, generisanje baze i punjenje podacima. <strong>Dimenziono modelovanje</strong> je tehnika logičkog dizajna koja podatke prikazuje u obliku pogodnom za brzu analizu. Podaci se organizuju kao <strong>mere</strong> (na primer iznos prodaje) i <strong>dimenzije</strong> (vreme, proizvod, grad). Svaka dimenziona tabela ima primarni ključ, a svi oni zajedno čine ključ tabele činjenica; takav model se zove <strong>šema zvezde</strong>."
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Dvodimenzionalni model",
+            "items": [
+              "podaci o prodaji za svaku oblast nalaze se u različitim tabelama"
+            ]
+          },
+          "right": {
+            "title": "Trodimenzionalni model",
+            "items": [
+              "svi podaci smešteni su u trodimenzionalni niz (kocka): proizvod × mesec × grad"
+            ]
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": "Primer iz predavanja: kocka „Prodaja“ ima tri dimenzije: vreme (Q1–Q4), proizvodi (računar, printer, monitor, TV) i tržišta (Banjaluka, Doboj, Prijedor, Bijeljina). Korisnik koji prati prodaju printera u Banjaluci postavlja upit za vrednosti u četvrtom kvartalu, a odgovor se nalazi u preseku tri dimenzije. Istu kocku možemo videti iz više uglova: svi proizvodi i meseci za jedan grad, svi proizvodi i gradovi za jedan mesec ili svi gradovi i meseci za jedan proizvod."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Prednosti i mane"
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Dobre strane",
+            "items": [
+              "pristup podacima brzo i jednostavno preko veb pregledača",
+              "detaljne analize koje ranije nisu bile moguće",
+              "integrisan pogled na podatke cele organizacije",
+              "operativne baze nisu opterećene složenim upitima"
+            ]
+          },
+          "right": {
+            "title": "Loše strane",
+            "items": [
+              "izgradnja i održavanje su skupi",
+              "teško, skupo i dugotrajno kada organizacija koristi zastarele sisteme",
+              "odeljenja mogu da se protive deljenju podataka",
+              "isplati se samo velikim organizacijama koje redovno ulažu u IT rešenja"
+            ]
+          }
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "skladište podataka je posebna baza za analizu, sa podacima iz više izvora i sa istorijom",
+            "OLTP beleži transakcije, a skladište omogućava analize i odlučivanje",
+            "najviše posla je u pripremi podataka: čišćenje, ujednačavanje i transformacija (ETL)",
+            "podaci se modeluju kao dimenzije i mere, a prikazuju kao kocka"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Šta je skladište podataka, a šta data mart?",
+                "Po čemu se OLTP razlikuje od analitičkog sistema?",
+                "Šta je ETL i koji su tipični problemi sa izvorima podataka?",
+                "Šta je dimenziono modelovanje i šta je šema zvezde?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Predavanje Data Warehousing, predmet Osnove informacionih sistema.",
+          "muted": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "05-razvoj-is-strategije-i-poslovni-trendovi",
+    "subjectSlug": "projektovanje-informacionih-sistema",
+    "kind": "predavanje",
+    "title": "Razvoj informacionih sistema: fokusi, strategije i poslovni trendovi",
+    "description": "Na šta se usredsređuje razvoj IS, kako se meri uspeh IT projekta, koje su bazične strategije razvoja, šta je SOA i koji poslovni trendovi oblikuju sistem.",
+    "week": 5,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Na šta se fokusira razvoj IS"
+        },
+        {
+          "type": "paragraph",
+          "text": "Razvoj informacionog sistema obuhvata tri glavna fokusa:"
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "🗄️",
+              "title": "Podaci",
+              "text": "sirovi materijal za izradu korisnih informacija"
+            },
+            {
+              "icon": "⚙️",
+              "title": "Procesi",
+              "text": "aktivnosti (uključujući menadžment) kojima se ostvaruje misija poslovanja"
+            },
+            {
+              "icon": "🔌",
+              "title": "Interfejsi",
+              "text": "povezivanje sistema sa korisnicima i drugim sistemima"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kada je IT projekat uspešan"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "razvijeni IS je prihvatljiv za korisnika",
+            "sistem je isporučen na vreme",
+            "sistem je razvijen u okviru budžeta",
+            "proces razvoja imao je minimalan uticaj na tekuće poslovne operacije"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Integrisana obrada podataka"
+        },
+        {
+          "type": "paragraph",
+          "text": "Preduzeće ima funkcije kao što su istraživanje i razvoj, marketing i prodaja, nabavka, skladištenje, proizvodnja, otprema, korisnički servis, finansije, računovodstvo i upravljanje ljudskim resursima. Informacioni sistem treba da ih poveže u dva pravca:"
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Horizontalna integracija",
+            "items": [
+              "povezuje funkcije koje se nadovezuju jedna na drugu (nabavka → skladište → proizvodnja → otprema)"
+            ]
+          },
+          "right": {
+            "title": "Vertikalna integracija",
+            "items": [
+              "povezuje nivoe upravljanja, od operativnog preko planiranja do strateškog menadžmenta"
+            ]
+          }
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Bazične strategije razvoja IS"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Strategija",
+            "Šta znači",
+            "Kada se bira"
+          ],
+          "rows": [
+            [
+              "Redukcije",
+              "minimalno ulaganje uz održavanje dostignutog nivoa",
+              "poslovni sistem stagnira (kategorija I)"
+            ],
+            [
+              "Razvoja",
+              "uvođenje novih tehnologija i/ili širenje obuhvata IT aplikacija",
+              "poslovni sistem se razvija (kategorija II)"
+            ],
+            [
+              "Umrežavanja",
+              "saradnja specijalizovanih firmi za pojedine aktivnosti životnog ciklusa razvoja IS i njihovo povezivanje radi zajedničkog razvoja",
+              "poslovni sistem se razvija kroz specijalizaciju (kategorija III)"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "SOA – servisno orijentisana arhitektura"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>SOA (Service Oriented Architecture)</strong> je stil projektovanja IT sistema u kome se funkcionalnosti dele na nezavisne <strong>servise</strong> koji se distribuiraju preko mreže i kombinuju u složenije poslovne aplikacije. SOA omogućava da različite aplikacije, na različitim operativnim sistemima i u različitim programskim jezicima, razmenjuju podatke. Servisi međusobno komuniciraju razmenom podataka ili koordinacijom aktivnosti."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Zamislite lego kocke: svaka kocka (servis) radi jedan posao i može se spojiti sa drugima. Servis za plaćanje, servis za proveru zaliha i servis za slanje e-pošte mogu se koristiti u više aplikacija."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Poslovni trendovi koji utiču na IS"
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "🔗",
+              "title": "Lanci snabdevanja",
+              "text": "tok materijala, informacija, plaćanja i usluga od dobavljača sirovina do krajnjeg korisnika; traže jaku IT podršku"
+            },
+            {
+              "icon": "✅",
+              "title": "TQM i standardizacija",
+              "text": "sveobuhvatno poboljšanje kvaliteta; Six Sigma teži manje od 3,4 greške na milion izvođenja"
+            },
+            {
+              "icon": "🔁",
+              "title": "Kontinuirano poboljšanje procesa (CPI)",
+              "text": "stalno praćenje procesa radi malih, ali merljivih ušteda"
+            },
+            {
+              "icon": "🏭",
+              "title": "ERP",
+              "text": "poslovni informacioni sistemi: komercijalni paketi za sve standardne poslovne funkcije"
+            },
+            {
+              "icon": "📚",
+              "title": "Upravljanje znanjem (KMS)",
+              "text": "formalizuje znanje preduzeća iz baza, dokumenata i iskustva eksperata"
+            },
+            {
+              "icon": "📊",
+              "title": "Poslovna inteligencija (BI)",
+              "text": "prikupljanje i analiza poslovnih informacija radi boljih odluka"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Standardi kvaliteta vezani za informacioni sistem"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Standard",
+            "Čime se bavi"
+          ],
+          "rows": [
+            [
+              "ISO 9001",
+              "obezbeđenje kvaliteta u projektovanju, razvoju, proizvodnji, instalaciji i održavanju"
+            ],
+            [
+              "ISO 20000",
+              "zahtevi za sistem upravljanja IT uslugama"
+            ],
+            [
+              "ISO 12207",
+              "model životnog ciklusa razvoja informacionog sistema (softvera)"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Opšti model poslovne inteligencije"
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Transakciona baza",
+              "sub": "izbor zanimljivih podataka"
+            },
+            {
+              "title": "ETL",
+              "sub": "ekstrakcija, transformacija, čišćenje"
+            },
+            {
+              "title": "Skladište podataka",
+              "sub": "Data Warehouse"
+            },
+            {
+              "title": "OLAP kocka",
+              "sub": "višedimenzionalna analiza"
+            },
+            {
+              "title": "Izveštaji",
+              "sub": "gotovi i ad hoc"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovim modelom bavimo se u sledećim lekcijama, kroz poslovnu inteligenciju, OLAP i data mining."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "razvoj IS gleda podatke, procese i interfejse, a uspeh se meri prihvaćenošću, rokom, budžetom i uticajem na poslovanje",
+            "strategije razvoja su redukcija, razvoj i umrežavanje",
+            "SOA deli sistem na servise koji se mogu kombinovati",
+            "poslovni trendovi (lanci snabdevanja, kvalitet, ERP, znanje, BI) određuju zahteve prema IS"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Navedite bazične strategije razvoja informacionog sistema.",
+                "Šta je SOA i koje su njene prednosti?",
+                "Kako se meri uspeh IT projekta?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Predavanje Trendovi razvoja informacionih sistema, predmet Osnove informacionih sistema.",
+          "muted": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "06-poslovna-inteligencija",
+    "subjectSlug": "projektovanje-informacionih-sistema",
+    "kind": "predavanje",
+    "title": "Poslovna inteligencija (BI)",
+    "description": "Zašto izveštaji iz operativnih sistema nisu dovoljni, šta je poslovna inteligencija, kako se razvija i koga opslužuje.",
+    "week": 6,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Problem: mnogo podataka, malo odgovora"
+        },
+        {
+          "type": "paragraph",
+          "text": "Transakcioni informacioni sistemi (<strong>OLTP</strong>) beleže pojedinačne transakcije: bankovne poslove, rezervacije letova, naručivanje robe. Transakcije su česte, ponavljaju se i izvode paralelno, a obično imaju samo jedan ili nekoliko koraka."
+        },
+        {
+          "type": "paragraph",
+          "text": "Iz takvih sistema je teško dobiti kvalitetne izveštaje. To znači analizu velike količine sirovih podataka, dugo traje, komplikovano je za korišćenje i prikaz, traži uključivanje informatičara i opterećuje operativni sistem. Problem nije u količini podataka, već u njihovoj <strong>dostupnosti</strong>. Rezultat: više verzija „istine“ i „analiza-paraliza“."
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Transakcioni IS",
+              "sub": "beleži poslovanje"
+            },
+            {
+              "title": "Analitički IS",
+              "sub": "pomaže odlučivanju"
+            },
+            {
+              "title": "Poslovna inteligencija",
+              "sub": "pretvara podatke u odluke"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako su se razvijali sistemi za podršku odlučivanju"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Decenija",
+            "Koncepti"
+          ],
+          "rows": [
+            [
+              "1960-te",
+              "strukturirani izveštaji, interaktivna pretraživanja sistema"
+            ],
+            [
+              "1970-te",
+              "sistemi za podršku odlučivanju (DSS), specifični za zadatke"
+            ],
+            [
+              "1980-te",
+              "grupni DSS (GDSS), izvršni informacioni sistemi (EIS)"
+            ],
+            [
+              "1990-te",
+              "data warehouse, OLAP, vizuelno modelovanje"
+            ],
+            [
+              "2000-te",
+              "poslovna inteligencija, data mining, upravljanje znanjem"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je poslovna inteligencija"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Poslovna inteligencija (Business Intelligence, BI)</strong> je skup procesa za prikupljanje i analizu poslovnih informacija radi donošenja boljih odluka i prepoznavanja novih poslovnih mogućnosti. Obuhvata tehnologiju koja se koristi u tim procesima i informacije koje se pritom koriste. Koristi se i izraz „poslovno izveštavanje“ ili „upravljanje poslovnim informacijama“."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ključne tehnologije BI-ja su <strong>data warehousing, OLAP i data mining</strong> (neuronske mreže, stabla odlučivanja, klaster analiza, text mining)."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "BI nije proizvod koji se kupi i uključi. Predstavlja pre svega proces i način razmišljanja: kako od onoga što firma već zna doći do odluka."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta BI sistem omogućava"
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Funkcionalnosti",
+            "items": [
+              "analiza efikasnosti upravljanja",
+              "ad hoc pretraživanja",
+              "interaktivne analize",
+              "drill-through navigacija (od zbira do pojedinačnog zapisa)"
+            ]
+          },
+          "right": {
+            "title": "Poslovne vrednosti",
+            "items": [
+              "posmatranje pojedinih segmenata tržišta",
+              "analiza ponašanja kupaca i dobavljača",
+              "lakše pregovaranje sa kupcima i dobavljačima",
+              "predviđanje budućih pojava",
+              "uvid gde, čime i kod kojih kupaca nastaje poslovni rezultat"
+            ]
+          }
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Za koga je BI"
+        },
+        {
+          "type": "paragraph",
+          "text": "BI je namenjen svima, ali svaki nivo koristi različite proizvode. Što je viši nivo, to je količina detalja manja, a složenost analize veća."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Korisnici",
+            "Šta koriste"
+          ],
+          "rows": [
+            [
+              "Uprava",
+              "KPI, scorecards i dashboards (ključni pokazatelji na jednom ekranu)"
+            ],
+            [
+              "Analitičari, viši menadžment",
+              "OLAP i analize"
+            ],
+            [
+              "Niži menadžment",
+              "menadžerski izveštaji"
+            ],
+            [
+              "Zaposleni i partneri",
+              "detaljni izveštaji i dokumenta (fakture, otpremnice)"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Ciklus poslovne inteligencije"
+        },
+        {
+          "type": "paragraph",
+          "text": "BI je kružna aktivnost sa četiri osnovne faze:"
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Planiranje i upravljanje",
+              "sub": "šta nam treba i zašto"
+            },
+            {
+              "title": "Prikupljanje podataka",
+              "sub": "izvori"
+            },
+            {
+              "title": "Obrada i analiza",
+              "sub": "izrada analiza"
+            },
+            {
+              "title": "Distribucija",
+              "sub": "isporuka i upotreba"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Tipovi BI aplikacija"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "izveštajne aplikacije",
+            "ad hoc upiti i izveštavanje",
+            "multidimenzionalna analiza",
+            "statističke analize i data mining",
+            "planiranje"
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Oblast",
+            "Primeri pitanja na koje BI odgovara"
+          ],
+          "rows": [
+            [
+              "Finansijske usluge",
+              "Koliko je ukupno nevraćenih kredita i kolika je njihova vrednost?"
+            ],
+            [
+              "Trgovina",
+              "Koja su tri najprodavanija proizvoda na jugoistoku zemlje? Da li je obrt u skladu sa planom?"
+            ],
+            [
+              "Telekomunikacije",
+              "Koji je najprofitabilniji segment? Kako zadržati lojalnost klijenata?"
+            ],
+            [
+              "Farmacija",
+              "Kakav je trend prodaje po regionima za novu vrstu leka? Da li se razvoj leka odvija po planu?"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako se razvija BI sistem"
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "⚡",
+              "title": "Quick-hit",
+              "text": "najčešći pristup: inicijativa dolazi od menadžera, a sistem grade zajedno menadžeri i programeri"
+            },
+            {
+              "icon": "🏗️",
+              "title": "Tradicionalni životni ciklus",
+              "text": "za složene sisteme sa mnogo korisnika; veliki organizacioni BI je modelno orijentisan"
+            },
+            {
+              "icon": "🔁",
+              "title": "Iterativni razvoj",
+              "text": "prototip se gradi i poboljšava; korisnik i graditelj zajedno definišu problem"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Kako se BI uklapa u poslovne procese"
+        },
+        {
+          "type": "list",
+          "style": "numbered",
+          "items": [
+            "analitičke aplikacije se povezuju sa operativnim preko preduzetničkog portala, da bi im pristupali interni i eksterni korisnici",
+            "analitičke metode se ugrađuju u operativne aplikacije tokom razvoja aplikacija",
+            "uvode se veb servisi koji dinamički povezuju analitičke metode sa internim ili partnerskim aplikacijama"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Organizacione barijere"
+        },
+        {
+          "type": "paragraph",
+          "text": "Najveći otpori nisu tehnički, već ljudski: promene u strukturi moći, kulturološki imperativi i preraspodela autoriteta, uz probleme sa kadrovima. Ko ranije kontroliše informaciju ima moć, a BI tu informaciju stavlja na raspolaganje svima."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "OLTP sistemi su dobri za beleženje transakcija, a loši za analizu",
+            "BI je proces prikupljanja i analize poslovnih informacija radi boljih odluka",
+            "oslanja se na data warehouse, OLAP i data mining",
+            "razvoj BI se oslanja na saradnju poslovnih korisnika i informatičara"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Šta BI sistem omogućava?",
+                "Za koga je BI sistem namenjen?",
+                "Navedite jednu definiciju poslovne inteligencije (BI).",
+                "Koje su ključne tehnologije poslovne inteligencije?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Predavanje Poslovna inteligencija, prof. dr Branko Latinović.",
+          "muted": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "07-olap",
+    "subjectSlug": "projektovanje-informacionih-sistema",
+    "kind": "predavanje",
+    "title": "OLAP: višedimenzionalna analiza",
+    "description": "Šta je OLAP, kako izgleda OLAP kocka, koje operacije podržava, šta je FASMI test i dvanaest Coddovih pravila i koje su vrste OLAP arhitekture.",
+    "week": 7,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je OLAP"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>OLAP (Online Analytical Processing)</strong> je interaktivan proces koji obuhvata kreiranje, upravljanje, analizu i izveštavanje na osnovu podataka. Termin su 1993. uveli E. F. Codd (tvorac relacionog modela), S. T. Codd i C. T. Salley u radu „Providing OnLine Analytical Processing to User-Analysts: An IT Mandate“."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "",
+            "OLTP",
+            "OLAP"
+          ],
+          "rows": [
+            [
+              "Posao",
+              "ogroman broj jednostavnih transakcija",
+              "mali broj vrlo složenih upita"
+            ],
+            [
+              "Obrasci rada",
+              "predvidljivi",
+              "fleksibilni"
+            ],
+            [
+              "Odgovara na pitanja",
+              "ko? zašto?",
+              "ko? šta? zašto? šta ako?"
+            ],
+            [
+              "Svrha",
+              "prikupljanje podataka",
+              "udruživanje, poređenje i podrška odlučivanju"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kocka umesto tabele"
+        },
+        {
+          "type": "paragraph",
+          "text": "Poslovni podaci su višedimenzionalni: prodaja zavisi od proizvoda, regiona i vremena. OLAP ih zato prikazuje kao <strong>matricu ili kocku</strong>, a ne kao dugu tabelu. Svaka dimenzija ima svoju hijerarhiju (na primer dan, mesec, kvartal, godina)."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Proizvod",
+            "Region",
+            "Mesec",
+            "Prodaja"
+          ],
+          "rows": [
+            [
+              "Film",
+              "Istok",
+              "Dec-01",
+              "240"
+            ],
+            [
+              "Sočiva",
+              "Jug",
+              "Jan-02",
+              "250"
+            ],
+            [
+              "Kamere",
+              "Sever",
+              "Feb-02",
+              "690"
+            ],
+            [
+              "Film",
+              "Jug",
+              "Mar-02",
+              "425"
+            ],
+            [
+              "Sočiva",
+              "Istok",
+              "Apr-02",
+              "300"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Isti podaci u kocki imaju tri ose (proizvod, region, mesec), a prodaja je vrednost u preseku. Pitanje „Koliko smo čokolade prodali na jugoistoku u maju 2008?“ je jedno polje kocke."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Osnovne operacije"
+        },
+        {
+          "type": "cards",
+          "columns": 4,
+          "items": [
+            {
+              "icon": "📚",
+              "title": "Konsolidacija (roll-up)",
+              "text": "udruživanje po hijerarhiji, na primer od meseca do kvartala"
+            },
+            {
+              "icon": "🔍",
+              "title": "Drill-down",
+              "text": "obrnut smer: od zbira do detalja"
+            },
+            {
+              "icon": "🔪",
+              "title": "Isecanje (slice, dice)",
+              "text": "izdvajanje dela kocke po jednoj ili više dimenzija"
+            },
+            {
+              "icon": "🔄",
+              "title": "Pivotiranje",
+              "text": "zamena osa, da se ista kocka vidi iz drugog ugla"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "OLAP omogućava i složene proračune potrebne za prognoze: trend algoritme, klizne proseke, procente rasta, korelacije i periodičnost."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "FASMI test"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nigel Pendse je OLAP sistem definisao jednom rečenicom i skraćenicom <strong>FASMI</strong>:"
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "⚡",
+              "title": "F – Fast",
+              "text": "odgovor do 5 sekundi: 1 sekunda za najjednostavniju analizu, najviše 20 sekundi za složene zahteve"
+            },
+            {
+              "icon": "🧮",
+              "title": "A – Analysis",
+              "text": "poslovna logika i statistika koje su važne korisniku i jednostavne za upotrebu"
+            },
+            {
+              "icon": "👥",
+              "title": "S – Shared",
+              "text": "poverljivost, višekorisnički pristup i zaključavanje konkurentnog ažuriranja"
+            },
+            {
+              "icon": "🧊",
+              "title": "M – Multidimensional",
+              "text": "višedimenzionalni pogled i podrška hijerarhijama"
+            },
+            {
+              "icon": "ℹ️",
+              "title": "I – Information",
+              "text": "sve potrebne podatke i izvedene informacije, gde god su potrebne"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Dvanaest pravila OLAP-a"
+        },
+        {
+          "type": "list",
+          "style": "numbered",
+          "items": [
+            "višedimenzionalni konceptualni pogled",
+            "transparentnost",
+            "pristupačnost",
+            "konzistentne performanse izveštavanja",
+            "klijent/server arhitektura",
+            "generičko dimenzionisanje",
+            "dinamičko upravljanje matricama",
+            "višekorisnički rad",
+            "neograničene operacije sa unakrsnim dimenzijama",
+            "intuitivno upravljanje podacima",
+            "fleksibilno izveštavanje",
+            "neograničene dimenzije i nivoi agregacije"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Arhitekture OLAP sistema"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Tip",
+            "Gde su podaci",
+            "Prednost",
+            "Nedostatak"
+          ],
+          "rows": [
+            [
+              "MOLAP (višedimenzionalni)",
+              "u posebnom formatu izvan relacione baze",
+              "brzo pretraživanje i manipulacija",
+              "statičnost podataka i mogućnosti"
+            ],
+            [
+              "ROLAP (relacioni)",
+              "u relacionoj bazi; OLAP operacije rade nad njom, preko metapodataka",
+              "nema ograničenja veličine podataka; nasleđuje funkcije relacione baze",
+              "složeni upiti narušavaju performanse"
+            ],
+            [
+              "HOLAP (hibridni)",
+              "agregacija u kocki, detalji u relacionoj bazi",
+              "najbolje iz oba sveta, drill-down ka detaljima",
+              "velika redundansa, teže održati konzistentnost"
+            ],
+            [
+              "DOLAP (desktop)",
+              "kocka se isporučuje na računar korisnika",
+              "koristi resurse stolnog računara",
+              "ograničeni skupovi podataka, bezbednost, konzistentnost"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "OLAP na dohvat ruke"
+        },
+        {
+          "type": "paragraph",
+          "text": "OLAP funkcije su ušle i u standardni SQL (SQL:1999 i novije verzije), kroz klauzule <code>GROUP BY ROLLUP</code> i <code>GROUP BY CUBE</code>, kao i <code>RANK</code> i <code>DENSE_RANK</code>. U Excelu isto radi <strong>pivot tabela</strong> i funkcije za rad sa kockama (CUBEVALUE, CUBEMEMBER i druge)."
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "SELECT proizvod, region, SUM(prodaja) AS ukupno\nFROM prodaja\nGROUP BY CUBE (proizvod, region);\n-- rezultat: zbirovi po (proizvod, region), po proizvodu, po regionu i ukupno"
+        },
+        {
+          "type": "paragraph",
+          "text": "OLAP koriste top menadžeri, savetnici, marketing korisnici, analitičari, prognostičari i krajnji korisnici."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "OLAP omogućava brzu višedimenzionalnu analizu, dok OLTP beleži transakcije",
+            "osnovni pojmovi su kocka, dimenzije, hijerarhija, roll-up, drill-down, slice i pivot",
+            "FASMI: brz, analitičan, deljen, višedimenzionalan, informativan",
+            "MOLAP, ROLAP, HOLAP i DOLAP razlikuju se po tome gde se čuvaju podaci"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Navedite 12 pravila OLAP-a.",
+                "Šta označava skraćenica FASMI?",
+                "Kako se razlikuju MOLAP, ROLAP i HOLAP?",
+                "Po čemu se OLAP razlikuje od OLTP?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Predavanje OLAP i Poslovna inteligencija, prof. dr Branko Latinović.",
+          "muted": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "08-rudarenje-podataka",
+    "subjectSlug": "projektovanje-informacionih-sistema",
+    "kind": "predavanje",
+    "title": "Rudarenje podataka (data mining)",
+    "description": "Kako se u velikim bazama pronalaze skriveni obrasci: koraci otkrivanja znanja, priprema podataka i osnovne metode.",
+    "week": 8,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je rudarenje podataka"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sa rastom baza podataka raste i potreba da se velike količine sačuvanih podataka analiziraju i vizuelizuju, kako bi se došlo do informacija i znanja. <strong>Rudarenje podataka (data mining)</strong> je proces pronalaženja skrivenih trendova, modela, zakonitosti i odnosa među podacima. Obično se posmatra kao završni stadijum procesa skladištenja podataka."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alati za rudarenje otkrivaju ranije neprepoznate obrasce ponašanja i omogućavaju bržu i tačniju prognozu, tj. <strong>proaktivne odluke zasnovane na znanju</strong>. Danas je to moguće zato što su sazrele tri tehnologije: moćna multiprocesorska računarska tehnologija, tehnologija za masovno prikupljanje podataka i algoritamske tehnike rudarenja."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Razlika u odnosu na izveštaje i OLAP: tamo postavljamo pitanje i dobijamo odgovor. Kod data mininga algoritmi sami analiziraju podatke i javljaju šta su otkrili, čak i na pitanja koja nismo postavili."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Koraci u procesu otkrivanja znanja"
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Selekcija podataka",
+              "sub": "izbor ciljne grupe"
+            },
+            {
+              "title": "Pročišćavanje",
+              "sub": "spajanje i čišćenje"
+            },
+            {
+              "title": "Redukcija i projekcija",
+              "sub": "transformacija"
+            },
+            {
+              "title": "Izbor metode",
+              "sub": "i rudarenje"
+            },
+            {
+              "title": "Tumačenje",
+              "sub": "znanje"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>selekcija</strong>: bira se ciljana grupa podataka nad kojom se vodi postupak",
+            "<strong>pročišćavanje</strong>: podaci stižu sa različitih računara i baza, zatim se čiste i uparuju",
+            "<strong>redukcija i projekcija</strong>: transformacija podataka iz transakcionih baza",
+            "<strong>izbor najprikladnije metode</strong> rudarenja podataka"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Nakon rudarenja se rezultati tumače i proveravaju, a otkriveno znanje se primenjuje u poslovanju."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Priprema (pretprocesiranje) podataka"
+        },
+        {
+          "type": "paragraph",
+          "text": "Dobri rezultati se ne mogu dobiti iz loših podataka, pa priprema traje najduže. Najčešće se radi:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>pronalaženje ekstremnih vrednosti</strong> (outliers): ne izbacuju se dok se ne utvrdi njihov uzrok",
+            "<strong>dijagnostika i dopuna nedostajućih vrednosti</strong>",
+            "<strong>povezivanje ključeva</strong> iz različitih izvora i postizanje jednoobraznosti",
+            "<strong>uzorkovanje</strong>: podela osnovne populacije na uzorak za učenje modela i testni uzorak",
+            "<strong>kategorizacija vrednosti i formiranje izvedenih atributa</strong> (binning)",
+            "<strong>grupisanje (sažimanje)</strong> velike količine podataka po određenim kriterijumima",
+            "<strong>normiranje podataka</strong>, na primer min-max normiranjem"
+          ]
+        },
+        {
+          "type": "code",
+          "language": "text",
+          "code": "x' = (x - min) / (max - min)",
+          "description": "Min-max normiranje: sve vrednosti svodi na raspon od 0 do 1."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Analiza relevantnosti atributa</strong> otkriva koji atributi imaju slab ili nikakav uticaj na cilj analize, pa se mogu izostaviti iz daljeg rada."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Osnovne metode"
+        },
+        {
+          "type": "cards",
+          "layout": "pair",
+          "items": [
+            {
+              "icon": "📈",
+              "title": "Regresija",
+              "text": "opisuje vezu između varijable od interesa (prodaja, iznos računa) i prediktora (primanja, uzrast, broj članova domaćinstva); služi za predviđanje, na primer koliko će profita doneti neka kategorija potrošača"
+            },
+            {
+              "icon": "🗂️",
+              "title": "Klasifikacija",
+              "text": "svrstava entitete u unapred definisane klase; model se uči na već klasifikovanim slučajevima"
+            },
+            {
+              "icon": "🧩",
+              "title": "Klasterovanje",
+              "text": "grupiše objekte sličnih karakteristika; grupe se međusobno znatno razlikuju, a članovi unutar grupe su vrlo slični; koristi se za početnu segmentaciju tržišta"
+            },
+            {
+              "icon": "🧠",
+              "title": "Neuronske mreže",
+              "text": "nelinearni modeli po uzoru na biološki neuron; pogodni za velike i složene probleme sa stotinama varijabli"
+            },
+            {
+              "icon": "🌳",
+              "title": "Stabla odlučivanja",
+              "text": "klasifikuju atribute u odnosu na ciljnu varijablu; rezultat se lako tumači kao pravila (koren, čvorovi, grane, listovi)"
+            },
+            {
+              "icon": "🛒",
+              "title": "Analiza asocijacija",
+              "text": "otkriva koji se proizvodi i sa kojom verovatnoćom kupuju zajedno, na primer „ko kupi X, kupiće i Y“"
+            },
+            {
+              "icon": "🧬",
+              "title": "Genetički algoritmi",
+              "text": "slede model evolucije: najbolja rešenja prenose se na sledeću generaciju, a traži se maksimum funkcije prilagođenosti"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Primer upotrebe: ako analiza asocijacija pokaže da se određeni artikli često kupuju zajedno, prodavnica ih može postaviti jedan blizu drugog ili ponuditi zajedno u akciji."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "data mining pronalazi skrivene obrasce u velikim količinama podataka",
+            "proces ima korake: selekcija, pročišćavanje, redukcija i projekcija, izbor metode",
+            "osnovne metode su regresija, klasifikacija, klasterovanje, neuronske mreže, stabla odlučivanja, asocijacije i genetički algoritmi"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Navedite korake u procesu otkrivanja znanja.",
+                "Objasnite šta označava rudarenje podataka.",
+                "Navedite osnovne metode rudarenja podataka."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Predavanje Data Mining (rudarenje podataka), prof. dr Branko Latinović.",
+          "muted": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "09-modeli-razvoja-is-zivotni-ciklus",
+    "subjectSlug": "projektovanje-informacionih-sistema",
+    "kind": "predavanje",
+    "title": "Modeli razvoja IS: model životnog ciklusa",
+    "description": "Klasičan (kaskadni) model razvoja informacionog sistema: faze od strategije do održavanja, analiza zahteva, prednosti, rizici i nedostaci.",
+    "week": 9,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zašto nam trebaju modeli razvoja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Informacioni sistem se ne piše „odjednom“, već kroz organizovan proces. <strong>Model razvoja</strong> određuje koje se aktivnosti izvode, kojim redosledom i šta je rezultat svake. Postoji više modela: model životnog ciklusa, iterativno-inkrementalni, prototipski razvoj, RAD i spiralni model. Danas počinjemo sa najstarijim, <strong>modelom životnog ciklusa</strong> (waterfall, „vodopad“)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tradicionalna metodologija razvoja velikih informacionih sistema oslanja se na organizaciju životnog ciklusa razvojnih procesa: niz faza koje zajedno proizvode informacioni sistem."
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Definisanje strategije"
+            },
+            {
+              "title": "Snimanje postojećeg stanja"
+            },
+            {
+              "title": "Projektovanje"
+            },
+            {
+              "title": "Aplikativno modeliranje"
+            },
+            {
+              "title": "Uvođenje"
+            },
+            {
+              "title": "Održavanje"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Faze modela životnog ciklusa"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "1. Definisanje strategije"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "utvrđuju se strategija i ciljevi razvoja IS u skladu sa strategijom i ciljevima preduzeća",
+            "istražuju se savremeni pravci razvoja informacionih sistema i mogućnosti novih tehnologija",
+            "definiše se plan razvoja IS"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "2. Snimanje postojećeg stanja (analiza zahteva)"
+        },
+        {
+          "type": "paragraph",
+          "text": "U ovoj fazi se saznaje kako organizacija radi danas i šta korisnici očekuju od sistema. Postoje dva pristupa:"
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Odozdo-na-gore (bottom-up)",
+            "items": [
+              "zahtevi se izvode iz dokumenata: ulaznih dokumenata, kartoteka i fascikli (skladišta podataka), izlaznih dokumenata i uzoraka izveštaja",
+              "proveravaju se i organizacioni propisi: da li postoje i koliko se poštuju, da li postoji služba standardizacije, da li su definisani normativi"
+            ]
+          },
+          "right": {
+            "title": "Odozgo-na-dole (top-down)",
+            "items": [
+              "zahtevi se prikupljaju intervjuima sa rukovodiocima",
+              "priprema se lista rukovodilaca i termina, teme razgovora i opšta pitanja",
+              "sagledava se poslovanje top menadžmenta: dekompozicija ciljeva, funkcija, procesa, potreba, problema, projekata",
+              "definišu se prioriteti i preporuke"
+            ]
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": "Nalaz se dokumentuje <strong>strukturnom sistem analizom</strong>: jasnom grafičkom specifikacijom pogodnom za razgovor sa korisnicima, sa više nivoa apstrakcije (na višim nivoima sistem se opisuje opšte, a na nižim detaljno) i sa logičkom specifikacijom procesa (kako sistem sada radi i kako treba da radi)."
+        },
+        {
+          "type": "callout",
+          "variant": "warning",
+          "text": "Najčešći nalazi snimka stanja su: razvijene parcijalne aplikacije (svaka za sebe), nejedinstven sistem označavanja, nekonsultovani zahtevi korisnika i nepostojanje adekvatne dokumentacije."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "3. Projektovanje"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "analiza strukture sistema: identifikacija procesa, definisanje tokova podataka i skladišta podataka, identifikacija interfejsa",
+            "izrada modela sistema: definisanje objekata sistema i veza i relacija među njima",
+            "definisanje načina realizacije: izbor sistemskog softvera, koncepta skladištenja podataka i softverskih alata, utvrđivanje nosilaca razvoja i specifikacija potrebnih resursa"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "4. Aplikativno modeliranje"
+        },
+        {
+          "type": "paragraph",
+          "text": "Fizička realizacija sistema: generisanje baze podataka, izrada aplikacija (programiranje logike, grafički interfejs, definisanje menija, formi, upita i standardnih izveštaja), testiranje aplikacija i definisanje rasporeda softverskih komponenti."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "5. Uvođenje IS"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "postavljanje i fizičko povezivanje opreme, instaliranje sistemskog softvera, baze podataka i aplikacija",
+            "inicijalno formiranje baze podataka: prikupljanje podataka, unos, prečišćavanje i punjenje baze",
+            "<strong>obuka</strong>: neposredni korisnici, operativno rukovodstvo i top menadžment"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "6. Održavanje"
+        },
+        {
+          "type": "paragraph",
+          "text": "Korekcije i inovacije. Najčešće se poverava specijalizovanoj firmi. Zahteva detaljnu analizu, testiranje i dokumentovanje."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kada je ovaj model dobar izbor"
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Prednosti",
+            "items": [
+              "pogodan kada je poželjno predvideti sve mogućnosti sistema odjednom",
+              "pogodan kada je potrebno povući iz upotrebe ceo zastareli sistem odjednom",
+              "jednostavan i razumljiv, svaka faza ima jasne rezultate"
+            ]
+          },
+          "right": {
+            "title": "Rizici",
+            "items": [
+              "zahtevi nisu dobro shvaćeni",
+              "sistem je prevelik da bi se sve uradilo odjednom",
+              "očekuju se brze promene tehnologije",
+              "postoje brze promene zahteva",
+              "ograničeni resursi (ljudi, novac)"
+            ]
+          }
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Nedostaci"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "<strong>frontalni pristup</strong>: razvoj u jednom prolazu, tj. analiza celog sistema, projektovanje celog sistema, implementacija celog sistema i uvođenje celog sistema",
+            "<strong>slaba efikasnost</strong>: dugo vreme uvođenja i realan rizik da se sistem promeni dok se ne završe sve faze",
+            "<strong>niska efektivnost</strong>: prema citatu iz ranih 1980-ih, u proseku samo oko 30% novih informacionih sistema potpuno zadovoljava korisnika",
+            "posledica je „softverska kriza“: sistemi kasne, koštaju više nego što je planirano i ne rade ono što je korisniku potrebno"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "model životnog ciklusa: strategija, snimak stanja, projektovanje, aplikativno modeliranje, uvođenje, održavanje",
+            "snimak stanja radi se odozdo-na-gore (dokumenta) i odozgo-na-dole (intervjui)",
+            "dobar je kada su zahtevi jasni i stabilni, a loš kada su zahtevi nejasni ili se često menjaju"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Navedite 4 modela razvoja informacionog sistema.",
+                "Koje su faze modela životnog ciklusa razvoja IS?",
+                "Navedite prednosti i mane „waterfall“ modela razvoja IS.",
+                "Objasnite razliku između pristupa odozdo-na-gore i odozgo-na-dole u analizi zahteva."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Predavanje Modeli razvoja informacionih sistema, prof. dr Branko Latinović.",
+          "muted": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "10-iterativni-prototipski-rad-i-spiralni-model",
+    "subjectSlug": "projektovanje-informacionih-sistema",
+    "kind": "predavanje",
+    "title": "Iterativni, prototipski, RAD i spiralni model",
+    "description": "Alternativa „vodopadu“: razvoj u etapama, prototipovi, brzi razvoj aplikacija i spiralni model sa analizom rizika.",
+    "week": 10,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kada „vodopad“ nije dovoljan"
+        },
+        {
+          "type": "paragraph",
+          "text": "U prošloj lekciji videli smo da model životnog ciklusa radi „frontalno“: sve se analizira, pa sve projektuje, pa sve gradi. To ne funkcioniše kada zahtevi nisu jasni ili se menjaju. Zato su nastali modeli koji sistem grade u delovima i uče iz svakog koraka."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Iterativno-inkrementalni model"
+        },
+        {
+          "type": "paragraph",
+          "text": "Naziva se i „predplanirano poboljšanje proizvoda“. Razvoj počinje datim skupom zahteva i vrši se kroz više etapa. Prva etapa obuhvata deo zahteva, svaka sledeća dodaje nove, sve dok se sistem ne završi. U svakoj etapi radi se detaljno projektovanje inkrementa, aplikativno modeliranje, integracija i testiranje."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Paradigma: „Planiraj malo, analiziraj malo, projektuj malo, implementiraj malo!“"
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Verzija 1",
+              "sub": "analiza, dizajn, kod, test"
+            },
+            {
+              "title": "Verzija 2",
+              "sub": "analiza, dizajn, kod, test"
+            },
+            {
+              "title": "…"
+            },
+            {
+              "title": "Verzija n",
+              "sub": "radna aplikacija"
+            }
+          ]
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Prednosti (kada ga birati)",
+            "items": [
+              "potrebno je brzo osposobljavanje",
+              "međuproizvod je odmah upotrebljiv",
+              "sistem je prirodno deljiv na inkremente",
+              "ljudi i sredstva se obezbeđuju postepeno",
+              "neki problemi se mogu ostaviti za kasnije cikluse",
+              "planiran je, predvidiv i manje riskantan, a izmene donose manje „potresa“"
+            ]
+          },
+          "right": {
+            "title": "Rizici",
+            "items": [
+              "zahtevi nisu dobro shvaćeni",
+              "poželjno je da se sve mogućnosti ostvare odjednom",
+              "očekuju se brze promene tehnologije ili zahteva",
+              "dugoročno su ograničena sredstva"
+            ]
+          }
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Evolutivni prototipski razvoj"
+        },
+        {
+          "type": "paragraph",
+          "text": "Takođe razvija sistem kroz etape, ali polazi od pretpostavke da zahtevi u početku <strong>nisu u potpunosti shvaćeni</strong> i ne mogu se potpuno definisati. Zahtevi se delimično definišu unapred, a zatim preciziraju u svakoj sledećoj etapi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prvi prototip se pravi na osnovu prioritetnih zahteva korisnika. Životni ciklus se ponavlja više puta, a rezultat svake iteracije je relativno mali, ali za korisnika značajan deo sistema. Kriterijum: dva do tri meseca razvoja po inkrementu, a jedan inkrement obuhvata samo nekoliko funkcija."
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Korisnički zahtev"
+            },
+            {
+              "title": "Prototip",
+              "sub": "prvi, prema prioritetnim zahtevima"
+            },
+            {
+              "title": "Korisnik ga proba"
+            },
+            {
+              "title": "Dopune i korekcije"
+            },
+            {
+              "title": "Sledeći prototip"
+            }
+          ]
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Prednosti",
+            "items": [
+              "potrebno je brzo osposobljavanje",
+              "privremeni proizvod je odmah upotrebljiv",
+              "povratne informacije pomažu da se razumeju svi zahtevi",
+              "lakše je pratiti promene tehnologije"
+            ]
+          },
+          "right": {
+            "title": "Rizici",
+            "items": [
+              "korisnik želi sve mogućnosti odjednom",
+              "dugoročno su ograničena sredstva (ljudi, novac)"
+            ]
+          }
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "RAD (Rapid Application Development)"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>RAD</strong> je namenjen brzom programiranju, uz paralelni razvoj. Osnovne pretpostavke (i ograničenja): jasno okruženje i mala složenost sistema. Da bi uspeo, projektanti moraju da rade sa krajnjim korisnicima, da budu iskusni u upotrebi alata i tehnika, a oblast primene mora biti dobro poznata."
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Analiza okruženja"
+            },
+            {
+              "title": "Analiza podataka"
+            },
+            {
+              "title": "Analiza procesa"
+            },
+            {
+              "title": "Programiranje"
+            },
+            {
+              "title": "Test"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Aplikacija se razlaže na makro funkcije koje se razvijaju paralelno."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Spiralni model"
+        },
+        {
+          "type": "paragraph",
+          "text": "Slično je evolutivnom pristupu i polazi od realnog sistema čiji informacioni sistem može da se nadgrađuje u više prolaza. Posebnost spiralnog modela je što u svakom krugu uključuje <strong>analizu rizika</strong>."
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Inicijalni snimak zahteva"
+            },
+            {
+              "title": "Planiranje"
+            },
+            {
+              "title": "Analiza rizika"
+            },
+            {
+              "title": "Projektovanje"
+            },
+            {
+              "title": "Implementacija"
+            },
+            {
+              "title": "Evaluacija korisnika",
+              "sub": "pa novi krug"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Svaki krug spirale daje prototip, a korisnik ga ocenjuje. Time se rizik otkriva rano, dok je ispravljanje još jeftino."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Poređenje modela"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Model",
+            "Kako gradi sistem",
+            "Kada ga birati"
+          ],
+          "rows": [
+            [
+              "Životni ciklus (vodopad)",
+              "sve odjednom, faza po faza",
+              "zahtevi jasni i stabilni; zamena celog sistema odjednom"
+            ],
+            [
+              "Iterativno-inkrementalni",
+              "po etapama, dodaju se funkcije",
+              "sistem je prirodno deljiv, potrebno je brzo osposobljavanje"
+            ],
+            [
+              "Prototipski",
+              "prototipovi se proveravaju i doteruju",
+              "zahtevi nisu jasni, postoje povratne informacije korisnika"
+            ],
+            [
+              "RAD",
+              "paralelan brz razvoj makro funkcija",
+              "jednostavan sistem, jasno okruženje, iskusan tim"
+            ],
+            [
+              "Spiralni",
+              "krugovi uz analizu rizika i prototip",
+              "sistem je rizičan ili složen"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "iterativno-inkrementalni razvoj gradi sistem u etapama koje daju radne verzije",
+            "prototipski razvoj je za sisteme kod kojih zahtevi nisu potpuno jasni",
+            "RAD ubrzava razvoj paralelnim radom, ali samo za jednostavne sisteme",
+            "spiralni model u svaki krug ugrađuje analizu rizika"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Navedite 4 modela razvoja informacionog sistema.",
+                "Objasnite iterativno-inkrementalni model. Koje su njegove prednosti i rizici?",
+                "Po čemu se prototipski razvoj razlikuje od inkrementalnog?",
+                "Kada je pogodan RAD, a kada spiralni model?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Predavanje Modeli razvoja informacionih sistema, prof. dr Branko Latinović.",
+          "muted": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "11-kvalitet-softvera-i-faze-razvoja",
+    "subjectSlug": "projektovanje-informacionih-sistema",
+    "kind": "predavanje",
+    "title": "Kvalitet softvera i faze razvoja",
+    "description": "Šta je dobar softver, kako se meri kvalitet proizvoda i procesa, ko učestvuje u razvoju i kroz koje faze prolazi softver.",
+    "week": 11,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Aplikativni softver i izazovi razvoja"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Analiza sistema</strong> je razlaganje problema na delove (potprobleme) koje možemo da razumemo i rešimo, a veze između njih mogu biti ključne za rešenje. <strong>Sinteza rešenja</strong> je sklapanje parcijalnih rešenja u potpuno rešenje problema."
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Aplikativni softver</strong> čine programi napravljeni za određenu svrhu, koji nisu u direktnoj vezi sa hardverom. Pri izvršavanju oslanjaju se na <strong>sistemski softver</strong> (programi niskog nivoa koji kontrolišu operacije nad računarskom opremom), pre svega na operativni sistem. Granica nije uvek jasna: na primer, nema saglasnosti da li je veb pregledač deo operativnog sistema."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Zašto softver ima greške"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "svaki problem se može rešiti na više načina, koji se razlikuju po efikasnosti, preciznosti, mogućnosti izmene i razumljivosti",
+            "korisnici ponekad koriste sistem neočekivano (zloupotreba ili nestručno rukovanje)",
+            "tržište diktira brz razvoj, pa ostaje malo vremena za testiranje",
+            "ponekad je teže ispraviti uočene nedostatke nego napisati novi softver"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "warning",
+          "text": "Što je nedostatak duže neotkriven, njegovo otklanjanje više košta. Prema predavanju, troškovi ispravljanja greške u fazi analize su oko 10 puta manji nego nakon isporuke."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je dobar softver"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kvalitet zavisi od konteksta: nedostaci koji se tolerišu u programu za obradu teksta ne mogu se prihvatiti tamo gde je bezbednost presudna. Kvalitet se posmatra na tri načina:"
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "📦",
+              "title": "Kvalitet proizvoda",
+              "text": "kako softver radi i kako je napravljen"
+            },
+            {
+              "icon": "🛠️",
+              "title": "Kvalitet procesa",
+              "text": "kako je softver razvijan"
+            },
+            {
+              "icon": "💼",
+              "title": "Kvalitet u poslovnom kontekstu",
+              "text": "kakvu vrednost softver donosi poslovanju"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Kvalitet proizvoda"
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Gledište korisnika",
+            "items": [
+              "softver je kvalitetan ako radi kako treba, lako se uči i koristi",
+              "korisnik meri tip i broj otkaza"
+            ]
+          },
+          "right": {
+            "title": "Gledište projektanta",
+            "items": [
+              "razmatra unutrašnje karakteristike proizvoda",
+              "meri broj nedostataka u zahtevima, projektu i kodu"
+            ]
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Boehmov model kvaliteta</strong> (Boehm i drugi, 1978) povezuje spoljni pogled korisnika sa unutrašnjim pogledom programera. Prema njemu je kvalitetan softver onaj koji radi ono što korisnik traži, ispravno i efikasno koristi računarske resurse, jednostavan je za učenje i korišćenje, a dobro je projektovan, dobro kodiran i lako se testira i održava."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Osnovna karakteristika",
+            "Obuhvata"
+          ],
+          "rows": [
+            [
+              "Opšta korisnost",
+              "pouzdanost, efikasnost, ljudsko inženjerstvo (lakoća korišćenja)"
+            ],
+            [
+              "Mogućnost održavanja",
+              "mogućnost testiranja, razumljivost, mogućnost izmene"
+            ],
+            [
+              "Prenosivost",
+              "nezavisnost od uređaja, samosadržanost"
+            ],
+            [
+              "Pouzdanost i efikasnost",
+              "tačnost, potpunost, robusnost, doslednost, efikasnost uređaja, pristupačnost"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Kvalitet procesa"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kvalitet procesa razvoja jednako je važan kao kvalitet proizvoda. Ako neka aktivnost krene u pogrešnom smeru, to pogoršava proizvod. Zato se proces modeluje i postavljaju pitanja:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "gde i kada ćemo verovatno naći neku vrstu nedostatka?",
+            "kako možemo što ranije da pronađemo nedostatke?",
+            "kako ugraditi toleranciju na greške, da nedostatak ne pređe u otkaz?",
+            "postoje li alternativne aktivnosti koje proces čine efikasnijim uz očuvanje kvaliteta?"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Kvalitet u kontekstu poslovanja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Posmatra se poslovna vrednost proizvoda: tehnička vrednost (kvalitet proizvoda i procesa, produktivnost) i poslovna vrednost (povraćaj investicije, kraći put do kupca)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Učesnici u razvoju softvera"
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "💵",
+              "title": "Kupac",
+              "text": "kompanija, organizacija ili pojedinac koji finansira razvoj sistema"
+            },
+            {
+              "icon": "👤",
+              "title": "Korisnik",
+              "text": "pojedinci koji će sistem stvarno koristiti"
+            },
+            {
+              "icon": "👷",
+              "title": "Projektant",
+              "text": "ko pravi sistem za kupca"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Jedna osoba ili firma može imati više uloga. Ako sektor firme razvija softver sam za sebe, on je istovremeno kupac, korisnik i projektant."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Faze u razvoju softvera"
+        },
+        {
+          "type": "list",
+          "style": "numbered",
+          "items": [
+            "<strong>analiza i definisanje zahteva</strong>: u saradnji sa kupcem utvrđuju se zahtevi, uzimaju se u obzir entiteti, aktivnosti i ograničenja i interakcija sa okruženjem",
+            "<strong>projektovanje sistema</strong>: projekat opisuje funkcionalnost i izgled sistema sa stanovišta kupca (snimci ekrana, izveštaji, interakcija sa korisnikom)",
+            "<strong>projektovanje programa</strong>: kada kupac odobri projekat, generišu se podprojekti pogodni za programsku realizaciju",
+            "<strong>implementacija</strong> (pisanje programa)",
+            "<strong>testiranje modula</strong>: proveravaju se pojedinačni delovi koda",
+            "<strong>testiranje integrisanog sistema</strong>: moduli se povezuju u celinu",
+            "<strong>završno testiranje sistema</strong>: provera da li su zahtevi ispunjeni",
+            "<strong>isporuka sistema</strong>",
+            "<strong>održavanje</strong>: tokom upotrebe javljaju se problemi koje treba rešavati"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Proces razvoja softvera</strong> je svaki opis razvoja koji sadrži neke od ovih faza, organizovanih tako da proizvedu proveren kod."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "aplikativni softver se oslanja na sistemski, a kvalitet se posmatra kroz proizvod, proces i poslovni kontekst",
+            "Boehmov model povezuje očekivanja korisnika i programera",
+            "greške treba otkriti što ranije, jer kasnije ispravke koštaju mnogo više",
+            "učesnici su kupac, korisnik i projektant, a razvoj ide kroz faze od analize zahteva do održavanja"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Šta je kvalitetan softver? Kako se kvalitet posmatra?",
+                "Ko su kupac, korisnik i projektant?",
+                "Navedite faze u razvoju softvera.",
+                "Zašto je važno greške otkriti u ranim fazama?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Predavanje Metode za razvoj softvera, prof. dr Branko Latinović.",
+          "muted": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "12-modeli-procesa-razvoja-softvera-i-agilne-metode",
+    "subjectSlug": "projektovanje-informacionih-sistema",
+    "kind": "predavanje",
+    "title": "Modeli procesa razvoja softvera i agilne metode",
+    "description": "Kaskadni model, V model, fazni, prototipski i spiralni razvoj, kao i agilne metode (ekstremno programiranje, Scrum).",
+    "week": 12,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zašto modelujemo proces razvoja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kada tim opiše proces projektovanja koji primenjuje, taj opis postaje zajedničko shvatanje aktivnosti, resursa i ograničenja. Modelovanje pomaže da se nađu nedoslednosti, viškovi i izostavljeni elementi, a model treba da odražava ciljeve razvoja i da bude prilagođen situaciji u kojoj se primenjuje."
+        },
+        {
+          "type": "badges",
+          "items": [
+            "kaskadni model",
+            "V model",
+            "fazni razvoj (inkrementalni i iterativni)",
+            "prototipski model",
+            "model specifikacije rada",
+            "transformacioni model",
+            "spiralni model",
+            "agilne metode"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kaskadni model (vodopad)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Royce, 1970. Veoma visok nivo apstrakcije razvojnog procesa čije su faze prikazane kaskadno."
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Analiza zahteva"
+            },
+            {
+              "title": "Projektovanje"
+            },
+            {
+              "title": "Kodiranje"
+            },
+            {
+              "title": "Testiranje"
+            },
+            {
+              "title": "Operativni rad i održavanje"
+            }
+          ]
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Prednosti",
+            "items": [
+              "jednostavnost, lako se objašnjava kupcima",
+              "dobija se puna funkcionalnost sistema",
+              "jasni međuproizvodi i kritične tačke olakšavaju praćenje projekta",
+              "pogodan kada treba odjednom zameniti stari sistem"
+            ]
+          },
+          "right": {
+            "title": "Nedostaci",
+            "items": [
+              "ne odražava povratne sprege koje postoje zbog grešaka i nepreciznosti zahteva",
+              "sistem je obično prevelik da bi se uradio u jednoj iteraciji",
+              "nije pogodan kod velikih izmena zahteva"
+            ]
+          }
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "V model"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nemačko Ministarstvo odbrane, 1992. Modifikovani kaskadni model koji pokazuje vezu između testiranja i faza analize i projektovanja. Levo su faze razvoja, a desno odgovarajuća testiranja."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Leva strana (razvoj)",
+            "Desna strana (provera)",
+            "Šta se proverava"
+          ],
+          "rows": [
+            [
+              "Analiza zahteva",
+              "završno testiranje sistema",
+              "validacija zahteva: da li smo napravili pravu stvar"
+            ],
+            [
+              "Projektovanje sistema",
+              "testiranje sistema pri integraciji",
+              "verifikacija projekta: da li smo je napravili kako treba"
+            ],
+            [
+              "Projektovanje programa",
+              "testiranje delova",
+              "verifikacija projekta programa"
+            ],
+            [
+              "Kodiranje",
+              "(osnova za testove delova)",
+              "ispravnost koda"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Za razliku od kaskadnog modela koji je usredsređen na dokumenta i međuproizvode, V model se bavi aktivnostima i ispravnim radom sistema. Ako se tokom provere nađu problemi, aktivnosti na levoj strani mogu se ponoviti pre ponovnog testiranja."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Fazni razvoj"
+        },
+        {
+          "type": "paragraph",
+          "text": "Način projektovanja koji omogućava isporuku sistema u delovima: korisnici koriste jedan deo funkcija dok se ostatak razvija. Zato uporedo postoje dva sistema: <strong>produkcioni</strong> (koji trenutno koriste naručilac i korisnici) i <strong>razvojni</strong> (sledeća verzija koja se priprema da zameni postojeći). Tim uvek radi na verziji n+1, dok je verzija n u operativnoj upotrebi."
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Inkrementalni razvoj",
+            "items": [
+              "sistem se deli na podsisteme po funkcijama",
+              "svaka nova verzija dodaje nove funkcije",
+              "operativni podskup funkcija isporučuje se vrlo brzo",
+              "tim može biti relativno mali, a napredak je vidljiv"
+            ]
+          },
+          "right": {
+            "title": "Iterativni razvoj",
+            "items": [
+              "isporučuje se potpun sistem u svim verzijama",
+              "svaka verzija unapređuje funkcije svakog podsistema",
+              "obuka može da počne sa prvom verzijom",
+              "česte verzije omogućavaju brzo otklanjanje nepredviđenih problema"
+            ]
+          }
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Prototipski model"
+        },
+        {
+          "type": "paragraph",
+          "text": "Zasniva se na izradi prototipova: delimično razvijenog proizvoda koji omogućava naručiocu i projektantima da ispitaju neke aspekte predloženog sistema i odluče da li je potreban. Cilj je smanjenje rizika i neodređenosti. Zahtevi sistema mogu u početku biti i neformalni ili nepotpuni. Tok: prototip zahteva → revizija → prototip projekta → revizija → prototip sistema → test → isporuka, uz mogućnost vraćanja na ranije korake kada naiđu problemi."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Model specifikacije rada i transformacioni model"
+        },
+        {
+          "type": "list",
+          "style": "bullets",
+          "items": [
+            "<strong>Model specifikacije rada</strong> (Zave, 1984): zahtevi se pre projektovanja ocenjuju ili izvršavaju pomoću programskih paketa, kako bi se rano uočili problemi",
+            "<strong>Transformacioni model</strong> (Balzer, 1981): niz transformacija pretvara formalnu specifikaciju u sistem koji se isporučuje, uz formalni zapis razvoja; prepreka širem prihvatanju je potreba za formalnom specifikacijom"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Spiralni model"
+        },
+        {
+          "type": "paragraph",
+          "text": "Boehm, 1988. Razvoj posmatra kroz prisutne rizike tako što kombinuje razvojne aktivnosti sa upravljanjem rizicima. Proces se odvija kroz četiri iteracije: opis funkcionisanja na visokom nivou, definisanje zahteva, dizajn sistema i testiranje. U svakoj se radi analiza rizika, a prototipovi proveravaju izvodljivost varijanti pre izbora."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Agilne metode"
+        },
+        {
+          "type": "paragraph",
+          "text": "Agilne metode (Agile Alliance, 2001) nastale su kao otpor ranijim modelima koji su nametali stroga pravila osmišljavanja, dokumentovanja, razvoja i testiranja. Naglasak je na fleksibilnosti i brzom razvoju. Četiri principa agilnog razvoja:"
+        },
+        {
+          "type": "list",
+          "style": "numbered",
+          "items": [
+            "za uspeh projekta najvažniji su kvalitet ljudi i kvalitet njihove saradnje, a postupci i alati su sporedni",
+            "bolje je uložiti vreme u softver koji radi nego u sveobuhvatnu dokumentaciju",
+            "saradnja sa naručiocem je važna: naručilac je uključen u ključne aspekte razvoja",
+            "umesto praćenja plana, važnije je odgovarati na promene, jer se svi zahtevi ne mogu predvideti na početku"
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Agilni proces",
+            "Ukratko"
+          ],
+          "rows": [
+            [
+              "Ekstremno programiranje (XP), Beck 1999",
+              "skup tehnika za kreativnost tima uz minimum administracije"
+            ],
+            [
+              "Scrum, Schwaber i Beedle 2002",
+              "iterativni razvoj; svaka 30-dnevna iteracija je „sprint“ u kome se implementiraju zahtevi najvišeg prioriteta; koordinacija kratkim dnevnim sastancima"
+            ],
+            [
+              "Crystal, Cockburn 2002",
+              "svaki projekat traži drugačiji skup dogovora i metodologija; važna je jednostavna i kompaktna organizacija tima"
+            ],
+            [
+              "ASD (Adaptive Software Development), Highsmith i Bayer 2000",
+              "fokus na ciljeve, iterativnost, poštovanje rokova isporuke, prihvatanje rizika; izmene se tretiraju kao prilagođavanje, a ne greška"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Ekstremno programiranje: vrednosti i prakse"
+        },
+        {
+          "type": "paragraph",
+          "text": "Karakteristike agilnosti: <strong>komunikacija</strong> (stalna razmena informacija sa naručiocem), <strong>povratna sprega</strong> (ugrađuje se u sve aktivnosti), <strong>jednostavnost</strong> (najjednostavniji dizajn koji odgovara potrebama) i <strong>odvažnost</strong> (posvećenost čestim i blagovremenim isporukama)."
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "igra planiranja: mape budućih verzija i rokova isporuke",
+            "male verzije: funkcije se dele na male delove koji se isporučuju i proširuju",
+            "testovi pre kodiranja: naručilac definiše funkcionalne testove, tim ih izvršava",
+            "prerađivanje koda (refactoring) i stalna integracija, dnevne ili satne isporuke",
+            "programiranje u paru, kolektivna vlasništvo nad kodom i standardi kodiranja",
+            "održiv tempo: oko 40 radnih sati nedeljno, jer umorni ljudi više greše",
+            "naručilac je raspoloživ na terenu"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "kaskadni model i V model su plan-vođeni: faze idu jedna za drugom, V model dodaje testove koji odgovaraju fazama",
+            "fazni (inkrementalni i iterativni), prototipski i spiralni modeli omogućavaju učenje tokom razvoja",
+            "agilne metode ističu ljude, softver koji radi, saradnju sa naručiocem i prilagođavanje promenama"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za proveru znanja",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Navedite 4 modela razvoja informacionog sistema.",
+                "Prednosti i mane „waterfall“ modela razvoja IS.",
+                "Po čemu se V model razlikuje od kaskadnog?",
+                "Navedite četiri principa agilnog razvoja.",
+                "Šta je Scrum, a šta ekstremno programiranje?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor gradiva: Predavanje Metode za razvoj softvera, prof. dr Branko Latinović.",
+          "muted": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "vezba-01-sta-je-sistem",
+    "subjectSlug": "projektovanje-informacionih-sistema",
+    "kind": "vezba",
+    "title": "Šta je sistem i zašto ga vidimo svuda oko sebe",
+    "description": "Uvodna vežba: pojam sistema, njegovi elementi, veze, cilj, granica i okruženje, na primerima iz života i poslovanja.",
+    "week": 1,
+    "date": "2026-10-13",
+    "formattedDate": "13.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Ova vežba nije o programiranju. Ona je o načinu razmišljanja koji stoji iza svega što ćeš raditi kao softverski inženjer, pa zato i iza ovog predmeta.",
+          "title": "Vežba"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Počnimo od pitanja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Šta je zajedničko kafiću, bolnici, fakultetu, aplikaciji za taksi, saobraćaju u gradu i ljudskom telu? Na prvi pogled ništa. Ali svi su <strong>sistemi</strong>, a ko ume da ih prepozna i razume, razume i kako se oni grade, menjaju i popravljaju."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta je sistem"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Sistem</strong> je skup međusobno povezanih elemenata koji zajedno rade na ostvarenju nekog cilja. Dva dela te rečenice su ključna: elementi moraju biti <em>povezani</em> i moraju imati <em>zajednički cilj</em>. Gomila delova koja se ne dopunjuje nije sistem."
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "🧩",
+              "title": "Elementi",
+              "text": "delovi od kojih je sistem sastavljen: ljudi, oprema, podaci, pravila, programi"
+            },
+            {
+              "icon": "🔗",
+              "title": "Veze",
+              "text": "ko koga i šta čemu šalje, ko od koga zavisi, ko koga kontroliše"
+            },
+            {
+              "icon": "🎯",
+              "title": "Cilj",
+              "text": "zašto sistem postoji i po čemu znamo da radi dobro"
+            },
+            {
+              "icon": "🧱",
+              "title": "Granica",
+              "text": "šta je unutar sistema, a šta je izvan njega"
+            },
+            {
+              "icon": "🌍",
+              "title": "Okruženje",
+              "text": "sve sa čim sistem razmenjuje: kupci, država, dobavljači, konkurencija"
+            },
+            {
+              "icon": "🔄",
+              "title": "Povratna sprega",
+              "text": "kako sistem saznaje da li postiže cilj i kako se prilagođava"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Isti obrazac, različiti sistemi"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Sistem",
+            "Elementi",
+            "Cilj",
+            "Okruženje"
+          ],
+          "rows": [
+            [
+              "Kafić",
+              "osoblje, gosti, aparat za kafu, zalihe, kasa, pravila rada",
+              "zadovoljan gost i zarada",
+              "dobavljači, inspekcija, konkurencija, komšiluk"
+            ],
+            [
+              "Fakultet",
+              "studenti, nastavnici, službe, učionice, planovi i programi, evidencije",
+              "obrazovani i osposobljeni studenti",
+              "ministarstvo, privreda, budući poslodavci, srednje škole"
+            ],
+            [
+              "Aplikacija za taksi",
+              "putnici, vozači, vozila, mapa, serveri, algoritam dodele, plaćanje",
+              "brz, siguran i pouzdan prevoz",
+              "saobraćajni propisi, banke, mobilni operateri"
+            ],
+            [
+              "Bolnica",
+              "pacijenti, lekari, oprema, lekovi, dokumentacija, protokoli",
+              "lečenje i zdravlje pacijenata",
+              "zdravstveno osiguranje, ministarstvo, apoteke"
+            ],
+            [
+              "Ljudsko telo",
+              "organi, ćelije, nervni sistem, krvotok",
+              "održavanje života",
+              "hrana, vazduh, temperatura, bolesti"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Sistem u poslovanju: sistem sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Svako preduzeće je sistem koji se sastoji od drugih sistema: prodaja, nabavka, magacin, proizvodnja, finansije, kadrovi. Svaki od njih ima svoje elemente i ciljeve, ali celina funkcioniše samo ako su oni usklađeni. Zato kažemo da je preduzeće <strong>sistem sistema</strong>."
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Ulazi",
+              "sub": "sirovine, podaci, novac, ljudi"
+            },
+            {
+              "title": "Obrada",
+              "sub": "procesi i aktivnosti"
+            },
+            {
+              "title": "Izlazi",
+              "sub": "proizvodi, usluge, informacije"
+            },
+            {
+              "title": "Povratna sprega",
+              "sub": "ocena rezultata i korekcija"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Informacioni sistem</strong> je samo jedan od podsistema. Njegova uloga je da prikuplja, čuva, obrađuje i isporučuje informacije svim ostalim delovima, kako bi odluke bile bolje i procesi brži. Softver zato <strong>nikad ne postoji sam za sebe</strong>: uvek je deo većeg sistema od ljudi, procedura, propisa i novca."
+        },
+        {
+          "type": "callout",
+          "variant": "warning",
+          "text": "Sistem koji napravimo je dobar samo koliko je dobro uklopljen u sistem u kome će raditi. Program koji besprekorno radi, ali ga niko ne ume ili ne sme da koristi, nije uspeh."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zašto je ovo bitno baš za softversko inženjerstvo"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "svaki softver koji pravimo je model nekog dela stvarnosti: porudžbine, termini, računi, pacijenti, vozila",
+            "ako pogrešno razumemo sistem u stvarnosti, i najčistiji kod će modelovati pogrešnu stvar",
+            "sposobnost da se nešto prepozna kao sistem i rastavi na delove jednako je važna kao znanje bilo kog programskog jezika",
+            "svi predmeti koje ste slušali (programiranje, baze podataka, mreže, matematika) daju alate, a ovaj predmet uči kako se oni primenjuju na celinu"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Zadatak za rad na času",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Izaberi jedan sistem koji svakodnevno koristiš (menza, autobuska linija, studentska služba, prodavnica, teretana, aplikacija za dostavu) i popuni ovu šemu:"
+            },
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "navedi bar 6 elemenata sistema (ljude, opremu, podatke, pravila)",
+                "napiši koje su tri najvažnije veze među elementima (ko šta kome daje)",
+                "formuliši cilj sistema jednom rečenicom i kako bi se videlo da je cilj ostvaren",
+                "nacrtaj granicu: šta je unutar sistema, a šta je okruženje",
+                "šta se dešava kad jedan element otkaže? Koji element je najkritičniji i zašto?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "sistem čine povezani elementi sa zajedničkim ciljem, granicom i okruženjem",
+            "sistemi su svuda: u životu, prirodi, organizacijama i tehnologiji, i često su deo većih sistema",
+            "softver je uvek deo većeg sistema, zato ga ne možemo razumeti ako ne razumemo taj sistem"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za razmišljanje i diskusiju",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Zašto skup nepovezanih delova nije sistem?",
+                "Šta je granica sistema i zašto je važno da je jasno odredimo?",
+                "Navedi sistem iz života koji nije računarski i objasni njegove elemente, veze i cilj.",
+                "Zašto kažemo da informacioni sistem nikad ne postoji sam za sebe?"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "vezba-02-celina-delovi-i-slagalica",
+    "subjectSlug": "projektovanje-informacionih-sistema",
+    "kind": "vezba",
+    "title": "Celina, delovi i slagalica: kako razmišljamo o sistemu",
+    "description": "Najvažnija veština predmeta: prepoznati sistem, sagledati ga kao celinu, razložiti na delove, analizirati ih, povezati i ponovo sastaviti.",
+    "week": 2,
+    "date": "2026-10-20",
+    "formattedDate": "20.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Ako iz ovog predmeta poneseš samo jednu veštinu, neka to bude ova: prepoznati sistem, razložiti ga, razumeti delove i ponovo ih sastaviti u smislenu sliku.",
+          "title": "Ključna veština"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Slagalica sa 1000 delova"
+        },
+        {
+          "type": "paragraph",
+          "text": "Niko ne slaže slagalicu tako što uzme jedan deo i trudi se da ga savršeno uglavi. Prvo pogledamo sliku na kutiji (<strong>celinu</strong>), zatim razvrstamo delove po grupama (<strong>razlaganje</strong>), pa ih sklapamo grupu po grupu (<strong>analiza svakog dela i povezivanje</strong>), i na kraju proveravamo da li se slika poklapa sa kutijom (<strong>sinteza i provera</strong>). Tako rade i inženjeri sa sistemima."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šest koraka sistemskog razmišljanja"
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "1. Prepoznaj",
+              "sub": "koji je ovo sistem i gde mu je granica"
+            },
+            {
+              "title": "2. Sagledaj celinu",
+              "sub": "cilj, korisnici, okruženje"
+            },
+            {
+              "title": "3. Razloži",
+              "sub": "na manje, razumljive celine"
+            },
+            {
+              "title": "4. Analiziraj",
+              "sub": "svaku celinu posebno"
+            },
+            {
+              "title": "5. Poveži",
+              "sub": "tokovi, zavisnosti, interfejsi"
+            },
+            {
+              "title": "6. Sastavi i proveri",
+              "sub": "da li celina radi kako treba"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "style": "numbered",
+          "items": [
+            "<strong>Prepoznaj</strong>: pre bilo kog rešenja odredi šta je sistem i šta nije. Bez granice nećeš znati šta je tvoj problem, a šta tuđi.",
+            "<strong>Sagledaj celinu</strong>: čemu sistem služi, ko ga koristi, šta će se promeniti ako ga ne bude. Ovo je „slika na kutiji“.",
+            "<strong>Razloži</strong>: podeli sistem na delove koji su dovoljno mali da ih čovek može razumeti, ali dovoljno smisleni da imaju svoj cilj (dekompozicija).",
+            "<strong>Analiziraj</strong>: svaki deo ispitaj za sebe: šta radi, šta mu treba, šta daje, ko ga koristi, šta može poći po zlu.",
+            "<strong>Poveži</strong>: zapiši koje informacije i materijali teku između delova i ko od koga zavisi. Najveći rizici su obično u vezama, a ne u delovima.",
+            "<strong>Sastavi i proveri</strong>: vrati delove u celinu (sinteza) i proveri da li ona ostvaruje cilj iz drugog koraka."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Analiza i sinteza"
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Analiza (razlaganje)",
+            "items": [
+              "razlaže problem na potprobleme koje možemo razumeti i rešiti",
+              "daje dubinu: razumemo svaki deo i njegova pravila",
+              "opasnost: izgubiti iz vida celinu"
+            ]
+          },
+          "right": {
+            "title": "Sinteza (sastavljanje)",
+            "items": [
+              "sklapa parcijalna rešenja u potpuno rešenje problema",
+              "daje celovitost: vidimo kako delovi zajedno ostvaruju cilj",
+              "opasnost: sklapati bez dobro razumljivih delova"
+            ]
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": "Dobar inženjer stalno prelazi iz jednog u drugo: približi se detalju, pa se odmakne da vidi celinu, pa se opet približi."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Primer: onlajn prodavnica kao slagalica"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sistem „onlajn prodavnica“ razlažemo na podsisteme i odmah pitamo šta svaki od njih treba od drugih."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Deo sistema",
+            "Šta radi",
+            "Šta mu treba od drugih delova"
+          ],
+          "rows": [
+            [
+              "Katalog",
+              "čuva i prikazuje proizvode i cene",
+              "stanje zaliha iz magacina"
+            ],
+            [
+              "Korpa i porudžbina",
+              "prikuplja izbor kupca i pravi porudžbinu",
+              "cene iz kataloga, podaci o kupcu"
+            ],
+            [
+              "Plaćanje",
+              "naplaćuje i potvrđuje uplatu",
+              "iznos porudžbine, banka ili procesor plaćanja"
+            ],
+            [
+              "Magacin",
+              "evidentira zalihe, priprema paket",
+              "potvrđene porudžbine"
+            ],
+            [
+              "Isporuka",
+              "dostavlja paket i prati status",
+              "adresa, podaci iz magacina, kurirska služba"
+            ],
+            [
+              "Podrška i povrat",
+              "rešava reklamacije i povrate",
+              "istorija porudžbine, plaćanja i isporuke"
+            ],
+            [
+              "Finansije i izveštaji",
+              "knjiži promet, prave izveštaje",
+              "podaci o plaćanjima i isporukama"
+            ]
+          ]
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Katalog"
+            },
+            {
+              "title": "Korpa"
+            },
+            {
+              "title": "Plaćanje"
+            },
+            {
+              "title": "Magacin"
+            },
+            {
+              "title": "Isporuka"
+            },
+            {
+              "title": "Podrška"
+            },
+            {
+              "title": "Finansije"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Gde slagalica puca"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "⚠️",
+              "text": "<strong>Svaki deo radi, celina ne radi.</strong> Katalog pokazuje proizvod koji je magacin već prodao, jer dva dela ne dele isti podatak o zalihama."
+            },
+            {
+              "icon": "⚠️",
+              "text": "<strong>Optimizacija dela škodi celini.</strong> Kuhinja je ubrzana, a konobari nisu: gosti i dalje čekaju, samo sada na pultu."
+            },
+            {
+              "icon": "⚠️",
+              "text": "<strong>Parcijalne aplikacije.</strong> Svako odeljenje ima svoj program i svoje podatke, pa se isti kupac vodi na pet mesta na pet načina. To je tipičan nalaz pri snimanju stanja u firmama."
+            },
+            {
+              "icon": "⚠️",
+              "text": "<strong>Zaboravljen deo.</strong> Niko nije mislio na povrat robe, pa sistem ne ume da vrati novac."
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Zadatak za rad na času",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Radi u grupama od 3 do 4 studenta. Sistem: studentska služba fakulteta (ili neki drugi po dogovoru)."
+            },
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "odredi cilj i granicu sistema: ko su korisnici i šta je okruženje",
+                "razloži sistem na 6 do 8 podsistema i svakom daj jednu rečenicu svrhe",
+                "za svaki podsistem napiši koje podatke prima i koje daje",
+                "nacrtaj strelice među podsistemima i obeleži tri veze koje bi najviše štetile kad bi pokvarile",
+                "izaberi jedan podsistem i analiziraj ga detaljnije: šta može poći po zlu?",
+                "predstavi ostalima celu sliku u 2 minuta, a oni traže deo koji ste zaboravili"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "prvo celina, onda delovi, pa veze, pa ponovo celina",
+            "analiza bez sinteze daje savršene delove koji ne rade zajedno",
+            "najviše problema je u vezama među delovima, ne u samim delovima",
+            "uvek proveri da li si pokrio ceo sistem ili samo deo koji ti je najlakši"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za razmišljanje i diskusiju",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Koji su koraci sistemskog razmišljanja i zašto je njihov redosled važan?",
+                "Šta je razlika između analize i sinteze? Zašto nam trebaju obe?",
+                "Kako može da se desi da svaki deo sistema radi ispravno, a da sistem u celini ne radi?",
+                "Zašto su veze među delovima često važnije od samih delova?"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "vezba-03-razliciti-uglovi-i-akteri",
+    "subjectSlug": "projektovanje-informacionih-sistema",
+    "kind": "vezba",
+    "title": "Isti sistem iz različitih uglova: akteri, zahtevi i propisi",
+    "description": "Zašto sistem treba posmatrati očima svih učesnika: vlasnika, zaposlenih, korisnika, države i tehničkog tima, i kako od toga nastaju zahtevi.",
+    "week": 3,
+    "date": "2026-10-27",
+    "formattedDate": "27.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Isti sistem, različite priče"
+        },
+        {
+          "type": "paragraph",
+          "text": "Zamisli aplikaciju za zakazivanje termina u salonu lepote. Šta je najvažnije vlasniku? A radnici u salonu? A klijentu? A državi? Svako će dati drugačiji odgovor, i svaki je tačan iz svog ugla. Ko sluša samo jednog, napraviće sistem koji ostale ne zadovoljava."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Akteri sistema"
+        },
+        {
+          "type": "cards",
+          "columns": 3,
+          "items": [
+            {
+              "icon": "👔",
+              "title": "Vlasnik",
+              "text": "zarada, manje praznih termina, kontrola troškova, pregled poslovanja"
+            },
+            {
+              "icon": "💇",
+              "title": "Zaposleni",
+              "text": "jasan raspored, bez dupliranja termina, brz unos, malo administracije"
+            },
+            {
+              "icon": "🙋",
+              "title": "Klijent",
+              "text": "jednostavno zakazivanje, podsetnik, jasna cena, zaštita njegovih podataka"
+            },
+            {
+              "icon": "🏛️",
+              "title": "Država i propisi",
+              "text": "ispravni računi, evidencija prometa, zaštita podataka o ličnosti"
+            },
+            {
+              "icon": "🛠️",
+              "title": "Tehnički tim",
+              "text": "pouzdanost, bezbednost, mogućnost održavanja i proširenja"
+            },
+            {
+              "icon": "🤝",
+              "title": "Partneri i dobavljači",
+              "text": "usklađene narudžbine, jasne isporuke, razmena podataka"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Aktere delimo na one koji sistem <strong>koriste</strong>, one koji ga <strong>finansiraju i vode</strong>, one koji ga <strong>održavaju</strong> i one koji <strong>propisuju pravila</strong>. Neki od njih nikad neće videti aplikaciju, a ipak određuju kako ona sme da radi."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako različiti uglovi postaju zahtevi"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Akter",
+            "Šta želi",
+            "Čega se plaši",
+            "Zahtev za sistem"
+          ],
+          "rows": [
+            [
+              "Vlasnik",
+              "veću popunjenost termina",
+              "gubitak klijenata zbog lošeg iskustva",
+              "izveštaj o popunjenosti i otkazivanjima"
+            ],
+            [
+              "Zaposleni",
+              "pregledan raspored",
+              "da dva klijenta dobiju isti termin",
+              "sistem ne dozvoljava preklapanje termina"
+            ],
+            [
+              "Klijent",
+              "zakazivanje u par klikova",
+              "da mu podaci procure",
+              "jednostavan postupak i zaštita ličnih podataka"
+            ],
+            [
+              "Država",
+              "tačnu evidenciju",
+              "neevidentiran promet",
+              "izdavanje i čuvanje računa prema propisima"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Zahteve delimo na <strong>funkcionalne</strong> (šta sistem radi: zakazuje termin, šalje podsetnik, izdaje račun), <strong>nefunkcionalne</strong> (kako radi: brzina, dostupnost, bezbednost, lakoća korišćenja) i <strong>ograničenja</strong> (budžet, rok, propisi, postojeći sistemi sa kojima mora da se poveže)."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kada se zahtevi sukobe"
+        },
+        {
+          "type": "paragraph",
+          "text": "Zaposleni žele da mogu brzo da promene termin bez ikakvih provera, vlasnik želi da otkazivanje manje od 24 sata unapred bude zabranjeno ili naplaćeno, a klijent želi da otkaže kad god hoće. Sistem ne može sve to istovremeno. Zato analitičar:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "zapisuje svaki zahtev zajedno sa onim ko ga traži i zašto",
+            "otkriva pravi razlog iza zahteva (često se sukob smanji kad se pita „zašto“)",
+            "predlaže kompromis ili pravilo, a konačnu odluku donosi onaj ko za nju odgovara"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zakoni i pravila: deo problema, ne opterećenje"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ko ne zna da neko pravilo postoji, ne može ni da pita o njemu, pa ga ni sistem ne poštuje. Zato je razumevanje poslovnog okruženja jednako važno kao i tehničko. Primeri oblasti koje se često prepliću sa softverom:"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "📜",
+              "text": "zaštita podataka o ličnosti: koje podatke smemo da prikupljamo, koliko dugo ih čuvamo i ko sme da ih vidi"
+            },
+            {
+              "icon": "🧾",
+              "text": "izdavanje računa, fiskalizacija i elektronsko fakturisanje"
+            },
+            {
+              "icon": "💳",
+              "text": "bezbednost plaćanja i pravila platnih sistema"
+            },
+            {
+              "icon": "©️",
+              "text": "autorska prava i licence softvera i sadržaja koje koristimo (podseća na lekcije iz otvorenog računarstva)"
+            },
+            {
+              "icon": "🏥",
+              "text": "pravila struke: zdravstvo, finansije i obrazovanje imaju sopstvene standarde i obaveze čuvanja podataka"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "warning",
+          "text": "Konkretne propise uvek proveri u važećoj verziji i sa stručnim licem (pravnikom, računovođom). Ovde je cilj da naučiš da pitaš o njima na vreme."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako saznajemo šta sistem treba da radi"
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Razgovor i posmatranje",
+            "items": [
+              "intervjui sa rukovodiocima (odozgo-na-dole): ciljevi, prioriteti, problemi",
+              "razgovor sa onima koji rade posao svaki dan",
+              "posmatranje stvarnog rada: ljudi često rade drugačije nego što kažu"
+            ]
+          },
+          "right": {
+            "title": "Dokumenta i podaci",
+            "items": [
+              "ulazni i izlazni dokumenti, obrasci, izveštaji (odozdo-na-gore)",
+              "pravilnici, ugovori, uputstva i propisi",
+              "postojeći sistemi, baze i tabele koje ljudi sami vode"
+            ]
+          }
+        },
+        {
+          "type": "panel",
+          "title": "Zadatak za rad na času",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Sistem: aplikacija za zakazivanje termina u salonu lepote (ili teretani, ordinaciji, servisu)."
+            },
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "napravi tabelu aktera: ko su svi koji imaju interes u sistemu (bar 6)",
+                "za svakog napiši šta želi, čega se plaši i jedan konkretan zahtev",
+                "izdvoji dva zahteva koja se sukobljavaju i predloži rešenje",
+                "navedi bar tri pravila ili propisa koje treba proveriti pre projektovanja",
+                "sastavi listu od 10 pitanja koja bi postavio vlasniku pre nego što napišeš ijednu liniju koda"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "sistem uvek ima više aktera, a svaki vidi samo svoj deo slike",
+            "zahtev nije samo „šta“, već i „ko“ i „zašto“",
+            "propisi i poslovna pravila su deo zahteva, a ne naknadna prepreka",
+            "najbolji alat analitičara je pravo pitanje postavljeno na vreme"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za razmišljanje i diskusiju",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Zašto je opasno projektovati sistem samo prema zahtevima jednog aktera?",
+                "Koja je razlika između funkcionalnih zahteva, nefunkcionalnih zahteva i ograničenja? Daj po primer.",
+                "Kako postupamo kad se zahtevi dva aktera sukobe?",
+                "Zašto razumevanje zakona i poslovnih pravila spada u posao softverskog inženjera?"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "vezba-04-razvoj-softvera-je-razmisljanje",
+    "subjectSlug": "projektovanje-informacionih-sistema",
+    "kind": "vezba",
+    "title": "Razvoj softvera je pre svega razmišljanje",
+    "description": "Zašto je kodiranje samo deo posla: razumevanje problema, analiza, istraživanje i projektovanje određuju da li će sistem uspeti.",
+    "week": 4,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Mit: softverski inženjer je neko ko piše kod"
+        },
+        {
+          "type": "paragraph",
+          "text": "Programiranje je važna veština, ali je samo jedna faza u životu sistema. Većina posla odvija se pre prve linije koda i nakon nje: razumevanje problema, analiza, istraživanje, projektovanje, testiranje, uvođenje, obuka i održavanje. Sistem retko propadne zato što nije moglo da se napiše. Mnogo češće propadne zato što je napravljeno <em>pogrešno</em> ili <em>pogrešna stvar</em>."
+        },
+        {
+          "type": "flow",
+          "nodes": [
+            {
+              "title": "Razumeti problem"
+            },
+            {
+              "title": "Analizirati"
+            },
+            {
+              "title": "Projektovati"
+            },
+            {
+              "title": "Napraviti"
+            },
+            {
+              "title": "Proveriti"
+            },
+            {
+              "title": "Uvesti i obučiti"
+            },
+            {
+              "title": "Održavati"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Faze iz modela razvoja koje smo učili (analiza zahteva, projektovanje sistema i programa, implementacija, testiranje, isporuka i održavanje) pokazuju istu stvar: pisanje programa je jedna kućica u nizu."
+        },
+        {
+          "type": "callout",
+          "variant": "warning",
+          "text": "Što se greška duže ne primeti, to je skuplja. Pogrešno razumljen zahtev otkriven na sastanku košta razgovor, a otkriven kad je sistem već u upotrebi košta vreme, novac i poverenje."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta sve treba razumeti pre nego što se počne"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "🏢",
+              "text": "<strong>poslovni proces</strong>: kako se posao zaista radi danas, korak po korak, i zašto baš tako"
+            },
+            {
+              "icon": "👥",
+              "text": "<strong>ljudi</strong>: ko će koristiti sistem, koliko su vični, šta im je važno, čega se plaše"
+            },
+            {
+              "icon": "🗂️",
+              "text": "<strong>podaci</strong>: koji podaci postoje, ko ih proizvodi, koliko su pouzdani, gde se čuvaju"
+            },
+            {
+              "icon": "📜",
+              "text": "<strong>pravila i zakoni</strong>: šta sistem mora, a šta sme"
+            },
+            {
+              "icon": "🔌",
+              "text": "<strong>okruženje</strong>: postojeći sistemi, uređaji, mreže i usluge sa kojima mora da sarađuje"
+            },
+            {
+              "icon": "🔐",
+              "text": "<strong>bezbednost i rizici</strong>: šta se može pokvariti, ko sme šta da vidi, šta ako sistem padne"
+            },
+            {
+              "icon": "💰",
+              "text": "<strong>ograničenja</strong>: budžet, rokovi, ljudi i znanje koji su na raspolaganju"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Primer: jedno dugme, mnogo pitanja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Zahtev glasi: „Dodajte dugme za izvoz izveštaja u PDF.“ Jedna rečenica, a iza nje:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Pitanje",
+            "Zašto je važno"
+          ],
+          "rows": [
+            [
+              "Ko sme da izveze izveštaj?",
+              "prava pristupa i privatnost podataka"
+            ],
+            [
+              "Koji podaci ulaze u izveštaj i za koji period?",
+              "tačnost i obim posla"
+            ],
+            [
+              "Šta ako je izveštaj ogroman?",
+              "performanse i opterećenje sistema"
+            ],
+            [
+              "Ko će ga dobiti i na koji način ga čuva?",
+              "bezbednost i propisi o čuvanju podataka"
+            ],
+            [
+              "Kako izgleda, i da li ga mora potpisati ili overiti neko?",
+              "izgled, format i poslovna pravila"
+            ],
+            [
+              "Šta ako izvoz ne uspe?",
+              "poruke o grešci i oporavak"
+            ],
+            [
+              "Kako ćemo znati da radi ispravno?",
+              "testiranje, kriterijumi prihvatanja"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Kodiranje tog dugmeta traje malo. Razumevanje šta ono zaista treba da uradi je pravi posao."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Istraživanje je deo posla"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "tražimo kako je isti problem rešen drugde i šta su tamo naučili",
+            "proveravamo postojeće alate, biblioteke i usluge pre nego što pravimo sopstvene",
+            "učimo oblast koja nam nije poznata: pitamo stručnjake, čitamo dokumentaciju i propise",
+            "pravimo male probne prototipove da proverimo da li je ideja izvodljiva pre velike investicije",
+            "beležimo odluke i razloge, jer će ih neko (ili mi sami) pitati za godinu dana"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Veština postavljanja pravog pitanja"
+        },
+        {
+          "type": "paragraph",
+          "text": "Najskuplja greška u razvoju je rešiti pogrešan problem. Zato dobar inženjer pre rešenja traži <strong>razumevanje</strong>:"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "Koji problem zapravo rešavamo i za koga?",
+            "Kako se to radi sada i šta ne valja u tome?",
+            "Kako ćemo znati da smo uspeli?",
+            "Šta se dešava ako ovo ne uradimo?",
+            "Šta još može da bude pogođeno ovom promenom?"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Zadatak za rad na času",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Dobijaš ovaj zahtev od vlasnika male firme: „Treba nam aplikacija da pratimo zalihe u magacinu.“"
+            },
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "napiši 12 pitanja koja bi postavio pre bilo kakvog projektovanja",
+                "razvrstaj ih po grupama: proces, ljudi, podaci, pravila, okruženje, rizici, ograničenja",
+                "označi tri pitanja na koja bi odgovor najviše promenio izgled sistema",
+                "navedi koje stvari bi proverio istraživanjem (postojeća rešenja, propisi, alati) pre sastanka",
+                "u 5 rečenica opiši šta bi bio „uspeh“ za ovaj projekat i kako bi se to izmerilo"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "kodiranje je samo deo posla, a razumevanje, analiza i projektovanje odlučuju o ishodu",
+            "greške u razumevanju najskuplje su kad se otkriju kasno",
+            "inženjer mora da razume posao, ljude, podatke, propise i okruženje u kome sistem radi",
+            "dobro pitanje često vredi više od brzog rešenja"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za razmišljanje i diskusiju",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Zašto kažemo da razvoj softvera nije samo programiranje?",
+                "Zašto je greška u razumevanju zahteva skuplja što se kasnije otkrije?",
+                "Kako izgleda razlika između „napraviti stvar ispravno“ i „napraviti pravu stvar“?",
+                "Navedi pet stvari koje inženjer treba da razume pre početka projektovanja."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "vezba-05-softverski-inzenjer-profesija-i-trziste",
+    "subjectSlug": "projektovanje-informacionih-sistema",
+    "kind": "vezba",
+    "title": "Softverski inženjer: profesija, tržište i način razmišljanja",
+    "description": "Zašto je projektovanje informacionih sistema srž smera, kako objedinjuje sve što se učilo i zašto su sposobni inženjeri sve potrebniji.",
+    "week": 5,
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zašto je ovaj predmet srž smera"
+        },
+        {
+          "type": "paragraph",
+          "text": "Na studijama softverskog inženjerstva učite mnogo različitih stvari. Ovaj predmet ih <strong>spaja</strong>: pokazuje kako se znanje koje ste sticali pojedinačno primenjuje na jedan celovit sistem, od prve ideje do rada u stvarnom okruženju."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Znanje sa drugih predmeta",
+            "Šta doprinosi projektovanju sistema"
+          ],
+          "rows": [
+            [
+              "Programiranje i algoritmi",
+              "kako se rešenje izražava i da li je izvodljivo i efikasno"
+            ],
+            [
+              "Baze podataka",
+              "kako se podaci modeluju, čuvaju, povezuju i štite"
+            ],
+            [
+              "Računarske mreže i web tehnologije",
+              "kako delovi sistema komuniciraju i gde se izvršavaju"
+            ],
+            [
+              "Matematika i statistika",
+              "preciznost, modelovanje, analiza podataka i odlučivanje"
+            ],
+            [
+              "Teorija sistema i modelovanje (UML)",
+              "jezik za opis strukture i ponašanja sistema"
+            ],
+            [
+              "Informatika i poslovni informacioni sistemi",
+              "razumevanje poslovanja, procesa i uloge informacija"
+            ],
+            [
+              "Otvoreno računarstvo, licence, etika",
+              "pravila, odgovornost i okruženje u kome rade ljudi i organizacije"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Zato je projektovanje informacionih sistema mesto na kome se učenje iz svih predmeta sastaje u jednu sliku. To nije još jedan predmet pored ostalih, već način da se svi ostali koriste smisleno."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Svet sve više zavisi od softverskih sistema"
+        },
+        {
+          "type": "paragraph",
+          "text": "Zdravstvo, bankarstvo, trgovina, saobraćaj, obrazovanje, javna uprava, proizvodnja i poljoprivreda danas u velikoj meri rade preko softverskih sistema. Takvi sistemi se međusobno povezuju, rade sa velikim količinama podataka, moraju da budu stalno dostupni i da štite osetljive informacije. Zato su i zahtevi prema onima koji ih grade sve veći."
+        },
+        {
+          "type": "columns",
+          "left": {
+            "title": "Zašto je potreba sve veća",
+            "items": [
+              "sve više delatnosti se digitalizuje",
+              "sistemi su složeniji i više povezani nego ranije",
+              "cena greške raste: zastoj ili curenje podataka pogađa mnoge ljude",
+              "menjaju se tehnologije, ali potreba da se problem razume ostaje"
+            ]
+          },
+          "right": {
+            "title": "Šta se traži",
+            "items": [
+              "ne samo poznavanje alata, već razumevanje problema i celine",
+              "komunikacija sa ljudima koji nisu tehnički stručnjaci",
+              "odgovornost za kvalitet, bezbednost i održavanje",
+              "sposobnost brzog učenja novih oblasti i tehnologija"
+            ]
+          }
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Alati se menjaju: razmišljanje ostaje"
+        },
+        {
+          "type": "paragraph",
+          "text": "Alati za razvoj, uključujući one zasnovane na veštačkoj inteligenciji, sve više ubrzavaju pisanje koda. To ne smanjuje potrebu za inženjerima, već pomera ono što je vredno: <strong>odlučivanje šta treba napraviti, kako to treba da bude postavljeno, i da li je napravljeno ispravno</strong>."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Alat može da napiše kod, ali neko mora da zna šta treba napraviti, da postavi pravo pitanje, da proceni da li je rešenje ispravno, bezbedno i prikladno za stvarnu organizaciju, i da preuzme odgovornost za to. Zato razumevanje sistema postaje još vrednije, a ne manje."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako izgleda napredovanje"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Nivo",
+            "Ono što se očekuje"
+          ],
+          "rows": [
+            [
+              "Početnik",
+              "radi dobro definisane zadatke, uči alate i praksu, postavlja pitanja"
+            ],
+            [
+              "Iskusniji inženjer",
+              "samostalno razlaže problem, projektuje delove sistema, brine o kvalitetu i testiranju"
+            ],
+            [
+              "Stariji inženjer",
+              "razume sistem u celini i poslovni kontekst, bira rešenja, vodi druge, prepoznaje rizike unapred"
+            ],
+            [
+              "Arhitekta / vođa tima",
+              "odgovoran za celinu: odluke o strukturi, saradnja sa vlasnicima i partnerima, veza tehnike i poslovanja"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Napredovanje se zasniva na tome koliko veliki deo sistema čovek može da razume, objasni i odgovorno oblikuje, ne samo na tome koliko brzo kuca kod."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Kako graditi tu veštinu od prvog dana"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "🔍",
+              "text": "svaki sistem koji vidiš (aplikaciju, prodavnicu, prevoz) pogledaj kao inženjer: elementi, veze, cilj, akteri"
+            },
+            {
+              "icon": "✍️",
+              "text": "vežbaj da objasniš sistem jednostavnim jezikom nekome ko nije tehnički potkovan"
+            },
+            {
+              "icon": "❓",
+              "text": "navikni se da pitaš „zašto“ i „šta ako“ pre nego što počneš da rešavaš"
+            },
+            {
+              "icon": "📚",
+              "text": "čitaj tuđe sisteme, dokumentaciju i otvoreni kod, jer iz njih učiš kako su drugi razmišljali"
+            },
+            {
+              "icon": "🧪",
+              "text": "pravi sopstvene projekte od ideje do uvođenja i vodi beleške o odlukama"
+            },
+            {
+              "icon": "🤝",
+              "text": "razvijaj komunikaciju i timski rad, jer se veliki sistemi ne grade sami"
+            },
+            {
+              "icon": "🌱",
+              "text": "uči stalno, tehnologije se menjaju, a način razmišljanja ostaje"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Zaključak ciklusa vežbi"
+        },
+        {
+          "type": "paragraph",
+          "text": "Prošli smo kroz celu logiku predmeta: <strong>prepoznati sistem</strong> (V1), <strong>razložiti ga i ponovo sastaviti</strong> (V2), <strong>sagledati ga očima svih aktera i propisa</strong> (V3), <strong>razumeti da je razvoj pretežno razmišljanje</strong> (V4) i <strong>postaviti sebe u ulogu inženjera koji to sve povezuje</strong> (V5). Sve što sledi u predavanjima, od baza podataka i skladišta, preko poslovne inteligencije, do modela razvoja i agilnih metoda, samo su alati unutar tog načina razmišljanja."
+        },
+        {
+          "type": "panel",
+          "title": "Završni zadatak: mala studija slučaja",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Izaberi sistem iz svog okruženja koji bi voleo da unaprediš (npr. zakazivanje termina, evidencija članova teretane, narudžbine u kafiću). Za sistem napiši jednu stranu koja sadrži:"
+            },
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "opis sistema: cilj, granica, okruženje",
+                "razlaganje na 5 do 8 delova i veze među njima",
+                "listu aktera i po jedan ključni zahtev svakog",
+                "propise i pravila koje bi morao da proveriš",
+                "tri najveća rizika i kako bi ih smanjio",
+                "deo sistema koji bi prvi napravio i zašto baš taj"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Šta da zapamtite"
+        },
+        {
+          "type": "list",
+          "style": "flush",
+          "items": [
+            "projektovanje informacionih sistema objedinjuje znanje iz svih ostalih predmeta",
+            "potreba za sposobnim inženjerima raste jer su sistemi sve složeniji i važniji",
+            "alati ubrzavaju kodiranje, ali razumevanje sistema, odgovornost i odluke ostaju kod čoveka",
+            "veština sagledavanja celine gradi se svakodnevno, na svemu što posmatramo"
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Pitanja za razmišljanje i diskusiju",
+          "blocks": [
+            {
+              "type": "list",
+              "style": "numbered",
+              "items": [
+                "Zašto kažemo da ovaj predmet objedinjuje sve što se učilo na smeru?",
+                "Kako alati zasnovani na veštačkoj inteligenciji menjaju posao softverskog inženjera, a šta ostaje isto?",
+                "Po čemu se iskusan inženjer razlikuje od početnika, osim po brzini kodiranja?",
+                "Navedi tri navike koje možeš početi da gradiš već danas da bi bolje razumeo sisteme oko sebe."
+              ]
+            }
+          ]
         }
       ]
     }

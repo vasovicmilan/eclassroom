@@ -15,7 +15,7 @@
                  class="d-flex align-items-center gap-2 text-decoration-none <%= lec.slug === currentSlug ? 'fw-bold' : '' %> <%= !lec.available ? 'disabled-link' : '' %>"
                  <%= !lec.available ? 'tabindex="-1" aria-disabled="true"' : '' %>>
                 <span class="badge bg-secondary rounded-circle"><%= lec.week %></span>
-                <span class="flex-grow-1"><%= lec.title %></span>
+                <span class="flex-grow-1"><%= lec.title %><small class="d-block text-muted fw-normal"><%= lectionKind(lec).label %></small></span>
                 <% if (!lec.available) { %>
                   <span class="text-muted">🔒</span>
                 <% } else if (lec.slug === currentSlug) { %>

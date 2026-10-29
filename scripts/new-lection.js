@@ -25,7 +25,8 @@ const lections = await readJson(file).catch(() => fail(`Predmet "${subjectSlug}"
 const last = lections.at(-1);
 const week = weekArg ? Number(weekArg) : (last ? last.week + 1 : 1);
 const date = dateArg || (last ? addDays(last.date, 7) : todayIso());
-const lection = createLection({ subjectSlug, title, week, date, blocks: LECTION_TEMPLATES[template]() });
+const kind = template === 'prakticna' ? 'vezba' : 'predavanje'; // šablon za vežbe pravi vežbu, ostali predavanje
+const lection = createLection({ subjectSlug, title, week, date, kind, blocks: LECTION_TEMPLATES[template]() });
 
 if (lections.some(l => l.slug === lection.slug)) fail(`Lekcija sa slugom "${lection.slug}" već postoji.`);
 const problems = validateLection(lection);

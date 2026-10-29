@@ -103,7 +103,7 @@
                 <% workPlan.forEach(item => { %>
                   <tr class="<%= item.isCurrent ? 'table-primary' : '' %>">
                     <td><strong>Nedelja <%= item.week %></strong></td>
-                    <td><%= item.title %></td>
+                    <td><%= item.title %> <span class="badge bg-light text-secondary border ms-1"><%= lectionKind(item).label %></span></td>
                     <td><%= item.formattedDate %></td>
                     <td>
                       <% if (item.isCurrent) { %>

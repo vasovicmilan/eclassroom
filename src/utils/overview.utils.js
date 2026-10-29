@@ -10,7 +10,7 @@ export function buildSubjectOverview(lections, today = startOfDay()) {
   const stats = { total, available, percent: total ? Math.round((available / total) * 100) : 0 };
 
   const workPlan = sortBy(withStatus, l => l.week)
-    .map(({ week, title, date, formattedDate, isPast, isCurrent }) => ({ week, title, date, formattedDate, isPast, isCurrent }));
+    .map(({ week, kind, title, date, formattedDate, isPast, isCurrent }) => ({ week, kind, title, date, formattedDate, isPast, isCurrent }));
 
   const upcoming = sortBy(withStatus.filter(l => !l.isPast), l => l.week);
   const currentLection = withStatus.find(l => l.isCurrent) || upcoming[0] || withStatus[withStatus.length - 1];

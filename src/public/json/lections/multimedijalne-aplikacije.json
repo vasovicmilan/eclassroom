@@ -2,6 +2,7 @@
   {
     "slug": "uvod-u-multimediju-i-digitalne-formate",
     "subjectSlug": "multimedijalne-aplikacije",
+    "kind": "predavanje",
     "title": "Uvod u multimediju i digitalne formate",
     "description": "Pojam multimedije, tipovi medija, raster i vektorska grafika, rezolucija, piksel, DPI/PPI i osnovni digitalni formati.",
     "week": 1,
@@ -254,6 +255,7 @@
   {
     "slug": "vizuelna-komunikacija-i-kompozicija",
     "subjectSlug": "multimedijalne-aplikacije",
+    "kind": "predavanje",
     "title": "Vizuelna komunikacija i kompozicija",
     "description": "Elementi dizajna, kompozicija, kontrast, balans, vizuelna hijerarhija i osnove tipografije.",
     "week": 2,
@@ -544,6 +546,7 @@
   {
     "slug": "digitalna-obrada-slike-boja-i-korekcija",
     "subjectSlug": "multimedijalne-aplikacije",
+    "kind": "predavanje",
     "title": "Digitalna obrada slike I – Boja i korekcija",
     "description": "RGB i CMYK modeli, histogram, svetlina, kontrast, Levels, Curves i balans boja.",
     "week": 3,
@@ -844,6 +847,7 @@
   {
     "slug": "digitalna-obrada-slike-slojevi-i-maske",
     "subjectSlug": "multimedijalne-aplikacije",
+    "kind": "predavanje",
     "title": "Digitalna obrada slike II – Slojevi i maske",
     "description": "Rad sa slojevima, blend modovi, maske, selekcije, retuširanje i priprema grafike za web i štampu.",
     "week": 4,
@@ -1068,6 +1072,7 @@
   {
     "slug": "osnove-video-jezika-i-kadra",
     "subjectSlug": "multimedijalne-aplikacije",
+    "kind": "predavanje",
     "title": "Osnove video jezika i kadra",
     "description": "Planovi, vrste kadra, pravilo trećina, pokreti kamere i vizuelni kontinuitet – sa praktičnim uvodom u video produkcijsku opremu.",
     "week": 6,
@@ -1269,6 +1274,7 @@
   {
     "slug": "osnove-video-jezika-i-kadrau",
     "subjectSlug": "multimedijalne-aplikacije",
+    "kind": "predavanje",
     "title": "Osnove video jezika i kadra II",
     "description": "Ritam, linearna i nelinearna montaža, tranzicije i storytelling struktura.",
     "week": 7,
@@ -1352,6 +1358,7 @@
   {
     "slug": "montaza-i-narativ-u-videu",
     "subjectSlug": "multimedijalne-aplikacije",
+    "kind": "predavanje",
     "title": "Montaža i narativ u videu",
     "description": "Ritam, linearna i nelinearna montaža, tranzicije i storytelling struktura.",
     "week": 7,
@@ -1422,6 +1429,7 @@
   {
     "slug": "audio-u-multimediji",
     "subjectSlug": "multimedijalne-aplikacije",
+    "kind": "predavanje",
     "title": "Audio u multimediji",
     "description": "Osnove digitalnog zvuka, sample rate, bit depth, mono/stereo, balans i obrada zvuka.",
     "week": 8,
@@ -1505,6 +1513,7 @@
   {
     "slug": "kompresija-i-formati-za-web",
     "subjectSlug": "multimedijalne-aplikacije",
+    "kind": "predavanje",
     "title": "Kompresija i formati za web",
     "description": "Lossy i lossless kompresija, bitrate, video kodeci i optimizacija za web.",
     "week": 9,
@@ -1614,6 +1623,7 @@
   {
     "slug": "ui-ux-principi-i-grid-sistem",
     "subjectSlug": "multimedijalne-aplikacije",
+    "kind": "predavanje",
     "title": "UI/UX principi i grid sistem",
     "description": "Osnove UI i UX dizajna, grid sistem, layout struktura i responzivni dizajn.",
     "week": 10,
@@ -1715,6 +1725,7 @@
   {
     "slug": "integracija-vizuelnog-identiteta",
     "subjectSlug": "multimedijalne-aplikacije",
+    "kind": "predavanje",
     "title": "Integracija vizuelnog identiteta",
     "description": "Doslednost brenda kroz grafiku, video i web i povezivanje elemenata projekta.",
     "week": 11,

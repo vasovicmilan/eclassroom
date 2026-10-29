@@ -1,0 +1,74 @@
+[
+  {
+    "week": 2,
+    "title": "Baze podataka",
+    "file": "ois/ch04.ppt",
+    "date": "2026-10-20",
+    "formattedDate": "20.10.2026.",
+    "available": true,
+    "subjectSlug": "projektovanje-informacionih-sistema"
+  },
+  {
+    "week": 4,
+    "title": "Data Warehousing",
+    "file": "ois/ch05.ppt",
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "subjectSlug": "projektovanje-informacionih-sistema"
+  },
+  {
+    "week": 5,
+    "title": "Trendovi razvoja informacionih sistema",
+    "file": "ois/ch02.ppt",
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "subjectSlug": "projektovanje-informacionih-sistema"
+  },
+  {
+    "week": 6,
+    "title": "Poslovna inteligencija",
+    "file": "ois/ch12.ppt",
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "subjectSlug": "projektovanje-informacionih-sistema"
+  },
+  {
+    "week": 7,
+    "title": "OLAP",
+    "file": "ois/ch14.ppt",
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "subjectSlug": "projektovanje-informacionih-sistema"
+  },
+  {
+    "week": 8,
+    "title": "Rudarenje podataka (Data Mining)",
+    "file": "ois/ch13.ppt",
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "subjectSlug": "projektovanje-informacionih-sistema"
+  },
+  {
+    "week": 9,
+    "title": "Modeli razvoja informacionih sistema",
+    "file": "ois/ch15.ppt",
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "subjectSlug": "projektovanje-informacionih-sistema"
+  },
+  {
+    "week": 11,
+    "title": "Metode za razvoj softvera",
+    "file": "ois/ch16.ppt",
+    "date": "2026-10-29",
+    "formattedDate": "29.10.2026.",
+    "available": true,
+    "subjectSlug": "projektovanje-informacionih-sistema"
+  }
+]
